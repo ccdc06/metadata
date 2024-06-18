@@ -19,7 +19,7 @@ foreach ($files as $yamlFn) {
 	$errors = validateMeta($meta);
 	if (!empty($errors)) {
 		foreach ($errors as $val) {
-			list($key, , $err) = $val;
+			list($key, $_, $err) = $val;
 			if ($first) {
 				echo "Key\tError\tFilename\n";
 				$first = false;

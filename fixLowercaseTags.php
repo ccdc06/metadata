@@ -13,16 +13,7 @@ foreach ($files as $yamlFn) {
 	if (!empty($meta['Tags']) && is_array($meta['Tags'])) {
 		foreach ($meta['Tags'] as &$tag) {
 			if (is_string($tag)) {
-				$lc = mb_strtolower($tag);
-				if (isset(Lists::$tagLowercaseExceptions[$lc])) {
-					$tag = Lists::$tagLowercaseExceptions[$lc];
-					continue;
-				}
-
-				$new = mb_convert_case($tag, MB_CASE_TITLE, 'UTF-8');
-				if ($tag !== $new) {
-					$tag = $new;
-				}
+				$tag = fixLowercaseTag($tag);
 			}
 		}
 		unset($tag);

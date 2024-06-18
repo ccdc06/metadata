@@ -16,7 +16,34 @@ if (!extension_loaded('yaml')) {
 	exit(__LINE__);
 }
 
-require __DIR__ . "/lists.php";
+class Lists {
+	static $downloadSources = [
+		'Anchira',
+		'HentaiNexus',
+	];
+
+	static $urlSources = [
+		'Fakku',
+		'Irodori',
+		'ProjectHentai',
+	];
+
+	static $tagLowercaseExceptions = [
+		"bdsm" => "BDSM",
+		"bl" => "BL",
+		"bss" => "BSS",
+		"cg set" => "CG Set",
+		"fffm foursome" => "FFFM Foursome",
+		"ffm threesome" => "FFM Threesome",
+		"mmf threesome" => "MMF Threesome",
+		"mmmf foursome" => "MMMF Foursome",
+		"ntr" => "NTR",
+		"romance-centric" => "Romance-centric",
+		"slice of life" => "Slice of Life",
+		"valentine-sale" => "Valentine-sale",
+		"x-ray" => "X-ray",
+	];
+}
 
 function fixSlashes($str) {
 	return str_replace(['\\', '/'], '/', $str);
@@ -165,10 +192,8 @@ function validateMeta($meta) {
 		if (!empty($meta['Tags']) && is_array($meta['Tags'])) {
 			foreach ($meta['Tags'] as $tag) {
 				if (is_string($tag)) {
-					$fc = mb_substr($tag, 0, 1);
-					if (IntlChar::islower($fc)) {
+					if (!validateLowercaseTag($tag)) {
 						$errors[] = ["Tags", $tag, "Lowercase tag"];
-						break;
 					}
 				}
 			}
@@ -266,4 +291,25 @@ function updateReadmeStatus($text) {
 	$out[] = $afterText;
 
 	return file_put_contents($mdFn, implode("", $out));
+}
+
+function fixLowercaseTag($tag) {
+	$lc = mb_strtolower($tag);
+
+	if (isset(Lists::$tagLowercaseExceptions[$lc])) {
+		return Lists::$tagLowercaseExceptions[$lc];
+	}
+
+	$new = mb_convert_case($tag, MB_CASE_TITLE, 'UTF-8');
+	return $new;
+}
+
+function validateLowercaseTag($tag) {
+	$lc = mb_strtolower($tag);
+
+	if (isset(Lists::$tagLowercaseExceptions[$lc])) {
+		return Lists::$tagLowercaseExceptions[$lc] === $tag;
+	}
+
+	return mb_convert_case($tag, MB_CASE_TITLE, 'UTF-8') === $tag;
 }
