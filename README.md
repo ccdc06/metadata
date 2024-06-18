@@ -1,5 +1,5 @@
 # TODO
-- Validate and fix lowercase tags
+- Update the todo list
 
 <!-- [Status] -->
 # Status
