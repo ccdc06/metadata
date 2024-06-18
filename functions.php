@@ -16,6 +16,8 @@ if (!extension_loaded('yaml')) {
 	exit(__LINE__);
 }
 
+require __DIR__ . "/lists.php";
+
 function fixSlashes($str) {
 	return str_replace(['\\', '/'], '/', $str);
 }
@@ -127,6 +129,7 @@ function validateMeta($meta) {
 
 			case 'Id': // map[string]int
 				$err = validateMapStringInt($val);
+
 				break;
 
 			default:
@@ -135,6 +138,40 @@ function validateMeta($meta) {
 
 		if ($err) {
 			$errors[] = [$key, $val, $err];
+		}
+
+		if (!empty($meta['Id']) && is_array($meta['Id'])) {
+			foreach ($meta['Id'] as $idKey => $idVal) {
+				if (!in_array($idKey, Lists::$downloadSources)) {
+					$errors[] = ["Id.{$idKey}", $idKey, "Unknown id source"];
+				}
+			}
+		}
+
+		if (!empty($meta['DownloadSource']) && is_string($meta['DownloadSource'])) {
+			if (!in_array($meta['DownloadSource'], Lists::$downloadSources)) {
+				$errors[] = ["DownloadSource", $meta['DownloadSource'], "Unknown download source"];
+			}
+		}
+
+		if (!empty($meta['URL']) && is_array($meta['URL'])) {
+			foreach ($meta['URL'] as $idKey => $idVal) {
+				if (!in_array($idKey, Lists::$urlSources)) {
+					$errors[] = ["URL.{$idKey}", $idKey, "Unknown URL source"];
+				}
+			}
+		}
+
+		if (!empty($meta['Tags']) && is_array($meta['Tags'])) {
+			foreach ($meta['Tags'] as $tag) {
+				if (is_string($tag)) {
+					$fc = mb_substr($tag, 0, 1);
+					if (IntlChar::islower($fc)) {
+						$errors[] = ["Tags", $tag, "Lowercase tag"];
+						break;
+					}
+				}
+			}
 		}
 	}
 

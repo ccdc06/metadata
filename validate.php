@@ -41,6 +41,10 @@ echo "\n#############################\n\n";
 echo "OK	{$ok}\n";
 echo "Bad	{$bad}\n";
 
+foreach ($badDetails as $key => $val) {
+	echo "{$key}	{$val}\n";
+}
+
 if ($updateStatus) {
 	$out[] = "# Status";
 	$out[] = "|Status|Count|";
