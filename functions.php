@@ -1,4 +1,6 @@
 <?php
+ini_set('yaml.output_width', -1);
+
 if (php_sapi_name() !== 'cli') {
 	echo "For command line usage only";
 	exit(__LINE__);
@@ -204,4 +206,27 @@ function validateMapStringInt($var) {
 			return "One or more values of the map aren't int";
 		}
 	}
+}
+
+function updateReadmeStatus($text) {
+	$beginTag = '<!-- [Status] -->';
+	$endTag = '<!-- [/Status] -->';
+
+	$mdFn = __DIR__ . '/README.md';
+
+	$md = file_get_contents($mdFn);
+
+	$beginPos = strpos($md, $beginTag);
+	$beforeText = substr($md, 0, $beginPos);
+
+	$endPos = strpos($md, $endTag, $beginPos) + strlen($endTag);
+	$afterText = substr($md, $endPos);
+
+	$out[] = $beforeText;
+	$out[] = $beginTag . "\n";
+	$out[] = $text;
+	$out[] = "\n" . $endTag;
+	$out[] = $afterText;
+
+	return file_put_contents($mdFn, implode("", $out));
 }

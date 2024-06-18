@@ -1,6 +1,9 @@
 <?php
 require __DIR__ . '/functions.php';
 
+$opt = getopt('u', ['update']);
+$updateStatus = isset($opt['update']) || isset($opt['u']);
+
 $files = listFiles();
 $total = count($files);
 
@@ -38,6 +41,15 @@ echo "\n#############################\n\n";
 echo "OK	{$ok}\n";
 echo "Bad	{$bad}\n";
 
-// foreach ($badDetails as $key => $val) {
-// 	echo " - {$key}	{$val}\n";
-// }
+if ($updateStatus) {
+	$out[] = "# Status";
+	$out[] = "|Status|Count|";
+	$out[] = "|-|-|";
+	$out[] = "|OK|{$ok}|";
+	$out[] = "|Bad|{$bad}|";
+	foreach ($badDetails as $key => $val) {
+		$out[] = "|{$key}|{$val}|";
+	}
+
+	updateReadmeStatus(implode("\n", $out));
+}
