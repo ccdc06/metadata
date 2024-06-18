@@ -1,13 +1,15 @@
 <?php
 require __DIR__ . '/functions.php';
 
+$opt = getopt('u', ['update']);
+$update = isset($opt['u']) || isset($opt['update']);
+
 $files = listFiles();
 
 foreach ($files as $yamlFn) {
 	$oldYaml = file_get_contents($yamlFn);
 	$meta = yaml_parse($oldYaml);
 
-	$changed = false;
 	if (!empty($meta['Tags']) && is_array($meta['Tags'])) {
 		foreach ($meta['Tags'] as &$tag) {
 			if (is_string($tag)) {
@@ -20,7 +22,6 @@ foreach ($files as $yamlFn) {
 				$new = mb_convert_case($tag, MB_CASE_TITLE, 'UTF-8');
 				if ($tag !== $new) {
 					$tag = $new;
-					$changed = true;
 				}
 			}
 		}
@@ -28,9 +29,14 @@ foreach ($files as $yamlFn) {
 	}
 
 	$newYaml = yaml_emit($meta);
-
 	if ($newYaml !== $oldYaml) {
-		// file_put_contents($yamlFn, $newYaml);
+		if ($update) {
+			file_put_contents($yamlFn, $newYaml);
+		}
 		echo $yamlFn, PHP_EOL;
 	}
+}
+
+if (!$update) {
+	echo "WARNING: Files won't be changed unless you pass -u or --update flag\n";
 }

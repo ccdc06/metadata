@@ -1,6 +1,9 @@
 <?php
 require __DIR__ . '/functions.php';
 
+$opt = getopt('u', ['update']);
+$update = isset($opt['u']) || isset($opt['update']);
+
 $files = listFiles();
 
 foreach ($files as $yamlFn) {
@@ -10,9 +13,14 @@ foreach ($files as $yamlFn) {
 	reorderFields($meta);
 
 	$newYaml = yaml_emit($meta);
-
 	if ($newYaml !== $oldYaml) {
-		file_put_contents($yamlFn, $newYaml);
+		if ($update) {
+			file_put_contents($yamlFn, $newYaml);
+		}
 		echo $yamlFn, PHP_EOL;
 	}
+}
+
+if (!$update) {
+	echo "WARNING: Files won't be changed unless you pass -u or --update flag\n";
 }
