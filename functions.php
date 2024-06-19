@@ -80,6 +80,52 @@ function fixEmptyValues(&$meta) {
 	});
 }
 
+function generateCollectionName($meta) {
+	if (empty($meta['DownloadSource'])) {
+		throw new Exception("DownloadSource empty");
+	}
+
+	if ($meta['DownloadSource'] == 'Anchira') {
+		if (empty($meta['Id']['Anchira'])) {
+			throw new Exception("Anchira Id empty");
+		}
+		$id = $meta['Id']['Anchira'];
+
+		$r = intval(floor($id / 1000) * 1000);
+
+		if ($id === $r) {
+			$r -= 1000;
+		}
+
+		$from = $r + 1;
+		$to = $r + 1000;
+		return "anchira.to_{$from}-{$to}";
+	}
+
+	if ($meta['DownloadSource'] == 'HentaiNexus') {
+		if (empty($meta['Id']['HentaiNexus'])) {
+			throw new Exception("HentaiNexus Id empty");
+		}
+
+		$id = $meta['Id']['HentaiNexus'];
+		if ($id <= 17000) {
+			$from = 1;
+			$to = 17000;
+		} else {
+			$r = intval(floor($id / 1000) * 1000);
+
+			if ($id === $r) {
+				$r -= 1000;
+			}
+
+			$from = $r + 1;
+			$to = $r + 1000;
+		}
+
+		return "hentainexus.com_{$from}-{$to}";
+	}
+}
+
 function reorderFields(&$meta) {
 	$order = array_flip([
 		'Title',
