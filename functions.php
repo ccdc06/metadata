@@ -1,11 +1,6 @@
 <?php
 ini_set('yaml.output_width', -1);
 
-if (php_sapi_name() !== 'cli') {
-	echo "For command line usage only";
-	exit(__LINE__);
-}
-
 if (version_compare(PHP_VERSION, '8.3.0') < 0) {
 	echo "Use php >= 8.3";
 	exit(__LINE__);
@@ -358,4 +353,8 @@ function validateLowercaseTag($tag) {
 	}
 
 	return mb_convert_case($tag, MB_CASE_TITLE, 'UTF-8') === $tag;
+}
+
+function h($str) {
+	return htmlspecialchars($str);
 }

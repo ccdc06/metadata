@@ -5,9 +5,9 @@
 # Status
 |Status|Count|
 |-|-|
-|OK|13666|
-|Bad|256|
-|Empty URL field|255|
+|OK|13679|
+|Bad|243|
+|Empty URL field|242|
 |Empty Artist field|3|
 <!-- [/Status] -->
 
