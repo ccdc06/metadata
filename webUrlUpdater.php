@@ -91,9 +91,9 @@ function routeWebIndex() {
 	}
 
 	$files = listFiles();
-	$limit = intval(isset($_GET['limit']) ? $_GET['limit'] : 50);
+	$limit = intval(isset($_GET['limit']) ? $_GET['limit'] : 10);
 	if ($limit <= 0) {
-		$limit = 50;
+		$limit = 10;
 	}
 
 	$missing = [];
@@ -197,13 +197,13 @@ function routeWebIndex() {
 						<form method="post" action="update.php">
 							<input type="hidden" name="key" value="<?= $key ?>" />
 							<div class="p-1 d-flex">
+								<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
 								<select class="form-select" name="source">
 									<option value="" selected>(Select)</option>
 									<?php foreach (Lists::$urlSources as $source): ?>
 										<option value="<?= h($source) ?>"><?= h($source) ?></option>
 									<?php endforeach; ?>
 								</select>
-								<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
 							</div>
 							<div class=" p-1">
 								<button class="btn btn-primary" type="submit" name="op" value="updateUrl">Save</button>
