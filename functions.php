@@ -11,6 +11,10 @@ if (!extension_loaded('yaml')) {
 	exit(__LINE__);
 }
 
+if (!is_dir(__DIR__ . '/temp')) {
+	mkdir(__DIR__ . '/temp', 0777, true);
+}
+
 class Lists {
 	static $downloadSources = [
 		'Anchira',
@@ -21,6 +25,7 @@ class Lists {
 		'Fakku',
 		'Irodori',
 		'ProjectHentai',
+		'FuDeORS',
 	];
 
 	static $tagLowercaseExceptions = [
@@ -134,7 +139,6 @@ function reorderFields(&$meta) {
 		'Magazine',
 		'Event',
 		'Pages',
-		'Thumbnail',
 		'Released',
 		'Id',
 		'DownloadSource',

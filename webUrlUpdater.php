@@ -137,6 +137,7 @@ function routeWebIndex() {
 				<?php
 				$query = [];
 
+				$pages = intval($val['Pages'] ?? 0);
 				$artist = '';
 				if (!empty($val['Artist'])) {
 					$artist = implode(' ', $val['Artist']);
@@ -187,6 +188,9 @@ function routeWebIndex() {
 							<?php if (!empty($publisher)): ?>
 								<span class="text-muted">(<?= h($publisher) ?>)</span>
 							<?php endif; ?>
+							<?php if ($pages > 0): ?>
+								(<?= $pages == 1 ? "1 page" : "{$pages} pages" ?>)
+							<?php endif; ?>
 						</h4>
 					</div>
 					<div class="card-body">
@@ -208,15 +212,34 @@ function routeWebIndex() {
 						</form>
 					</div>
 					<div class="card-footer">
-						<a target="_blank" rel="noopener,noreferrer" href="<?= h($hentagUrl) ?>" class="btn btn-primary">Hentag</a>
-						<a target="_blank" rel="noopener,noreferrer" href="<?= h($googleUrl) ?>" class="btn btn-primary">Google</a>
-						<a target="_blank" rel="noopener,noreferrer" href="<?= h($fakkuUrl) ?>" class="btn btn-primary">Fakku</a>
-						<a target="_blank" rel="noopener,noreferrer" href="<?= h($irodoriUrl) ?>" class="btn btn-primary">Irodori</a>
-						<a target="_blank" rel="noopener,noreferrer" href="<?= h($_2dmarketUrl) ?>" class="btn btn-primary">2D Market</a>
+						<a target="hentag" rel="noopener,noreferrer" href="<?= h($hentagUrl) ?>" class="btn btn-primary">Hentag</a>
+						<a target="google" rel="noopener,noreferrer" href="<?= h($googleUrl) ?>" class="btn btn-primary">Google</a>
+						<a target="fakku" rel="noopener,noreferrer" href="<?= h($fakkuUrl) ?>" class="btn btn-primary">Fakku</a>
+						<a target="irodori" rel="noopener,noreferrer" href="<?= h($irodoriUrl) ?>" class="btn btn-primary">Irodori</a>
+						<a target="2dmarket" rel="noopener,noreferrer" href="<?= h($_2dmarketUrl) ?>" class="btn btn-primary">2D Market</a>
 					</div>
 				</div>
 			<?php endforeach; ?>
 		</div>
+		<script type="text/javascript">
+		var $body = $('body');
+
+		$body.on('keyup', 'input[name="url"]', function (e) {
+			var $current = $(e.currentTarget);
+			var $select = $current.closest('div.card').find('select[name="source"]');
+			if ($select.val() !== "") {
+				return;
+			}
+
+			if ($current.val().indexOf('fakku.net') !== -1) {
+				$select.val('Fakku');
+			}
+
+			if ($current.val().indexOf('irodoricomics.com') !== -1) {
+				$select.val('Irodori');
+			}
+		})
+		</script>
 	</body>
 	</html>
 	<?php
