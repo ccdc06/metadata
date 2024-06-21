@@ -315,6 +315,11 @@ function validateMapStringInt($var) {
 	}
 }
 
+function anchorKey($text) {
+	$text = mb_convert_case($text, MB_CASE_LOWER);
+	return trim(preg_replace('#\PL+#im', '-', $text), '-');
+}
+
 function updateReadmeStatus($text) {
 	$beginTag = '<!-- [Status] -->';
 	$endTag = '<!-- [/Status] -->';
@@ -336,6 +341,21 @@ function updateReadmeStatus($text) {
 	$out[] = $afterText;
 
 	return file_put_contents($mdFn, implode("", $out));
+}
+
+function updateDetailedStatus($tag) {
+	$mdFn = __DIR__ . '/STATUS.md';
+	$out = new SplFileObject($mdFn, 'w');
+
+	foreach ($tag as $key => $val) {
+		$out->fwrite("# {$key}\n");
+		foreach ($val as $fn) {
+			$url = urlencode("../{$fn}");
+			$out->fwrite("- [{$fn}]($url)\n");
+		}
+	}
+
+	$out = null;
 }
 
 function fixLowercaseTag($tag) {

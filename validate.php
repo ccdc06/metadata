@@ -25,10 +25,7 @@ foreach ($files as $yamlFn) {
 				$first = false;
 			}
 			echo "{$key}\t{$err}\t{$relativeYamlFn}\n";
-			if (empty($badDetails[$err])) {
-				$badDetails[$err] = 0;
-			}
-			$badDetails[$val[2]]++;
+			$badDetails[$val[2]][$relativeYamlFn] = $relativeYamlFn;
 		}
 	} else {
 		$ok++;
@@ -42,7 +39,8 @@ echo "OK	{$ok}\n";
 echo "Bad	{$bad}\n";
 
 foreach ($badDetails as $key => $val) {
-	echo "{$key}	{$val}\n";
+	$count = count($val);
+	echo "{$key}	{$count}\n";
 }
 
 if ($updateStatus) {
@@ -52,8 +50,11 @@ if ($updateStatus) {
 	$out[] = "|OK|{$ok}|";
 	$out[] = "|Bad|{$bad}|";
 	foreach ($badDetails as $key => $val) {
-		$out[] = "|{$key}|{$val}|";
+		$anchorKey = anchorKey($key);
+		$count = count($val);
+		$out[] = "|[{$key}](STATUS.md#{$anchorKey})|{$count}|";
 	}
 
 	updateReadmeStatus(implode("\n", $out));
+	updateDetailedStatus($badDetails);
 }
