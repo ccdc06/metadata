@@ -1,5 +1,5 @@
 # TODO
-- Update the todo list
+- Update this todo list
 
 <!-- [Status] -->
 # Status
