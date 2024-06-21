@@ -350,7 +350,8 @@ function updateDetailedStatus($tag) {
 	foreach ($tag as $key => $val) {
 		$out->fwrite("# {$key}\n");
 		foreach ($val as $fn) {
-			$url = '/' . urlencode($fn);
+			$pi = pathinfo($fn);
+			$url = "/{$pi['dirname']}/" . urlencode($pi['basename']);
 			$out->fwrite("- [{$fn}]($url)\n");
 		}
 	}
