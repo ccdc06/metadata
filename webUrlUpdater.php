@@ -8,6 +8,7 @@ switch (php_sapi_name()) {
 			case '/': case '/index.php': return routeWebIndex();
 			case '/update.php': return routeWebUpdate();
 			case '/hide.php': return routeWebHide();
+			case '/hentagProxy.php': return routeWebHentagProxy();
 
 			default:
 				http_response_code(404);
@@ -19,6 +20,19 @@ switch (php_sapi_name()) {
 function routeCli() {
 	// putenv('PHP_CLI_SERVER_WORKERS=4');
 	passthru(escapeshellarg(PHP_BINARY) . ' -S 127.0.0.1:8000 ' . __FILE__);
+}
+
+function routeWebHentagProxy() {
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, "https://hentag.com/api/v1/search/vault/title/");
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_HEADER, 0);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($_POST));
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+	header('Content-Type: application/json');
+	echo curl_exec($ch);
+	curl_close($ch);
 }
 
 function routeWebHide() {
@@ -194,6 +208,7 @@ function routeWebIndex() {
 						</h4>
 					</div>
 					<div class="card-body">
+						<p class="px-2"><code><?= h($key) ?></code></p>
 						<form method="post" action="update.php">
 							<input type="hidden" name="key" value="<?= $key ?>" />
 							<div class="p-1 d-flex">
@@ -212,6 +227,7 @@ function routeWebIndex() {
 						</form>
 					</div>
 					<div class="card-footer">
+						<button type="button" class="hentag-api btn btn-primary" data-query="<?= h($query) ?>">Hentag API</button>
 						<a target="hentag" rel="noopener,noreferrer" href="<?= h($hentagUrl) ?>" class="btn btn-primary">Hentag</a>
 						<a target="google" rel="noopener,noreferrer" href="<?= h($googleUrl) ?>" class="btn btn-primary">Google</a>
 						<a target="fakku" rel="noopener,noreferrer" href="<?= h($fakkuUrl) ?>" class="btn btn-primary">Fakku</a>
@@ -223,6 +239,47 @@ function routeWebIndex() {
 		</div>
 		<script type="text/javascript">
 		var $body = $('body');
+
+		$body.on('click', 'button.hentag-api', function (e) {
+			e.preventDefault();
+			var $current = $(e.currentTarget);
+			var $url = $current.closest('div.card').find('input[name="url"]');
+			var $select = $current.closest('div.card').find('select[name="source"]');
+			var query = $current.data('query');
+			$current.attr('disabled', true);
+
+			$.ajax({
+				type: 'POST',
+				url: 'hentagProxy.php',
+				data: {title: query},
+				success: function(data) {
+					$current.removeAttr('disabled');
+
+					if ('length' in data) {
+						for (const result of data) {
+							if ('locations' in result) {
+								var search = result.locations.filter(v => v.includes('fakku.net'));
+								if ('0' in search) {
+									window.open(search[0], 'fakku').focus();
+									$url.val(search[0]).focus().select();
+									$select.val('Fakku');
+									break;
+								}
+							}
+						}
+					}
+				},
+				error: function () {
+					$current.removeAttr('disabled');
+				}
+			});
+		})
+
+		$body.on('click', 'div.card-footer a', function (e) {
+			var $current = $(e.currentTarget);
+			var $url = $current.closest('div.card').find('input[name="url"]');
+			$url.focus();
+		});
 
 		$body.on('keyup', 'input[name="url"]', function (e) {
 			var $current = $(e.currentTarget);
