@@ -59,8 +59,12 @@ function relativeDir($path) {
 
 function listFiles() {
 	$files = [];
-	$files = array_merge($files, glob(baseDir() . '/anchira.to_*/*.yaml'));
-	$files = array_merge($files, glob(baseDir() . '/hentainexus.com_*/*.yaml'));
+	$collections = file(__DIR__ . '/collections.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+	foreach ($collections as $collection) {
+		$files = array_merge($files, glob(baseDir() . "/{$collection}/*.yaml"));
+	}
+
 	natsort($files);
 
 	return $files;
