@@ -220,9 +220,10 @@ function routeWebIndex() {
 									<?php endforeach; ?>
 								</select>
 							</div>
-							<div class=" p-1">
+							<div class="p-1">
 								<button class="btn btn-primary" type="submit" name="op" value="updateUrl">Save</button>
 								<a href="hide.php?<?= http_build_query(['key' => $key]) ?>" class="btn btn-warning">Hide</a>
+								<span class="comment ms-2 text-danger"></span>
 							</div>
 						</form>
 					</div>
@@ -245,6 +246,7 @@ function routeWebIndex() {
 			var $current = $(e.currentTarget);
 			var $url = $current.closest('div.card').find('input[name="url"]');
 			var $select = $current.closest('div.card').find('select[name="source"]');
+			var $comment = $current.closest('div.card').find('span.comment');
 			var query = $current.data('query');
 			$current.attr('disabled', true);
 
@@ -259,6 +261,13 @@ function routeWebIndex() {
 						for (const result of data) {
 							if ('locations' in result) {
 								var search = result.locations.filter(v => v.includes('fakku.net'));
+
+								if (result.otherTags) {
+									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli'));
+									if (evilTags.length > 0) {
+										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
+									}
+								}
 								if ('0' in search) {
 									window.open(search[0], 'fakku').focus();
 									$url.val(search[0]).focus().select();
