@@ -19,7 +19,7 @@ switch (php_sapi_name()) {
 
 function routeCli() {
 	// putenv('PHP_CLI_SERVER_WORKERS=4');
-	passthru(escapeshellarg(PHP_BINARY) . ' -S 127.0.0.1:8000 ' . __FILE__);
+	passthru(escapeshellarg(PHP_BINARY) . ' -S 127.0.0.1:8001 ' . __FILE__);
 }
 
 function routeWebHentagProxy() {
