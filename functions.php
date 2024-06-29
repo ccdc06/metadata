@@ -1,4 +1,5 @@
 <?php
+set_time_limit(120);
 ini_set('yaml.output_width', -1);
 
 if (version_compare(PHP_VERSION, '8.3.0') < 0) {
@@ -57,9 +58,15 @@ function relativeDir($path) {
 	return ltrim(str_replace(baseDir(), '', $path), '/');
 }
 
-function listFiles() {
+function listFiles($opts = []) {
 	$files = [];
 	$collections = file(__DIR__ . '/collections.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+	if (in_array('noanchira', $opts)) {
+		$collections = array_values(array_filter($collections, function ($val) {
+			return !str_starts_with($val, 'anchira.to_');
+		}));
+	}
 
 	foreach ($collections as $collection) {
 		$files = array_merge($files, glob(baseDir() . "/{$collection}/*.yaml"));
