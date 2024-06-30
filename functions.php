@@ -1,5 +1,6 @@
 <?php
-set_time_limit(120);
+set_time_limit(0);
+ini_set('max_execution_time', 0);
 ini_set('yaml.output_width', -1);
 
 if (version_compare(PHP_VERSION, '8.3.0') < 0) {
