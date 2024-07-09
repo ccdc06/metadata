@@ -263,7 +263,7 @@ function routeWebIndex() {
 								var search = result.locations.filter(v => v.includes('fakku.net'));
 
 								if (result.otherTags) {
-									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli'));
+									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'shotacon'));
 									if (evilTags.length > 0) {
 										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
 									}
