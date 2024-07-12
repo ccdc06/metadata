@@ -9,3 +9,7 @@ Example: Anchira id 9703 (Night Play Roly-Poly) was replaced with Anchira id 125
 The best place to find me is on [HenTalk](https://discord.gg/hentalkbian-toku-hvnc-896056250402504715).
 
 You can also mail me [ccdc06@proton.me](mailto:ccdc06@proton.me) or send a private message to ccdc06 on Discord.
+
+# Nayumi/ndbiaw/HenTalk is a scammer! Why are you advertising his Discord server?
+
+Yea, I know, I know. I'm too lazy to set my own server and deal with user management, bots, annoying user, etc. so I'm borrowing his server but I have absolutely no commitment to it.
