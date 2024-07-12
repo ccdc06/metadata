@@ -95,12 +95,12 @@ function fixEmptyValues(&$meta) {
 
 function generateCollectionName($meta) {
 	if (empty($meta['DownloadSource'])) {
-		throw new Exception("DownloadSource empty");
+		throw new \Exception("DownloadSource empty");
 	}
 
 	if ($meta['DownloadSource'] == 'Anchira') {
 		if (empty($meta['Id']['Anchira'])) {
-			throw new Exception("Anchira Id empty");
+			throw new \Exception("Anchira Id empty");
 		}
 		$id = $meta['Id']['Anchira'];
 
@@ -117,7 +117,7 @@ function generateCollectionName($meta) {
 
 	if ($meta['DownloadSource'] == 'HentaiNexus') {
 		if (empty($meta['Id']['HentaiNexus'])) {
-			throw new Exception("HentaiNexus Id empty");
+			throw new \Exception("HentaiNexus Id empty");
 		}
 
 		$id = $meta['Id']['HentaiNexus'];
@@ -162,11 +162,11 @@ function reorderFields(&$meta) {
 
 	uksort($meta, function ($a, $b) use ($order) {
 		if (!isset($order[$a])) {
-			throw new Exception("Unknown field {$a}");
+			throw new \Exception("Unknown field {$a}");
 		}
 
 		if (!isset($order[$b])) {
-			throw new Exception("Unknown field {$b}");
+			throw new \Exception("Unknown field {$b}");
 		}
 
 		return $order[$a] <=> $order[$b];
@@ -375,7 +375,7 @@ function updateIndex($files) {
 
 		$pi = pathinfo($relativeYamlFn);
 		if ($pi['extension'] !== 'yaml') {
-			throw new exception("Unknown file {$relativeYamlFn}");
+			throw new \Exception("Unknown file {$relativeYamlFn}");
 		}
 
 		$cbzName = substr($relativeYamlFn, 0, -5) . '.cbz';
