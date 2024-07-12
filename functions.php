@@ -1,4 +1,5 @@
 <?php
+namespace Metadata;
 set_time_limit(0);
 ini_set('max_execution_time', 0);
 ini_set('yaml.output_width', -1);
@@ -61,7 +62,7 @@ function relativeDir($path) {
 
 function listFiles($opts = []) {
 	$files = [];
-	$collections = file(__DIR__ . '/collections.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	$collections = file(__DIR__ . '/indexes/collections.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
 	if (in_array('noanchira', $opts)) {
 		$collections = array_values(array_filter($collections, function ($val) {
@@ -355,20 +356,32 @@ function updateReadmeStatus($text) {
 	return file_put_contents($mdFn, implode("", $out));
 }
 
-function updateDetailedStatus($tag) {
-	$mdFn = __DIR__ . '/STATUS.md';
-	$out = new SplFileObject($mdFn, 'w');
+function updateBadIndex($tag) {
+	$badFn = __DIR__ . '/indexes/bad.csv';
+	$out = new \SplFileObject($badFn, 'w');
 
-	foreach ($tag as $key => $val) {
-		$out->fwrite("# {$key}\n");
+	foreach ($tag as $status => $val) {
 		foreach ($val as $fn) {
-			$pi = pathinfo($fn);
-			$url = "/{$pi['dirname']}/" . rawurlencode($pi['basename']);
-			$out->fwrite("- [{$fn}]($url)\n");
+			$out->fputcsv([$fn, $status]);
 		}
 	}
+}
 
-	$out = null;
+function updateIndex($files) {
+	$out = new \SplFileObject(__DIR__ . '/indexes/list.csv', 'w');
+
+	foreach ($files as $yamlFn) {
+		$relativeYamlFn = relativeDir($yamlFn);
+
+		$pi = pathinfo($relativeYamlFn);
+		if ($pi['extension'] !== 'yaml') {
+			throw new exception("Unknown file {$relativeYamlFn}");
+		}
+
+		$cbzName = substr($relativeYamlFn, 0, -5) . '.cbz';
+
+		$out->fputcsv([$relativeYamlFn, $cbzName]);
+	}
 }
 
 function fixLowercaseTag($tag) {

@@ -1,4 +1,5 @@
 <?php
+namespace Metadata;
 require __DIR__ . '/functions.php';
 
 $opt = getopt('u', ['update']);

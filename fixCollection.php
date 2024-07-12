@@ -1,4 +1,5 @@
 <?php
+namespace Metadata;
 require __DIR__ . '/functions.php';
 
 $opt = getopt('u', ['update']);
@@ -15,7 +16,7 @@ foreach ($files as $yamlFn) {
 
 	if ($current !== $expected) {
 		if ($update) {
-			throw new Exception("Not implemented");
+			throw new \Exception("Not implemented");
 		}
 		echo $yamlFn, PHP_EOL;
 	}

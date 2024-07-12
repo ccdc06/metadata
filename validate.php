@@ -1,10 +1,14 @@
 <?php
+namespace Metadata;
 require __DIR__ . '/functions.php';
 
 $opt = getopt('u', ['update']);
 $updateStatus = isset($opt['update']) || isset($opt['u']);
 
 $files = listFiles();
+if ($updateStatus) {
+	updateIndex($files);
+}
 $total = count($files);
 
 $ok = 0;
@@ -56,5 +60,5 @@ if ($updateStatus) {
 	}
 
 	updateReadmeStatus(implode("\n", $out));
-	updateDetailedStatus($badDetails);
+	updateBadIndex($badDetails);
 }
