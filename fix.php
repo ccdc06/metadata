@@ -45,13 +45,16 @@ foreach ($files as $yamlFn) {
 			unset($tag);
 		}
 	}
+	
+	// Empty ThumbnailName/ThumbnailIndex
+	if (!empty($args['thumbnails']) || !empty($args['all'])) {
+		fillEmptyThumbnail($meta);
+	}
 
 	// Order
 	if (!empty($args['order']) || !empty($args['all'])) {
 		reorderFields($meta);
 	}
-
-	#TODO fix empty ThumbnailIndex/ThumbnailName
 
 	$newYaml = yaml_emit($meta);
 	if ($newYaml !== $oldYaml) {

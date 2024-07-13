@@ -226,6 +226,20 @@ function generateCollectionName($meta) {
 	}
 }
 
+function fillEmptyThumbnail(&$meta) {
+	if (empty($meta['Files'])) {
+		return;
+	}
+
+	if (empty($meta['ThumbnailName'])) {
+		$meta['ThumbnailName'] = $meta['Files'][0];
+	}
+
+	if (!isset($meta['ThumbnailIndex'])) {
+		$meta['ThumbnailIndex'] = 0;
+	}
+}
+
 function reorderFields(&$meta) {
 	$order = array_flip([
 		'Title',
@@ -349,16 +363,19 @@ function validateMeta($meta) {
 		$errors[] = ["Files", null, "Empty list of files"];
 	} else {
 		if (is_array($meta['Files'])) {
-			if (!empty($meta['ThumbnailName']) && !in_array($meta['ThumbnailName'], $meta['Files'])) {
+			if (empty($meta['ThumbnailName'])) {
+				$errors[] = ["ThumbnailName", $meta['ThumbnailName'], "Empty thumbnail name"];
+			} elseif (!in_array($meta['ThumbnailName'], $meta['Files'])) {
 				$errors[] = ["ThumbnailName", $meta['ThumbnailName'], "Thumbnail name not found in Files"];
 			}
 
-			if (isset($meta['ThumbnailIndex']) && !isset($meta['Files'][$meta['ThumbnailIndex']])) {
+			if (!isset($meta['ThumbnailIndex'])) {
+				$errors[] = ["ThumbnailIndex", $meta['ThumbnailName'], "Empty thumbnail index"];
+			} elseif (!isset($meta['Files'][$meta['ThumbnailIndex']])) {
 				$errors[] = ["ThumbnailIndex", $meta['ThumbnailIndex'], "Thumbnail index not found in Files"];
 			}
 		}
 	}
-
 
 	$required = [
 		'Artist',
