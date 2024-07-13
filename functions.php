@@ -51,6 +51,26 @@ class Lists {
 	];
 }
 
+class Spec {
+	public string $Title; // string
+	public array $Artist; // []string
+	public array $Circle; // []string
+	public string $Description; // string
+	public array $Parody; // []string
+	public array $URL; // map[string]string
+	public array $Tags; // []string
+	public array $Publisher; // []string
+	public array $Magazine; // []string
+	public array $Event; // []string
+	public int $Pages; // int
+	public int $Released; // int
+	public array $Id; // map[string]IntOrString
+	public string $DownloadSource; // string
+	public int $ThumbnailIndex; // int
+	public string $ThumbnailName; // string
+	public array $Files; // []string
+}
+
 function fixSlashes($str) {
 	return str_replace(['\\', '/'], '/', $str);
 }
@@ -239,39 +259,54 @@ function validateMeta($meta) {
 		if ($err) {
 			$errors[] = [$key, $val, $err];
 		}
+	}
 
-		if (!empty($meta['Id']) && is_array($meta['Id'])) {
-			foreach ($meta['Id'] as $idKey => $idVal) {
-				if (!in_array($idKey, Lists::$downloadSources)) {
-					$errors[] = ["Id.{$idKey}", $idKey, "Unknown id source"];
-				}
+	if (!empty($meta['Id']) && is_array($meta['Id'])) {
+		foreach ($meta['Id'] as $idKey => $idVal) {
+			if (!in_array($idKey, Lists::$downloadSources)) {
+				$errors[] = ["Id.{$idKey}", $idKey, "Unknown id source"];
 			}
 		}
+	}
 
-		if (!empty($meta['DownloadSource']) && is_string($meta['DownloadSource'])) {
-			if (!in_array($meta['DownloadSource'], Lists::$downloadSources)) {
-				$errors[] = ["DownloadSource", $meta['DownloadSource'], "Unknown download source"];
+	if (!empty($meta['DownloadSource']) && is_string($meta['DownloadSource'])) {
+		if (!in_array($meta['DownloadSource'], Lists::$downloadSources)) {
+			$errors[] = ["DownloadSource", $meta['DownloadSource'], "Unknown download source"];
+		}
+	}
+
+	if (!empty($meta['URL']) && is_array($meta['URL'])) {
+		foreach ($meta['URL'] as $idKey => $idVal) {
+			if (!in_array($idKey, Lists::$urlSources)) {
+				$errors[] = ["URL.{$idKey}", $idKey, "Unknown URL source"];
 			}
 		}
+	}
 
-		if (!empty($meta['URL']) && is_array($meta['URL'])) {
-			foreach ($meta['URL'] as $idKey => $idVal) {
-				if (!in_array($idKey, Lists::$urlSources)) {
-					$errors[] = ["URL.{$idKey}", $idKey, "Unknown URL source"];
-				}
-			}
-		}
-
-		if (!empty($meta['Tags']) && is_array($meta['Tags'])) {
-			foreach ($meta['Tags'] as $tag) {
-				if (is_string($tag)) {
-					if (!validateLowercaseTag($tag)) {
-						$errors[] = ["Tags", $tag, "Lowercase tag"];
-					}
+	if (!empty($meta['Tags']) && is_array($meta['Tags'])) {
+		foreach ($meta['Tags'] as $tag) {
+			if (is_string($tag)) {
+				if (!validateLowercaseTag($tag)) {
+					$errors[] = ["Tags", $tag, "Lowercase tag"];
 				}
 			}
 		}
 	}
+
+	if (empty($meta['Files'])) {
+		$errors[] = ["Files", null, "Empty list of files"];
+	} else {
+		if (is_array($meta['Files'])) {
+			if (!empty($meta['ThumbnailName']) && !in_array($meta['ThumbnailName'], $meta['Files'])) {
+				$errors[] = ["ThumbnailName", $meta['ThumbnailName'], "Thumbnail name not found in Files"];
+			}
+
+			if (isset($meta['ThumbnailIndex']) && !isset($meta['Files'][$meta['ThumbnailIndex']])) {
+				$errors[] = ["ThumbnailIndex", $meta['ThumbnailIndex'], "Thumbnail index not found in Files"];
+			}
+		}
+	}
+
 
 	$required = [
 		'Artist',
