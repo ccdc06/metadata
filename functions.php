@@ -300,7 +300,7 @@ function validateMeta($meta) {
 				break;
 
 			case 'Id': // map[string]int
-				$err = validateMapStringInt($val);
+				$err = validateMapStringIntOrString($val);
 
 				break;
 
@@ -426,6 +426,18 @@ function validateMapStringInt($var) {
 
 		if (!is_int($val)) {
 			return "One or more values of the map aren't int";
+		}
+	}
+}
+
+function validateMapStringIntOrString($var) {
+	if (!is_array($var)) {
+		return "Not a map";
+	}
+
+	foreach ($var as $key => $val) {
+		if (!is_string($key) && !is_int($val)) {
+			return "One or more keys of the map aren't int or string";
 		}
 	}
 }

@@ -106,7 +106,7 @@ function routeWebIndex() {
 		$hide = [];
 	}
 
-	$files = listFiles('noAnchira');
+	$files = listFiles();
 	$limit = intval(isset($_GET['limit']) ? $_GET['limit'] : 10);
 	if ($limit <= 0) {
 		$limit = 10;
@@ -262,18 +262,27 @@ function routeWebIndex() {
 					if ('length' in data) {
 						for (const result of data) {
 							if ('locations' in result) {
-								var search = result.locations.filter(v => v.includes('fakku.net'));
-
+								// #TODO also scan male/female tags
 								if (result.otherTags) {
-									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'shotacon'));
+									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
 									if (evilTags.length > 0) {
 										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
 									}
 								}
+
+								var search = result.locations.filter(v => v.includes('fakku.net'));
 								if ('0' in search) {
 									window.open(search[0], 'fakku').focus();
 									$url.val(search[0]).focus().select();
 									$select.val('Fakku');
+									break;
+								}
+
+								search = result.locations.filter(v => v.includes('irodoricomics.com'));
+								if ('0' in search) {
+									window.open(search[0], 'irodori').focus();
+									$url.val(search[0]).focus().select();
+									$select.val('Irodori');
 									break;
 								}
 							}

@@ -51,6 +51,8 @@ foreach ($files as $yamlFn) {
 		reorderFields($meta);
 	}
 
+	#TODO fix empty ThumbnailIndex/ThumbnailName
+
 	$newYaml = yaml_emit($meta);
 	if ($newYaml !== $oldYaml) {
 		if ($update) {

@@ -11,10 +11,10 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # Status
 |Status|Count|
 |-|-|
-|OK|14060|
-|Bad|6|
+|OK|14108|
+|Bad|7|
 |[Empty URL field](STATUS.md#empty-url-field)|3|
-|[Empty Artist field](STATUS.md#empty-artist-field)|3|
+|[Empty Artist field](STATUS.md#empty-artist-field)|4|
 <!-- [/Status] -->
 
 ![#ccdc06](https://placehold.co/15x15/ccdc06/ccdc06.png)
