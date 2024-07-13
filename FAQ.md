@@ -16,6 +16,8 @@ For example, if the most recent id of the download source is `12665`, the curren
 
 Sometimes the source site or even I add or remove galleries from a collection. Removals often happen because a gallery has been replaced with a newer version. Removals and additions may also occur when a gallery is placed in the wrong collection.
 
+Whenever a new revision of a collection is released, I will tag it with a new version number and hide/delete the older version from nyaa.
+
 # I have a question, suggestion or complaint
 
 The best place to find me is on [HenTalk](https://discord.gg/hentalkbian-toku-hvnc-896056250402504715).
