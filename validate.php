@@ -40,6 +40,7 @@ foreach ($files as $yamlFn) {
 $bad = $total - $ok;
 
 echo "\n#############################\n\n";
+echo "Total	{$total}\n";
 echo "OK	{$ok}\n";
 echo "Bad	{$bad}\n";
 
@@ -52,6 +53,7 @@ if ($updateStatus) {
 	$out[] = "# Status";
 	$out[] = "|Status|Count|";
 	$out[] = "|-|-|";
+	$out[] = "|Total|{$total}|";
 	$out[] = "|OK|{$ok}|";
 	$out[] = "|Bad|{$bad}|";
 	foreach ($badDetails as $key => $val) {
