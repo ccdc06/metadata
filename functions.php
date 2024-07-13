@@ -24,6 +24,7 @@ function init() {
 class Lists {
 	static $downloadSources = [
 		'Anchira',
+		'Koharu',
 		'HentaiNexus',
 	];
 
@@ -69,6 +70,51 @@ class Spec {
 	public int $ThumbnailIndex; // int
 	public string $ThumbnailName; // string
 	public array $Files; // []string
+	private string $fileName;
+
+	public static function fromFile(string $fn) : Spec {
+		if (!file_exists($fn)) {
+			throw new \Exception("Spec {$fn} not found");
+		}
+
+		$data = file_get_contents($fn);
+
+		$ret = yamlDecodeIntoClass($data, Spec::class);
+		$ret->fileName = $fn;
+		return $ret;
+	}
+
+	public function getBaseName() : string {
+		if (empty($this->fileName)) {
+			throw new \Exception("This file wasn't generated from a file");
+		}
+
+		return relativeDir($this->fileName);
+	}
+
+	public function getBaseNameCbz() : string {
+		$bn = $this->getBaseName();
+
+		$pi = pathinfo($bn);
+		if ($pi['extension'] !== 'yaml') {
+			throw new \Exception("Unknown file {$bn}");
+		}
+		return mb_substr($bn, 0, -5) . '.cbz';
+	}
+}
+
+function yamlDecodeIntoClass($data, $class) {
+	$ret = new $class;
+
+	$yaml = yaml_parse($data);
+
+	foreach ($yaml as $key => $val) {
+		if (property_exists($ret, $key)) {
+			$ret->{$key} = $val;
+		}
+	}
+
+	return $ret;
 }
 
 function fixSlashes($str) {
@@ -95,12 +141,18 @@ function listCollections($opts = []) {
 	return $ret;
 }
 
-function listFiles($opts = []) {
+function listFiles(...$opts) {
 	$collections = listCollections();
 
-	if (in_array('noanchira', $opts)) {
+	if (in_array('noAnchira', $opts)) {
 		$collections = array_values(array_filter($collections, function ($val) {
 			return !str_starts_with($val, 'anchira.to_');
+		}));
+	}
+
+	if (in_array('schaleOnly', $opts)) {
+		$collections = array_values(array_filter($collections, function ($val) {
+			return str_starts_with($val, 'anchira.to_') || str_starts_with($val, 'koharu.to_');
 		}));
 	}
 
@@ -428,7 +480,7 @@ function updateIndex($files) {
 			throw new \Exception("Unknown file {$relativeYamlFn}");
 		}
 
-		$cbzName = substr($relativeYamlFn, 0, -5) . '.cbz';
+		$cbzName = mb_substr($relativeYamlFn, 0, -5) . '.cbz';
 
 		$out->fputcsv([$relativeYamlFn, $cbzName]);
 	}

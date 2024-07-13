@@ -106,7 +106,7 @@ function routeWebIndex() {
 		$hide = [];
 	}
 
-	$files = listFiles(['noanchira']);
+	$files = listFiles('noAnchira');
 	$limit = intval(isset($_GET['limit']) ? $_GET['limit'] : 10);
 	if ($limit <= 0) {
 		$limit = 10;
