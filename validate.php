@@ -1,6 +1,7 @@
 <?php
 namespace Metadata;
 require __DIR__ . '/functions.php';
+init();
 
 $opt = getopt('u', ['update']);
 $updateStatus = isset($opt['update']) || isset($opt['u']);

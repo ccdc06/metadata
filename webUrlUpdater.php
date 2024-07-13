@@ -1,6 +1,7 @@
 <?php
 namespace Metadata;
 require __DIR__ . '/functions.php';
+init();
 
 switch (php_sapi_name()) {
 	case 'cli': return routeCli();

@@ -1,21 +1,24 @@
 <?php
 namespace Metadata;
-set_time_limit(0);
-ini_set('max_execution_time', 0);
-ini_set('yaml.output_width', -1);
 
-if (version_compare(PHP_VERSION, '8.3.0') < 0) {
-	echo "Use php >= 8.3";
-	exit(__LINE__);
-}
+function init() {
+	set_time_limit(0);
+	ini_set('max_execution_time', 0);
+	ini_set('yaml.output_width', -1);
 
-if (!extension_loaded('yaml')) {
-	echo "PHP extension 'yaml' is required";
-	exit(__LINE__);
-}
+	if (version_compare(PHP_VERSION, '8.3.0') < 0) {
+		echo "Use php >= 8.3";
+		exit(__LINE__);
+	}
 
-if (!is_dir(__DIR__ . '/temp')) {
-	mkdir(__DIR__ . '/temp', 0777, true);
+	if (!extension_loaded('yaml')) {
+		echo "PHP extension 'yaml' is required";
+		exit(__LINE__);
+	}
+
+	if (!is_dir(__DIR__ . '/temp')) {
+		mkdir(__DIR__ . '/temp', 0777, true);
+	}
 }
 
 class Lists {
@@ -60,9 +63,20 @@ function relativeDir($path) {
 	return ltrim(str_replace(baseDir(), '', $path), '/');
 }
 
+function listCollections($opts = []) {
+	$file = new \SplFileObject(__DIR__ . '/indexes/collections.csv');
+	$file->setFlags(\SplFileObject::READ_CSV);
+	$ret = [];
+	foreach ($file as $val) {
+		if (!empty($val[0])) {
+			$ret[] = $val[0];
+		}
+	}
+	return $ret;
+}
+
 function listFiles($opts = []) {
-	$files = [];
-	$collections = file(__DIR__ . '/indexes/collections.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	$collections = listCollections();
 
 	if (in_array('noanchira', $opts)) {
 		$collections = array_values(array_filter($collections, function ($val) {
@@ -70,6 +84,7 @@ function listFiles($opts = []) {
 		}));
 	}
 
+	$files = [];
 	foreach ($collections as $collection) {
 		$files = array_merge($files, glob(baseDir() . "/{$collection}/*.yaml"));
 	}
