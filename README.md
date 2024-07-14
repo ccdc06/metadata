@@ -11,8 +11,8 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # Status
 |Status|Count|
 |-|-|
-|Total|14115|
-|OK|14109|
+|Total|14129|
+|OK|14123|
 |Bad|6|
 |[Empty URL field](STATUS.md#empty-url-field)|3|
 |[Empty Artist field](STATUS.md#empty-artist-field)|3|
