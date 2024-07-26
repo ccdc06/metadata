@@ -20,6 +20,9 @@ switch (php_sapi_name()) {
 }
 
 function routeCli() {
+	echo "Building cache\n";
+	buildEmptyUrlCache();
+
 	putenv('PHP_CLI_SERVER_WORKERS=4');
 	passthru(escapeshellarg(PHP_BINARY) . ' -S 127.0.0.1:3602 ' . __FILE__);
 }
@@ -69,7 +72,7 @@ function routeWebUpdate() {
 		exit("Empty source");
 	}
 
-	if (!in_array($source, Lists::$urlSources)) {
+	if (!in_array($source, ValNorm::$urlSources)) {
 		http_response_code(400);
 		exit("Unknown source " . h($source));
 	}
@@ -85,15 +88,11 @@ function routeWebUpdate() {
 		exit("File {$yamlFn} not found");
 	}
 
-	$meta = yaml_parse(file_get_contents($yamlFn));
-	if (empty($meta)) {
-		exit("Bad YAML file");
-	}
+	$spec = Spec::fromFile($yamlFn);
 
-	$meta['URL'][$source] = $url;
+	$spec->URL[$source] = $url;
 
-	reorderFields($meta);
-	file_put_contents($yamlFn, yaml_emit($meta));
+	file_put_contents($yamlFn, $spec->yaml());
 
 	echo '<script type="text/javascript">location.replace("index.php")</script>';
 }
@@ -106,35 +105,7 @@ function routeWebIndex() {
 		$hide = [];
 	}
 
-	$files = listFiles();
-	$limit = intval(isset($_GET['limit']) ? $_GET['limit'] : 10);
-	if ($limit <= 0) {
-		$limit = 10;
-	}
-
-	$missing = [];
-	foreach ($files as $yamlFn) {
-		$rFile = relativeDir($yamlFn);
-		if (!empty($hide[$rFile])) {
-			continue;
-		}
-
-		$yaml = file_get_contents($yamlFn);
-		$meta = yaml_parse($yaml);
-		if (empty($meta)) {
-			continue;
-		}
-
-		if (!empty($meta['URL'])) {
-			continue;
-		}
-
-		$missing[$rFile] = $meta;
-
-		if (count($missing) >= $limit) {
-			break;
-		}
-	}
+	$missing = getEmptyUrlsCache();
 	?>
 	<!DOCTYPE html>
 	<html lang="en">
@@ -149,8 +120,15 @@ function routeWebIndex() {
 
 	<body>
 		<div class="container">
+			<?php $count = 0; ?>
+			<div class="alert alert-info mt-2">
+				Count: <?= count($missing) ?>
+			</div>
 			<?php foreach ($missing as $key => $val): ?>
 				<?php
+				if ($count > 20) {
+					break;
+				}
 				$query = [];
 
 				$pages = intval($val['Pages'] ?? 0);
@@ -178,7 +156,7 @@ function routeWebIndex() {
 				]);
 
 				$googleUrl = "https://www.google.com/search?" . http_build_query([
-					'q' => $query,
+					'q' => "{$artist} \"{$title}\"",
 				]);
 
 				$fakkuUrl = "https://www.fakku.net/search/" . rawurlencode($query);
@@ -209,6 +187,7 @@ function routeWebIndex() {
 							<?php endif; ?>
 						</h4>
 					</div>
+					<div style="display: none" class="card-header title_compare"></div>
 					<div class="card-body">
 						<p class="px-2"><code><?= h($key) ?></code></p>
 						<form method="post" action="update.php">
@@ -217,7 +196,7 @@ function routeWebIndex() {
 								<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
 								<select class="form-select" name="source">
 									<option value="" selected>(Select)</option>
-									<?php foreach (Lists::$urlSources as $source): ?>
+									<?php foreach (ValNorm::$urlSources as $source): ?>
 										<option value="<?= h($source) ?>"><?= h($source) ?></option>
 									<?php endforeach; ?>
 								</select>
@@ -238,6 +217,7 @@ function routeWebIndex() {
 						<a target="2dmarket" rel="noopener,noreferrer" href="<?= h($_2dmarketUrl) ?>" class="btn btn-primary">2D Market</a>
 					</div>
 				</div>
+				<?php $count++; ?>
 			<?php endforeach; ?>
 		</div>
 		<script type="text/javascript">
@@ -249,6 +229,7 @@ function routeWebIndex() {
 			var $url = $current.closest('div.card').find('input[name="url"]');
 			var $select = $current.closest('div.card').find('select[name="source"]');
 			var $comment = $current.closest('div.card').find('span.comment');
+			var $titleCompare = $current.closest('div.card').find('div.title_compare');
 			var query = $current.data('query');
 			$current.attr('disabled', true);
 
@@ -272,7 +253,8 @@ function routeWebIndex() {
 
 								var search = result.locations.filter(v => v.includes('fakku.net'));
 								if ('0' in search) {
-									window.open(search[0], 'fakku').focus();
+									$titleCompare.show().html($('<h4>').html(result.title));
+									// window.open(search[0], 'fakku').focus();
 									$url.val(search[0]).focus().select();
 									$select.val('Fakku');
 									break;
@@ -280,9 +262,19 @@ function routeWebIndex() {
 
 								search = result.locations.filter(v => v.includes('irodoricomics.com'));
 								if ('0' in search) {
-									window.open(search[0], 'irodori').focus();
+									$titleCompare.show().html($('<h4>').html(result.title));
+									// window.open(search[0], 'irodori').focus();
 									$url.val(search[0]).focus().select();
 									$select.val('Irodori');
+									break;
+								}
+
+								search = result.locations.filter(v => v.includes('doujin.io'));
+								if ('0' in search) {
+									$titleCompare.show().html($('<h4>').html(result.title));
+									// window.open(search[0], 'irodori').focus();
+									$url.val(search[0]).focus().select();
+									$select.val('J18');
 									break;
 								}
 							}
@@ -314,6 +306,10 @@ function routeWebIndex() {
 
 			if ($current.val().indexOf('irodoricomics.com') !== -1) {
 				$select.val('Irodori');
+			}
+			
+			if ($current.val().indexOf('doujin.io') !== -1) {
+				$select.val('J18');
 			}
 		})
 		</script>

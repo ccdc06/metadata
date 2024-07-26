@@ -9,18 +9,8 @@ $update = isset($opt['u']) || isset($opt['update']);
 $files = listFiles();
 
 foreach ($files as $yamlFn) {
-	$oldYaml = file_get_contents($yamlFn);
-	$meta = yaml_parse($oldYaml);
-
-	$current = basename(dirname($yamlFn));
-	$expected = generateCollectionName($meta);
-
-	if ($current !== $expected) {
-		if ($update) {
-			throw new \Exception("Not implemented");
-		}
-		echo $yamlFn, PHP_EOL;
-	}
+	$spec = Spec::fromFile($yamlFn);
+	$spec->checkCollection();
 }
 
 if (!$update) {

@@ -6,57 +6,21 @@ init();
 $opt = getopt('u', ['update']);
 $update = isset($opt['u']) || isset($opt['update']);
 
-$args = [];
-foreach ($argv as $key => $val) {
-	if ($key === 0) {
-		continue;
-	}
-
-	if (substr($val, 0, 1) === '-') {
-		continue;
-	}
-
-	$args[$val] = true;
-}
-
-if (empty($args)) {
-	$args['all'] = true;
-}
-
 $files = listFiles();
 
+$count = count($files);
+$i = 0;
 foreach ($files as $yamlFn) {
+	$i++;
+	if ($i % 1000 === 0) {
+		echo "{$i}/{$count}\n";
+	}
 	$oldYaml = file_get_contents($yamlFn);
-	$meta = yaml_parse($oldYaml);
+	$spec = Spec::fromFile($yamlFn);
 
-	// Empty values
-	if (!empty($args['empty']) || !empty($args['all'])) {
-		fixEmptyValues($meta);
-	}
+	$spec->fix();
 
-	// Lowercase Tags
-	if (!empty($args['lctags']) || !empty($args['all'])) {
-		if (!empty($meta['Tags']) && is_array($meta['Tags'])) {
-			foreach ($meta['Tags'] as &$tag) {
-				if (is_string($tag)) {
-					$tag = fixLowercaseTag($tag);
-				}
-			}
-			unset($tag);
-		}
-	}
-	
-	// Empty ThumbnailName/ThumbnailIndex
-	if (!empty($args['thumbnails']) || !empty($args['all'])) {
-		fillEmptyThumbnail($meta);
-	}
-
-	// Order
-	if (!empty($args['order']) || !empty($args['all'])) {
-		reorderFields($meta);
-	}
-
-	$newYaml = yaml_emit($meta);
+	$newYaml = $spec->yaml();
 	if ($newYaml !== $oldYaml) {
 		if ($update) {
 			file_put_contents($yamlFn, $newYaml);

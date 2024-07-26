@@ -6,62 +6,63 @@ init();
 $opt = getopt('u', ['update']);
 $updateStatus = isset($opt['update']) || isset($opt['u']);
 
+if ($updateStatus) {
+	$listIndex = new \SplFileObject( __DIR__ . '/indexes/list.csv', 'w');
+	$listIndex->fputcsv(['file', 'gallery']);
+
+	$byErrorIndex = new \SplFileObject( __DIR__ . '/indexes/errors.csv', 'w');
+	$byErrorIndex->fputcsv(['error', 'file']);
+
+	$byDownloadSourceIndex = new \SplFileObject( __DIR__ . '/indexes/downloadSource.csv', 'w');
+	$byDownloadSourceIndex->fputcsv(['source', 'id', 'file']);
+
+	$byUrlSourceIndex = new \SplFileObject( __DIR__ . '/indexes/urlSource.csv', 'w');
+	$byUrlSourceIndex->fputcsv(['source', 'url', 'file']);
+}
+
 $files = listFiles();
-if ($updateStatus) {
-	updateIndex($files);
-}
-$total = count($files);
+$status = new StatusReport();
+$status->total = count($files);
 
-$ok = 0;
-$badDetails = [];
 $first = true;
-
 foreach ($files as $yamlFn) {
-	$relativeYamlFn = relativeDir($yamlFn);
-	$yaml = file_get_contents($yamlFn);
-	$meta = yaml_parse($yaml);
+	$spec = Spec::fromFile($yamlFn);
+	$baseName = $spec->getBaseName();
 
-	$errors = validateMeta($meta);
-	if (!empty($errors)) {
-		foreach ($errors as $val) {
-			list($key, $_, $err) = $val;
-			if ($first) {
-				echo "Key\tError\tFilename\n";
-				$first = false;
+	if ($updateStatus) {
+		$baseNameCbz = $spec->getBaseNameCbz();
+		$downloadSource = $spec->DownloadSource;
+		$downloadSourceId = $spec->DownloadSourceId();
+		$listIndex->fputcsv([$baseName, $baseNameCbz]);
+		$byDownloadSourceIndex->fputcsv([$downloadSource, $downloadSourceId, $baseName]);
+
+		if (!empty($spec->URL)) {
+			foreach ($spec->URL as $source => $url) {
+				$byUrlSourceIndex->fputcsv([$source, $url, $baseName]);
 			}
-			echo "{$key}\t{$err}\t{$relativeYamlFn}\n";
-			$badDetails[$val[2]][$relativeYamlFn] = $relativeYamlFn;
 		}
-	} else {
-		$ok++;
 	}
-}
 
-$bad = $total - $ok;
+	$errors = $spec->validate();
 
-echo "\n#############################\n\n";
-echo "Total	{$total}\n";
-echo "OK	{$ok}\n";
-echo "Bad	{$bad}\n";
-
-foreach ($badDetails as $key => $val) {
-	$count = count($val);
-	echo "{$key}	{$count}\n";
+	$status->push($spec);
+	if ($errors->empty()) {
+		$status->pushOk($spec);
+	} else {
+		$status->pushError($spec, $errors);
+		if ($first) {
+			echo "Key\tError\tFilename\n";
+			$first = false;
+		}
+		echo $errors->tsv($baseName);
+		if ($updateStatus) {
+			foreach ($errors->errors as $error) {
+				$byErrorIndex->fputcsv([$error->error, $baseName]);
+			}
+		}
+	}
 }
 
 if ($updateStatus) {
-	$out[] = "# Status";
-	$out[] = "|Status|Count|";
-	$out[] = "|-|-|";
-	$out[] = "|Total|{$total}|";
-	$out[] = "|OK|{$ok}|";
-	$out[] = "|Bad|{$bad}|";
-	foreach ($badDetails as $key => $val) {
-		$anchorKey = anchorKey($key);
-		$count = count($val);
-		$out[] = "|[{$key}](STATUS.md#{$anchorKey})|{$count}|";
-	}
-
-	updateReadmeStatus(implode("\n", $out));
-	updateBadIndex($badDetails);
+	$status->updateStatusFile();
 }
