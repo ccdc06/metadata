@@ -22,4 +22,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Hashes:
+  LANraragi: a539f6560133f680563c4ef654db8d63c7228b2a
+  SHA256: 7ef710ddf598c474bb8155c2c844d9b0d6b81c82bcbc704cb53abbc6fd29462d
 ...

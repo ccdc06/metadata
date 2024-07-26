@@ -9,8 +9,8 @@ function init() {
 	ini_set('max_execution_time', 0);
 	ini_set('yaml.output_width', -1);
 
-	if (version_compare(PHP_VERSION, '8.3.0') < 0) {
-		echo "Use php >= 8.3";
+	if (version_compare(PHP_VERSION, '8.2.0') < 0) {
+		echo "Use php >= 8.2";
 		exit(__LINE__);
 	}
 
@@ -158,6 +158,7 @@ class Spec {
 	public int $ThumbnailIndex; // int
 	public string $ThumbnailName; // string
 	public array $Files; // []string
+	public array $Hashes; // []string
 	private string $fileName;
 
 	public static function fromFile(string $fn) : Spec {
@@ -320,6 +321,7 @@ class Spec {
 		$this->fixTags();
 		$this->fixArtist();
 		$this->fixCircle();
+		$this->fixHashes();
 		$this->fixEmptyThumbnail();
 		$this->fixId();
 	}
@@ -365,6 +367,14 @@ class Spec {
 		}
 
 		$this->Circle = ValNorm::normalizeCircles($this->Circle);
+	}
+
+	public function fixHashes() {
+		if (empty($this->Hashes)) {
+			return;
+		}
+
+		ksort($this->Hashes);
 	}
 
 	public function fixTags() {
@@ -455,6 +465,7 @@ class Spec {
 
 				case 'URL': // map[string]string
 				case 'Id': // map[string]int
+				case 'Hashes': // []string
 					$err = validateMapStringString($val);
 					break;
 
@@ -655,6 +666,20 @@ function listFiles(...$opts) {
 	natcasesort($files);
 
 	return $files;
+}
+
+function streamSpecs() {
+	$collections = listCollections();
+	natcasesort($collections);
+
+	foreach ($collections as $collection) {
+		$files = glob(baseDir() . "/{$collection}/*.yaml");
+		natcasesort($files);
+
+		foreach ($files as $file) {
+			yield Spec::fromFile($file);
+		}
+	}
 }
 
 function buildEmptyUrlCache() {
