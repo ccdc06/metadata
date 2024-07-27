@@ -55,12 +55,4 @@ Since nyaa doesn't allow new user registrations, I'm using a borrowed acocunt to
 
 # I have a question, suggestion or complaint
 
-The best place to find me is on [this Discord server](https://discord.gg/hentalkbian-toku-hvnc-896056250402504715).
-
-You can also [mail me](mailto:ccdc06@proton.me) or send a private message to ccdc06 on Discord.
-
-# Nayumi/ndbiaw/HenTalk is a scammer! Why are you advertising his Discord server?
-
-I'm too lazy to set my own server and deal with user management, bots, annoying users, etc, so I'm borrowing his server but I have absolutely no commitment to it.
-
-Adults should never share personal information or send money to strangers on the internet. That server is no exception.
+I'm most actively discussing things on [this Discord server](https://discord.gg/hentalkbian-toku-hvnc-896056250402504715). You can also send a private message to ccdc06 on Discord or [mail me](mailto:ccdc06@proton.me).
