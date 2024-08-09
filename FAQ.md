@@ -34,7 +34,7 @@ Collections are split by their numeric id numbers. The most recent release from 
 
 For example, if the most recent id of the download source is `12665`, the current ongoing release will be `example.com_12001-13000`, and the completion percentage will be 66% (12**66**5).
 
-# Can you add <whatever> to your release?
+# Can you add \<whatever\> to your release?
 
 I do not manage individual galleries. If you want to see something in my releases, upload it directly to Koharu or HentaiNexus. When it gets published to at least one of them, it will be included in the next release.
 
