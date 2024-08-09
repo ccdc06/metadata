@@ -257,28 +257,54 @@ function routeWebIndex() {
 									// window.open(search[0], 'fakku').focus();
 									$url.val(search[0]).focus().select();
 									$select.val('Fakku');
-									break;
+									return;
+								}
+							}
+						}
+
+						for (const result of data) {
+							if ('locations' in result) {
+								// #TODO also scan male/female tags
+								if (result.otherTags) {
+									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
+									if (evilTags.length > 0) {
+										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
+									}
 								}
 
-								search = result.locations.filter(v => v.includes('irodoricomics.com'));
+								var search = result.locations.filter(v => v.includes('irodoricomics.com'));
 								if ('0' in search) {
 									$titleCompare.show().html($('<h4>').html(result.title));
 									// window.open(search[0], 'irodori').focus();
 									$url.val(search[0]).focus().select();
 									$select.val('Irodori');
-									break;
+									return;
+								}
+							}
+						}
+
+						for (const result of data) {
+							if ('locations' in result) {
+								// #TODO also scan male/female tags
+								if (result.otherTags) {
+									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
+									if (evilTags.length > 0) {
+										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
+									}
 								}
 
-								search = result.locations.filter(v => v.includes('doujin.io'));
+								var search = result.locations.filter(v => v.includes('doujin.io'));
 								if ('0' in search) {
 									$titleCompare.show().html($('<h4>').html(result.title));
 									// window.open(search[0], 'irodori').focus();
 									$url.val(search[0]).focus().select();
 									$select.val('J18');
-									break;
+									return;
 								}
 							}
 						}
+
+
 					}
 				},
 				error: function () {
@@ -307,7 +333,7 @@ function routeWebIndex() {
 			if ($current.val().indexOf('irodoricomics.com') !== -1) {
 				$select.val('Irodori');
 			}
-			
+
 			if ($current.val().indexOf('doujin.io') !== -1) {
 				$select.val('J18');
 			}

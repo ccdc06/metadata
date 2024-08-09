@@ -613,6 +613,29 @@ function parseMid(string $mid) : array {
 	return $spl;
 }
 
+function fullParseMid(string $mid) : array {
+	list($source, $id) = parseMid($mid);
+
+	if ($source === 'HentaiNexus') {
+		$exp = explode('/', $mid);
+		if (count($exp) !== 3) {
+			throw new \Exception("bad Nexus count {$mid}");
+		}
+		$nid = intval($exp[2]);
+	} elseif ($source === 'Koharu') {
+		$exp = explode('/', $mid);
+		if (count($exp) !== 4) {
+			throw new \Exception("bad Koharu count {$mid}");
+		}
+		$nid = intval($exp[2]);
+	}
+
+	if (empty($nid)) {
+		throw new \Exception("bad nid {$mid}");
+	}
+	return [$source, $id, $nid];
+}
+
 function listCollections() {
 	$file = new \SplFileObject(__DIR__ . '/indexes/collections.csv');
 	$file->setFlags(\SplFileObject::READ_CSV);
@@ -625,38 +648,8 @@ function listCollections() {
 	return $ret;
 }
 
-function listByDownloadSource(...$opts) {
-	$file = new \SplFileObject(__DIR__ . '/indexes/downloadSource.csv');
-	$file->setFlags(\SplFileObject::READ_CSV);
-	$ret = [];
-	foreach ($file as $val) {
-		if (count($val) === 3) {
-
-			if (in_array('numericIds', $opts)) {
-				if ($val[0] === 'Koharu') {
-					$spl = explode('/', $val[1], 2);
-					assert(count($spl) === 2);
-					$val[1] = intval($spl[0]);
-				} else {
-					$val[1] = intval($val[1]);
-				}
-				assert(!empty($val[1]));
-			}
-
-			$ret[] = array_combine(['source', 'id', 'file'], $val);
-		}
-	}
-	return $ret;
-}
-
-function listFiles(...$opts) {
+function listFiles() {
 	$collections = listCollections();
-
-	if (in_array('schaleOnly', $opts)) {
-		$collections = array_values(array_filter($collections, function ($val) {
-			return str_starts_with($val, 'anchira.to_') || str_starts_with($val, 'koharu.to_');
-		}));
-	}
 
 	$files = [];
 	foreach ($collections as $collection) {
@@ -687,8 +680,15 @@ function buildEmptyUrlCache() {
 
 	$files = listFiles();
 
+	$i = 0;
+	$count = count($files);
+
 	$missing = [];
 	foreach ($files as $yamlFn) {
+		$i++;
+		if ($i % 1000 === 0) {
+			echo "{$i}/{$count}\n";
+		}
 		$rFile = relativeDir($yamlFn);
 
 		$yaml = file_get_contents($yamlFn);
