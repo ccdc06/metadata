@@ -1,11 +1,14 @@
+# Next release when?
+
+[TBA](https://tenor.com/view/anime-whatever-kawaii-dont-worry-gif-12242087)
+
 # What is your goal?
 
 - Create a set of torrent files with all galleries uploaded to Koharu and HentaiNexus
 - Exclude duplicates between these sources (giving priority to Koharu versions over HentaiNexus versions)
 - Split them into directories (collections) with up to 1000 files
-- Update these torrents every 2 weeks (uploads usually happen on Fridays)
 
-# Do I need to download everything again every two weeks to keep up with your release format?
+# Do I need to download everything again to keep up with your release format?
 
 If you did not change any folder names or edit the cbz files, you should be able to remove an older release from your torrent client (make sure you do it without deleting the existing files) and download a new version over it.
 
@@ -55,4 +58,4 @@ Since nyaa doesn't allow new user registrations, I'm using a borrowed acocunt to
 
 # I have a question, suggestion or complaint
 
-I'm most actively discussing things on [this Discord server](https://discord.gg/hentalkbian-toku-hvnc-896056250402504715). You can also send a private message to ccdc06 on Discord or [mail me](mailto:ccdc06@proton.me).
+Send a private message to ccdc06 on Discord or [mail me](mailto:ccdc06@proton.me).
