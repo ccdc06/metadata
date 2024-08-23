@@ -8,20 +8,20 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # Status
 |Status|Count|
 |-|-|
-|[Total](indexes/list.csv)|14423|
+|[Total](indexes/list.csv)|14438|
 |OK|14276|
-|[Errors](indexes/errors.csv)|147|
+|[Errors](indexes/errors.csv)|162|
 
 # [Errors](indexes/errors.csv)
 |Error|Count|
 |-|-|
-|Empty URL field|144|
+|Empty URL field|159|
 |Empty Artist field|4|
 
 # [Download sources](indexes/downloadSource.csv)
 |Source|Count|
 |-|-|
-|Koharu|14244|
+|Koharu|14259|
 |HentaiNexus|179|
 
 # [Download URLs](indexes/urlSource.csv)
