@@ -324,6 +324,7 @@ class Spec {
 		$this->fixHashes();
 		$this->fixEmptyThumbnail();
 		$this->fixId();
+		$this->fixUrl();
 	}
 
 	public function validate() {
@@ -426,6 +427,20 @@ class Spec {
 				}
 
 				throw new \Exception("Not implemented");
+			}
+		}
+	}
+
+	public function fixUrl() {
+		if (empty($this->URL)) {
+			return;
+		}
+
+		foreach ($this->URL as $source => $url) {
+			if ($source === 'Fakku') {
+				if (str_starts_with($url, 'https://fakku.net/')) {
+					$this->URL[$source] = str_replace('https://fakku.net/', 'https://www.fakku.net/', $url);
+				}
 			}
 		}
 	}
