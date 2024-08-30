@@ -243,7 +243,6 @@ function routeWebIndex() {
 					if ('length' in data) {
 						for (const result of data) {
 							if ('locations' in result) {
-								// #TODO also scan male/female tags
 								if (result.otherTags) {
 									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
 									if (evilTags.length > 0) {
@@ -259,18 +258,6 @@ function routeWebIndex() {
 									$select.val('Fakku');
 									return;
 								}
-							}
-						}
-
-						for (const result of data) {
-							if ('locations' in result) {
-								// #TODO also scan male/female tags
-								if (result.otherTags) {
-									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
-									if (evilTags.length > 0) {
-										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
-									}
-								}
 
 								var search = result.locations.filter(v => v.includes('irodoricomics.com'));
 								if ('0' in search) {
@@ -279,18 +266,6 @@ function routeWebIndex() {
 									$url.val(search[0]).focus().select();
 									$select.val('Irodori');
 									return;
-								}
-							}
-						}
-
-						for (const result of data) {
-							if ('locations' in result) {
-								// #TODO also scan male/female tags
-								if (result.otherTags) {
-									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
-									if (evilTags.length > 0) {
-										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
-									}
 								}
 
 								var search = result.locations.filter(v => v.includes('doujin.io'));
@@ -303,8 +278,6 @@ function routeWebIndex() {
 								}
 							}
 						}
-
-
 					}
 				},
 				error: function () {
