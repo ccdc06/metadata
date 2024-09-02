@@ -18,6 +18,9 @@ if ($updateStatus) {
 
 	$byUrlSourceIndex = new \SplFileObject( __DIR__ . '/indexes/urlSource.csv', 'w');
 	$byUrlSourceIndex->fputcsv(['source', 'url', 'file']);
+
+	$byTitleIndex = new \SplFileObject( __DIR__ . '/indexes/title.csv', 'w');
+	$byTitleIndex->fputcsv(['title', 'file']);
 }
 
 $files = listFiles();
@@ -28,6 +31,7 @@ $first = true;
 foreach ($files as $yamlFn) {
 	$spec = Spec::fromFile($yamlFn);
 	$baseName = $spec->getBaseName();
+	$title = $spec->Title;
 
 	if ($updateStatus) {
 		$baseNameCbz = $spec->getBaseNameCbz();
@@ -41,6 +45,7 @@ foreach ($files as $yamlFn) {
 				$byUrlSourceIndex->fputcsv([$source, $url, $baseName]);
 			}
 		}
+		$byTitleIndex->fputcsv([$title, $baseName]);
 	}
 
 	$errors = $spec->validate();
