@@ -1,10 +1,10 @@
 <?php
 return [
+	"bbm" => "BBM",
+	"bbw" => "BBW",
 	"bdsm" => "BDSM",
 	"bl" => "BL",
 	"bss" => "BSS",
-	"bbm" => "BBM",
-	"bbw" => "BBW",
 	"cg set" => "CG Set",
 	"fffm foursome" => "FFFM Foursome",
 	"ffm threesome" => "FFM Threesome",
@@ -15,11 +15,11 @@ return [
 	"valentine-sale" => "Valentine-sale",
 	"x-ray" => "X-ray",
 
-	"loli" => "Lolicon",
-	"shota" => "Shotacon",
-	"schoolgirl outfit" => "Schoolgirl Uniform",
-	"no sex" => "No Penetration",
-	"public hair" => "Pubic Hair",
 	"first time" => "Defloration",
+	"loli" => "Lolicon",
+	"no sex" => "No Penetration",
 	"ntr" => "Netorare",
+	"public hair" => "Pubic Hair",
+	"schoolgirl outfit" => "Schoolgirl Uniform",
+	"shota" => "Shotacon",
 ];
