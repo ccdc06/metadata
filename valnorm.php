@@ -34,6 +34,7 @@ class ValNorm {
 		foreach ($tags as &$tag) {
 			$tag = self::normalizeTag($tag);
 		}
+		$tags = array_unique($tags);
 		natcasesort($tags);
 		return array_values($tags);
 	}

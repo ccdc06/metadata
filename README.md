@@ -9,13 +9,13 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 |Status|Count|
 |-|-|
 |[Total](indexes/list.csv)|14570|
-|OK|14532|
-|[Errors](indexes/errors.csv)|38|
+|OK|14552|
+|[Errors](indexes/errors.csv)|18|
 
 # [Errors](indexes/errors.csv)
 |Error|Count|
 |-|-|
-|Empty URL field|34|
+|Empty URL field|14|
 |Empty Artist field|4|
 
 # [Download sources](indexes/downloadSource.csv)
@@ -27,9 +27,9 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # [Download URLs](indexes/urlSource.csv)
 |Source|Count|
 |-|-|
-|Fakku|14002|
+|Fakku|14014|
 |ProjectHentai|17|
-|Irodori|500|
+|Irodori|508|
 |J18|17|
 <!-- [/Status] -->
 
