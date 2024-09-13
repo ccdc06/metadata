@@ -22,4 +22,7 @@ return [
 	"public hair" => "Pubic Hair",
 	"schoolgirl outfit" => "Schoolgirl Uniform",
 	"shota" => "Shotacon",
+	"creampie" => "Nakadashi",
+	"big dick" => "Big Penis",
+	"paperback" => "Tankoubon",
 ];
