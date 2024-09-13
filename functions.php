@@ -450,6 +450,12 @@ class Spec {
 				}
 			}
 		}
+
+		if (count($this->URL) === 1 && empty($this->URLSource)) {
+			$this->URLSource = array_key_first($this->URL);
+		}
+
+		ksort($this->URL);
 	}
 
 	public function updateFiles(string $fn) {
@@ -569,6 +575,12 @@ class Spec {
 			if (!in_array($idKey, ValNorm::$urlSources)) {
 				$errors->push("URL.{$idKey}", $idKey, "Unknown URL source");
 			}
+		}
+
+		if (empty($this->URLSource)) {
+			$errors->push("URLSource", null, "Empty URL source");
+		} elseif (!in_array($this->URLSource, ValNorm::$urlSources)) {
+			$errors->push("URLSource", null, "Unknown URL source");
 		}
 	}
 

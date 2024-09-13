@@ -91,7 +91,9 @@ function routeWebUpdate() {
 	$spec = Spec::fromFile($yamlFn);
 
 	$spec->URL[$source] = $url;
-	$spec->URLSource = $source;
+	if (empty($spec->URLSource)) {
+		$spec->URLSource = $source;
+	}
 
 	$spec->save();
 
@@ -307,14 +309,14 @@ function routeWebIndex() {
 									}
 								}
 
-								// var search = result.locations.filter(v => v.includes('fakku.net'));
-								// if ('0' in search) {
-								// 	$titleCompare.show().html($('<h4>').html(result.title));
-								// 	// window.open(search[0], 'fakku').focus();
-								// 	$url.val(search[0]).focus().select();
-								// 	$select.val('Fakku');
-								// 	return;
-								// }
+								var search = result.locations.filter(v => v.includes('fakku.net'));
+								if ('0' in search) {
+									$titleCompare.show().html($('<h4>').html(result.title));
+									// window.open(search[0], 'fakku').focus();
+									$url.val(search[0]).focus().select();
+									$select.val('Fakku');
+									return;
+								}
 
 								var search = result.locations.filter(v => v.includes('irodoricomics.com'));
 								if ('0' in search) {
@@ -325,14 +327,14 @@ function routeWebIndex() {
 									return;
 								}
 
-								// var search = result.locations.filter(v => v.includes('doujin.io'));
-								// if ('0' in search) {
-								// 	$titleCompare.show().html($('<h4>').html(result.title));
-								// 	// window.open(search[0], 'irodori').focus();
-								// 	$url.val(search[0]).focus().select();
-								// 	$select.val('J18');
-								// 	return;
-								// }
+								var search = result.locations.filter(v => v.includes('doujin.io'));
+								if ('0' in search) {
+									$titleCompare.show().html($('<h4>').html(result.title));
+									// window.open(search[0], 'irodori').focus();
+									$url.val(search[0]).focus().select();
+									$select.val('J18');
+									return;
+								}
 							}
 						}
 					}
