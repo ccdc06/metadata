@@ -92,7 +92,7 @@ function routeWebUpdate() {
 
 	$spec->URL[$source] = $url;
 
-	file_put_contents($yamlFn, $spec->yaml());
+	$spec->save();
 
 	echo '<script type="text/javascript">location.replace("index.php")</script>';
 }

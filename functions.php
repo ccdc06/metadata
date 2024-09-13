@@ -182,7 +182,7 @@ class Spec {
 			throw new \Exception("This spec was not generated from a file");
 		}
 
-		$this->fix();
+		// $this->fix();
 
 		file_put_contents($this->fileName, $this->yaml());
 	}
@@ -389,6 +389,10 @@ class Spec {
 	public function fixEmptyThumbnail() {
 		if (empty($this->Files)) {
 			return;
+		}
+
+		if (empty($this->ThumbnailName) && isset($this->ThumbnailIndex)) {
+			$this->ThumbnailName = $this->Files[$this->ThumbnailIndex];
 		}
 
 		if (empty($this->ThumbnailName)) {

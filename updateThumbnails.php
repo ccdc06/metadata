@@ -24,7 +24,8 @@ foreach (streamSpecs() as $spec) {
 	if ($zip->statName($sf) === false) {
 		throw new Exception("BADFILES");
 	}
-	$lastFileName = $lfd . DIRECTORY_SEPARATOR . md5($spec->getBaseName()) . '_' . $sf;
+	$pi = pathinfo($sf);
+	$lastFileName = $lfd . DIRECTORY_SEPARATOR . md5($spec->getBaseName()) . '.' . $pi['extension'];
 	if (file_exists($lastFileName)) {
 		continue;
 	}
