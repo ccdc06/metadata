@@ -9,15 +9,14 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 |Status|Count|
 |-|-|
 |[Total](indexes/list.csv)|14651|
-|OK|14604|
-|[Errors](indexes/errors.csv)|47|
+|OK|14634|
+|[Errors](indexes/errors.csv)|17|
 
 # [Errors](indexes/errors.csv)
 |Error|Count|
 |-|-|
 |Empty URL field|14|
 |Empty Artist field|3|
-|Thumbnail name not found in Files|30|
 
 # [Download sources](indexes/downloadSource.csv)
 |Source|Count|

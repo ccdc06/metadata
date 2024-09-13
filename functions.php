@@ -391,8 +391,10 @@ class Spec {
 			return;
 		}
 
-		if (empty($this->ThumbnailName) && isset($this->ThumbnailIndex)) {
-			$this->ThumbnailName = $this->Files[$this->ThumbnailIndex];
+		if (!empty($this->ThumbnailName) && isset($this->ThumbnailIndex)) {
+			if (!in_array($this->ThumbnailName, $this->Files)) {
+				$this->ThumbnailName = $this->Files[$this->ThumbnailIndex];
+			}
 		}
 
 		if (empty($this->ThumbnailName)) {
