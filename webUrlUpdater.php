@@ -11,6 +11,7 @@ switch (php_sapi_name()) {
 			case '/update.php': return routeWebUpdate();
 			case '/hide.php': return routeWebHide();
 			case '/hentagProxy.php': return routeWebHentagProxy();
+			case '/duplicates.php': return routeDuplicates();
 
 			default:
 				http_response_code(404);
@@ -149,6 +150,12 @@ function routeWebIndex() {
 			<div class="alert alert-info mt-2">
 				Count: <?= count($missing) ?>
 			</div>
+			<div class="card mt-4">
+				<div class="card-body">
+					<a href="duplicates.php" target="_blank" class="btn btn-primary">Duplicates</a>
+				</div>
+			</div>
+
 			<?php foreach ($missing as $baseName => $spec): ?>
 				<?php
 				if ($count > 20) {
@@ -375,4 +382,27 @@ function routeWebIndex() {
 	</body>
 	</html>
 	<?php
+}
+
+function routeDuplicates() {
+	header('Content-Type: text/plain');
+	$groups = [];
+	foreach (streamSpecs() as $spec) {
+		if (!empty($spec->URL)) {
+			foreach ($spec->URL as $url) {
+				$groups[$url][] = $spec->getBaseName();
+			}
+		}
+	}
+
+	foreach ($groups as $url => $names) {
+		$names = array_unique($names);
+		sort($names);
+		if (count($names) > 1) {
+			foreach ($names as $name) {
+				echo 'rm ' . escapeshellarg($name), PHP_EOL;
+			}
+			echo PHP_EOL;
+		}
+	}
 }
