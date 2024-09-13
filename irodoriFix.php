@@ -24,6 +24,8 @@ foreach (streamSpecs() as $spec) {
 			$sf = end($spec->Files);
 			echo "BADFILES,";
 		}
+		echo PHP_EOL;
+		continue;
 		$lastFile = $zip->getFromName($sf);
 		$zip->close();
 
