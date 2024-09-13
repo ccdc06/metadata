@@ -147,6 +147,7 @@ class Spec {
 	public string $Description; // string
 	public array $Parody; // []string
 	public array $URL; // map[string]string
+	public string $URLSource; // string
 	public array $Tags; // []string
 	public array $Publisher; // []string
 	public array $Magazine; // []string
@@ -489,6 +490,7 @@ class Spec {
 				case 'Description': // string
 				case 'ThumbnailName': // string
 				case 'DownloadSource': // string
+				case 'URLSource': // string
 					if (!is_string($val)) {
 						$err = "Not a string";
 					}
@@ -700,15 +702,19 @@ function listFiles() {
 	return $files;
 }
 
-function streamSpecs() {
+function streamSpecs(bool $reverse = false) {
 	$collections = listCollections();
 	natcasesort($collections);
-	$collections = array_reverse($collections);
+	if ($reverse) {
+		$collections = array_reverse($collections);
+	}
 
 	foreach ($collections as $collection) {
 		$files = glob(baseDir() . "/{$collection}/*.yaml");
 		natcasesort($files);
-		$files = array_reverse($files);
+		if ($reverse) {
+			$files = array_reverse($files);
+		}
 
 		foreach ($files as $file) {
 			yield Spec::fromFile($file);
@@ -765,18 +771,14 @@ function getEmptyUrlsCache() {
 		if (!empty($hide[$rFile])) {
 			continue;
 		}
+		$fn = baseDir() . '/' . $yamlFn;
+		$spec = Spec::fromFile($fn);
 
-		$yaml = file_get_contents($yamlFn);
-		$meta = yaml_parse($yaml);
-		if (empty($meta)) {
+		if (!empty($spec->URL)) {
 			continue;
 		}
 
-		if (!empty($meta['URL'])) {
-			continue;
-		}
-
-		$missing[$rFile] = $meta;
+		$missing[$rFile] = $spec;
 	}
 	return $missing;
 }

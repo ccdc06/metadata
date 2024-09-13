@@ -73,6 +73,7 @@ class ValNorm {
 		return array_values($circles);
 	}
 }
+
 ValNorm::$downloadSources = require __DIR__ . '/arrays/downloadSources.php';
 ValNorm::$urlSources = require __DIR__ . '/arrays/urlSources.php';
 ValNorm::$tags = require __DIR__ . '/arrays/tagsMap.php';

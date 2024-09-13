@@ -91,6 +91,7 @@ function routeWebUpdate() {
 	$spec = Spec::fromFile($yamlFn);
 
 	$spec->URL[$source] = $url;
+	$spec->URLSource = $source;
 
 	$spec->save();
 
@@ -106,6 +107,28 @@ function routeWebIndex() {
 	}
 
 	$missing = getEmptyUrlsCache();
+	/*
+	$files = file(baseDir() . '/temp/iro.tsv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	$missing = [];
+	$i = 0;
+	foreach ($files as $raw) {
+		if (count($missing) >= 30) {
+			continue;
+		}
+		$spl = explode("\t", $raw);
+		if (!empty($hide[$spl[0]])) {
+			continue;
+		}
+		$spec = Spec::fromFile(baseDir() . '/' . $spl[0]);
+		if (!empty($spec->URLSource)) {
+			continue;
+		}
+
+		$i++;
+		$missing[$spl[0]] = $spec;
+	}
+	var_dump($i . "/" . count($files));
+	*/
 	?>
 	<!DOCTYPE html>
 	<html lang="en">
@@ -124,28 +147,29 @@ function routeWebIndex() {
 			<div class="alert alert-info mt-2">
 				Count: <?= count($missing) ?>
 			</div>
-			<?php foreach ($missing as $key => $val): ?>
+			<?php foreach ($missing as $baseName => $spec): ?>
 				<?php
 				if ($count > 20) {
 					break;
 				}
+				$count++;
 				$query = [];
 
-				$pages = intval($val['Pages'] ?? 0);
+				$pages = intval($spec->Pages ?? 0);
 				$artist = '';
-				if (!empty($val['Artist'])) {
-					$artist = implode(' ', $val['Artist']);
+				if (!empty($spec->Artist)) {
+					$artist = implode(' ', $spec->Artist);
 					$query[] = $artist;
 				}
 
 				$publisher = '';
-				if (!empty($val['Publisher'])) {
-					$publisher = implode(' ', $val['Publisher']);
+				if (!empty($spec->Publisher)) {
+					$publisher = implode(' ', $spec->Publisher);
 				}
 
 				$title = '';
 				if (empty($title)) {
-					$title = $val['Title'];
+					$title = $spec->Title;
 					$query[] = $title;
 				}
 
@@ -163,7 +187,12 @@ function routeWebIndex() {
 
 				$irodoriUrl = "https://irodoricomics.com/index.php?" . http_build_query([
 					'route' => 'product/search',
-					'search' => $title,
+					'search' => str_replace(['-', ':'], ' ', $title),
+				]);
+
+				$irodoriApiUrl = "https://irodoricomics.com/index.php?" . http_build_query([
+					'route' => 'extension/module/me_ajax_search/search',
+					'search' => str_replace(['-', ':'], ' ', $title),
 				]);
 
 				$_2dmarketUrl = "https://2d-market.com/Search?" . http_build_query([
@@ -189,9 +218,9 @@ function routeWebIndex() {
 					</div>
 					<div style="display: none" class="card-header title_compare"></div>
 					<div class="card-body">
-						<p class="px-2"><code><?= h($key) ?></code></p>
+						<p class="px-2"><code><?= h($baseName) ?></code></p>
 						<form method="post" action="update.php">
-							<input type="hidden" name="key" value="<?= $key ?>" />
+							<input type="hidden" name="key" value="<?= $baseName ?>" />
 							<div class="p-1 d-flex">
 								<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
 								<select class="form-select" name="source">
@@ -203,7 +232,7 @@ function routeWebIndex() {
 							</div>
 							<div class="p-1">
 								<button class="btn btn-primary" type="submit" name="op" value="updateUrl">Save</button>
-								<a href="hide.php?<?= http_build_query(['key' => $key]) ?>" class="btn btn-warning">Hide</a>
+								<a href="hide.php?<?= http_build_query(['key' => $baseName]) ?>" class="btn btn-warning">Hide</a>
 								<span class="comment ms-2 text-danger"></span>
 							</div>
 						</form>
@@ -214,15 +243,43 @@ function routeWebIndex() {
 						<a target="google" rel="noopener,noreferrer" href="<?= h($googleUrl) ?>" class="btn btn-primary">Google</a>
 						<a target="fakku" rel="noopener,noreferrer" href="<?= h($fakkuUrl) ?>" class="btn btn-primary">Fakku</a>
 						<a target="irodori" rel="noopener,noreferrer" href="<?= h($irodoriUrl) ?>" class="btn btn-primary">Irodori</a>
+						<button type="button" class="irodori-api btn btn-primary" data-url="<?= h($irodoriApiUrl) ?>">Irodori API</button>
 						<a target="2dmarket" rel="noopener,noreferrer" href="<?= h($_2dmarketUrl) ?>" class="btn btn-primary">2D Market</a>
 					</div>
 				</div>
-				<?php $count++; ?>
 			<?php endforeach; ?>
 		</div>
 		<script type="text/javascript">
 		var $body = $('body');
 
+		$body.on('click', 'button.irodori-api', function (e) {
+			e.preventDefault();
+			var $current = $(e.currentTarget);
+			var $url = $current.closest('div.card').find('input[name="url"]');
+			var $select = $current.closest('div.card').find('select[name="source"]');
+			var $titleCompare = $current.closest('div.card').find('div.title_compare');
+
+			var queryUrl = $current.data('url');
+
+			$.ajax({
+				type: 'GET',
+				url: queryUrl,
+				success: function(data) {
+					$current.removeAttr('disabled');
+
+					if ('products' in data && 0 in data.products) {
+						let p = data.products[0];
+
+						$titleCompare.show().html($('<h4>').html('[' + p.manufacturer + '] ' + p.name));
+						$url.val(p.href.split('?')[0]).focus().select();
+						$select.val('Irodori');
+					}
+				},
+				error: function () {
+					$current.removeAttr('disabled');
+				}
+			});
+		});
 		$body.on('click', 'button.hentag-api', function (e) {
 			e.preventDefault();
 			var $current = $(e.currentTarget);
@@ -250,14 +307,14 @@ function routeWebIndex() {
 									}
 								}
 
-								var search = result.locations.filter(v => v.includes('fakku.net'));
-								if ('0' in search) {
-									$titleCompare.show().html($('<h4>').html(result.title));
-									// window.open(search[0], 'fakku').focus();
-									$url.val(search[0]).focus().select();
-									$select.val('Fakku');
-									return;
-								}
+								// var search = result.locations.filter(v => v.includes('fakku.net'));
+								// if ('0' in search) {
+								// 	$titleCompare.show().html($('<h4>').html(result.title));
+								// 	// window.open(search[0], 'fakku').focus();
+								// 	$url.val(search[0]).focus().select();
+								// 	$select.val('Fakku');
+								// 	return;
+								// }
 
 								var search = result.locations.filter(v => v.includes('irodoricomics.com'));
 								if ('0' in search) {
@@ -268,14 +325,14 @@ function routeWebIndex() {
 									return;
 								}
 
-								var search = result.locations.filter(v => v.includes('doujin.io'));
-								if ('0' in search) {
-									$titleCompare.show().html($('<h4>').html(result.title));
-									// window.open(search[0], 'irodori').focus();
-									$url.val(search[0]).focus().select();
-									$select.val('J18');
-									return;
-								}
+								// var search = result.locations.filter(v => v.includes('doujin.io'));
+								// if ('0' in search) {
+								// 	$titleCompare.show().html($('<h4>').html(result.title));
+								// 	// window.open(search[0], 'irodori').focus();
+								// 	$url.val(search[0]).focus().select();
+								// 	$select.val('J18');
+								// 	return;
+								// }
 							}
 						}
 					}
@@ -304,6 +361,7 @@ function routeWebIndex() {
 			}
 
 			if ($current.val().indexOf('irodoricomics.com') !== -1) {
+				$current.val($current.val().split('?')[0]);
 				$select.val('Irodori');
 			}
 

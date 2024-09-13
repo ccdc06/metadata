@@ -29,7 +29,7 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 |-|-|
 |Fakku|14067|
 |ProjectHentai|17|
-|Irodori|536|
+|Irodori|1055|
 |J18|17|
 <!-- [/Status] -->
 
