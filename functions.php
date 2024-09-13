@@ -445,6 +445,24 @@ class Spec {
 		}
 	}
 
+	public function updateFiles(string $fn) {
+		$zip = new \ZipArchive();
+		if ($zip->open($fn) === false) {
+			throw new \Exception();
+		}
+
+		$this->Files = [];
+		for ($i = 0; $i < $zip->numFiles; $i++) {
+			$f = $zip->getNameIndex($i);
+			$pi = pathinfo($f);
+			if ($pi['extension'] === 'txt' || $pi['extension'] === 'yaml' || $pi['extension'] === 'xml') {
+				continue;
+			}
+
+			$this->Files[] = $f;
+		}
+	}
+
 	public function validateTypes(ValidationErrors $errors) {
 		foreach ($this as $key => $val) {
 			$err = null;
@@ -679,10 +697,12 @@ function listFiles() {
 function streamSpecs() {
 	$collections = listCollections();
 	natcasesort($collections);
+	$collections = array_reverse($collections);
 
 	foreach ($collections as $collection) {
 		$files = glob(baseDir() . "/{$collection}/*.yaml");
 		natcasesort($files);
+		$files = array_reverse($files);
 
 		foreach ($files as $file) {
 			yield Spec::fromFile($file);
