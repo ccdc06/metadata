@@ -11,6 +11,7 @@ switch (php_sapi_name()) {
 			case '/update.php': return routeWebUpdate();
 			case '/hide.php': return routeWebHide();
 			case '/hentagProxy.php': return routeWebHentagProxy();
+			case '/fakkuProxy.php': return routeWebFakkuProxy();
 			case '/duplicates.php': return routeDuplicates();
 
 			default:
@@ -36,6 +37,24 @@ function routeWebHentagProxy() {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($_POST));
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+	header('Content-Type: application/json');
+	echo curl_exec($ch);
+	curl_close($ch);
+}
+
+function routeWebFakkuProxy() {
+	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
+
+	$url = "https://www.fakku.net/suggest/" . rawurlencode($query);
+
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, [
+		// "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
+	    "X-Requested-With: XMLHttpRequest",
+	]);
+	curl_setopt($ch, CURLOPT_HEADER, false);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	header('Content-Type: application/json');
 	echo curl_exec($ch);
 	curl_close($ch);
@@ -204,6 +223,8 @@ function routeWebIndex() {
 					'search' => str_replace(['-', ':'], ' ', $title),
 				]);
 
+				$fakkuApiQuery = str_replace(['-', ':'], ' ', $title);
+
 				$_2dmarketUrl = "https://2d-market.com/Search?" . http_build_query([
 					'search_value' => $title,
 					'type' => 'all',
@@ -248,11 +269,12 @@ function routeWebIndex() {
 					</div>
 					<div class="card-footer">
 						<button type="button" class="hentag-api btn btn-primary" data-query="<?= h($query) ?>">Hentag API</button>
+						<button type="button" class="irodori-api btn btn-primary" data-url="<?= h($irodoriApiUrl) ?>">Irodori API</button>
+						<button type="button" class="fakku-api btn btn-primary" data-query="<?= h($fakkuApiQuery) ?>">Fakku API</button>
 						<a target="hentag" rel="noopener,noreferrer" href="<?= h($hentagUrl) ?>" class="btn btn-primary">Hentag</a>
 						<a target="google" rel="noopener,noreferrer" href="<?= h($googleUrl) ?>" class="btn btn-primary">Google</a>
 						<a target="fakku" rel="noopener,noreferrer" href="<?= h($fakkuUrl) ?>" class="btn btn-primary">Fakku</a>
 						<a target="irodori" rel="noopener,noreferrer" href="<?= h($irodoriUrl) ?>" class="btn btn-primary">Irodori</a>
-						<button type="button" class="irodori-api btn btn-primary" data-url="<?= h($irodoriApiUrl) ?>">Irodori API</button>
 						<a target="2dmarket" rel="noopener,noreferrer" href="<?= h($_2dmarketUrl) ?>" class="btn btn-primary">2D Market</a>
 					</div>
 				</div>
@@ -260,6 +282,35 @@ function routeWebIndex() {
 		</div>
 		<script type="text/javascript">
 		var $body = $('body');
+
+		$body.on('click', 'button.fakku-api', function (e) {
+			e.preventDefault();
+			var $current = $(e.currentTarget);
+			var query = $current.data('query');
+			var $url = $current.closest('div.card').find('input[name="url"]');
+			var $select = $current.closest('div.card').find('select[name="source"]');
+			var $titleCompare = $current.closest('div.card').find('div.title_compare');
+
+			$.ajax({
+				type: 'GET',
+				url: 'fakkuProxy.php',
+				data: {query: query},
+				success: function(data) {
+					$current.removeAttr('disabled');
+
+					if ('results' in data && 0 in data.results) {
+						let p = data.results[0];
+
+						$titleCompare.show().html($('<h4>').html(p.title));
+						$url.val('https://www.fakku.net/hentai' + p.link).focus().select();
+						$select.val('Fakku');
+					}
+				},
+				error: function () {
+					$current.removeAttr('disabled');
+				}
+			});
+		});
 
 		$body.on('click', 'button.irodori-api', function (e) {
 			e.preventDefault();
@@ -289,6 +340,7 @@ function routeWebIndex() {
 				}
 			});
 		});
+
 		$body.on('click', 'button.hentag-api', function (e) {
 			e.preventDefault();
 			var $current = $(e.currentTarget);
