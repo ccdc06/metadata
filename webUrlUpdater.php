@@ -302,7 +302,7 @@ function routeWebIndex() {
 						let p = data.results[0];
 
 						$titleCompare.show().html($('<h4>').html(p.title));
-						$url.val('https://www.fakku.net/hentai' + p.link).focus().select();
+						$url.val('https://www.fakku.net' + p.link).focus().select();
 						$select.val('Fakku');
 					}
 				},
