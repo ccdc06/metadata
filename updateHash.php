@@ -10,16 +10,16 @@ foreach (streamSpecs() as $spec) {
 	echo "{$fn}\n";
 	if (file_exists($fn)) {
 		$save = false;
-		if (empty($spec->Hashes['SHA256'])) {
-			$save = true;
-			$spec->Hashes['SHA256'] = hash_file('sha256', $fn);
-		}
-
 		if (empty($spec->Hashes['LANraragi'])) {
 			$save = true;
 			$file = new \SplFileObject($fn);
 			$bytes = $file->fread(512000);
 			$spec->Hashes['LANraragi'] = sha1($bytes);
+		}
+		
+		if (empty($spec->Hashes['SHA256'])) {
+			$save = true;
+			$spec->Hashes['SHA256'] = hash_file('sha256', $fn);
 		}
 
 		if ($save) {

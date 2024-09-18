@@ -147,6 +147,7 @@ class Spec {
 	public string $Description; // string
 	public array $Parody; // []string
 	public array $URL; // map[string]string
+	public string $URLSource; // string
 	public array $Tags; // []string
 	public array $Publisher; // []string
 	public array $Magazine; // []string
@@ -182,7 +183,7 @@ class Spec {
 			throw new \Exception("This spec was not generated from a file");
 		}
 
-		$this->fix();
+		// $this->fix();
 
 		file_put_contents($this->fileName, $this->yaml());
 	}
@@ -324,6 +325,7 @@ class Spec {
 		$this->fixHashes();
 		$this->fixEmptyThumbnail();
 		$this->fixId();
+		$this->fixUrl();
 	}
 
 	public function validate() {
@@ -390,6 +392,12 @@ class Spec {
 			return;
 		}
 
+		if (!empty($this->ThumbnailName) && isset($this->ThumbnailIndex)) {
+			if (!in_array($this->ThumbnailName, $this->Files)) {
+				$this->ThumbnailName = $this->Files[$this->ThumbnailIndex];
+			}
+		}
+
 		if (empty($this->ThumbnailName)) {
 			$this->ThumbnailName = $this->Files[0];
 		}
@@ -430,6 +438,44 @@ class Spec {
 		}
 	}
 
+	public function fixUrl() {
+		if (empty($this->URL)) {
+			return;
+		}
+
+		foreach ($this->URL as $source => $url) {
+			if ($source === 'Fakku') {
+				if (str_starts_with($url, 'https://fakku.net/')) {
+					$this->URL[$source] = str_replace('https://fakku.net/', 'https://www.fakku.net/', $url);
+				}
+			}
+		}
+
+		if (count($this->URL) === 1 && empty($this->URLSource)) {
+			$this->URLSource = array_key_first($this->URL);
+		}
+
+		ksort($this->URL);
+	}
+
+	public function updateFiles(string $fn) {
+		$zip = new \ZipArchive();
+		if ($zip->open($fn) === false) {
+			throw new \Exception();
+		}
+
+		$this->Files = [];
+		for ($i = 0; $i < $zip->numFiles; $i++) {
+			$f = $zip->getNameIndex($i);
+			$pi = pathinfo($f);
+			if ($pi['extension'] === 'txt' || $pi['extension'] === 'yaml' || $pi['extension'] === 'xml') {
+				continue;
+			}
+
+			$this->Files[] = $f;
+		}
+	}
+
 	public function validateTypes(ValidationErrors $errors) {
 		foreach ($this as $key => $val) {
 			$err = null;
@@ -450,6 +496,7 @@ class Spec {
 				case 'Description': // string
 				case 'ThumbnailName': // string
 				case 'DownloadSource': // string
+				case 'URLSource': // string
 					if (!is_string($val)) {
 						$err = "Not a string";
 					}
@@ -528,6 +575,12 @@ class Spec {
 			if (!in_array($idKey, ValNorm::$urlSources)) {
 				$errors->push("URL.{$idKey}", $idKey, "Unknown URL source");
 			}
+		}
+
+		if (empty($this->URLSource)) {
+			$errors->push("URLSource", null, "Empty URL source");
+		} elseif (!in_array($this->URLSource, ValNorm::$urlSources)) {
+			$errors->push("URLSource", null, "Unknown URL source");
 		}
 	}
 
@@ -661,13 +714,19 @@ function listFiles() {
 	return $files;
 }
 
-function streamSpecs() {
+function streamSpecs(bool $reverse = false) {
 	$collections = listCollections();
 	natcasesort($collections);
+	if ($reverse) {
+		$collections = array_reverse($collections);
+	}
 
 	foreach ($collections as $collection) {
 		$files = glob(baseDir() . "/{$collection}/*.yaml");
 		natcasesort($files);
+		if ($reverse) {
+			$files = array_reverse($files);
+		}
 
 		foreach ($files as $file) {
 			yield Spec::fromFile($file);
@@ -724,18 +783,14 @@ function getEmptyUrlsCache() {
 		if (!empty($hide[$rFile])) {
 			continue;
 		}
+		$fn = baseDir() . '/' . $yamlFn;
+		$spec = Spec::fromFile($fn);
 
-		$yaml = file_get_contents($yamlFn);
-		$meta = yaml_parse($yaml);
-		if (empty($meta)) {
+		if (!empty($spec->URL)) {
 			continue;
 		}
 
-		if (!empty($meta['URL'])) {
-			continue;
-		}
-
-		$missing[$rFile] = $meta;
+		$missing[$rFile] = $spec;
 	}
 	return $missing;
 }

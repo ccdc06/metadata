@@ -11,6 +11,8 @@ switch (php_sapi_name()) {
 			case '/update.php': return routeWebUpdate();
 			case '/hide.php': return routeWebHide();
 			case '/hentagProxy.php': return routeWebHentagProxy();
+			case '/fakkuProxy.php': return routeWebFakkuProxy();
+			case '/duplicates.php': return routeDuplicates();
 
 			default:
 				http_response_code(404);
@@ -35,6 +37,24 @@ function routeWebHentagProxy() {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($_POST));
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+	header('Content-Type: application/json');
+	echo curl_exec($ch);
+	curl_close($ch);
+}
+
+function routeWebFakkuProxy() {
+	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
+
+	$url = "https://www.fakku.net/suggest/" . rawurlencode($query);
+
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, [
+		// "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
+	    "X-Requested-With: XMLHttpRequest",
+	]);
+	curl_setopt($ch, CURLOPT_HEADER, false);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	header('Content-Type: application/json');
 	echo curl_exec($ch);
 	curl_close($ch);
@@ -91,8 +111,11 @@ function routeWebUpdate() {
 	$spec = Spec::fromFile($yamlFn);
 
 	$spec->URL[$source] = $url;
+	if (empty($spec->URLSource)) {
+		$spec->URLSource = $source;
+	}
 
-	file_put_contents($yamlFn, $spec->yaml());
+	$spec->save();
 
 	echo '<script type="text/javascript">location.replace("index.php")</script>';
 }
@@ -106,6 +129,28 @@ function routeWebIndex() {
 	}
 
 	$missing = getEmptyUrlsCache();
+	/*
+	$files = file(baseDir() . '/temp/iro.tsv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	$missing = [];
+	$i = 0;
+	foreach ($files as $raw) {
+		if (count($missing) >= 30) {
+			continue;
+		}
+		$spl = explode("\t", $raw);
+		if (!empty($hide[$spl[0]])) {
+			continue;
+		}
+		$spec = Spec::fromFile(baseDir() . '/' . $spl[0]);
+		if (!empty($spec->URLSource)) {
+			continue;
+		}
+
+		$i++;
+		$missing[$spl[0]] = $spec;
+	}
+	var_dump($i . "/" . count($files));
+	*/
 	?>
 	<!DOCTYPE html>
 	<html lang="en">
@@ -124,28 +169,35 @@ function routeWebIndex() {
 			<div class="alert alert-info mt-2">
 				Count: <?= count($missing) ?>
 			</div>
-			<?php foreach ($missing as $key => $val): ?>
+			<div class="card mt-4">
+				<div class="card-body">
+					<a href="duplicates.php" target="_blank" class="btn btn-primary">Duplicates</a>
+				</div>
+			</div>
+
+			<?php foreach ($missing as $baseName => $spec): ?>
 				<?php
 				if ($count > 20) {
 					break;
 				}
+				$count++;
 				$query = [];
 
-				$pages = intval($val['Pages'] ?? 0);
+				$pages = intval($spec->Pages ?? 0);
 				$artist = '';
-				if (!empty($val['Artist'])) {
-					$artist = implode(' ', $val['Artist']);
+				if (!empty($spec->Artist)) {
+					$artist = implode(' ', $spec->Artist);
 					$query[] = $artist;
 				}
 
 				$publisher = '';
-				if (!empty($val['Publisher'])) {
-					$publisher = implode(' ', $val['Publisher']);
+				if (!empty($spec->Publisher)) {
+					$publisher = implode(' ', $spec->Publisher);
 				}
 
 				$title = '';
 				if (empty($title)) {
-					$title = $val['Title'];
+					$title = $spec->Title;
 					$query[] = $title;
 				}
 
@@ -163,8 +215,15 @@ function routeWebIndex() {
 
 				$irodoriUrl = "https://irodoricomics.com/index.php?" . http_build_query([
 					'route' => 'product/search',
-					'search' => $title,
+					'search' => str_replace(['-', ':'], ' ', $title),
 				]);
+
+				$irodoriApiUrl = "https://irodoricomics.com/index.php?" . http_build_query([
+					'route' => 'extension/module/me_ajax_search/search',
+					'search' => str_replace(['-', ':'], ' ', $title),
+				]);
+
+				$fakkuApiQuery = str_replace(['-', ':'], ' ', $title);
 
 				$_2dmarketUrl = "https://2d-market.com/Search?" . http_build_query([
 					'search_value' => $title,
@@ -189,9 +248,9 @@ function routeWebIndex() {
 					</div>
 					<div style="display: none" class="card-header title_compare"></div>
 					<div class="card-body">
-						<p class="px-2"><code><?= h($key) ?></code></p>
+						<p class="px-2"><code><?= h($baseName) ?></code></p>
 						<form method="post" action="update.php">
-							<input type="hidden" name="key" value="<?= $key ?>" />
+							<input type="hidden" name="key" value="<?= $baseName ?>" />
 							<div class="p-1 d-flex">
 								<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
 								<select class="form-select" name="source">
@@ -203,13 +262,15 @@ function routeWebIndex() {
 							</div>
 							<div class="p-1">
 								<button class="btn btn-primary" type="submit" name="op" value="updateUrl">Save</button>
-								<a href="hide.php?<?= http_build_query(['key' => $key]) ?>" class="btn btn-warning">Hide</a>
+								<a href="hide.php?<?= http_build_query(['key' => $baseName]) ?>" class="btn btn-warning">Hide</a>
 								<span class="comment ms-2 text-danger"></span>
 							</div>
 						</form>
 					</div>
 					<div class="card-footer">
 						<button type="button" class="hentag-api btn btn-primary" data-query="<?= h($query) ?>">Hentag API</button>
+						<button type="button" class="irodori-api btn btn-primary" data-url="<?= h($irodoriApiUrl) ?>">Irodori API</button>
+						<button type="button" class="fakku-api btn btn-primary" data-query="<?= h($fakkuApiQuery) ?>">Fakku API</button>
 						<a target="hentag" rel="noopener,noreferrer" href="<?= h($hentagUrl) ?>" class="btn btn-primary">Hentag</a>
 						<a target="google" rel="noopener,noreferrer" href="<?= h($googleUrl) ?>" class="btn btn-primary">Google</a>
 						<a target="fakku" rel="noopener,noreferrer" href="<?= h($fakkuUrl) ?>" class="btn btn-primary">Fakku</a>
@@ -217,11 +278,68 @@ function routeWebIndex() {
 						<a target="2dmarket" rel="noopener,noreferrer" href="<?= h($_2dmarketUrl) ?>" class="btn btn-primary">2D Market</a>
 					</div>
 				</div>
-				<?php $count++; ?>
 			<?php endforeach; ?>
 		</div>
 		<script type="text/javascript">
 		var $body = $('body');
+
+		$body.on('click', 'button.fakku-api', function (e) {
+			e.preventDefault();
+			var $current = $(e.currentTarget);
+			var query = $current.data('query');
+			var $url = $current.closest('div.card').find('input[name="url"]');
+			var $select = $current.closest('div.card').find('select[name="source"]');
+			var $titleCompare = $current.closest('div.card').find('div.title_compare');
+
+			$.ajax({
+				type: 'GET',
+				url: 'fakkuProxy.php',
+				data: {query: query},
+				success: function(data) {
+					$current.removeAttr('disabled');
+
+					if ('results' in data && 0 in data.results) {
+						let p = data.results[0];
+
+						$titleCompare.show().html($('<h4>').html(p.title));
+						$url.val('https://www.fakku.net' + p.link).focus().select();
+						$select.val('Fakku');
+					}
+				},
+				error: function () {
+					$current.removeAttr('disabled');
+				}
+			});
+		});
+
+		$body.on('click', 'button.irodori-api', function (e) {
+			e.preventDefault();
+			var $current = $(e.currentTarget);
+			var $url = $current.closest('div.card').find('input[name="url"]');
+			var $select = $current.closest('div.card').find('select[name="source"]');
+			var $titleCompare = $current.closest('div.card').find('div.title_compare');
+
+			var queryUrl = $current.data('url');
+
+			$.ajax({
+				type: 'GET',
+				url: queryUrl,
+				success: function(data) {
+					$current.removeAttr('disabled');
+
+					if ('products' in data && 0 in data.products) {
+						let p = data.products[0];
+
+						$titleCompare.show().html($('<h4>').html('[' + p.manufacturer + '] ' + p.name));
+						$url.val(p.href.split('?')[0]).focus().select();
+						$select.val('Irodori');
+					}
+				},
+				error: function () {
+					$current.removeAttr('disabled');
+				}
+			});
+		});
 
 		$body.on('click', 'button.hentag-api', function (e) {
 			e.preventDefault();
@@ -243,7 +361,6 @@ function routeWebIndex() {
 					if ('length' in data) {
 						for (const result of data) {
 							if ('locations' in result) {
-								// #TODO also scan male/female tags
 								if (result.otherTags) {
 									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
 									if (evilTags.length > 0) {
@@ -259,18 +376,6 @@ function routeWebIndex() {
 									$select.val('Fakku');
 									return;
 								}
-							}
-						}
-
-						for (const result of data) {
-							if ('locations' in result) {
-								// #TODO also scan male/female tags
-								if (result.otherTags) {
-									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
-									if (evilTags.length > 0) {
-										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
-									}
-								}
 
 								var search = result.locations.filter(v => v.includes('irodoricomics.com'));
 								if ('0' in search) {
@@ -279,18 +384,6 @@ function routeWebIndex() {
 									$url.val(search[0]).focus().select();
 									$select.val('Irodori');
 									return;
-								}
-							}
-						}
-
-						for (const result of data) {
-							if ('locations' in result) {
-								// #TODO also scan male/female tags
-								if (result.otherTags) {
-									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
-									if (evilTags.length > 0) {
-										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
-									}
 								}
 
 								var search = result.locations.filter(v => v.includes('doujin.io'));
@@ -303,8 +396,6 @@ function routeWebIndex() {
 								}
 							}
 						}
-
-
 					}
 				},
 				error: function () {
@@ -331,6 +422,7 @@ function routeWebIndex() {
 			}
 
 			if ($current.val().indexOf('irodoricomics.com') !== -1) {
+				$current.val($current.val().split('?')[0]);
 				$select.val('Irodori');
 			}
 
@@ -342,4 +434,27 @@ function routeWebIndex() {
 	</body>
 	</html>
 	<?php
+}
+
+function routeDuplicates() {
+	header('Content-Type: text/plain');
+	$groups = [];
+	foreach (streamSpecs() as $spec) {
+		if (!empty($spec->URL)) {
+			foreach ($spec->URL as $url) {
+				$groups[$url][] = $spec->getBaseName();
+			}
+		}
+	}
+
+	foreach ($groups as $url => $names) {
+		$names = array_unique($names);
+		sort($names);
+		if (count($names) > 1) {
+			foreach ($names as $name) {
+				echo 'rm ' . escapeshellarg($name), PHP_EOL;
+			}
+			echo PHP_EOL;
+		}
+	}
 }

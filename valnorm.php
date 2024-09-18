@@ -34,6 +34,7 @@ class ValNorm {
 		foreach ($tags as &$tag) {
 			$tag = self::normalizeTag($tag);
 		}
+		$tags = array_unique($tags);
 		natcasesort($tags);
 		return array_values($tags);
 	}
@@ -72,6 +73,7 @@ class ValNorm {
 		return array_values($circles);
 	}
 }
+
 ValNorm::$downloadSources = require __DIR__ . '/arrays/downloadSources.php';
 ValNorm::$urlSources = require __DIR__ . '/arrays/urlSources.php';
 ValNorm::$tags = require __DIR__ . '/arrays/tagsMap.php';
