@@ -21,8 +21,8 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # [Download sources](indexes/downloadSource.csv)
 |Source|Count|
 |-|-|
-|Koharu|14256|
-|HentaiNexus|523|
+|Koharu|14255|
+|HentaiNexus|524|
 
 # [Download URLs](indexes/urlSource.csv)
 |Source|Count|
