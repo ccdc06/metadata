@@ -1,5 +1,7 @@
 <?php
 return [
+	"bbm" => "BBM",
+	"bbw" => "BBW",
 	"bdsm" => "BDSM",
 	"bl" => "BL",
 	"bss" => "BSS",
@@ -8,9 +10,20 @@ return [
 	"ffm threesome" => "FFM Threesome",
 	"mmf threesome" => "MMF Threesome",
 	"mmmf foursome" => "MMMF Foursome",
-	"ntr" => "NTR",
 	"romance-centric" => "Romance-centric",
 	"slice of life" => "Slice of Life",
 	"valentine-sale" => "Valentine-sale",
 	"x-ray" => "X-ray",
+
+	"first time" => "Defloration",
+	"loli" => "Lolicon",
+	"no sex" => "No Penetration",
+	"ntr" => "Netorare",
+	"public hair" => "Pubic Hair",
+	"schoolgirl outfit" => "Schoolgirl Uniform",
+	"shota" => "Shotacon",
+	"creampie" => "Nakadashi",
+	"big dick" => "Big Penis",
+	"paperback" => "Tankoubon",
+	"forced" => "Rape",
 ];

@@ -18,6 +18,13 @@ if ($updateStatus) {
 
 	$byUrlSourceIndex = new \SplFileObject( __DIR__ . '/indexes/urlSource.csv', 'w');
 	$byUrlSourceIndex->fputcsv(['source', 'url', 'file']);
+
+	$byTitleIndex = new \SplFileObject( __DIR__ . '/indexes/title.csv', 'w');
+	$byTitleIndex->fputcsv(['title', 'file']);
+
+	$byTagIndex = new \SplFileObject( __DIR__ . '/indexes/tags.csv', 'w');
+	$byTagIndex->fputcsv(['tag', 'count']);
+	$byTagArray = [];
 }
 
 $files = listFiles();
@@ -28,6 +35,7 @@ $first = true;
 foreach ($files as $yamlFn) {
 	$spec = Spec::fromFile($yamlFn);
 	$baseName = $spec->getBaseName();
+	$title = $spec->Title;
 
 	if ($updateStatus) {
 		$baseNameCbz = $spec->getBaseNameCbz();
@@ -39,6 +47,16 @@ foreach ($files as $yamlFn) {
 		if (!empty($spec->URL)) {
 			foreach ($spec->URL as $source => $url) {
 				$byUrlSourceIndex->fputcsv([$source, $url, $baseName]);
+			}
+		}
+		$byTitleIndex->fputcsv([$title, $baseName]);
+
+		if (!empty($spec->Tags)) {
+			foreach ($spec->Tags as $tag) {
+				if (empty($byTagArray[$tag])) {
+					$byTagArray[$tag] = 0;
+				}
+				$byTagArray[$tag]++;
 			}
 		}
 	}
@@ -64,5 +82,10 @@ foreach ($files as $yamlFn) {
 }
 
 if ($updateStatus) {
+	uksort($byTagArray, 'strnatcasecmp');
+	foreach ($byTagArray as $tag => $count) {
+		$byTagIndex->fputcsv([$tag, strval($count)]);
+	}
+
 	$status->updateStatusFile();
 }
