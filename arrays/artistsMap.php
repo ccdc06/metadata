@@ -241,4 +241,6 @@ return  [
 	// manual
 	'rib꞉y(uhki)' => 'Rib:y(uhki)', // Not colon
 	'ind kary (indo curry)' => 'IND Kary',
+	'manno' => 'Mannno',
+	'polinky' => 'Hori Hiroaki',
 ];
