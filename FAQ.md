@@ -1,18 +1,18 @@
 # Next release when?
 
-[TBA](https://tenor.com/view/anime-whatever-kawaii-dont-worry-gif-12242087)
+Every 2 weeks (maybe)[.](https://tenor.com/view/anime-whatever-kawaii-dont-worry-gif-12242087)
 
 # What is your goal?
 
-- Create a set of torrent files with all galleries uploaded to Koharu and HentaiNexus
-- Exclude duplicates between these sources (giving priority to Koharu versions over HentaiNexus versions)
+- Create an unofficial set of torrent files with all galleries uploaded to Koharu and HentaiNexus
+- Exclude duplicates between these sources
 - Split them into directories (collections) with up to 1000 files
 
 # Do I need to download everything again to keep up with your release format?
 
 If you did not change any folder names or edit the cbz files, you should be able to remove an older release from your torrent client (make sure you do it without deleting the existing files) and download a new version over it.
 
-Your torrent client probably is smart enough to download only the missing and changed files while skipping those already downloaded.
+Your torrent client probably is smart enough to download only the missing and changed files while skipping those already downloaded, but it probably won't remove files that were replaced with a newer version. There is more information on how to deal wth that [here](#are-my-collections-complete-what-files-were-added-and-removed-on-the-last-update).
 
 # Why some collections have less than 1000 files?
 
@@ -28,11 +28,7 @@ Removals often happen because a gallery was replaced with a new version. Removal
 
 Whenever a new revision of a collection is released, I will tag it with a new version number and hide/delete the older versions from nyaa.
 
-# What does "ongoing" and "X% complete" mean in release names?
-
-Collections are split by their numeric id numbers. The most recent release from each source will always be a partial "ongoing" release.
-
-For example, if the most recent id of the download source is `12665`, the current ongoing release will be `example.com_12001-13000`, and the completion percentage will be 66% (12**66**5).
+This is also used to version control the latest batches which size is supposed to increase for each release.
 
 # Can you add \<whatever\> to your release?
 
@@ -46,11 +42,23 @@ You can write some code yourself to parse it and find out what's missing and del
 
 You can also use [this tool](https://github.com/ccdc06/tidy) that does exatctly that (Windows users will most likely want to download and run the `ccdc06-tidy-windows-amd64.exe` binary from the [latest release](https://github.com/ccdc06/tidy/releases/latest))
 
-# Where is the 17001-18000 HentaiNexus batch?
+# Where are the Koharu/Anchira batches between id 15000 and 22000?
 
-To make managing duplicate galleries easier, on 26/jul/2024 I decided to replace all duplicate galleries from Nexus with their respective versions from Koharu.
+Koharu once uploaded a big batch of almost 9k files from [https://panda.chaika.moe](panda.chaika.moe). This batch is located between ids 14263 and 23248. Since this batch includes censored, non-english and poorly/machine translated galleries, this whole batch was skipped.
 
-As of the time I wrote this, 100% of the galleries in the 17001-18000 id range had a Koharu version available, so the whole folder was removed.
+If there is something worth keeping in this range, I can include it manually on request (as long as it is oficially uncensored and has good quality english translation).
+
+Occasionally more files from Chaika are uploaded in smaller batches and I'm filtering them manually to exclude anything including these tags:
+
+```
+japanese
+full censorship
+mosaic censorship
+mosaics
+text cleaned
+rough translation
+rough grammar
+```
 
 # Why are all your uploads anonymous?
 
