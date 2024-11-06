@@ -3,6 +3,9 @@ namespace Metadata;
 require __DIR__ . '/functions.php';
 init();
 
+$opt = getopt('u', ['update']);
+$update = isset($opt['u']) || isset($opt['update']);
+
 $autoSeries = require __DIR__ . '/arrays/autoSeriesMap.php';
 
 $i = 0;
@@ -35,13 +38,16 @@ foreach (streamSpecs() as $spec) {
 
 			foreach ($fieldValues as $fieldValue) {
 				foreach ($rules as $ruleType => $ruleValue) {
-					// if (str_starts_with($spec->$field, '48')) {
-					// 	var_dump($fieldValue, $ruleValue);
-					// 	exit;
-					// }
 					switch($ruleType) {
 						case 'prefix':
 							if (!str_starts_with($fieldValue, $ruleValue)) {
+								$specMatch = false;
+								break 4;
+							}
+							break;
+
+						case 'suffix':
+							if (!str_ends_with($fieldValue, $ruleValue)) {
 								$specMatch = false;
 								break 4;
 							}
@@ -77,6 +83,12 @@ foreach (streamSpecs() as $spec) {
 	}
 
 	if ($save) {
-		$spec->save();
+		if ($update) {
+			$spec->save();
+		}
 	}
+}
+
+if (!$update) {
+	echo "WARNING: Files won't be changed unless you pass -u or --update flag\n";
 }
