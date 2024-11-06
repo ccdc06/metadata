@@ -142,6 +142,7 @@ class StatusReport {
 
 class Spec {
 	public string $Title; // string
+	public array $Series; // []string
 	public array $Artist; // []string
 	public array $Circle; // []string
 	public string $Description; // string
@@ -319,6 +320,7 @@ class Spec {
 
 	public function fix() {
 		$this->fixEmptyValues();
+		$this->fixTitleFilenameCharacters();
 		$this->fixTags();
 		$this->fixArtist();
 		$this->fixCircle();
@@ -353,6 +355,20 @@ class Spec {
 				unset($this->{$key});
 			}
 		}
+	}
+
+	public function fixTitleFilenameCharacters() {
+		if (empty($this->Title)) {
+			return;
+		}
+
+		$this->Title = str_replace([
+			'꞉',
+			// '’',
+		], [
+			':',
+			// '\'',
+		], $this->Title);
 	}
 
 	public function fixArtist() {
@@ -482,6 +498,7 @@ class Spec {
 
 			switch ($key) {
 				case 'Artist': // []string
+				case 'Series': // []string
 				case 'Circle': // []string
 				case 'Magazine': // []string
 				case 'Parody': // []string
