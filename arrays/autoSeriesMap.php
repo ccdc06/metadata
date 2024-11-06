@@ -1,13 +1,6 @@
 <?php
 return  [
 	[
-		"title" => "Transferred to the Gyaru Academy",
-		"conditions" => [
-			"Title" => ["prefix" => "Transferred to the Gyaru Academy "],
-			"Artist" => ["match" => "Souryu"],
-		],
-	],
-	[
 		"title" => "GAMING HAREM",
 		"conditions" => [
 			"Title" => ["prefix" => "GAMING HAREM "],
