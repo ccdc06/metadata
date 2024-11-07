@@ -281,7 +281,10 @@ class Spec {
 			if ($id <= 14000) {
 				return "anchira.to_{$from}-{$to}";
 			}
-			return "koharu.to_{$from}-{$to}";
+			if ($id <= 24000) {
+				return "koharu.to_{$from}-{$to}";
+			}
+			return "schale.network_{$from}-{$to}";
 		}
 
 		if ($this->DownloadSource == 'HentaiNexus') {
