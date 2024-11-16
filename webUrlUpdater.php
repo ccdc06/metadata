@@ -477,6 +477,10 @@ function routeWebIndex() {
 			if ($current.val().indexOf('doujin.io') !== -1) {
 				$select.val('J18');
 			}
+
+			if ($current.val().indexOf('projecthentai.com') !== -1) {
+				$select.val('ProjectHentai');
+			}
 		})
 		</script>
 	</body>
