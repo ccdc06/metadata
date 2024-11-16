@@ -243,4 +243,5 @@ return  [
 	'ind kary (indo curry)' => 'IND Kary',
 	'manno' => 'Mannno',
 	'polinky' => 'Hori Hiroaki',
+	'kirei na oneesan wa suki desu kai' => 'Kirei na Oneesan Wa Suki Desu Kai',
 ];

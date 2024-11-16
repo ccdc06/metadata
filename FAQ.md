@@ -4,7 +4,7 @@ Every 2 weeks (maybe)[.](https://tenor.com/view/anime-whatever-kawaii-dont-worry
 
 # What is your goal?
 
-- Create an unofficial set of torrent files with all galleries uploaded to Koharu and HentaiNexus
+- Create an unofficial set of torrent files with all galleries uploaded to Schale and HentaiNexus
 - Exclude duplicates between these sources
 - Split them into directories (collections) with up to 1000 files
 
@@ -32,7 +32,7 @@ This is also used to version control the latest batches which size is supposed t
 
 # Can you add \<whatever\> to your release?
 
-I do not manage individual galleries. If you want to see something in my releases, upload it directly to Koharu or HentaiNexus. When it gets published to at least one of them, it will be included in the next release.
+I do not manage individual galleries. If you want to see something in my releases, upload it directly to Schale or HentaiNexus. When it gets published to at least one of them, it will be included in the next release.
 
 # Are my collections complete? What files were added and removed on the last update?
 
@@ -42,9 +42,9 @@ You can write some code yourself to parse it and find out what's missing and del
 
 You can also use [this tool](https://github.com/ccdc06/tidy) that does exatctly that (Windows users will most likely want to download and run the `ccdc06-tidy-windows-amd64.exe` binary from the [latest release](https://github.com/ccdc06/tidy/releases/latest))
 
-# Where are the Koharu/Anchira batches between id 15000 and 22000?
+# Where are the Schale/Anchira batches between id 15000 and 22000?
 
-Koharu once uploaded a big batch of almost 9k files from [https://panda.chaika.moe](panda.chaika.moe). This batch is located between ids 14263 and 23248. Since this batch includes censored, non-english and poorly/machine translated galleries, this whole batch was skipped.
+Schale once uploaded a big batch of almost 9k files from [https://panda.chaika.moe](panda.chaika.moe). This batch is located between ids 14263 and 23248. Since this batch includes censored, non-english and poorly/machine translated galleries, this whole batch was skipped.
 
 If there is something worth keeping in this range, I can include it manually on request (as long as it is oficially uncensored and has good quality english translation).
 

@@ -22,6 +22,9 @@ if ($updateStatus) {
 	$byTitleIndex = new \SplFileObject( __DIR__ . '/indexes/title.csv', 'w');
 	$byTitleIndex->fputcsv(['title', 'file']);
 
+	$bySeriesIndex = new \SplFileObject( __DIR__ . '/indexes/series.csv', 'w');
+	$bySeriesIndex->fputcsv(['title', 'file']);
+
 	$byTagIndex = new \SplFileObject( __DIR__ . '/indexes/tags.csv', 'w');
 	$byTagIndex->fputcsv(['tag', 'count']);
 	$byTagArray = [];
@@ -49,6 +52,13 @@ foreach ($files as $yamlFn) {
 				$byUrlSourceIndex->fputcsv([$source, $url, $baseName]);
 			}
 		}
+
+		if (!empty($spec->Series)) {
+			foreach ($spec->Series as $series) {
+				$bySeriesIndex->fputcsv([$series, $baseName]);
+			}
+		}
+		
 		$byTitleIndex->fputcsv([$title, $baseName]);
 
 		if (!empty($spec->Tags)) {

@@ -142,6 +142,7 @@ class StatusReport {
 
 class Spec {
 	public string $Title; // string
+	public array $Series; // []string
 	public array $Artist; // []string
 	public array $Circle; // []string
 	public string $Description; // string
@@ -225,13 +226,13 @@ class Spec {
 			}
 		}
 
-		if ($this->DownloadSource === 'Koharu') {
+		if ($this->DownloadSource === 'Schale') {
 			$spl = explode('/', $id);
 
 			if (count($spl) === 2) {
 				$ret = intval($spl[0]);
 				if ($ret === 0) {
-					throw new \Exception("Invalid Koharu numeric id");
+					throw new \Exception("Invalid Schale numeric id");
 				}
 
 				return $ret;
@@ -240,7 +241,7 @@ class Spec {
 			if (count($spl) === 4 && $spl[1] === 'g') {
 				$ret = intval($spl[2]);
 				if ($ret === 0) {
-					throw new \Exception("Invalid Koharu numeric id");
+					throw new \Exception("Invalid Schale numeric id");
 				}
 
 				return $ret;
@@ -265,7 +266,7 @@ class Spec {
 			throw new \Exception("DownloadSource empty");
 		}
 
-		if ($this->DownloadSource === 'Koharu') {
+		if ($this->DownloadSource === 'Schale') {
 			$id = $this->DownloadSourceIdNumeric();
 
 			$r = intval(floor($id / 1000) * 1000);
@@ -280,7 +281,10 @@ class Spec {
 			if ($id <= 14000) {
 				return "anchira.to_{$from}-{$to}";
 			}
-			return "koharu.to_{$from}-{$to}";
+			if ($id <= 24000) {
+				return "koharu.to_{$from}-{$to}";
+			}
+			return "schale.network_{$from}-{$to}";
 		}
 
 		if ($this->DownloadSource == 'HentaiNexus') {
@@ -319,6 +323,7 @@ class Spec {
 
 	public function fix() {
 		$this->fixEmptyValues();
+		$this->fixTitleFilenameCharacters();
 		$this->fixTags();
 		$this->fixArtist();
 		$this->fixCircle();
@@ -353,6 +358,20 @@ class Spec {
 				unset($this->{$key});
 			}
 		}
+	}
+
+	public function fixTitleFilenameCharacters() {
+		if (empty($this->Title)) {
+			return;
+		}
+
+		$this->Title = str_replace([
+			'꞉',
+			// '’',
+		], [
+			':',
+			// '\'',
+		], $this->Title);
 	}
 
 	public function fixArtist() {
@@ -415,7 +434,7 @@ class Spec {
 		$matches = null;
 
 		foreach ($this->Id as $source => &$id) {
-			if ($source === 'Koharu' || $source == 'Anchira') {
+			if ($source === 'Schale') {
 				if (str_starts_with($id, '/g/')) {
 					continue;
 				}
@@ -482,6 +501,7 @@ class Spec {
 
 			switch ($key) {
 				case 'Artist': // []string
+				case 'Series': // []string
 				case 'Circle': // []string
 				case 'Magazine': // []string
 				case 'Parody': // []string
@@ -675,10 +695,10 @@ function fullParseMid(string $mid) : array {
 			throw new \Exception("bad Nexus count {$mid}");
 		}
 		$nid = intval($exp[2]);
-	} elseif ($source === 'Koharu') {
+	} elseif ($source === 'Schale') {
 		$exp = explode('/', $mid);
 		if (count($exp) !== 4) {
-			throw new \Exception("bad Koharu count {$mid}");
+			throw new \Exception("bad Schale count {$mid}");
 		}
 		$nid = intval($exp[2]);
 	}

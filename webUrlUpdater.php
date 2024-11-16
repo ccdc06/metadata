@@ -11,8 +11,10 @@ switch (php_sapi_name()) {
 			case '/update.php': return routeWebUpdate();
 			case '/hide.php': return routeWebHide();
 			case '/hentagProxy.php': return routeWebHentagProxy();
+			case '/fakkusm.php': return routeFakkuSm();
 			case '/fakkuProxy.php': return routeWebFakkuProxy();
 			case '/duplicates.php': return routeDuplicates();
+			case '/favicon.ico': die();
 
 			default:
 				http_response_code(404);
@@ -58,6 +60,22 @@ function routeWebFakkuProxy() {
 	header('Content-Type: application/json');
 	echo curl_exec($ch);
 	curl_close($ch);
+}
+
+function routeFakkuSm() {
+	$smindex = require __DIR__ . '/temp/fakkusm.php';
+	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
+
+	$found = array_keys($smindex, $query);
+	$ret = [];
+	foreach ($found as $url) {
+		$ret[] = [
+			'url' => $url,
+			'title' => $smindex[$url],
+		];
+	}
+	header('Content-Type: application/json');
+	echo json_encode($ret);
 }
 
 function routeWebHide() {
@@ -268,6 +286,7 @@ function routeWebIndex() {
 						</form>
 					</div>
 					<div class="card-footer">
+						<button type="button" class="fakkusm-api btn btn-primary" data-query="<?= h($title) ?>">Fakku SM</button>
 						<button type="button" class="hentag-api btn btn-primary" data-query="<?= h($query) ?>">Hentag API</button>
 						<button type="button" class="irodori-api btn btn-primary" data-url="<?= h($irodoriApiUrl) ?>">Irodori API</button>
 						<button type="button" class="fakku-api btn btn-primary" data-query="<?= h($fakkuApiQuery) ?>">Fakku API</button>
@@ -282,6 +301,35 @@ function routeWebIndex() {
 		</div>
 		<script type="text/javascript">
 		var $body = $('body');
+
+		$body.on('click', 'button.fakkusm-api', function (e) {
+			e.preventDefault();
+			var $current = $(e.currentTarget);
+			var query = $current.data('query');
+			var $url = $current.closest('div.card').find('input[name="url"]');
+			var $select = $current.closest('div.card').find('select[name="source"]');
+			var $titleCompare = $current.closest('div.card').find('div.title_compare');
+
+			$.ajax({
+				type: 'GET',
+				url: 'fakkusm.php',
+				data: {query: query},
+				success: function(data) {
+					$current.removeAttr('disabled');
+
+					if (0 in data) {
+						let p = data[0];
+
+						$titleCompare.show().html($('<h4>').html(p.title));
+						$url.val(p.url).focus().select();
+						$select.val('Fakku');
+					}
+				},
+				error: function () {
+					$current.removeAttr('disabled');
+				}
+			});
+		});
 
 		$body.on('click', 'button.fakku-api', function (e) {
 			e.preventDefault();
@@ -428,6 +476,10 @@ function routeWebIndex() {
 
 			if ($current.val().indexOf('doujin.io') !== -1) {
 				$select.val('J18');
+			}
+
+			if ($current.val().indexOf('projecthentai.com') !== -1) {
+				$select.val('ProjectHentai');
 			}
 		})
 		</script>
