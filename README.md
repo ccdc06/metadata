@@ -27,7 +27,7 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # [Download URLs](indexes/urlSource.csv)
 |Source|Count|
 |-|-|
-|Fakku|14406|
+|Fakku|14408|
 |ProjectHentai|38|
 |Irodori|1196|
 |J18|16|
