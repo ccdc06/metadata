@@ -210,4 +210,11 @@ return  [
 			"Title" => ["prefix" => "Victim Girls "],
 		],
 	],
+	[
+		"title" => "My Harem in Another World",
+		"conditions" => [
+			"Artist" => ["match" => "Mahiro Ootori"],
+			"Title" => ["prefix" => "My Harem in Another World "],
+		],
+	],
 ];
