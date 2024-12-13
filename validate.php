@@ -8,24 +8,31 @@ $updateStatus = isset($opt['update']) || isset($opt['u']);
 
 if ($updateStatus) {
 	$listIndex = new \SplFileObject( __DIR__ . '/indexes/list.csv', 'w');
+	$listIndex->setCsvControl(',', '"', '\\');
 	$listIndex->fputcsv(['file', 'gallery']);
 
 	$byErrorIndex = new \SplFileObject( __DIR__ . '/indexes/errors.csv', 'w');
+	$byErrorIndex->setCsvControl(',', '"', '\\');
 	$byErrorIndex->fputcsv(['error', 'file']);
 
 	$byDownloadSourceIndex = new \SplFileObject( __DIR__ . '/indexes/downloadSource.csv', 'w');
+	$byDownloadSourceIndex->setCsvControl(',', '"', '\\');
 	$byDownloadSourceIndex->fputcsv(['source', 'id', 'file']);
 
 	$byUrlSourceIndex = new \SplFileObject( __DIR__ . '/indexes/urlSource.csv', 'w');
+	$byUrlSourceIndex->setCsvControl(',', '"', '\\');
 	$byUrlSourceIndex->fputcsv(['source', 'url', 'file']);
 
 	$byTitleIndex = new \SplFileObject( __DIR__ . '/indexes/title.csv', 'w');
+	$byTitleIndex->setCsvControl(',', '"', '\\');
 	$byTitleIndex->fputcsv(['title', 'file']);
 
 	$bySeriesIndex = new \SplFileObject( __DIR__ . '/indexes/series.csv', 'w');
+	$bySeriesIndex->setCsvControl(',', '"', '\\');
 	$bySeriesIndex->fputcsv(['title', 'file']);
 
 	$byTagIndex = new \SplFileObject( __DIR__ . '/indexes/tags.csv', 'w');
+	$byTagIndex->setCsvControl(',', '"', '\\');
 	$byTagIndex->fputcsv(['tag', 'count']);
 	$byTagArray = [];
 }
@@ -58,7 +65,7 @@ foreach ($files as $yamlFn) {
 				$bySeriesIndex->fputcsv([$series, $baseName]);
 			}
 		}
-		
+
 		$byTitleIndex->fputcsv([$title, $baseName]);
 
 		if (!empty($spec->Tags)) {

@@ -12,6 +12,7 @@ switch (php_sapi_name()) {
 			case '/hide.php': return routeWebHide();
 			case '/hentagProxy.php': return routeWebHentagProxy();
 			case '/fakkusm.php': return routeFakkuSm();
+			case '/irodorism.php': return routeIrodoriSm();
 			case '/fakkuProxy.php': return routeWebFakkuProxy();
 			case '/duplicates.php': return routeDuplicates();
 			case '/favicon.ico': die();
@@ -64,6 +65,22 @@ function routeWebFakkuProxy() {
 
 function routeFakkuSm() {
 	$smindex = require __DIR__ . '/temp/fakkusm.php';
+	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
+
+	$found = array_keys($smindex, $query);
+	$ret = [];
+	foreach ($found as $url) {
+		$ret[] = [
+			'url' => $url,
+			'title' => $smindex[$url],
+		];
+	}
+	header('Content-Type: application/json');
+	echo json_encode($ret);
+}
+
+function routeIrodoriSm() {
+	$smindex = require __DIR__ . '/temp/irodorism.php';
 	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
 
 	$found = array_keys($smindex, $query);
@@ -287,6 +304,7 @@ function routeWebIndex() {
 					</div>
 					<div class="card-footer">
 						<button type="button" class="fakkusm-api btn btn-primary" data-query="<?= h($title) ?>">Fakku SM</button>
+						<button type="button" class="irodorism-api btn btn-primary" data-query="<?= h($title) ?>">Irodori SM</button>
 						<button type="button" class="hentag-api btn btn-primary" data-query="<?= h($query) ?>">Hentag API</button>
 						<button type="button" class="irodori-api btn btn-primary" data-url="<?= h($irodoriApiUrl) ?>">Irodori API</button>
 						<button type="button" class="fakku-api btn btn-primary" data-query="<?= h($fakkuApiQuery) ?>">Fakku API</button>
@@ -323,6 +341,35 @@ function routeWebIndex() {
 						$titleCompare.show().html($('<h4>').html(p.title));
 						$url.val(p.url).focus().select();
 						$select.val('Fakku');
+					}
+				},
+				error: function () {
+					$current.removeAttr('disabled');
+				}
+			});
+		});
+
+		$body.on('click', 'button.irodorism-api', function (e) {
+			e.preventDefault();
+			var $current = $(e.currentTarget);
+			var query = $current.data('query');
+			var $url = $current.closest('div.card').find('input[name="url"]');
+			var $select = $current.closest('div.card').find('select[name="source"]');
+			var $titleCompare = $current.closest('div.card').find('div.title_compare');
+
+			$.ajax({
+				type: 'GET',
+				url: 'irodorism.php',
+				data: {query: query},
+				success: function(data) {
+					$current.removeAttr('disabled');
+
+					if (0 in data) {
+						let p = data[0];
+
+						$titleCompare.show().html($('<h4>').html(p.title));
+						$url.val(p.url).focus().select();
+						$select.val('Irodori');
 					}
 				},
 				error: function () {

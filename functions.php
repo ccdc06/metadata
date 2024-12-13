@@ -711,6 +711,7 @@ function fullParseMid(string $mid) : array {
 
 function listCollections() {
 	$file = new \SplFileObject(__DIR__ . '/indexes/collections.csv');
+	$file->setCsvControl(',', '"', '\\');
 	$file->setFlags(\SplFileObject::READ_CSV);
 	$ret = [];
 	foreach ($file as $val) {
