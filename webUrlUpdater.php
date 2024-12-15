@@ -13,7 +13,6 @@ switch (php_sapi_name()) {
 			case '/hentagProxy.php': return routeWebHentagProxy();
 			case '/fakkusm.php': return routeFakkuSm();
 			case '/irodorism.php': return routeIrodoriSm();
-			case '/fakkuProxy.php': return routeWebFakkuProxy();
 			case '/duplicates.php': return routeDuplicates();
 			case '/favicon.ico': die();
 
@@ -67,14 +66,16 @@ function routeFakkuSm() {
 	$smindex = require __DIR__ . '/temp/fakkusm.php';
 	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
 
-	$found = array_keys($smindex, $query);
 	$ret = [];
-	foreach ($found as $url) {
-		$ret[] = [
-			'url' => $url,
-			'title' => $smindex[$url],
-		];
+	foreach ($smindex as $url => $val) {
+		if (strnatcasecmp($query, $val['title']) === 0) {
+			$ret[] = [
+				'url' => $url,
+				'title' => "[{$smindex[$url]['artist']}] {$smindex[$url]['title']}",
+			];
+		}
 	}
+
 	header('Content-Type: application/json');
 	echo json_encode($ret);
 }
@@ -83,13 +84,14 @@ function routeIrodoriSm() {
 	$smindex = require __DIR__ . '/temp/irodorism.php';
 	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
 
-	$found = array_keys($smindex, $query);
 	$ret = [];
-	foreach ($found as $url) {
-		$ret[] = [
-			'url' => $url,
-			'title' => $smindex[$url],
-		];
+	foreach ($smindex as $url => $val) {
+		if (strnatcasecmp($query, $val['title']) === 0) {
+			$ret[] = [
+				'url' => $url,
+				'title' => "[{$smindex[$url]['artist']}] {$smindex[$url]['title']}",
+			];
+		}
 	}
 	header('Content-Type: application/json');
 	echo json_encode($ret);
@@ -306,8 +308,6 @@ function routeWebIndex() {
 						<button type="button" class="fakkusm-api btn btn-primary" data-query="<?= h($title) ?>">Fakku SM</button>
 						<button type="button" class="irodorism-api btn btn-primary" data-query="<?= h($title) ?>">Irodori SM</button>
 						<button type="button" class="hentag-api btn btn-primary" data-query="<?= h($query) ?>">Hentag API</button>
-						<button type="button" class="irodori-api btn btn-primary" data-url="<?= h($irodoriApiUrl) ?>">Irodori API</button>
-						<button type="button" class="fakku-api btn btn-primary" data-query="<?= h($fakkuApiQuery) ?>">Fakku API</button>
 						<a target="hentag" rel="noopener,noreferrer" href="<?= h($hentagUrl) ?>" class="btn btn-primary">Hentag</a>
 						<a target="google" rel="noopener,noreferrer" href="<?= h($googleUrl) ?>" class="btn btn-primary">Google</a>
 						<a target="fakku" rel="noopener,noreferrer" href="<?= h($fakkuUrl) ?>" class="btn btn-primary">Fakku</a>
@@ -369,64 +369,6 @@ function routeWebIndex() {
 
 						$titleCompare.show().html($('<h4>').html(p.title));
 						$url.val(p.url).focus().select();
-						$select.val('Irodori');
-					}
-				},
-				error: function () {
-					$current.removeAttr('disabled');
-				}
-			});
-		});
-
-		$body.on('click', 'button.fakku-api', function (e) {
-			e.preventDefault();
-			var $current = $(e.currentTarget);
-			var query = $current.data('query');
-			var $url = $current.closest('div.card').find('input[name="url"]');
-			var $select = $current.closest('div.card').find('select[name="source"]');
-			var $titleCompare = $current.closest('div.card').find('div.title_compare');
-
-			$.ajax({
-				type: 'GET',
-				url: 'fakkuProxy.php',
-				data: {query: query},
-				success: function(data) {
-					$current.removeAttr('disabled');
-
-					if ('results' in data && 0 in data.results) {
-						let p = data.results[0];
-
-						$titleCompare.show().html($('<h4>').html(p.title));
-						$url.val('https://www.fakku.net' + p.link).focus().select();
-						$select.val('Fakku');
-					}
-				},
-				error: function () {
-					$current.removeAttr('disabled');
-				}
-			});
-		});
-
-		$body.on('click', 'button.irodori-api', function (e) {
-			e.preventDefault();
-			var $current = $(e.currentTarget);
-			var $url = $current.closest('div.card').find('input[name="url"]');
-			var $select = $current.closest('div.card').find('select[name="source"]');
-			var $titleCompare = $current.closest('div.card').find('div.title_compare');
-
-			var queryUrl = $current.data('url');
-
-			$.ajax({
-				type: 'GET',
-				url: queryUrl,
-				success: function(data) {
-					$current.removeAttr('disabled');
-
-					if ('products' in data && 0 in data.products) {
-						let p = data.products[0];
-
-						$titleCompare.show().html($('<h4>').html('[' + p.manufacturer + '] ' + p.name));
-						$url.val(p.href.split('?')[0]).focus().select();
 						$select.val('Irodori');
 					}
 				},
@@ -556,4 +498,65 @@ function routeDuplicates() {
 			echo PHP_EOL;
 		}
 	}
+}
+
+function buildEmptyUrlCache() {
+	$cacheFn = __DIR__ . '/temp/emptyUrlCache.json';
+
+	$files = listFiles();
+
+	$i = 0;
+	$count = count($files);
+
+	$missing = [];
+	foreach ($files as $yamlFn) {
+		$i++;
+		if ($i % 1000 === 0) {
+			echo "{$i}/{$count}\n";
+		}
+		$rFile = relativeDir($yamlFn);
+
+		$yaml = file_get_contents($yamlFn);
+		$meta = yaml_parse($yaml);
+		if (empty($meta)) {
+			continue;
+		}
+
+		if (!empty($meta['URL'])) {
+			continue;
+		}
+
+		$missing[] = $rFile;
+	}
+
+	file_put_contents($cacheFn, json_encode($missing, JSON_PRETTY_PRINT));
+}
+
+function getEmptyUrlsCache() {
+	$cacheFn = __DIR__ . '/temp/emptyUrlCache.json';
+	$files = json_decode(file_get_contents($cacheFn), true);
+
+	$hideFn = __DIR__ . '/temp/hidden.json';
+	if (file_exists($hideFn)) {
+		$hide = json_decode(file_get_contents($hideFn), true);
+	} else {
+		$hide = [];
+	}
+
+	$missing = [];
+	foreach ($files as $yamlFn) {
+		$rFile = relativeDir($yamlFn);
+		if (!empty($hide[$rFile])) {
+			continue;
+		}
+		$fn = baseDir() . '/' . $yamlFn;
+		$spec = Spec::fromFile($fn);
+
+		if (!empty($spec->URL)) {
+			continue;
+		}
+
+		$missing[$rFile] = $spec;
+	}
+	return $missing;
 }

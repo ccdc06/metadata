@@ -191,7 +191,7 @@ class Spec {
 
 	public function getBaseName() : string {
 		if (empty($this->fileName)) {
-			throw new \Exception("This file wasn't generated from a file");
+			throw new \Exception("This spec was not generated from a file");
 		}
 
 		return relativeDir($this->fileName);
@@ -753,67 +753,6 @@ function streamSpecs(bool $reverse = false) {
 			yield Spec::fromFile($file);
 		}
 	}
-}
-
-function buildEmptyUrlCache() {
-	$cacheFn = __DIR__ . '/temp/emptyUrlCache.json';
-
-	$files = listFiles();
-
-	$i = 0;
-	$count = count($files);
-
-	$missing = [];
-	foreach ($files as $yamlFn) {
-		$i++;
-		if ($i % 1000 === 0) {
-			echo "{$i}/{$count}\n";
-		}
-		$rFile = relativeDir($yamlFn);
-
-		$yaml = file_get_contents($yamlFn);
-		$meta = yaml_parse($yaml);
-		if (empty($meta)) {
-			continue;
-		}
-
-		if (!empty($meta['URL'])) {
-			continue;
-		}
-
-		$missing[] = $rFile;
-	}
-
-	file_put_contents($cacheFn, json_encode($missing, JSON_PRETTY_PRINT));
-}
-
-function getEmptyUrlsCache() {
-	$cacheFn = __DIR__ . '/temp/emptyUrlCache.json';
-	$files = json_decode(file_get_contents($cacheFn), true);
-
-	$hideFn = __DIR__ . '/temp/hidden.json';
-	if (file_exists($hideFn)) {
-		$hide = json_decode(file_get_contents($hideFn), true);
-	} else {
-		$hide = [];
-	}
-
-	$missing = [];
-	foreach ($files as $yamlFn) {
-		$rFile = relativeDir($yamlFn);
-		if (!empty($hide[$rFile])) {
-			continue;
-		}
-		$fn = baseDir() . '/' . $yamlFn;
-		$spec = Spec::fromFile($fn);
-
-		if (!empty($spec->URL)) {
-			continue;
-		}
-
-		$missing[$rFile] = $spec;
-	}
-	return $missing;
 }
 
 function validateArrayString($var) {

@@ -21,15 +21,15 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # [Download sources](indexes/downloadSource.csv)
 |Source|Count|
 |-|-|
-|Schale|14223|
-|HentaiNexus|1060|
+|Schale|14221|
+|HentaiNexus|1062|
 
 # [Download URLs](indexes/urlSource.csv)
 |Source|Count|
 |-|-|
-|Fakku|14512|
+|Fakku|15017|
 |ProjectHentai|43|
-|Irodori|1224|
+|Irodori|1715|
 |J18|16|
 <!-- [/Status] -->
 
