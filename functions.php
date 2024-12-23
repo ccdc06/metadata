@@ -462,11 +462,31 @@ class Spec {
 			return;
 		}
 
-		foreach ($this->URL as $source => $url) {
+		foreach ($this->URL as $source => &$url) {
+			$pu = parse_url($url);
+
+			if ($pu['scheme'] !== 'https') {
+				die("scheme != https: {$url}");
+			}
+
 			if ($source === 'Fakku') {
-				if (str_starts_with($url, 'https://fakku.net/')) {
-					$this->URL[$source] = str_replace('https://fakku.net/', 'https://www.fakku.net/', $url);
+				if ($pu['host'] !== 'fakku.net') {
+					$url = str_replace('https://fakku.net/', 'https://www.fakku.net/', $url);
 				}
+
+				if ($pu['host'] !== 'www.fakku.net') {
+					die("host != www.fakku.net: {$url}");
+				}
+			}
+
+			if ($source === 'Irodori') {
+				if ($pu['host'] !== 'irodoricomics.com') {
+					die("host != irodoricomics.com: {$url}");
+				}
+			}
+
+			if (!empty($pu['query'])) {
+				$url = str_replace("?{$pu['query']}", "", $url);
 			}
 		}
 
