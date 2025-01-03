@@ -26,4 +26,5 @@ return [
 	"big dick" => "Big Penis",
 	"paperback" => "Tankoubon",
 	"forced" => "Rape",
+	"book" => "Tankoubon",
 ];

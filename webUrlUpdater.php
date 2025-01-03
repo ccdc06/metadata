@@ -11,9 +11,7 @@ switch (php_sapi_name()) {
 			case '/update.php': return routeWebUpdate();
 			case '/hide.php': return routeWebHide();
 			case '/hentagProxy.php': return routeWebHentagProxy();
-			case '/fakkusm.php': return routeFakkuSm();
-			case '/irodorism.php': return routeIrodoriSm();
-			case '/fakkuProxy.php': return routeWebFakkuProxy();
+			case '/sm.php': return routeSm();
 			case '/duplicates.php': return routeDuplicates();
 			case '/favicon.ico': die();
 
@@ -63,34 +61,32 @@ function routeWebFakkuProxy() {
 	curl_close($ch);
 }
 
-function routeFakkuSm() {
-	$smindex = require __DIR__ . '/temp/fakkusm.php';
+function routeSm() {
+	$fakkuindex = require __DIR__ . '/temp/fakkusm.php';
+	$iroindex = require __DIR__ . '/temp/irodorism.php';
 	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
 
-	$found = array_keys($smindex, $query);
 	$ret = [];
-	foreach ($found as $url) {
-		$ret[] = [
-			'url' => $url,
-			'title' => $smindex[$url],
-		];
+	foreach ($fakkuindex as $url => $val) {
+		if (strnatcasecmp($query, $val['title']) === 0) {
+			$ret[] = [
+				'url' => $url,
+				'title' => "[{$fakkuindex[$url]['artist']}] {$fakkuindex[$url]['title']}",
+				'source' => 'Fakku',
+			];
+		}
 	}
-	header('Content-Type: application/json');
-	echo json_encode($ret);
-}
 
-function routeIrodoriSm() {
-	$smindex = require __DIR__ . '/temp/irodorism.php';
-	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
-
-	$found = array_keys($smindex, $query);
-	$ret = [];
-	foreach ($found as $url) {
-		$ret[] = [
-			'url' => $url,
-			'title' => $smindex[$url],
-		];
+	foreach ($iroindex as $url => $val) {
+		if (strnatcasecmp($query, $val['title']) === 0) {
+			$ret[] = [
+				'url' => $url,
+				'title' => "[{$iroindex[$url]['artist']}] {$iroindex[$url]['title']}",
+				'source' => 'Irodori',
+			];
+		}
 	}
+
 	header('Content-Type: application/json');
 	echo json_encode($ret);
 }
@@ -113,28 +109,12 @@ function routeWebHide() {
 }
 
 function routeWebUpdate() {
-	$url = strval(isset($_POST['url']) ? $_POST['url'] : '');
 	$key = strval(isset($_POST['key']) ? $_POST['key'] : '');
-	$source = strval(isset($_POST['source']) ? $_POST['source'] : '');
+	$entries = isset($_POST['entries']) ? $_POST['entries'] : [];
 
-	if (empty($url)) {
+	if (empty($entries) || !is_array($entries)) {
 		http_response_code(400);
-		exit("Empty url");
-	}
-
-	if (empty($source)) {
-		http_response_code(400);
-		exit("Empty source");
-	}
-
-	if (!in_array($source, ValNorm::$urlSources)) {
-		http_response_code(400);
-		exit("Unknown source " . h($source));
-	}
-
-	if (empty($key)) {
-		http_response_code(400);
-		exit("Empty key");
+		exit("Empty entries");
 	}
 
 	$yamlFn = __DIR__ . "/{$key}";
@@ -142,13 +122,21 @@ function routeWebUpdate() {
 		http_response_code(400);
 		exit("File {$yamlFn} not found");
 	}
-
 	$spec = Spec::fromFile($yamlFn);
 
-	$spec->URL[$source] = $url;
-	if (empty($spec->URLSource)) {
-		$spec->URLSource = $source;
+	foreach ($entries as $entry) {
+		if (!in_array($entry['source'], ValNorm::$urlSources)) {
+			http_response_code(400);
+			exit("Unknown source " . h($entry['source']));
+		}
+
+		if (empty($spec->URLSource)) {
+			$spec->URLSource = $entry['source'];
+		}
+
+		$spec->URL[$entry['source']] = $entry['url'];
 	}
+
 
 	$spec->save();
 
@@ -164,28 +152,6 @@ function routeWebIndex() {
 	}
 
 	$missing = getEmptyUrlsCache();
-	/*
-	$files = file(baseDir() . '/temp/iro.tsv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-	$missing = [];
-	$i = 0;
-	foreach ($files as $raw) {
-		if (count($missing) >= 30) {
-			continue;
-		}
-		$spl = explode("\t", $raw);
-		if (!empty($hide[$spl[0]])) {
-			continue;
-		}
-		$spec = Spec::fromFile(baseDir() . '/' . $spl[0]);
-		if (!empty($spec->URLSource)) {
-			continue;
-		}
-
-		$i++;
-		$missing[$spl[0]] = $spec;
-	}
-	var_dump($i . "/" . count($files));
-	*/
 	?>
 	<!DOCTYPE html>
 	<html lang="en">
@@ -286,28 +252,31 @@ function routeWebIndex() {
 						<p class="px-2"><code><?= h($baseName) ?></code></p>
 						<form method="post" action="update.php">
 							<input type="hidden" name="key" value="<?= $baseName ?>" />
-							<div class="p-1 d-flex">
-								<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
-								<select class="form-select" name="source">
-									<option value="" selected>(Select)</option>
-									<?php foreach (ValNorm::$urlSources as $source): ?>
-										<option value="<?= h($source) ?>"><?= h($source) ?></option>
-									<?php endforeach; ?>
-								</select>
+							<div class="list-target">
+								<template>
+									<fieldset class="p-1 d-flex">
+										<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
+										<select class="form-select mx-1" name="source">
+											<option value="" selected>(Select)</option>
+											<?php foreach (ValNorm::$urlSources as $source): ?>
+											<option value="<?= h($source) ?>"><?= h($source) ?></option>
+											<?php endforeach; ?>
+										</select>
+										<button type="button" class="btn btn-danger mx-1 option-remove">x</button>
+									</fieldset>
+								</template>
 							</div>
 							<div class="p-1">
 								<button class="btn btn-primary" type="submit" name="op" value="updateUrl">Save</button>
 								<a href="hide.php?<?= http_build_query(['key' => $baseName]) ?>" class="btn btn-warning">Hide</a>
+								<button class="btn btn-success add-empty-option" type="button">+</button>
 								<span class="comment ms-2 text-danger"></span>
 							</div>
 						</form>
 					</div>
 					<div class="card-footer">
-						<button type="button" class="fakkusm-api btn btn-primary" data-query="<?= h($title) ?>">Fakku SM</button>
-						<button type="button" class="irodorism-api btn btn-primary" data-query="<?= h($title) ?>">Irodori SM</button>
+						<button type="button" class="sm-api btn btn-primary" data-query="<?= h($title) ?>">SM</button>
 						<button type="button" class="hentag-api btn btn-primary" data-query="<?= h($query) ?>">Hentag API</button>
-						<button type="button" class="irodori-api btn btn-primary" data-url="<?= h($irodoriApiUrl) ?>">Irodori API</button>
-						<button type="button" class="fakku-api btn btn-primary" data-query="<?= h($fakkuApiQuery) ?>">Fakku API</button>
 						<a target="hentag" rel="noopener,noreferrer" href="<?= h($hentagUrl) ?>" class="btn btn-primary">Hentag</a>
 						<a target="google" rel="noopener,noreferrer" href="<?= h($googleUrl) ?>" class="btn btn-primary">Google</a>
 						<a target="fakku" rel="noopener,noreferrer" href="<?= h($fakkuUrl) ?>" class="btn btn-primary">Fakku</a>
@@ -319,115 +288,54 @@ function routeWebIndex() {
 		</div>
 		<script type="text/javascript">
 		var $body = $('body');
+		var i = 0;
 
-		$body.on('click', 'button.fakkusm-api', function (e) {
+		function addOption($target, url, source) {
+			i++;
+			var templateHtml = $target.find('template').html();
+			var $item = $(templateHtml);
+
+			var $url = $item.find('[name=url]');
+			$url.attr('name', 'entries[' + i + '][url]');
+			$url.val(url);
+
+			var $source = $item.find('[name=source]');
+			$source.attr('name', 'entries[' + i + '][source]');
+			$source.val(source);
+
+			$target.append($item);
+
+			$url.focus().select();
+		}
+
+		$('body').on('click', '.add-empty-option', function (e) {
+			var $target = $(e.currentTarget).closest('div.card').find('.list-target');
+			addOption($target);
+		});
+
+		$('body').on('click', '.option-remove', function (e) {
+			$(e.currentTarget).closest('fieldset').remove();
+		});
+
+		$body.on('click', 'button.sm-api', function (e) {
 			e.preventDefault();
 			var $current = $(e.currentTarget);
 			var query = $current.data('query');
-			var $url = $current.closest('div.card').find('input[name="url"]');
-			var $select = $current.closest('div.card').find('select[name="source"]');
-			var $titleCompare = $current.closest('div.card').find('div.title_compare');
+			var $listTarget = $current.closest('div.card').find('.list-target');
+			var query = $current.data('query');
+			$current.attr('disabled', true);
 
 			$.ajax({
 				type: 'GET',
-				url: 'fakkusm.php',
+				url: 'sm.php',
 				data: {query: query},
 				success: function(data) {
 					$current.removeAttr('disabled');
 
-					if (0 in data) {
-						let p = data[0];
-
-						$titleCompare.show().html($('<h4>').html(p.title));
-						$url.val(p.url).focus().select();
-						$select.val('Fakku');
-					}
-				},
-				error: function () {
-					$current.removeAttr('disabled');
-				}
-			});
-		});
-
-		$body.on('click', 'button.irodorism-api', function (e) {
-			e.preventDefault();
-			var $current = $(e.currentTarget);
-			var query = $current.data('query');
-			var $url = $current.closest('div.card').find('input[name="url"]');
-			var $select = $current.closest('div.card').find('select[name="source"]');
-			var $titleCompare = $current.closest('div.card').find('div.title_compare');
-
-			$.ajax({
-				type: 'GET',
-				url: 'irodorism.php',
-				data: {query: query},
-				success: function(data) {
-					$current.removeAttr('disabled');
-
-					if (0 in data) {
-						let p = data[0];
-
-						$titleCompare.show().html($('<h4>').html(p.title));
-						$url.val(p.url).focus().select();
-						$select.val('Irodori');
-					}
-				},
-				error: function () {
-					$current.removeAttr('disabled');
-				}
-			});
-		});
-
-		$body.on('click', 'button.fakku-api', function (e) {
-			e.preventDefault();
-			var $current = $(e.currentTarget);
-			var query = $current.data('query');
-			var $url = $current.closest('div.card').find('input[name="url"]');
-			var $select = $current.closest('div.card').find('select[name="source"]');
-			var $titleCompare = $current.closest('div.card').find('div.title_compare');
-
-			$.ajax({
-				type: 'GET',
-				url: 'fakkuProxy.php',
-				data: {query: query},
-				success: function(data) {
-					$current.removeAttr('disabled');
-
-					if ('results' in data && 0 in data.results) {
-						let p = data.results[0];
-
-						$titleCompare.show().html($('<h4>').html(p.title));
-						$url.val('https://www.fakku.net' + p.link).focus().select();
-						$select.val('Fakku');
-					}
-				},
-				error: function () {
-					$current.removeAttr('disabled');
-				}
-			});
-		});
-
-		$body.on('click', 'button.irodori-api', function (e) {
-			e.preventDefault();
-			var $current = $(e.currentTarget);
-			var $url = $current.closest('div.card').find('input[name="url"]');
-			var $select = $current.closest('div.card').find('select[name="source"]');
-			var $titleCompare = $current.closest('div.card').find('div.title_compare');
-
-			var queryUrl = $current.data('url');
-
-			$.ajax({
-				type: 'GET',
-				url: queryUrl,
-				success: function(data) {
-					$current.removeAttr('disabled');
-
-					if ('products' in data && 0 in data.products) {
-						let p = data.products[0];
-
-						$titleCompare.show().html($('<h4>').html('[' + p.manufacturer + '] ' + p.name));
-						$url.val(p.href.split('?')[0]).focus().select();
-						$select.val('Irodori');
+					if (data.length) {
+						for (const result of data) {
+							addOption($listTarget, result.url, result.source);
+						}
 					}
 				},
 				error: function () {
@@ -556,4 +464,65 @@ function routeDuplicates() {
 			echo PHP_EOL;
 		}
 	}
+}
+
+function buildEmptyUrlCache() {
+	$cacheFn = __DIR__ . '/temp/emptyUrlCache.json';
+
+	$files = listFiles();
+
+	$i = 0;
+	$count = count($files);
+
+	$missing = [];
+	foreach ($files as $yamlFn) {
+		$i++;
+		if ($i % 1000 === 0) {
+			echo "{$i}/{$count}\n";
+		}
+		$rFile = relativeDir($yamlFn);
+
+		$yaml = file_get_contents($yamlFn);
+		$meta = yaml_parse($yaml);
+		if (empty($meta)) {
+			continue;
+		}
+
+		if (!empty($meta['URL'])) {
+			continue;
+		}
+
+		$missing[] = $rFile;
+	}
+
+	file_put_contents($cacheFn, json_encode($missing, JSON_PRETTY_PRINT));
+}
+
+function getEmptyUrlsCache() {
+	$cacheFn = __DIR__ . '/temp/emptyUrlCache.json';
+	$files = json_decode(file_get_contents($cacheFn), true);
+
+	$hideFn = __DIR__ . '/temp/hidden.json';
+	if (file_exists($hideFn)) {
+		$hide = json_decode(file_get_contents($hideFn), true);
+	} else {
+		$hide = [];
+	}
+
+	$missing = [];
+	foreach ($files as $yamlFn) {
+		$rFile = relativeDir($yamlFn);
+		if (!empty($hide[$rFile])) {
+			continue;
+		}
+		$fn = baseDir() . '/' . $yamlFn;
+		$spec = Spec::fromFile($fn);
+
+		if (!empty($spec->URL)) {
+			continue;
+		}
+
+		$missing[$rFile] = $spec;
+	}
+	return $missing;
 }

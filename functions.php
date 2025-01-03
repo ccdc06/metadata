@@ -191,7 +191,7 @@ class Spec {
 
 	public function getBaseName() : string {
 		if (empty($this->fileName)) {
-			throw new \Exception("This file wasn't generated from a file");
+			throw new \Exception("This spec was not generated from a file");
 		}
 
 		return relativeDir($this->fileName);
@@ -331,6 +331,7 @@ class Spec {
 		$this->fixEmptyThumbnail();
 		$this->fixId();
 		$this->fixUrl();
+		$this->fixAutoSeries();
 	}
 
 	public function validate() {
@@ -457,16 +458,106 @@ class Spec {
 		}
 	}
 
+	public function fixAutoSeries() {
+		if (!empty($this->Series)) {
+			return;
+		}
+
+		if (empty($GLOBAL['auto_series'])) {
+			$GLOBAL['auto_series'] = require __DIR__ . '/arrays/autoSeriesMap.php';
+		}
+
+		foreach ($GLOBAL['auto_series'] as $series) {
+			$seriesTitle = $series['title'];
+			$conditions = $series['conditions'];
+
+			$specMatch = true;
+			foreach ($conditions as $field => $rules) {
+				if (empty($this->$field)) {
+					continue;
+				}
+
+				if (!is_array($this->$field)) {
+					$fieldValues = [$this->$field];
+				} else {
+					$fieldValues = $this->$field;
+				}
+
+				foreach ($fieldValues as $fieldValue) {
+					foreach ($rules as $ruleType => $ruleValue) {
+						switch($ruleType) {
+							case 'prefix':
+								if (!str_starts_with($fieldValue, $ruleValue)) {
+									$specMatch = false;
+									break 4;
+								}
+								break;
+
+							case 'suffix':
+								if (!str_ends_with($fieldValue, $ruleValue)) {
+									$specMatch = false;
+									break 4;
+								}
+								break;
+
+							case 'match':
+								if (strcasecmp($fieldValue, $ruleValue) !== 0) {
+									$specMatch = false;
+									break 4;
+								}
+								break;
+
+							case 'contains':
+								if (!str_contains($fieldValue, $ruleValue)) {
+									$specMatch = false;
+									break 4;
+								}
+								break;
+
+							default:
+								throw new \Exception("unknown rule type {$ruleType}");
+						}
+					}
+				}
+			}
+
+			if ($specMatch) {
+				$spec->Series[] = $seriesTitle;
+				break;
+			}
+		}
+	}
+
 	public function fixUrl() {
 		if (empty($this->URL)) {
 			return;
 		}
 
-		foreach ($this->URL as $source => $url) {
+		foreach ($this->URL as $source => &$url) {
+			$pu = parse_url($url);
+
+			if ($pu['scheme'] !== 'https') {
+				die("scheme != https: {$url}");
+			}
+
 			if ($source === 'Fakku') {
-				if (str_starts_with($url, 'https://fakku.net/')) {
-					$this->URL[$source] = str_replace('https://fakku.net/', 'https://www.fakku.net/', $url);
+				if ($pu['host'] !== 'fakku.net') {
+					$url = str_replace('https://fakku.net/', 'https://www.fakku.net/', $url);
 				}
+
+				if ($pu['host'] !== 'www.fakku.net') {
+					die("host != www.fakku.net: {$url}");
+				}
+			}
+
+			if ($source === 'Irodori') {
+				if ($pu['host'] !== 'irodoricomics.com') {
+					die("host != irodoricomics.com: {$url}");
+				}
+			}
+
+			if (!empty($pu['query'])) {
+				$url = str_replace("?{$pu['query']}", "", $url);
 			}
 		}
 
@@ -753,67 +844,6 @@ function streamSpecs(bool $reverse = false) {
 			yield Spec::fromFile($file);
 		}
 	}
-}
-
-function buildEmptyUrlCache() {
-	$cacheFn = __DIR__ . '/temp/emptyUrlCache.json';
-
-	$files = listFiles();
-
-	$i = 0;
-	$count = count($files);
-
-	$missing = [];
-	foreach ($files as $yamlFn) {
-		$i++;
-		if ($i % 1000 === 0) {
-			echo "{$i}/{$count}\n";
-		}
-		$rFile = relativeDir($yamlFn);
-
-		$yaml = file_get_contents($yamlFn);
-		$meta = yaml_parse($yaml);
-		if (empty($meta)) {
-			continue;
-		}
-
-		if (!empty($meta['URL'])) {
-			continue;
-		}
-
-		$missing[] = $rFile;
-	}
-
-	file_put_contents($cacheFn, json_encode($missing, JSON_PRETTY_PRINT));
-}
-
-function getEmptyUrlsCache() {
-	$cacheFn = __DIR__ . '/temp/emptyUrlCache.json';
-	$files = json_decode(file_get_contents($cacheFn), true);
-
-	$hideFn = __DIR__ . '/temp/hidden.json';
-	if (file_exists($hideFn)) {
-		$hide = json_decode(file_get_contents($hideFn), true);
-	} else {
-		$hide = [];
-	}
-
-	$missing = [];
-	foreach ($files as $yamlFn) {
-		$rFile = relativeDir($yamlFn);
-		if (!empty($hide[$rFile])) {
-			continue;
-		}
-		$fn = baseDir() . '/' . $yamlFn;
-		$spec = Spec::fromFile($fn);
-
-		if (!empty($spec->URL)) {
-			continue;
-		}
-
-		$missing[$rFile] = $spec;
-	}
-	return $missing;
 }
 
 function validateArrayString($var) {
