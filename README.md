@@ -21,8 +21,8 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # [Download sources](indexes/downloadSource.csv)
 |Source|Count|
 |-|-|
-|Schale|14215|
-|HentaiNexus|1126|
+|Schale|14214|
+|HentaiNexus|1127|
 
 # [Download URLs](indexes/urlSource.csv)
 |Source|Count|

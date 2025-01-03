@@ -331,6 +331,7 @@ class Spec {
 		$this->fixEmptyThumbnail();
 		$this->fixId();
 		$this->fixUrl();
+		$this->fixAutoSeries();
 	}
 
 	public function validate() {
@@ -453,6 +454,76 @@ class Spec {
 				}
 
 				throw new \Exception("Not implemented");
+			}
+		}
+	}
+
+	public function fixAutoSeries() {
+		if (!empty($this->Series)) {
+			return;
+		}
+
+		if (empty($GLOBAL['auto_series'])) {
+			$GLOBAL['auto_series'] = require __DIR__ . '/arrays/autoSeriesMap.php';
+		}
+
+		foreach ($GLOBAL['auto_series'] as $series) {
+			$seriesTitle = $series['title'];
+			$conditions = $series['conditions'];
+
+			$specMatch = true;
+			foreach ($conditions as $field => $rules) {
+				if (empty($this->$field)) {
+					continue;
+				}
+
+				if (!is_array($this->$field)) {
+					$fieldValues = [$this->$field];
+				} else {
+					$fieldValues = $this->$field;
+				}
+
+				foreach ($fieldValues as $fieldValue) {
+					foreach ($rules as $ruleType => $ruleValue) {
+						switch($ruleType) {
+							case 'prefix':
+								if (!str_starts_with($fieldValue, $ruleValue)) {
+									$specMatch = false;
+									break 4;
+								}
+								break;
+
+							case 'suffix':
+								if (!str_ends_with($fieldValue, $ruleValue)) {
+									$specMatch = false;
+									break 4;
+								}
+								break;
+
+							case 'match':
+								if (strcasecmp($fieldValue, $ruleValue) !== 0) {
+									$specMatch = false;
+									break 4;
+								}
+								break;
+
+							case 'contains':
+								if (!str_contains($fieldValue, $ruleValue)) {
+									$specMatch = false;
+									break 4;
+								}
+								break;
+
+							default:
+								throw new \Exception("unknown rule type {$ruleType}");
+						}
+					}
+				}
+			}
+
+			if ($specMatch) {
+				$spec->Series[] = $seriesTitle;
+				break;
 			}
 		}
 	}
