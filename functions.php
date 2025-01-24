@@ -522,7 +522,7 @@ class Spec {
 			}
 
 			if ($specMatch) {
-				$spec->Series[] = $seriesTitle;
+				$this->Series[] = $seriesTitle;
 				break;
 			}
 		}

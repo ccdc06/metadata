@@ -322,7 +322,6 @@ function routeWebIndex() {
 			var $current = $(e.currentTarget);
 			var query = $current.data('query');
 			var $listTarget = $current.closest('div.card').find('.list-target');
-			var query = $current.data('query');
 			$current.attr('disabled', true);
 
 			$.ajax({
@@ -347,11 +346,10 @@ function routeWebIndex() {
 		$body.on('click', 'button.hentag-api', function (e) {
 			e.preventDefault();
 			var $current = $(e.currentTarget);
-			var $url = $current.closest('div.card').find('input[name="url"]');
-			var $select = $current.closest('div.card').find('select[name="source"]');
+			var query = $current.data('query');
+			var $listTarget = $current.closest('div.card').find('.list-target');
 			var $comment = $current.closest('div.card').find('span.comment');
 			var $titleCompare = $current.closest('div.card').find('div.title_compare');
-			var query = $current.data('query');
 			$current.attr('disabled', true);
 
 			$.ajax({
@@ -371,31 +369,16 @@ function routeWebIndex() {
 									}
 								}
 
-								var search = result.locations.filter(v => v.includes('fakku.net'));
-								if ('0' in search) {
-									$titleCompare.show().html($('<h4>').html(result.title));
-									// window.open(search[0], 'fakku').focus();
-									$url.val(search[0]).focus().select();
-									$select.val('Fakku');
-									return;
-								}
-
-								var search = result.locations.filter(v => v.includes('irodoricomics.com'));
-								if ('0' in search) {
-									$titleCompare.show().html($('<h4>').html(result.title));
-									// window.open(search[0], 'irodori').focus();
-									$url.val(search[0]).focus().select();
-									$select.val('Irodori');
-									return;
-								}
-
-								var search = result.locations.filter(v => v.includes('doujin.io'));
-								if ('0' in search) {
-									$titleCompare.show().html($('<h4>').html(result.title));
-									// window.open(search[0], 'irodori').focus();
-									$url.val(search[0]).focus().select();
-									$select.val('J18');
-									return;
+								for (const location of result.locations) {
+									if (location.includes('fakku.net')) {
+										addOption($listTarget, location, 'Fakku');
+									}
+									if (location.includes('irodoricomics.com')) {
+										addOption($listTarget, location, 'Irodori');
+									}
+									if (location.includes('doujin.io')) {
+										addOption($listTarget, location, 'J18');
+									}
 								}
 							}
 						}
