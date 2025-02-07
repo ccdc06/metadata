@@ -403,6 +403,15 @@ class Spec {
 		if (empty($this->Tags)) {
 			return;
 		}
+		
+		foreach ($this->Tags as &$tag) {
+			if (str_ends_with($tag, ' ♂')) {
+				$tag = rtrim($tag, ' ♂');
+			}
+			if (str_ends_with($tag, ' ♀')) {
+				$tag = rtrim($tag, ' ♀');
+			}
+		}
 
 		$this->Tags = ValNorm::normalizeTags($this->Tags);
 	}
