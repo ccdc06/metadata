@@ -244,4 +244,5 @@ return  [
 	'manno' => 'Mannno',
 	'polinky' => 'Hori Hiroaki',
 	'kirei na oneesan wa suki desu kai' => 'Kirei na Oneesan Wa Suki Desu Kai',
+	'alexa mahone' => 'Arekusa Mahoone',
 ];
