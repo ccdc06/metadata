@@ -241,6 +241,7 @@ return  [
 	// manual
 	'rib꞉y(uhki)' => 'Rib:y(uhki)', // Not colon
 	'ind kary (indo curry)' => 'IND Kary',
+	'indo curry' => 'IND Kary',
 	'manno' => 'Mannno',
 	'polinky' => 'Hori Hiroaki',
 	'kirei na oneesan wa suki desu kai' => 'Kirei na Oneesan Wa Suki Desu Kai',
@@ -255,4 +256,6 @@ return  [
 	'towa oshima' => 'Oshima Towa',
 	'karasu chan' => 'Karasu-chan',
 	'tomihero.' => 'tomihero',
+	'aka p' => 'Aka P',
+	'Kurosugatari' => 'Kurosu Gatari',
 ];

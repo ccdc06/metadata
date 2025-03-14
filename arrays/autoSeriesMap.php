@@ -217,4 +217,11 @@ return  [
 			"Title" => ["prefix" => "My Harem in Another World "],
 		],
 	],
+	[
+		"title" => "Bimbo Gal VS the Disciplinary Squad",
+		"conditions" => [
+			"Artist" => ["match" => "Kakuzato"],
+			"Title" => ["prefix" => "Bimbo Gal VS the Disciplinary Squad "],
+		],
+	],
 ];
