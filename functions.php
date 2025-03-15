@@ -403,7 +403,7 @@ class Spec {
 		if (empty($this->Tags)) {
 			return;
 		}
-		
+
 		foreach ($this->Tags as &$tag) {
 			if (str_ends_with($tag, ' ♂')) {
 				$tag = rtrim($tag, ' ♂');
@@ -835,11 +835,15 @@ function listFiles() {
 	return $files;
 }
 
-function streamSpecs(bool $reverse = false) {
+function streamSpecs(bool $reverse = false, bool $random = false) {
 	$collections = listCollections();
 	natcasesort($collections);
 	if ($reverse) {
 		$collections = array_reverse($collections);
+	}
+
+	if ($random) {
+		shuffle($collections);
 	}
 
 	foreach ($collections as $collection) {
@@ -847,6 +851,10 @@ function streamSpecs(bool $reverse = false) {
 		natcasesort($files);
 		if ($reverse) {
 			$files = array_reverse($files);
+		}
+
+		if ($random) {
+			shuffle($files);
 		}
 
 		foreach ($files as $file) {
