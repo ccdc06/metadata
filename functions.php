@@ -161,6 +161,7 @@ class Spec {
 	public string $ThumbnailName; // string
 	public array $Files; // []string
 	public array $Hashes; // []string
+	public array $Filesize; // int
 	private string $fileName;
 
 	public static function fromFile(string $fn) : Spec {
@@ -493,10 +494,17 @@ class Spec {
 				}
 
 				foreach ($fieldValues as $fieldValue) {
-					foreach ($rules as $ruleType => $ruleValue) {
+					foreach ($rules as list($ruleType, $ruleValue)) {
 						switch($ruleType) {
 							case 'prefix':
-								if (!str_starts_with($fieldValue, $ruleValue)) {
+								// if (!str_starts_with($fieldValue, $ruleValue)) {
+								// 	$specMatch = false;
+								// 	break 4;
+								// }
+								// break;
+
+							case 'iprefix':
+								if (stripos($fieldValue, $ruleValue) !== 0) {
 									$specMatch = false;
 									break 4;
 								}
@@ -517,11 +525,19 @@ class Spec {
 								break;
 
 							case 'contains':
-								if (!str_contains($fieldValue, $ruleValue)) {
+								// if (!str_contains($fieldValue, $ruleValue)) {
+								// 	$specMatch = false;
+								// 	break 4;
+								// }
+								// break;
+
+							case 'icontains':
+								if (stripos($fieldValue, $ruleValue) === false) {
 									$specMatch = false;
 									break 4;
 								}
 								break;
+
 
 							default:
 								throw new \Exception("unknown rule type {$ruleType}");
@@ -534,6 +550,10 @@ class Spec {
 				$this->Series[] = $seriesTitle;
 				break;
 			}
+		}
+
+		if (!empty($this->Series)) {
+			$this->Series = array_unique($this->Series);
 		}
 	}
 
@@ -625,6 +645,7 @@ class Spec {
 				case 'ThumbnailIndex': // int
 				case 'Pages': // int
 				case 'Released': // int
+				case 'Filesize': // int
 					if (!is_int($val)) {
 						$err = "Not an int";
 					}
