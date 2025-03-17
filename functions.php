@@ -160,8 +160,8 @@ class Spec {
 	public int $ThumbnailIndex; // int
 	public string $ThumbnailName; // string
 	public array $Files; // []string
+	public int $Filesize; // int
 	public array $Hashes; // []string
-	public array $Filesize; // int
 	private string $fileName;
 
 	public static function fromFile(string $fn) : Spec {

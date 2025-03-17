@@ -1631,14 +1631,7 @@ return  [
 		"title" => "My Gloomy Self Used These Magic Items to Turn My Share House into a Harem",
 		"conditions" => [
 			"Artist" => [["match", "Ohara Makoto"]],
-			"Title" => [["prefix", "My Gloomy Self Used These Magic Items to Turn My Share House into a Harem"]],
-		],
-	],
-	[
-		"title" => "My Gloomy Self Used These Magic Items to Turn My Share House into a Harem",
-		"conditions" => [
-			"Artist" => [["match", "Ohara Makoto"]],
-			"Title" => [["prefix", "My Gloomy Self Used These Magic Items to Turn My Share House Into a Harem"]],
+			"Title" => [["iprefix", "My Gloomy Self Used These Magic Items to Turn My Share House into a Harem"]],
 		],
 	],
 	[
