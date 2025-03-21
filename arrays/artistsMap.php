@@ -256,7 +256,7 @@ return  [
 	'towa oshima' => 'Oshima Towa',
 	'karasu chan' => 'Karasu-chan',
 	'tomihero.' => 'tomihero',
-	'aka p' => 'Aka P',
+	'aka p' => 'AkaP',
 	'kurosugatari' => 'Kurosu Gatari',
 	'bekotaro' => 'Beko Tarou',
 	'ootori mahiro' => 'Mahiro Ootori',
