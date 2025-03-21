@@ -2920,4 +2920,284 @@ return  [
 			"Title" => [["prefix", "Zoo-Type Girl"]],
 		],
 	],
+	[
+		"title" => "Re:Temptation",
+		"conditions" => [
+			"Artist" => [["match", "ShAKe"]],
+			"Title" => [["prefix", "Re:Temptation"]],
+		],
+	],
+	[
+		"title" => "Release Miss Desire! ❤",
+		"conditions" => [
+			"Artist" => [["match", "Hinahara Emi"]],
+			"Title" => [["prefix", "Release Miss Desire! ❤"]],
+		],
+	],
+	[
+		"title" => "Reunion (Mori Guruta)",
+		"conditions" => [
+			"Artist" => [["match", "Mori Guruta"]],
+			"Title" => [["prefix", "Reunion"]],
+		],
+	],
+	[
+		"title" => "Revenge Hypno",
+		"conditions" => [
+			"Artist" => [["match", "Danchino"]],
+			"Title" => [["prefix", "Revenge Hypno"]],
+		],
+	],
+	[
+		"title" => "Sachi's Part-Time Job",
+		"conditions" => [
+			"Artist" => [["match", "Toitoi"]],
+			"Title" => [["prefix", "Sachi's Part-Time Job"]],
+		],
+	],
+	[
+		"title" => "Sakata-kun's Just at That Age",
+		"conditions" => [
+			"Artist" => [["match", "Kerorin"]],
+			"Title" => [["prefix", "Sakata-kun's Just at That Age"]],
+		],
+	],
+	[
+		"title" => "School Festa",
+		"conditions" => [
+			"Artist" => [["match", "Ninoko"]],
+			"Title" => [["prefix", "School Festa"]],
+		],
+	],
+	[
+		"title" => "Schoolgirl Guide",
+		"conditions" => [
+			"Artist" => [["match", "yumoteliuce"]],
+			"Title" => [["prefix", "Schoolgirl Guide"]],
+		],
+	],
+	[
+		"title" => "Schoolgirl & Pubescent Boy",
+		"conditions" => [
+			"Artist" => [["match", "Izure"]],
+			"Title" => [["prefix", "Schoolgirl & Pubescent Boy"]],
+		],
+	],
+	[
+		"title" => "School Melt",
+		"conditions" => [
+			"Artist" => [["match", "Endou Hiroto"]],
+			"Title" => [["prefix", "School Melt"]],
+		],
+	],
+	[
+		"title" => "Second Semester",
+		"conditions" => [
+			"Artist" => [["match", "Iida Toyoyuki"]],
+			"Title" => [["prefix", "Second Semester"]],
+		],
+	],
+	[
+		"title" => "Scrumper",
+		"conditions" => [
+			"Artist" => [["match", "Ukiuki Chisato"]],
+			"Title" => [["prefix", "Scrumper"]],
+		],
+	],
+	[
+		"title" => "Secretary Ship Kaga's Summer Vacation",
+		"conditions" => [
+			"Artist" => [["match", "Prime"]],
+			"Title" => [["prefix", "Secretary Ship Kaga's Summer Vacation"]],
+		],
+	],
+	[
+		"title" => "Serving Titty Monsters",
+		"conditions" => [
+			"Artist" => [["match", "Moburaibu"]],
+			"Title" => [["prefix", "Serving Titty Monsters"]],
+		],
+	],
+	[
+		"title" => "Sex Partners Delivered to Your Door",
+		"conditions" => [
+			"Artist" => [["match", "Freedom Prophet"]],
+			"Title" => [["prefix", "Sex Partners Delivered to Your Door"]],
+		],
+	],
+	[
+		"title" => "Sexual Training Camp",
+		"conditions" => [
+			"Artist" => [["match", "Takurowo"]],
+			"Title" => [["prefix", "Sexual Training Camp"]],
+		],
+	],
+	[
+		"title" => "Sexy Women After My Virginity",
+		"conditions" => [
+			"Artist" => [["match", "tomihero"]],
+			"Title" => [["prefix", "Sexy Women After My Virginity"]],
+		],
+	],
+	[
+		"title" => "Sex with Senpai",
+		"conditions" => [
+			"Artist" => [["match", "Sasamori Tomoe"]],
+			"Title" => [["prefix", "Sex with Senpai"]],
+		],
+	],
+	[
+		"title" => "Sexy Times With My Cosplaying Girlfriend",
+		"conditions" => [
+			"Artist" => [["match", "Utsutenkai"]],
+			"Title" => [["prefix", "Sexy Times With My Cosplaying Girlfriend"]],
+		],
+	],
+	[
+		"title" => "Shiraishi-san",
+		"conditions" => [
+			"Artist" => [["match", "Koppori Nama Beer"]],
+			"Title" => [["prefix", "Shiraishi-san"]],
+		],
+	],
+	// [
+	// 	"title" => "Sensei (Sekiya Asami)",
+	// 	"conditions" => [
+	// 		"Artist" => [["match", "Sekiya Asami"]],
+	// 		"Title" => [["prefix", "Sensei"]],
+	// 	],
+	// ],
+	[
+		"title" => "Shino-sama Is Upset ❤",
+		"conditions" => [
+			"Artist" => [["match", "Kyockcho"]],
+			"Title" => [["prefix", "Shino-sama Is Upset ❤"]],
+		],
+	],
+	[
+		"title" => "Shinobu's Divorcee Body",
+		"conditions" => [
+			"Artist" => [["match", "Yoshu Ohepe"]],
+			"Title" => [["prefix", "Shinobu's Divorcee Body"]],
+		],
+	],
+	[
+		"title" => "Shojo Colorful",
+		"conditions" => [
+			"Artist" => [["match", "Maruwatarou"]],
+			"Title" => [["prefix", "Shojo Colorful"]],
+		],
+	],
+	[
+		"title" => "Shut-in Girlfriend",
+		"conditions" => [
+			"Artist" => [["match", "Cucchiore"]],
+			"Title" => [["prefix", "Shut-in Girlfriend"]],
+		],
+	],
+	[
+		"title" => "Silent Manga Omnibus",
+		"conditions" => [
+			"Artist" => [["match", "Sueyuu"]],
+			"Title" => [["prefix", "Silent Manga Omnibus"]],
+		],
+	],
+	[
+		"title" => "Silhouette",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Silhouette"]],
+		],
+	],
+	[
+		"title" => "Sins of the Past",
+		"conditions" => [
+			"Artist" => [["match", "Syomu"]],
+			"Title" => [["prefix", "Sins of the Past"]],
+		],
+	],
+	[
+		"title" => "Sister (Koshino)",
+		"conditions" => [
+			"Artist" => [["match", "Koshino"]],
+			"Title" => [["prefix", "Sister"]],
+		],
+	],
+	[
+		"title" => "Sloppy Girlfriend",
+		"conditions" => [
+			"Artist" => [["match", "Ibarame Hisa"]],
+			"Title" => [["prefix", "Sloppy Girlfriend"]],
+		],
+	],
+	[
+		"title" => "24 Hour Humiliation TV",
+		"conditions" => [
+			"Artist" => [["match", "Crimson"]],
+			"Title" => [["prefix", "24 Hour Humiliation TV"]],
+		],
+	],
+	[
+		"title" => "Adult Runaway",
+		"conditions" => [
+			"Artist" => [["match", "Hori Hiroaki"]],
+			"Title" => [["prefix", "Adult Runaway"]],
+		],
+	],
+	[
+		"title" => "Adventurers by Day",
+		"conditions" => [
+			"Artist" => [["match", "Yukataro"]],
+			"Title" => [["prefix", "Adventurers by Day"]],
+		],
+	],
+	[
+		"title" => "I'm Not Your Idol!",
+		"conditions" => [
+			"Artist" => [["match", "Kichiroku"]],
+			"Title" => [["prefix", "I'm Not Your Idol!"]],
+		],
+	],
+	[
+		"title" => "Twins ☆ Scramble",
+		"conditions" => [
+			"Artist" => [["match", "Kima-gray"]],
+			"Title" => [["prefix", "Twins ☆ Scramble"]],
+		],
+	],
+	[
+		"title" => "My First Time Is With My Brother... A Pure Sister Gets Corrupted!",
+		"conditions" => [
+			"Artist" => [["match", "Kinako Yakumo"]],
+			"Title" => [["prefix", "My First Time Is With My Brother... A Pure Sister Gets Corrupted!"]],
+		],
+	],
+	[
+		"title" => "Bad Boys Get Punished",
+		"conditions" => [
+			"Artist" => [["match", "Kobachi Kenichi"]],
+			"Title" => [["prefix", "Bad Boys Get Punished"]],
+		],
+	],
+	[
+		"title" => "Lost Kitten's Repayment",
+		"conditions" => [
+			"Artist" => [["match", "Koshino"]],
+			"Title" => [["prefix", "Lost Kitten's Repayment"]],
+		],
+	],
+	[
+		"title" => "Anehara ~Until My Sister-in-Law Gets Pregnant~",
+		"conditions" => [
+			"Artist" => [["match", "Kusatsu Terunyo"]],
+			"Title" => [["prefix", "Anehara ~Until My Sister-in-Law Gets Pregnant~"]],
+		],
+	],
+	[
+		"title" => "Drop-in Gyaru Lets Me Use Her Pussy",
+		"conditions" => [
+			"Artist" => [["match", "Mannno"]],
+			"Title" => [["prefix", "Drop-in Gyaru Lets Me Use Her Pussy"]],
+		],
+	],
 ];

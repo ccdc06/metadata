@@ -3,6 +3,16 @@ namespace Metadata;
 require __DIR__ . '/functions.php';
 init();
 
+if (php_sapi_name() === 'cli') {
+	putenv('PHP_CLI_SERVER_WORKERS=4');
+	passthru(escapeshellarg(PHP_BINARY) . ' -S 127.0.0.1:3603 ' . __FILE__);
+	return;
+}
+
+if (php_sapi_name() !== 'cli-server') {
+	throw new Exception();
+}
+
 $files = listFiles();
 
 $out = [];
@@ -22,8 +32,8 @@ foreach ($files as $yamlFn) {
 }
 
 usort($out, function ($a, $b) {
-	return strnatcasecmp($a[2], $b[2]);
 	return strnatcasecmp($a[0], $b[0]);
+	return strnatcasecmp($a[2], $b[2]);
 })
 
 ?>
