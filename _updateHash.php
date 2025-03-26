@@ -23,9 +23,10 @@ foreach (streamSpecs(false, true) as $spec) {
 			$spec->Hashes['SHA256'] = hash_file('sha256', $fn);
 		}
 
-		if (empty($spec->Filesize)) {
+		$s = filesize($fn);
+		if (empty($spec->Filesize) || $spec->Filesize != $s) {
 			$save = true;
-			$spec->Filesize = filesize($fn);
+			$spec->Filesize = $s;
 		}
 
 		if ($save) {
