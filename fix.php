@@ -3,6 +3,12 @@ namespace Metadata;
 require __DIR__ . '/functions.php';
 init();
 
+// $spec = Spec::fromFile(__DIR__ . "\anchira.to_7001-8000\[Minato Itoya] Until Kashiwagura-san Falls (Comic Bavel 2021-11).yaml");
+// $spec->fixAutoSeries();
+// var_dump($spec);
+// exit;
+
+
 $opt = getopt('u', ['update']);
 $update = isset($opt['u']) || isset($opt['update']);
 

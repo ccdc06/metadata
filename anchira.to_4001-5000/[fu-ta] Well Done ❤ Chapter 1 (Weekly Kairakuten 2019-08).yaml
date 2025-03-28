@@ -1,5 +1,7 @@
 ---
 Title: "Well Done \u2764 Chapter 1"
+Series:
+- "Well Done \u2764"
 Artist:
 - fu-ta
 Parody:
@@ -42,6 +44,7 @@ Files:
 - 10.png
 - 11.png
 - 12.png
+Filesize: 5614397
 Hashes:
   LANraragi: ad8ac39670b123bc59d86744d504eb4702b4c69e
   SHA256: 5ca8fb66a73953a0937ec98ef9a626689dcaf55027caeeeb59668ea5021b9ee0

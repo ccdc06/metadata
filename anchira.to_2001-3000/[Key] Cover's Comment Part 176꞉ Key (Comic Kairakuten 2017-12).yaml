@@ -1,5 +1,7 @@
 ---
 Title: 'Cover''s Comment Part 176: Key'
+Series:
+- Cover's Comment
 Artist:
 - Key
 Parody:
@@ -25,6 +27,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 1918940
 Hashes:
   LANraragi: 83fda0046d00089addf464bdd2f4f9fd990d14ed
   SHA256: 2e93d37a7d97c3caa91a840424dbd02bcb4e981f67c39efee3dd7fa55a48e9a3

@@ -1,5 +1,7 @@
 ---
 Title: 'Summer Fall Memory #3'
+Series:
+- Summer Fall Memory
 Artist:
 - Izure
 Parody:
@@ -50,6 +52,7 @@ Files:
 - 14.png
 - 15.png
 - 16.png
+Filesize: 9690633
 Hashes:
   LANraragi: 60b0509c1b6ecbbb5769c5e8402a62287f9aeec2
   SHA256: a98954c7bb924d724be4f4424557bec92ae5f096b11b21dbc0a40cfed55bce62

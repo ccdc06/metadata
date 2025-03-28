@@ -1,5 +1,7 @@
 ---
 Title: 'Cover''s Comment Part 152: Koume Keito'
+Series:
+- Cover's Comment
 Artist:
 - Koume Keito
 Parody:
@@ -26,6 +28,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2492190
 Hashes:
   LANraragi: 074df97fc9afc37a2439683423ca8b61d936fa8d
   SHA256: 18c8ad0f06a8372258d6f6bd1314bc8df969cfe1432d5e21fdd05ac2ad6aa4e5

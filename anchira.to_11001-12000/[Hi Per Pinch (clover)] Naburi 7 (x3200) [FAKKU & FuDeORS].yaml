@@ -1,5 +1,7 @@
 ---
 Title: Naburi 7
+Series:
+- Naburi
 Artist:
 - clover
 Circle:
@@ -65,6 +67,7 @@ Files:
 - 030.png
 - 031.png
 - 032.png
+Filesize: 39429479
 Hashes:
   LANraragi: 8c0656e855399b86d09c5791170c26d84625daf1
   SHA256: 0d267ac0af84d180c391d309c67628d96553466262778094718a348e9dd4782d

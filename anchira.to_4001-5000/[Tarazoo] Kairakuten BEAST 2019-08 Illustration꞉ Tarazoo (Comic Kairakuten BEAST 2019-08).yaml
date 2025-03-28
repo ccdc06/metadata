@@ -1,5 +1,7 @@
 ---
 Title: 'Kairakuten BEAST 2019-08 Illustration: Tarazoo'
+Series:
+- Comic Kairakuten BEAST Illustrations
 Artist:
 - Tarazoo
 Parody:
@@ -29,6 +31,7 @@ ThumbnailName: 01.png
 Files:
 - 01.png
 - 02.png
+Filesize: 4253199
 Hashes:
   LANraragi: 1aa287ce10a89cd6745f1c5489db1ad1c9e8bdbe
   SHA256: 4631035595acc6139e34505804e86bc6a2c1c1f13acb5fe1d456c0529fe5005e

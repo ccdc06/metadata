@@ -1,5 +1,7 @@
 ---
 Title: Animal-Eared Fortune Teller ~The Story So Far~
+Series:
+- Animal-Eared Fortune Teller
 Artist:
 - RegDic
 URL:
@@ -36,6 +38,7 @@ Files:
 - 04.png
 - 05.png
 - 06.png
+Filesize: 3878690
 Hashes:
   LANraragi: c7446d7fd288cb39809f51ead40318679c91c81b
   SHA256: 9339a02feb4674eed2df41e0fdf152b660d8d5f4cf4a9b4a95e35ff26f575ba4

@@ -1,5 +1,7 @@
 ---
 Title: 'Europa Cover Girls #04'
+Series:
+- Europa Cover Girls
 Artist:
 - Miyabi
 Parody:
@@ -25,6 +27,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 1796484
 Hashes:
   LANraragi: aa4d512f233857c4511c9a743da070a61817a2f3
   SHA256: 809a001194a0f270c4d2604e7229c896efb91d369538a41e03d244febb56a394

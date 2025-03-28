@@ -1,5 +1,7 @@
 ---
 Title: 'BEAST Pinup 2021-05: kakao'
+Series:
+- Comic Kairakuten BEAST Illustrations
 Artist:
 - kakao
 Parody:
@@ -30,6 +32,7 @@ ThumbnailName: 01.png
 Files:
 - 01.png
 - 02.png
+Filesize: 4897707
 Hashes:
   LANraragi: d951affae8549d5ddbcfa5824099f1a0ee8396c9
   SHA256: 95c0044f76000d89b01c78999d58c4269fc9313378adb53bf6507c42c0383f42

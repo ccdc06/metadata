@@ -1,5 +1,7 @@
 ---
 Title: BEHAVIOUR+9
+Series:
+- BEHAVIOUR
 Artist:
 - The Amanoja9
 Circle:
@@ -62,6 +64,7 @@ Files:
 - 27.png
 - 28.png
 - 29.png
+Filesize: 46374823
 Hashes:
   LANraragi: ad1fac92b1a9f1473ed0a8e495407105b6cda4ad
   SHA256: cd49927feab3d35b2863f3dc972988b6c866f1b14156d0115956d6c91a53e613

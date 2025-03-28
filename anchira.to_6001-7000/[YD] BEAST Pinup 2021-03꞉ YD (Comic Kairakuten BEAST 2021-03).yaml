@@ -1,5 +1,7 @@
 ---
 Title: 'BEAST Pinup 2021-03: YD'
+Series:
+- Comic Kairakuten BEAST Illustrations
 Artist:
 - YD
 Parody:
@@ -32,6 +34,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2189871
 Hashes:
   LANraragi: cb92fb940d0d2310c144929402f745dd44a2daf7
   SHA256: 283082f786a1ccd20d2590280002f3be48b65fadb7f0ee9248a025346c64d4de

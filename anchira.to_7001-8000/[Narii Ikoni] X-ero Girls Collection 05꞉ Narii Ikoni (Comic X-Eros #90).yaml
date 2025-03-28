@@ -1,5 +1,7 @@
 ---
 Title: 'X-ero Girls Collection 05: Narii Ikoni'
+Series:
+- X-ero Girls Collection
 Artist:
 - Narii Ikoni
 Parody:
@@ -28,6 +30,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 1869678
 Hashes:
   LANraragi: 4d413899cc0fc6cacf2d754858106c3866d93523
   SHA256: 5de75a37859d7e9b98a18a192f03e166e6f218c5018f3183af6a70e17652cd75

@@ -1,5 +1,7 @@
 ---
 Title: 'Cover''s Comment Part 193: NaPaTa'
+Series:
+- Cover's Comment
 Artist:
 - NaPaTa
 Parody:
@@ -27,6 +29,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2599235
 Hashes:
   LANraragi: 9057b0dd8d10dce5b2679ef5ca97a5261042ab89
   SHA256: cf7365466f15ab9e2507555c4288bf0445cfd3dd3463486829bcd42207bc9fdc

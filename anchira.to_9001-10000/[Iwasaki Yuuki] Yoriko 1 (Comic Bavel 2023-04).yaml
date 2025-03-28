@@ -1,5 +1,7 @@
 ---
 Title: Yoriko 1
+Series:
+- Yoriko
 Artist:
 - Iwasaki Yuuki
 Parody:
@@ -61,6 +63,7 @@ Files:
 - 22.png
 - 23.png
 - 24.png
+Filesize: 51494528
 Hashes:
   LANraragi: a371b709fb69235075b7067b93038e65e894df14
   SHA256: fb6310230c4e989974fb863bb726bda0469c771212ac231779d721b7e5d23d89

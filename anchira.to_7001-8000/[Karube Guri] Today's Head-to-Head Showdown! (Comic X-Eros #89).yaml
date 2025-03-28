@@ -1,5 +1,7 @@
 ---
 Title: Today's Head-to-Head Showdown!
+Series:
+- Today's Head-to-Head Showdown!
 Artist:
 - Karube Guri
 Parody:
@@ -61,6 +63,7 @@ Files:
 - 18.png
 - 19.png
 - 20.png
+Filesize: 31042549
 Hashes:
   LANraragi: 63b3a4ac20a1e27fee9b56594aef541fc94db15a
   SHA256: a6e4174607802aec90cd2ada7e4b8a51f54cdcc641ded32574e50ce4a1e0b92b

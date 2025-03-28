@@ -1,5 +1,7 @@
 ---
 Title: Animal-Eared Fortune Teller ~Facing the Future with You~
+Series:
+- Animal-Eared Fortune Teller
 Artist:
 - RegDic
 Parody:
@@ -58,4 +60,8 @@ Files:
 - 020.png
 - 021.png
 - 022.png
+Filesize: 23249815
+Hashes:
+  LANraragi: e978a260f83c73be0257b0b316d97a4b3a5bf6c3
+  SHA256: 6c9e9d6b9e3d902691bc4d016d9aea755d20a71b7b0f7fb53340f62315a7a3d9
 ...

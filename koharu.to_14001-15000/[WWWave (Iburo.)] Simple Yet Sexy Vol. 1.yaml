@@ -1,5 +1,7 @@
 ---
 Title: Simple Yet Sexy Vol. 1
+Series:
+- Simple Yet Sexy
 Artist:
 - Iburo.
 Circle:
@@ -92,6 +94,7 @@ Files:
 - 060.png
 - 061.png
 - 062.png
+Filesize: 378482073
 Hashes:
   LANraragi: f33334b8fd5bc284f2633ef46c6c014de460664d
   SHA256: e965f972d1a87a24d912840cb39044881614df92eb8895c165dc5181a9712ee3

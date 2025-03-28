@@ -1,5 +1,7 @@
 ---
 Title: 'Everlasting Summer Island #1'
+Series:
+- Everlasting Summer Island
 Artist:
 - Miyamoto Liz
 Parody:
@@ -50,6 +52,7 @@ Files:
 - 14.png
 - 15.png
 - 16.png
+Filesize: 27931125
 Hashes:
   LANraragi: 4eeb758c7f894808ce71913c96a674b858afaa6c
   SHA256: 13344004db1852599933f974add72a5ed95a84e6183b5a4b9090f221d539da98

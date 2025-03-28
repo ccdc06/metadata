@@ -1,5 +1,7 @@
 ---
 Title: 'Cover''s Comment Part 192: Hamao'
+Series:
+- Cover's Comment
 Artist:
 - Hamao
 Parody:
@@ -25,6 +27,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 3354286
 Hashes:
   LANraragi: aaad8676b3e761f012c1d08840864378e1c79f5f
   SHA256: 9dbd9f890e23455eab47ba1814c435fa4eeafc8ae42bb4f4dec248708b6bc7b6

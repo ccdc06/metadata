@@ -1,5 +1,7 @@
 ---
 Title: The Dick Pub Volume 4
+Series:
+- The Dick Pub
 Artist:
 - Hiroyoshi Kira
 Circle:
@@ -114,6 +116,7 @@ Files:
 - 073.png
 - 074.png
 - 075.png
+Filesize: 479000560
 Hashes:
   LANraragi: d50d0c82345605b9d2cbca3e89d5f9886e45f63b
   SHA256: 5269652c52b6336ecef674f2aeb8d4bc5026f15d47caaa0fd9c547fd42ca23eb

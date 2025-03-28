@@ -1,5 +1,7 @@
 ---
 Title: 'Kairakuten BEAST 2023-06 Illustration: kakao'
+Series:
+- Comic Kairakuten BEAST Illustrations
 Artist:
 - kakao
 Parody:
@@ -29,6 +31,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2326581
 Hashes:
   LANraragi: 014c322d1ca04346ef920ff67c9ed9b67e351fcf
   SHA256: 00bd9a0eede6089cf2127dd24c8ece826a89d3278631e4039d0ae5e8a7640432

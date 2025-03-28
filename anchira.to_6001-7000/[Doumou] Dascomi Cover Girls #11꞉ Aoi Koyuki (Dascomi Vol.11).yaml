@@ -1,5 +1,7 @@
 ---
 Title: 'Dascomi Cover Girls #11: Aoi Koyuki'
+Series:
+- Dascomi Cover Girls
 Artist:
 - Doumou
 Parody:
@@ -29,6 +31,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2565128
 Hashes:
   LANraragi: 3c94fd6a2f7e000af6c57e7913131488b63f4767
   SHA256: 1dd698a1cee5a11c1fd9cc0c384082db222ad2cab7ce67988cc572eb3713dd8c

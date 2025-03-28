@@ -1,5 +1,7 @@
 ---
 Title: 'Dascomi Cover Girls #12: Momoi Sayuri'
+Series:
+- Dascomi Cover Girls
 Artist:
 - Doumou
 Parody:
@@ -29,6 +31,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2695961
 Hashes:
   LANraragi: fe3f363bfb650a3b7e98a0639589ff35ffbf7de9
   SHA256: 152e51e5f321901bd256af6c9e449dd1fe2660936305a2d486fce81031c96b99

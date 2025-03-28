@@ -1,5 +1,7 @@
 ---
 Title: 'Hypnosis Quest #05'
+Series:
+- Hypnosis Quest
 Artist:
 - Haitokukan
 Parody:
@@ -61,6 +63,7 @@ Files:
 - 22.png
 - 23.png
 - 24.png
+Filesize: 17311318
 Hashes:
   LANraragi: 4a8c45953bdec0b94c1cc9d14f28f62d64dce726
   SHA256: 70afc2952508c59fa4697162de09a9921a5e58162a57a8f421794fb1e333dfbe

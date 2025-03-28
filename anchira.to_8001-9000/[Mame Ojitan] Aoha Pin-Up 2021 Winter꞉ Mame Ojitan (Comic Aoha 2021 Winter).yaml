@@ -1,5 +1,7 @@
 ---
 Title: 'Aoha Pin-Up 2021 Winter: Mame Ojitan'
+Series:
+- Aoha Pin-Up
 Artist:
 - Mame Ojitan
 Parody:
@@ -27,6 +29,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 3074924
 Hashes:
   LANraragi: 153cbfae290e6df15864bba9cf622b9edf76e256
   SHA256: 2d3cabdc035964042b5fb0e7a3e51edcf6bce1703d498387464d28e1f6bc3483

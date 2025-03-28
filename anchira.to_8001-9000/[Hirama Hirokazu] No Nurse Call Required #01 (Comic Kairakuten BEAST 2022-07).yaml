@@ -1,5 +1,7 @@
 ---
 Title: 'No Nurse Call Required #01'
+Series:
+- No Nurse Call Required
 Artist:
 - Hirama Hirokazu
 Parody:
@@ -61,6 +63,7 @@ Files:
 - 22.png
 - 23.png
 - 24.png
+Filesize: 17688533
 Hashes:
   LANraragi: aa242870ba27983d5d96ad868e0e6db8b64d5acc
   SHA256: 1fcafc65208ea55f6813f6dea0eae513403ad6679f0ae40c359bf64eb6511d45

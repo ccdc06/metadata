@@ -1,5 +1,7 @@
 ---
 Title: The Dick Pub Volume 8
+Series:
+- The Dick Pub
 Artist:
 - Hiroyoshi Kira
 Circle:
@@ -113,4 +115,8 @@ Files:
 - 073.png
 - 074.png
 - 075.png
+Filesize: 440746742
+Hashes:
+  LANraragi: a92740bde399ec433dd5d75dd65ad98b85444f4e
+  SHA256: 04bd495c236661104bcd0b73c0fdbb757cb75c4f703065f83cbd84edf515bf14
 ...

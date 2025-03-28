@@ -1,5 +1,7 @@
 ---
 Title: 'Kairakuten BEAST 2020-12 Illustration: Tsukako'
+Series:
+- Comic Kairakuten BEAST Illustrations
 Artist:
 - Tsukako
 Parody:
@@ -30,6 +32,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2290188
 Hashes:
   LANraragi: a65c50e017e49c38af9a6e423ac429ba5c67839b
   SHA256: 60adae527cbc0db5353a170bd347649918aa6abc996d93a0a0d89565326de7fc

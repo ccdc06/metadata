@@ -1,5 +1,7 @@
 ---
 Title: Secrecy... Episode 2
+Series:
+- Secrecy...
 Artist:
 - Dagashi
 Parody:
@@ -45,6 +47,7 @@ Files:
 - 06.png
 - 07.png
 - 08.png
+Filesize: 9127939
 Hashes:
   LANraragi: 8df870e136fb46e07d62dc33e90f3f084d517c58
   SHA256: 8edb998d8619e03da2bdf6a69b7e699a4b1be77f6e9c8bb08e22a1ce9b6cf4c9

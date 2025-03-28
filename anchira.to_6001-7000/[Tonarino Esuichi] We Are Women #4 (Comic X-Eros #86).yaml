@@ -1,5 +1,7 @@
 ---
 Title: 'We Are Women #4'
+Series:
+- We Are Women
 Artist:
 - Tonarino Esuichi
 Parody:
@@ -41,6 +43,7 @@ Files:
 - 10.png
 - 11.png
 - 12.png
+Filesize: 21963626
 Hashes:
   LANraragi: 935f96f67dcf58de29d4678f9fed05c5e04f9ee1
   SHA256: 1ec191f0fefcf6f0626283a32579223cab968905ee13f7700fd81140979080ad

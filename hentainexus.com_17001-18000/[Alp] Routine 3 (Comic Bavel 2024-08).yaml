@@ -1,5 +1,7 @@
 ---
 Title: Routine 3
+Series:
+- Routine
 Artist:
 - Alp
 Description: I thought we were far more "distant"...
@@ -63,4 +65,8 @@ Files:
 - 026.png
 - 027.png
 - 028.png
+Filesize: 26920366
+Hashes:
+  LANraragi: 10c2acd17d4a511545ac49b3d3d85acbdedeff42
+  SHA256: 4cb2365e39e86a06c0938318c560dbed4b848c366a62ab520eea6c35a92375ee
 ...

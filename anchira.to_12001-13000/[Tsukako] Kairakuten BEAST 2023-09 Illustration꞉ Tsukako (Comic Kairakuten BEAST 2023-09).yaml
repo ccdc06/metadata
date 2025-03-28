@@ -1,5 +1,7 @@
 ---
 Title: 'Kairakuten BEAST 2023-09 Illustration: Tsukako'
+Series:
+- Comic Kairakuten BEAST Illustrations
 Artist:
 - Tsukako
 Parody:
@@ -32,6 +34,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2364152
 Hashes:
   LANraragi: 1511d51bc728e4c2bc821cd14b4d2138ae910ee0
   SHA256: 52fef781d2f79a749c6ac957cff30d89b0b2b944d3063c27f8fc90f34844a7bb

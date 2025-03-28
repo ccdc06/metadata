@@ -1,5 +1,7 @@
 ---
 Title: 'Kairakuten BEAST 2023-10 Illustration: Inonaka Kawazu'
+Series:
+- Comic Kairakuten BEAST Illustrations
 Artist:
 - Inonaka Kawazu
 Parody:
@@ -30,6 +32,7 @@ ThumbnailIndex: 0
 ThumbnailName: 001.png
 Files:
 - 001.png
+Filesize: 2188089
 Hashes:
   LANraragi: c37da51b3bce6bf6356c1d56690a653b384fcf29
   SHA256: e782d1552e439d5cd62e7f6500873d67593cdb04cdd81724787254825b2f8306

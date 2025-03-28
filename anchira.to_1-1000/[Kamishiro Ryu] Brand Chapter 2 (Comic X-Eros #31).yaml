@@ -1,5 +1,7 @@
 ---
 Title: Brand Chapter 2
+Series:
+- Brand (Kamishiro Ryu)
 Artist:
 - Kamishiro Ryu
 Parody:
@@ -56,6 +58,7 @@ Files:
 - 22.png
 - 23.png
 - 24.png
+Filesize: 14625213
 Hashes:
   LANraragi: 2ee3b74bf084c2080674344a0395356108f39a8a
   SHA256: 70bc75af6cf96d76b245ac0208c2aefd4c6cc8558c0a1e9eddc7cb68ea5a8ecc

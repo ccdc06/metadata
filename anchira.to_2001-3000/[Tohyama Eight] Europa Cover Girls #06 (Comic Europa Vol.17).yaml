@@ -1,5 +1,7 @@
 ---
 Title: 'Europa Cover Girls #06'
+Series:
+- Europa Cover Girls
 Artist:
 - Tohyama Eight
 Parody:
@@ -27,6 +29,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 1909070
 Hashes:
   LANraragi: 96c0180d7a41d6090e6100c5943d78b09d9b56aa
   SHA256: ba658e41fe7bd614d76fe933d697b73524f57b2cb8931869aa5a7c748c3e065e

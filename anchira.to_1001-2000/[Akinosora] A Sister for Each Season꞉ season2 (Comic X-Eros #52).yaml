@@ -1,5 +1,7 @@
 ---
 Title: 'A Sister for Each Season: season2'
+Series:
+- A Sister for Each Season
 Artist:
 - Akinosora
 Parody:
@@ -63,6 +65,7 @@ Files:
 - 23.png
 - 24.png
 - 25.png
+Filesize: 18928151
 Hashes:
   LANraragi: b1cc2a64a97ee307fb8ecc4469a6e3f4f1728396
   SHA256: 8f1b37957a2b1fe20780214c1aa553310e3fe79ccf43f8b9810be6c5a57a0247

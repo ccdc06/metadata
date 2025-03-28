@@ -1,5 +1,7 @@
 ---
 Title: 'X-Eros Color Spread #80: Yaki Tomato'
+Series:
+- X-Eros Color Spread
 Artist:
 - Yaki Tomato
 Parody:
@@ -43,6 +45,7 @@ Files:
 - 01.png
 - 02.png
 - 03.png
+Filesize: 12010379
 Hashes:
   LANraragi: cf328b64259a3e667c5e704dde6dc00e0e914e82
   SHA256: 2fe30d1ac3debc61eeb0f1326d15e3b4998085ec17c867e53b4f9575c3592a58

@@ -1,5 +1,7 @@
 ---
 Title: Simple Yet Sexy Vol. 11
+Series:
+- Simple Yet Sexy
 Artist:
 - Iburo.
 Circle:
@@ -107,6 +109,7 @@ Files:
 - 073.png
 - 074.png
 - 075.png
+Filesize: 404668988
 Hashes:
   LANraragi: a4e79da2340e42a74756d187d883dbd1dd67b3b8
   SHA256: 805fc679f2a600b983967eba749b489edbf111537bacb33bb212c57cc78e7f99

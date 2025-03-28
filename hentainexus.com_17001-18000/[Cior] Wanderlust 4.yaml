@@ -1,5 +1,7 @@
 ---
 Title: Wanderlust 4
+Series:
+- Wanderlust
 Artist:
 - Cior
 Description: "Takeru swore to love only his wife from now on, but that\u2019s until he reunites with Nazuna at a tropical beach town. When she makes a move on him, his instincts take over\u2026"
@@ -57,6 +59,7 @@ Files:
 - 032.jpg
 - 033.jpg
 - 034.jpg
+Filesize: 53913115
 Hashes:
   LANraragi: 68f9adf8e8fce8b2b3b9d89b2a3b667b1f4e938c
   SHA256: c101b45f80683b0f4e1ffc5b0a930042b60943f6e97a8488b16a159fad95260d

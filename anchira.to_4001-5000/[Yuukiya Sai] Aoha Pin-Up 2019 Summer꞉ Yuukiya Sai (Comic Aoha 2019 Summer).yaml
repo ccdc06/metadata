@@ -1,5 +1,7 @@
 ---
 Title: 'Aoha Pin-Up 2019 Summer: Yuukiya Sai'
+Series:
+- Aoha Pin-Up
 Artist:
 - Yuukiya Sai
 Parody:
@@ -28,6 +30,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2086863
 Hashes:
   LANraragi: cc0cafedfe5ba8d32ac6bb4c577728bd38aadcc5
   SHA256: a21c35373854e0218fe44807e2e31903f4751237ece95bc38bc1729077f76b62

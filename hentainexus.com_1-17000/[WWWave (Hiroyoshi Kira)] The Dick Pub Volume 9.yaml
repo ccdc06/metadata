@@ -1,5 +1,7 @@
 ---
 Title: The Dick Pub Volume 9
+Series:
+- The Dick Pub
 Artist:
 - Hiroyoshi Kira
 Circle:
@@ -112,4 +114,8 @@ Files:
 - 073.png
 - 074.png
 - 075.png
+Filesize: 437995371
+Hashes:
+  LANraragi: c8e7e6dba9b5485f0be621a304473cb509ebf77a
+  SHA256: dcdf80855b9019f8f569e7667fd054062f3ce921f21b57134b2f10ae78b61106
 ...

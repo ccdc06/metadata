@@ -1,5 +1,7 @@
 ---
 Title: The Household Favorite
+Series:
+- The Household Favorite
 Artist:
 - Maemuki na Doemu
 Circle:
@@ -95,6 +97,7 @@ Files:
 - 056.png
 - 057.png
 - 058.jpg
+Filesize: 54049104
 Hashes:
   LANraragi: 100c487fa589ad65dcd9c60e465688c57dad3c8a
   SHA256: 619a9b13a2ae36d221365c9ae6bbdc1135d76e63372ec1d2dd5758c548b58cbf

@@ -1,5 +1,7 @@
 ---
-Title: 'Bavel Pin-up Girls #064'
+Title: 'Bavel Pin-Up Girls #064'
+Series:
+- Bavel Pin-Up Girls
 Artist:
 - Yamada Gogogo
 Parody:
@@ -31,6 +33,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2580733
 Hashes:
   LANraragi: c2f2eaec2706a444722639ae783a004feafc22f6
   SHA256: 08c0f54c197c5ac53ddebbf9a2100df89d590c5680b3b7577091a2d209e5b5a1

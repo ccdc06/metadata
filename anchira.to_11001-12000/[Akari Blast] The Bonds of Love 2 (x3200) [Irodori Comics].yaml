@@ -1,5 +1,7 @@
 ---
 Title: The Bonds of Love 2
+Series:
+- The Bonds of Love
 Artist:
 - Akari Blast!
 Parody:
@@ -81,6 +83,7 @@ Files:
 - 040.png
 - 041.png
 - 042.jpg
+Filesize: 56049241
 Hashes:
   LANraragi: a16abddd4eb44b94e393f711d3235150837e2197
   SHA256: 787f9a1b5713921b70e0f75830fc33853e68dbdea8256d925a77c318ffb39fef

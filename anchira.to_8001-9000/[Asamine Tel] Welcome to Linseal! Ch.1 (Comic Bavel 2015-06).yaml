@@ -1,5 +1,7 @@
 ---
 Title: Welcome to Linseal! Ch.1
+Series:
+- Welcome to Linseal!
 Artist:
 - Asamine Tel
 Parody:
@@ -62,6 +64,7 @@ Files:
 - 22.png
 - 23.png
 - 24.png
+Filesize: 18223452
 Hashes:
   LANraragi: d5c71626b0e1304a5e299d374ec3cb9bb6ac8fdc
   SHA256: 9c84db611f237977e403322fb5f9876a91093c87232c206dd0ffc4bdc292cac8

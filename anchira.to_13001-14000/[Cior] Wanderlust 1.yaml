@@ -1,5 +1,7 @@
 ---
 Title: Wanderlust 1
+Series:
+- Wanderlust
 Artist:
 - Cior
 URL:
@@ -53,6 +55,7 @@ Files:
 - 028.png
 - 029.jpg
 - 030.jpg
+Filesize: 78767010
 Hashes:
   LANraragi: eacc29f42d0c327bc92222191d0268a69c044cc5
   SHA256: 1ecb047ebd02a839f87320e536c2d87361060f9411d90ea53c72aaa7c58a30df

@@ -1,5 +1,7 @@
 ---
 Title: 'Karma 4-Panel Theater #11'
+Series:
+- Karma 4-Panel Theater
 Artist:
 - Karma Tatsuro
 Parody:
@@ -30,6 +32,7 @@ ThumbnailName: 02.png
 Files:
 - 01.png
 - 02.png
+Filesize: 2149100
 Hashes:
   LANraragi: 139467163342bcad78465acf2252c48cc07572e7
   SHA256: 9bb0b39600e58bbf7a4cc50da40d4751fea7250d68e7cbbfda79f28812667d8c

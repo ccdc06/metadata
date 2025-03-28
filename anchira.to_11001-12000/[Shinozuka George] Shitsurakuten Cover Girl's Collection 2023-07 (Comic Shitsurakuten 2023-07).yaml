@@ -1,5 +1,7 @@
 ---
 Title: Shitsurakuten Cover Girl's Collection 2023-07
+Series:
+- Shitsurakuten Cover Girl's
 Artist:
 - Shinozuka George
 Parody:
@@ -31,6 +33,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2354981
 Hashes:
   LANraragi: 842bd6b6f859e5b3d98c00698c402c58122601f7
   SHA256: 00ecb58a79139e664db35970c43c2b8461784d61a12334b28ac753a38731aa65

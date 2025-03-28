@@ -1,5 +1,7 @@
 ---
 Title: Priapus 4
+Series:
+- Priapus
 Artist:
 - Mentaiko Itto
 Description: "Jingi is a young and charismatic gangster who\u2019s recently stepped up as the new don, but his struggles to keep his goons from getting into trouble have him down in the dumps. Taro greets him at his estate to provide him with exactly what he needs \u2013 some\_very\_hands-on group team-building exercises \u2013 and naturally, it\u2019s an offer he can\u2019t refuse!"
@@ -72,4 +74,8 @@ Files:
 - 049.jpg
 - 050.jpg
 - 051.jpg
+Filesize: 60812556
+Hashes:
+  LANraragi: 02adce59e5fdbbf30279ecfb57837b4933407793
+  SHA256: 102d13ffb1f83dd684e3cddc398ba967e3422fc274fea4f1d0f6c806ee13ba04
 ...

@@ -1,5 +1,7 @@
 ---
 Title: Cat's Cradle 1
+Series:
+- Cat's Cradle (Beko Tarou)
 Artist:
 - Beko Tarou
 Circle:
@@ -55,6 +57,7 @@ Files:
 - 024.png
 - 025.png
 - 026.png
+Filesize: 39574220
 Hashes:
   LANraragi: fffece45f890d6a18ae56d55248c376dda86c85c
   SHA256: d07e8c1dff63cb97fa16d6f50bda27cb0a13d8e62c2b8dcabaa25a142d739d21

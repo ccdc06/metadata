@@ -1,5 +1,7 @@
 ---
 Title: "Bad Maid \u2764 Service Revenge!"
+Series:
+- "Bad Maid \u2764 Service"
 Artist:
 - Miyamoto Liz
 Parody:
@@ -55,6 +57,7 @@ Files:
 - 20.png
 - 21.png
 - 22.png
+Filesize: 31842039
 Hashes:
   LANraragi: ec6f4e30a0a27b5e52b3e6c7724e245fda76000f
   SHA256: 87f56ab874936bb96f3db601b21a5a4964586cb5bcb15faedd3e8d94f01ab464

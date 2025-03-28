@@ -1,5 +1,7 @@
 ---
 Title: 'Kairakuten BEAST 2024-08 Illustration: Choipiro'
+Series:
+- Comic Kairakuten BEAST Illustrations
 Artist:
 - Choipiro
 URL:
@@ -27,6 +29,7 @@ ThumbnailIndex: 0
 ThumbnailName: 001.png
 Files:
 - 001.png
+Filesize: 2770352
 Hashes:
   LANraragi: c77294dbd21f6ef8b7859bdbd37783784eb93bc8
   SHA256: 12eddff0038818a0ab4419daf6c1bf8246ae1582172539856267eca17bf1908d

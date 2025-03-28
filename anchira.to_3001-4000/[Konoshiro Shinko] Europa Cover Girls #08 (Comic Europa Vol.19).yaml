@@ -1,5 +1,7 @@
 ---
 Title: 'Europa Cover Girls #08'
+Series:
+- Europa Cover Girls
 Artist:
 - Konoshiro Shinko
 Parody:
@@ -27,6 +29,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2920992
 Hashes:
   LANraragi: 48776907079ab14ea68862f7f20354b3e6e7909c
   SHA256: bcbb56f430b9c2d907e3482f265ac4050b88b90ab371b16200135d85d40488c0

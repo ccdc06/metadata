@@ -1,5 +1,7 @@
 ---
 Title: The Dick Pub Volume 2
+Series:
+- The Dick Pub
 Artist:
 - Hiroyoshi Kira
 Circle:
@@ -107,6 +109,7 @@ Files:
 - 073.jpg
 - 074.jpg
 - 075.jpg
+Filesize: 160151972
 Hashes:
   LANraragi: ddea75fc73e59168eaac9b240169ac2fc2e962d5
   SHA256: 908961ad966ed2c7adc31272260191fec8c7f2c31a9aff47b5f39efc53fb0d05

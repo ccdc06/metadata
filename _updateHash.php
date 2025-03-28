@@ -5,7 +5,7 @@ init();
 
 $baseDir = require __DIR__ . '/temp/baseDir.php';
 
-foreach (streamSpecs() as $spec) {
+foreach (streamSpecs(false, true) as $spec) {
 	$fn = $baseDir . DIRECTORY_SEPARATOR . $spec->getBaseNameCbz();
 	echo "{$fn}\n";
 	if (file_exists($fn)) {
@@ -21,6 +21,18 @@ foreach (streamSpecs() as $spec) {
 		if (empty($spec->Hashes['SHA256'])) {
 			$save = true;
 			$spec->Hashes['SHA256'] = hash_file('sha256', $fn);
+		}
+
+		// $s = filesize($fn);
+		// if (empty($spec->Filesize) || $spec->Filesize != $s) {
+		// 	$save = true;
+		// 	$spec->Filesize = $s;
+		// }
+
+		if (empty($spec->Filesize)) {
+			$s = filesize($fn);
+			$save = true;
+			$spec->Filesize = $s;
 		}
 
 		if ($save) {

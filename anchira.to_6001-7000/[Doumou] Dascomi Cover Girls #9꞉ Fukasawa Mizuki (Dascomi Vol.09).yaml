@@ -1,5 +1,7 @@
 ---
 Title: 'Dascomi Cover Girls #9: Fukasawa Mizuki'
+Series:
+- Dascomi Cover Girls
 Artist:
 - Doumou
 Parody:
@@ -28,6 +30,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2892907
 Hashes:
   LANraragi: 8aa2c7691f9525390eb103480c583b000a3ebfd5
   SHA256: 068483c7bba21f1b1bc565db9eeedb7df27099b68b8fb179ff4e8f3ace3b45c5

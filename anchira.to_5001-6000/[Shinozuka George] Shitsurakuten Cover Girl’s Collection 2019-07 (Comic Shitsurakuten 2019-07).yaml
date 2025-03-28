@@ -1,5 +1,7 @@
 ---
 Title: Shitsurakuten Cover Girl's Collection 2019-07
+Series:
+- Shitsurakuten Cover Girl's
 Artist:
 - Shinozuka George
 Parody:
@@ -30,6 +32,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2602117
 Hashes:
   LANraragi: 7deb945e470d90d5c4afc8a7d17ae2c4a7ac6be0
   SHA256: f2a0b3ee81d6dff83dc0888636489ddb087d1ef4a16240e570849b438ae46faf

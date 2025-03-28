@@ -160,6 +160,7 @@ class Spec {
 	public int $ThumbnailIndex; // int
 	public string $ThumbnailName; // string
 	public array $Files; // []string
+	public int $Filesize; // int
 	public array $Hashes; // []string
 	private string $fileName;
 
@@ -403,7 +404,7 @@ class Spec {
 		if (empty($this->Tags)) {
 			return;
 		}
-		
+
 		foreach ($this->Tags as &$tag) {
 			if (str_ends_with($tag, ' ♂')) {
 				$tag = rtrim($tag, ' ♂');
@@ -493,10 +494,17 @@ class Spec {
 				}
 
 				foreach ($fieldValues as $fieldValue) {
-					foreach ($rules as $ruleType => $ruleValue) {
+					foreach ($rules as list($ruleType, $ruleValue)) {
 						switch($ruleType) {
 							case 'prefix':
-								if (!str_starts_with($fieldValue, $ruleValue)) {
+								// if (!str_starts_with($fieldValue, $ruleValue)) {
+								// 	$specMatch = false;
+								// 	break 4;
+								// }
+								// break;
+
+							case 'iprefix':
+								if (stripos($fieldValue, $ruleValue) !== 0) {
 									$specMatch = false;
 									break 4;
 								}
@@ -517,11 +525,19 @@ class Spec {
 								break;
 
 							case 'contains':
-								if (!str_contains($fieldValue, $ruleValue)) {
+								// if (!str_contains($fieldValue, $ruleValue)) {
+								// 	$specMatch = false;
+								// 	break 4;
+								// }
+								// break;
+
+							case 'icontains':
+								if (stripos($fieldValue, $ruleValue) === false) {
 									$specMatch = false;
 									break 4;
 								}
 								break;
+
 
 							default:
 								throw new \Exception("unknown rule type {$ruleType}");
@@ -534,6 +550,10 @@ class Spec {
 				$this->Series[] = $seriesTitle;
 				break;
 			}
+		}
+
+		if (!empty($this->Series)) {
+			$this->Series = array_unique($this->Series);
 		}
 	}
 
@@ -625,6 +645,7 @@ class Spec {
 				case 'ThumbnailIndex': // int
 				case 'Pages': // int
 				case 'Released': // int
+				case 'Filesize': // int
 					if (!is_int($val)) {
 						$err = "Not an int";
 					}
@@ -835,11 +856,15 @@ function listFiles() {
 	return $files;
 }
 
-function streamSpecs(bool $reverse = false) {
+function streamSpecs(bool $reverse = false, bool $random = false) {
 	$collections = listCollections();
 	natcasesort($collections);
 	if ($reverse) {
 		$collections = array_reverse($collections);
+	}
+
+	if ($random) {
+		shuffle($collections);
 	}
 
 	foreach ($collections as $collection) {
@@ -847,6 +872,10 @@ function streamSpecs(bool $reverse = false) {
 		natcasesort($files);
 		if ($reverse) {
 			$files = array_reverse($files);
+		}
+
+		if ($random) {
+			shuffle($files);
 		}
 
 		foreach ($files as $file) {

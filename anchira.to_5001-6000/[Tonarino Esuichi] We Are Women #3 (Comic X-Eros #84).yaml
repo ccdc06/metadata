@@ -1,5 +1,7 @@
 ---
 Title: 'We Are Women #3'
+Series:
+- We Are Women
 Artist:
 - Tonarino Esuichi
 Parody:
@@ -40,6 +42,7 @@ Files:
 - 10.png
 - 11.png
 - 12.png
+Filesize: 20013364
 Hashes:
   LANraragi: a313a5915c45c4fe71834ba7e8f81342c5360328
   SHA256: 4bf9c83b3d0fe4c77a4208eaf54c3955602e946045a186185e13ded1f7868faa

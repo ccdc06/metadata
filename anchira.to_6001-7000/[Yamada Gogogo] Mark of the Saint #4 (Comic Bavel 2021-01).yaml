@@ -1,5 +1,7 @@
 ---
 Title: 'Mark of the Saint #4'
+Series:
+- Mark of the Saint
 Artist:
 - Yamada Gogogo
 Parody:
@@ -74,6 +76,7 @@ Files:
 - 24.png
 - 25.png
 - 26.png
+Filesize: 35509291
 Hashes:
   LANraragi: ce58b424fa7b69d57402f6838d05b6118d050687
   SHA256: abe70ab300c6b9c001870786aefe67c94e05ccc03facbe9db01a1d3c1be81f9e

@@ -1,5 +1,7 @@
 ---
 Title: 'We Are Women #1'
+Series:
+- We Are Women
 Artist:
 - Tonarino Esuichi
 Parody:
@@ -40,6 +42,7 @@ Files:
 - 10.png
 - 11.png
 - 12.png
+Filesize: 15710047
 Hashes:
   LANraragi: 4d4409cd10516586551c6909a16659735371863a
   SHA256: 31146a3f28e540e8b97878312e13b61949dd6cd68932077aaa2745ef4eefb8c1

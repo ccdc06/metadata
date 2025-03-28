@@ -1,5 +1,7 @@
 ---
 Title: Cat's Cradle
+Series:
+- Cat's Cradle (Yumeno Tanuki)
 Artist:
 - Yumeno Tanuki
 Parody:
@@ -65,6 +67,7 @@ Files:
 - 30.png
 - 31.png
 - 32.png
+Filesize: 18967868
 Hashes:
   LANraragi: c84e0fc7deeec95f871893bf94d6ee636d34e3e0
   SHA256: 61971d218cec9968092340f11db25ac01a871c55be1c9e346e6d3fe1cfb068cb

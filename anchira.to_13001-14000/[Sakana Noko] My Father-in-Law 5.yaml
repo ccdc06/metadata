@@ -1,5 +1,7 @@
 ---
 Title: My Father-in-Law 5
+Series:
+- My Father-in-Law
 Artist:
 - Sakana Noko
 URL:
@@ -76,6 +78,7 @@ Files:
 - 035.png
 - 036.png
 - 037.png
+Filesize: 65765027
 Hashes:
   LANraragi: 0bf0e41fdcb7e548ad7c53bc32fb25107899262c
   SHA256: 6e62d2c3dcfdb0af1efb570458435755d317aa4386b50d45cd33666510f3d721

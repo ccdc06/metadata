@@ -1,5 +1,7 @@
 ---
 Title: Routine 2
+Series:
+- Routine
 Artist:
 - Alp
 Parody:
@@ -50,6 +52,7 @@ Files:
 - 14.png
 - 15.png
 - 16.png
+Filesize: 12441841
 Hashes:
   LANraragi: f43f1ffa0ad1e309edc2bf6df3c9a33a2ced645f
   SHA256: b40a66cdf2dff51ccc37c9bdc87b1a59983df098189f9838e690c95bb4aa6544

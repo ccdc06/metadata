@@ -1,5 +1,7 @@
 ---
 Title: "Twins \u2606 Scramble"
+Series:
+- "Twins \u2606 Scramble"
 Artist:
 - Kima-gray
 Parody:
@@ -56,6 +58,7 @@ Files:
 - 22.png
 - 23.png
 - 24.png
+Filesize: 15417597
 Hashes:
   LANraragi: bb1290267d96afd230948fd7248999722953c723
   SHA256: 03c723992766870af080200ffc2d04ef296d33b40b1651b702aad2abb2b9edc5

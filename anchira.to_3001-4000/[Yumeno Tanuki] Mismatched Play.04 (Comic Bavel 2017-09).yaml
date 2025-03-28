@@ -1,5 +1,7 @@
 ---
 Title: Mismatched Play.04
+Series:
+- Mismatched Play
 Artist:
 - Yumeno Tanuki
 Parody:
@@ -71,6 +73,7 @@ Files:
 - 34.png
 - 35.png
 - 36.png
+Filesize: 23487887
 Hashes:
   LANraragi: 7de1fb7840b617b3dc6ddcad12e076c8f3277b6d
   SHA256: 32e3b9d5a37e8022cc173fb21f06d814ec4806bd48e1b767ecd4b8bf0c5b5e8d

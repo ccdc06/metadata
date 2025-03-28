@@ -1,5 +1,7 @@
 ---
 Title: The Prey
+Series:
+- The Prey
 Artist:
 - Norasuko
 Parody:
@@ -44,6 +46,7 @@ Files:
 - 16.jpeg
 - 17.jpeg
 - 18.jpeg
+Filesize: 5735269
 Hashes:
   LANraragi: da67221e1ce1ae6be476de1ee54ae77dab86bc51
   SHA256: e0c32cd52964bccdef1ddbd921cab569d933db6c0551e67ab52b670cfbbdb561

@@ -1,5 +1,7 @@
 ---
 Title: 'Friend Quest: Chapter 1'
+Series:
+- Friend Quest
 Artist:
 - Sakurai Energy
 Parody:
@@ -41,6 +43,7 @@ Files:
 - 14.png
 - 15.png
 - 16.png
+Filesize: 8586390
 Hashes:
   LANraragi: d5667f6fb94d40b28de9df434369a135c1ae1955
   SHA256: 42ee6642926cd2116a98b0d254278166e3db8234f3cb56e54e48418c2ed4c8cb

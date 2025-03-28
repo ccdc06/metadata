@@ -1,5 +1,7 @@
 ---
 Title: School Regulation Violation Historia
+Series:
+- School Regulation Violation
 Artist:
 - YUG
 Parody:
@@ -26,6 +28,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 3385644
 Hashes:
   LANraragi: 5bce24bc3118cf261ffe9639adccc364c4b3caf1
   SHA256: 5319a11dab119fcf27582e41d84275995489d26d9f5d3bdd9bd768d615d355a0

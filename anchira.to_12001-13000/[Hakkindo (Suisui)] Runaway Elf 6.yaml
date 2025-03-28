@@ -1,5 +1,7 @@
 ---
 Title: Runaway Elf 6
+Series:
+- Runaway Elf
 Artist:
 - Suisui
 Circle:
@@ -63,6 +65,7 @@ Files:
 - 026.png
 - 027.png
 - 028.png
+Filesize: 109604919
 Hashes:
   LANraragi: 1d54a0beb0a0c62799bd77c187af954ccf7924c2
   SHA256: 27e4b224b7a65cdc14cf9520c1b5201989a0851cdf5ae62bad1dee5f6ee534e2

@@ -1,5 +1,7 @@
 ---
 Title: 'Dascomi Cover Girls #1: Yorita Yuina'
+Series:
+- Dascomi Cover Girls
 Artist:
 - Doumou
 Parody:
@@ -27,6 +29,7 @@ ThumbnailIndex: 0
 ThumbnailName: 01.png
 Files:
 - 01.png
+Filesize: 2625965
 Hashes:
   LANraragi: 0ea9db0dd2db0c27208f36b5c60b6e2a47380ae3
   SHA256: 623e6ae6aa0287a3297e2888acf88746e7c913b94dc8d4173503dde89d68de95

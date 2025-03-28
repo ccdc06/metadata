@@ -1,5 +1,7 @@
 ---
 Title: Scrumper 2
+Series:
+- Scrumper
 Artist:
 - Ukiuki Chisato
 URL:
@@ -135,4 +137,8 @@ Files:
 - 115.jpg
 - 116.jpg
 - 117.jpg
+Filesize: 151362648
+Hashes:
+  LANraragi: 86c804aee3c186dacd9e4461e6f44b300eb7b6e1
+  SHA256: 25cbf31302708516684b71737afdda48b700454606a42e5a6059281c218806bc
 ...

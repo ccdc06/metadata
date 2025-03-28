@@ -1,5 +1,7 @@
 ---
 Title: 'Today''s Addendum #3'
+Series:
+- Today's Addendum
 Artist:
 - Reidi
 Parody:
@@ -30,6 +32,7 @@ Files:
 - 02.png
 - 03.png
 - 04.png
+Filesize: 4069490
 Hashes:
   LANraragi: 1456427245f93dd43251a2a811df0b655c17360e
   SHA256: 899d0441b3f6ae586dab1700f0c1579f1835742c0ce224f2f0907ff4a30332ed
