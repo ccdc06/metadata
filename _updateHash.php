@@ -8,6 +8,11 @@ $baseDir = require __DIR__ . '/temp/baseDir.php';
 foreach (streamSpecs(false, true) as $spec) {
 	$fn = $baseDir . DIRECTORY_SEPARATOR . $spec->getBaseNameCbz();
 	echo "{$fn}\n";
+
+	if (!empty($spec->Hashes['LANraragi']) && !empty($spec->Hashes['SHA256']) && !empty($spec->Filesize)) {
+		continue;
+	}
+
 	if (file_exists($fn)) {
 		$save = false;
 		if (empty($spec->Hashes['LANraragi'])) {
@@ -23,14 +28,8 @@ foreach (streamSpecs(false, true) as $spec) {
 			$spec->Hashes['SHA256'] = hash_file('sha256', $fn);
 		}
 
-		// $s = filesize($fn);
-		// if (empty($spec->Filesize) || $spec->Filesize != $s) {
-		// 	$save = true;
-		// 	$spec->Filesize = $s;
-		// }
-
-		if (empty($spec->Filesize)) {
-			$s = filesize($fn);
+		$s = filesize($fn);
+		if (empty($spec->Filesize) || $spec->Filesize != $s) {
 			$save = true;
 			$spec->Filesize = $s;
 		}
