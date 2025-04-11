@@ -442,6 +442,10 @@ function routeDuplicates() {
 		sort($names);
 		if (count($names) > 1) {
 			foreach ($names as $name) {
+				// $spec = Spec::fromfile($name);
+				// if (!empty($spec->Filesize)) {
+				// 	echo '#' . round($spec->Filesize/1024/1024, 1) . 'MB', PHP_EOL;
+				// }
 				echo 'rm ' . escapeshellarg($name), PHP_EOL;
 			}
 			echo PHP_EOL;

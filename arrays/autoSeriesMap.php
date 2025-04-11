@@ -3200,4 +3200,11 @@ return  [
 			"Title" => [["prefix", "Drop-in Gyaru Lets Me Use Her Pussy"]],
 		],
 	],
+	[
+		"title" => "My Time to Shine!",
+		"conditions" => [
+			"Artist" => [["match", "Unadon"]],
+			"Title" => [["prefix", "My Time to Shine!"]],
+		],
+	],
 ];
