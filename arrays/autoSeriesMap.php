@@ -3207,4 +3207,74 @@ return  [
 			"Title" => [["prefix", "My Time to Shine!"]],
 		],
 	],
+	[
+		"title" => "My Magic Stick Bewitches the Bitches",
+		"conditions" => [
+			"Artist" => [["match", "Saikura Noushu"]],
+			"Title" => [["prefix", "My Magic Stick Bewitches the Bitches"]],
+		],
+	],
+	[
+		"title" => "Heaven & Earth",
+		"conditions" => [
+			"Artist" => [["match", "Saikime"]],
+			"Title" => [["prefix", "Heaven & Earth"]],
+		],
+	],
+	[
+		"title" => "Business Trip!",
+		"conditions" => [
+			"Artist" => [["match", "Sakurai Energy"]],
+			"Title" => [["prefix", "Business Trip!"]],
+		],
+	],
+	[
+		"title" => "Oh Moon, Just a Little While Longer",
+		"conditions" => [
+			"Artist" => [["match", "Sakurai Energy"]],
+			"Title" => [["prefix", "Oh Moon, Just a Little While Longer"]],
+		],
+	],
+	[
+		"title" => "Maid Service by Miss Shirasaki",
+		"conditions" => [
+			"Artist" => [["match", "Sansyoku Nerune"]],
+			"Title" => [["prefix", "Maid Service by Miss Shirasaki"]],
+		],
+	],
+	[
+		"title" => "Can't Resist the Pleasurable Things",
+		"conditions" => [
+			"Artist" => [["match", "Sanuki"]],
+			"Title" => [["prefix", "Can't Resist the Pleasurable Things"]],
+		],
+	],
+	[
+		"title" => "Pet Robot Lilly",
+		"conditions" => [
+			"Artist" => [["match", "Saori Sato"]],
+			"Title" => [["prefix", "Pet Robot Lilly"]],
+		],
+	],
+	[
+		"title" => "First Time Mission!",
+		"conditions" => [
+			"Artist" => [["match", "Sasachinn"]],
+			"Title" => [["prefix", "First Time Mission!"]],
+		],
+	],
+	[
+		"title" => "My Ideal Girlfriend",
+		"conditions" => [
+			"Artist" => [["match", "Sasachinn"]],
+			"Title" => [["prefix", "My Ideal Girlfriend"]],
+		],
+	],
+	[
+		"title" => "How to Seduce Your Childhood Friend",
+		"conditions" => [
+			"Artist" => [["match", "Sasai Saji"]],
+			"Title" => [["prefix", "How to Seduce Your Childhood Friend"]],
+		],
+	],
 ];
