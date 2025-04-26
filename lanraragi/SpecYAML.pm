@@ -19,7 +19,7 @@ sub plugin_info {
         type         => "metadata",
         namespace    => "theplan",
         author       => "CCDC06",
-        version      => "0.2",
+        version      => "0.3",
         description  => "Gathers metadata from paired yaml files.<br/>
         Metadata file must have the same name as the archive file and be located in the same folder, replacing their extension with <code>.yaml</code>.<br/>
         Example implementation: https://github.com/ccdc06/metadata",
@@ -75,6 +75,7 @@ sub tags_from_yaml {
     my $title     = $hash->{"Title"};
     my $artists   = $hash->{"Artist"};
     my $parodies  = $hash->{"Parody"};
+    my $series    = $hash->{"Series"};
     my $urls      = $hash->{"URL"};
     my $tags      = $hash->{"Tags"};
     my $magazines = $hash->{"Magazine"};
@@ -84,7 +85,10 @@ sub tags_from_yaml {
         push( @found_tags, "artist:" . $artist );
     }
     foreach my $parody (@$parodies) {
-        push( @found_tags, "series:" . $parody );
+        push( @found_tags, "parody:" . $parody );
+    }
+    foreach my $serie (@$series) {
+        push( @found_tags, "series:" . $serie );
     }
     foreach my $key (keys %{ $urls }) {
         push( @found_tags, "source:" . $urls->{$key} );
