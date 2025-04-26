@@ -5,7 +5,7 @@ init();
 
 $baseDir = require __DIR__ . '/temp/baseDir.php';
 
-foreach (streamSpecs(false, true) as $spec) {
+foreach (streamSpecs(true) as $spec) {
 	$fn = $baseDir . DIRECTORY_SEPARATOR . $spec->getBaseNameCbz();
 	echo "{$fn}\n";
 

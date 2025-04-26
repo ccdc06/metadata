@@ -66,6 +66,14 @@ function routeSm() {
 	$iroindex = require __DIR__ . '/temp/irodorism.php';
 	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
 
+	$query = mb_strtolower(preg_replace('/[^0-9a-z]/im', '', $query));
+	array_walk($fakkuindex, function (&$val) {
+		$val['title'] = mb_strtolower(preg_replace('/[^0-9a-z]/im', '', $val['title']));
+	});
+	array_walk($iroindex, function (&$val) {
+		$val['title'] = mb_strtolower(preg_replace('/[^0-9a-z]/im', '', $val['title']));
+	});
+
 	$ret = [];
 	foreach ($fakkuindex as $url => $val) {
 		if (strnatcasecmp($query, $val['title']) === 0) {
@@ -73,6 +81,7 @@ function routeSm() {
 				'url' => $url,
 				'title' => "[{$fakkuindex[$url]['artist']}] {$fakkuindex[$url]['title']}",
 				'source' => 'Fakku',
+				// 'query' => $query,
 			];
 		}
 	}
@@ -83,6 +92,7 @@ function routeSm() {
 				'url' => $url,
 				'title' => "[{$iroindex[$url]['artist']}] {$iroindex[$url]['title']}",
 				'source' => 'Irodori',
+				// 'query' => $query,
 			];
 		}
 	}
