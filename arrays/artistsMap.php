@@ -260,4 +260,5 @@ return  [
 	'kurosugatari' => 'Kurosu Gatari',
 	'bekotaro' => 'Beko Tarou',
 	'ootori mahiro' => 'Mahiro Ootori',
+	'ayano baru' => 'Ayano Val',
 ];
