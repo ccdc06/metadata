@@ -2524,7 +2524,7 @@ return  [
 	[
 		"title" => "Next Life Sex Hero",
 		"conditions" => [
-			"Artist" => [["match", "Poki no Ie"]],
+			"Artist" => [["match", "Chinpoki"]],
 			"Title" => [["prefix", "Next Life Sex Hero"]],
 		],
 	],
@@ -3275,6 +3275,104 @@ return  [
 		"conditions" => [
 			"Artist" => [["match", "Sasai Saji"]],
 			"Title" => [["prefix", "How to Seduce Your Childhood Friend"]],
+		],
+	],
+	[
+		"title" => "Summer Friends and Summer Flings",
+		"conditions" => [
+			"Artist" => [["match", "Asakawa"]],
+			"Title" => [["prefix", "Summer Friends and Summer Flings"]],
+		],
+	],
+	[
+		"title" => "Forbidden Lover",
+		"conditions" => [
+			"Artist" => [["match", "Asamine Tel"]],
+			"Title" => [["prefix", "Forbidden Lover"]],
+		],
+	],
+	[
+		"title" => "The Cute Coworker I Shot Down",
+		"conditions" => [
+			"Artist" => [["match", "Asano Yomichi"]],
+			"Title" => [["prefix", "The Cute Coworker I Shot Down"]],
+		],
+	],
+	[
+		"title" => "The Biggest Loser (Winner)",
+		"conditions" => [
+			"Artist" => [["match", "Ashizuki"]],
+			"Title" => [["prefix", "The Biggest Loser (Winner)"]],
+		],
+	],
+	[
+		"title" => "KanCollection",
+		"conditions" => [
+			"Artist" => [["match", "Awayume"]],
+			"Title" => [["prefix", "KanCollection"]],
+		],
+	],
+	[
+		"title" => "Swinging Story",
+		"conditions" => [
+			"Artist" => [["match", "Babangida Yanagida"]],
+			"Title" => [["prefix", "Swinging Story"]],
+		],
+	],
+	[
+		"title" => "Where Adults Draw the Line",
+		"conditions" => [
+			"Artist" => [["match", "Beko Tarou"]],
+			"Title" => [["prefix", "Where Adults Draw the Line"]],
+		],
+	],
+	[
+		"title" => "Asleep at the Training Camp",
+		"conditions" => [
+			"Artist" => [["match", "Bifidus"]],
+			"Title" => [["prefix", "Asleep at the Training Camp"]],
+		],
+	],
+	[
+		"title" => "Bending the Rules Over",
+		"conditions" => [
+			"Artist" => [["match", "Chinetsu"]],
+			"Title" => [["prefix", "Bending the Rules Over"]],
+		],
+	],
+	[
+		"title" => "And the Spring Bird Sings No More",
+		"conditions" => [
+			"Artist" => [["match", "Chirinu Iroha"]],
+			"Title" => [["prefix", "And the Spring Bird Sings No More"]],
+		],
+	],
+	[
+		"title" => "My Girlfriend's and My Milking Life",
+		"conditions" => [
+			"Artist" => [["match", "Chiri"]],
+			"Title" => [["prefix", "My Girlfriend's and My Milking Life"]],
+		],
+	],
+	[
+		"title" => "Monster ❤ Mating Tales",
+		"conditions" => [
+			"Artist" => [["match", "Chirota Rochi"]],
+			"Title" => [["prefix", "Monster ❤ Mating Tales"]],
+		],
+	],
+	[
+		"title" => "My Childhood Friend Isn't Honest with Herself",
+		"conditions" => [
+			"Artist" => [["match", "Chiune"]],
+			"Title" => [["prefix", "My Childhood Friend Isn't Honest with Herself"]],
+		],
+	],
+	[
+		"title" => "Unrequited Love",
+		"conditions" => [
+			"Artist" => [["match", "Cucchiore"]],
+			"Title" => [["prefix", "Unrequited Love"]],
 		],
 	],
 ];
