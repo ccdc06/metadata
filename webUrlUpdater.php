@@ -38,8 +38,15 @@ function routeWebHentagProxy() {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($_POST));
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-	header('Content-Type: application/json');
-	echo curl_exec($ch);
+	$ret = curl_exec($ch);
+
+	if (json_validate($ret)) {
+		header('Content-Type: application/json');
+		echo $ret;
+	} else {
+		http_response_code(400);
+		echo $ret;
+	}
 	curl_close($ch);
 }
 
@@ -264,15 +271,20 @@ function routeWebIndex() {
 							<input type="hidden" name="key" value="<?= $baseName ?>" />
 							<div class="list-target">
 								<template>
-									<fieldset class="p-1 d-flex">
-										<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
-										<select class="form-select mx-1" name="source">
-											<option value="" selected>(Select)</option>
-											<?php foreach (ValNorm::$urlSources as $source): ?>
-											<option value="<?= h($source) ?>"><?= h($source) ?></option>
-											<?php endforeach; ?>
-										</select>
-										<button type="button" class="btn btn-danger mx-1 option-remove">x</button>
+									<fieldset class="p-1 d-flex flex-column">
+										<div>
+											<h6></h6>
+										</div>
+										<div class="d-flex flex-row">
+											<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
+											<select style="max-width: 190px" class="form-select mx-1" name="source">
+												<option value="" selected>(Select)</option>
+												<?php foreach (ValNorm::$urlSources as $source): ?>
+													<option value="<?= h($source) ?>"><?= h($source) ?></option>
+												<?php endforeach; ?>
+											</select>
+											<button type="button" class="btn btn-danger mx-1 option-remove">x</button>
+										</div>
 									</fieldset>
 								</template>
 							</div>
@@ -300,10 +312,17 @@ function routeWebIndex() {
 		var $body = $('body');
 		var i = 0;
 
-		function addOption($target, url, source) {
+		function addOption($target, url, source, title) {
 			i++;
 			var templateHtml = $target.find('template').html();
 			var $item = $(templateHtml);
+
+			var $title = $item.find('h6');
+			if (title) {
+				$title.html(title);
+			} else {
+				$title.closest('div').remove();
+			}
 
 			var $url = $item.find('[name=url]');
 			$url.attr('name', 'entries[' + i + '][url]');
@@ -324,7 +343,9 @@ function routeWebIndex() {
 		});
 
 		$('body').on('click', '.option-remove', function (e) {
+			var lt = $(e.currentTarget).closest('.list-target');
 			$(e.currentTarget).closest('fieldset').remove();
+			lt.find('fieldset input[type="text"]').first().focus();
 		});
 
 		$body.on('click', 'button.sm-api', function (e) {
@@ -369,7 +390,7 @@ function routeWebIndex() {
 				success: function(data) {
 					$current.removeAttr('disabled');
 
-					if ('length' in data) {
+					if (Array.isArray(data)) {
 						for (const result of data) {
 							if ('locations' in result) {
 								if (result.otherTags) {
@@ -381,21 +402,25 @@ function routeWebIndex() {
 
 								for (const location of result.locations) {
 									if (location.includes('fakku.net')) {
-										addOption($listTarget, location, 'Fakku');
+										addOption($listTarget, location, 'Fakku', result.title);
 									}
 									if (location.includes('irodoricomics.com')) {
-										addOption($listTarget, location, 'Irodori');
+										addOption($listTarget, location, 'Irodori', result.title);
 									}
 									if (location.includes('doujin.io')) {
-										addOption($listTarget, location, 'J18');
+										addOption($listTarget, location, 'J18', result.title);
 									}
 								}
 							}
 						}
 					}
 				},
-				error: function () {
+				error: function (xhr) {
 					$current.removeAttr('disabled');
+
+					if (xhr.responseText.includes('Rate limited')) {
+						$current.click();
+					}
 				}
 			});
 		})
