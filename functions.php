@@ -198,6 +198,14 @@ class Spec {
 		return relativeDir($this->fileName);
 	}
 
+	public function filename() : string {
+		if (empty($this->fileName)) {
+			throw new \Exception("This spec was not generated from a file");
+		}
+
+		return $this->fileName;
+	}
+
 	public function DownloadSourceId() : int|string {
 		if (empty($this->DownloadSource)) {
 			throw new \Exception("DownloadSource not set");
