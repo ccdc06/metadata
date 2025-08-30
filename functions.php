@@ -159,6 +159,7 @@ class Spec {
 	public string $DownloadSource; // string
 	public int $ThumbnailIndex; // int
 	public string $ThumbnailName; // string
+	public string $Notes; // string
 	public array $Files; // []string
 	public int $Filesize; // int
 	public array $Hashes; // []string
@@ -645,6 +646,7 @@ class Spec {
 				case 'ThumbnailName': // string
 				case 'DownloadSource': // string
 				case 'URLSource': // string
+				case 'Notes': // string
 					if (!is_string($val)) {
 						$err = "Not a string";
 					}
