@@ -70,7 +70,7 @@ function routeWebFakkuProxy() {
 
 function routeSm() {
 	$fakkuindex = require __DIR__ . '/temp/fakkusm.php';
-	$iroindex = require __DIR__ . '/temp/irodorism.php';
+	$iroindex = require __DIR__ . '/temp/irosmindex.php';
 	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
 
 	$query = mb_strtolower(preg_replace('/[^0-9a-z]/im', '', $query));
