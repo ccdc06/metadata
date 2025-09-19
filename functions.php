@@ -411,6 +411,7 @@ class Spec {
 
 	public function fixTags() {
 		if (empty($this->Tags)) {
+			unset($this->Tags);
 			return;
 		}
 
@@ -422,6 +423,14 @@ class Spec {
 				$tag = rtrim($tag, ' ♀');
 			}
 		}
+		unset($tag);
+
+		$this->Tags = array_filter($this->Tags, function ($tag) {
+			return !in_array($tag, array(
+				'Irodori Aqua',
+				'Summer-Sale',
+			));
+		});
 
 		$this->Tags = ValNorm::normalizeTags($this->Tags);
 	}
