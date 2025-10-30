@@ -19,7 +19,7 @@ sub plugin_info {
         type         => "metadata",
         namespace    => "theplan",
         author       => "CCDC06",
-        version      => "0.3",
+        version      => "0.4",
         description  => "Gathers metadata from paired yaml files.<br/>
         Metadata file must have the same name as the archive file and be located in the same folder, replacing their extension with <code>.yaml</code>.<br/>
         Example implementation: https://github.com/ccdc06/metadata",
