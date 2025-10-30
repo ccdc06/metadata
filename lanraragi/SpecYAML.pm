@@ -52,10 +52,19 @@ sub get_tags {
 
     my $parsed_data = LoadFile($filepath);
 
-    my ( $tags, $title ) = tags_from_yaml( $parsed_data, $assume_english );
+    my ( $tags, $title, $summary ) = tags_from_yaml( $parsed_data, $assume_english );
 
     #Return tags
     $logger->info("Sending the following tags to LRR: $tags");
+	if ($summary) {
+		$logger->info("Parsed summary is $summary");
+		if ($title) {
+            $logger->info("Parsed title is $title");
+            return ( tags => $tags, title => $title, summary => $summary );
+        } else {
+            return ( tags => $tags, summary => $summary );
+        }
+	}
     if ($title) {
         $logger->info("Parsed title is $title");
         return ( tags => $tags, title => $title );
@@ -73,6 +82,7 @@ sub tags_from_yaml {
     my $logger = get_plugin_logger();
 
     my $title     = $hash->{"Title"};
+	my $summary   = $hash->{"Description"};
     my $artists   = $hash->{"Artist"};
     my $parodies  = $hash->{"Parody"};
     my $series    = $hash->{"Series"};
@@ -107,7 +117,7 @@ sub tags_from_yaml {
 
     #Done-o
     my $concat_tags = join( ", ", @found_tags );
-    return ( $concat_tags, $title );
+    return ( $concat_tags, $title, $summary );
 
 }
 
