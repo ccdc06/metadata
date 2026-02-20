@@ -3375,4 +3375,760 @@ return  [
 			"Title" => [["prefix", "Unrequited Love"]],
 		],
 	],
+	[
+		"title" => "Erosion",
+		"conditions" => [
+			"Artist" => [["match", "7Zu7"]],
+			"Title" => [["prefix", "Erosion"]],
+		],
+	],
+	[
+		"title" => "You Really Think You're Gonna Survive with that Attitude?",
+		"conditions" => [
+			"Artist" => [["match", "35 Machi"]],
+			"Title" => [["prefix", "You Really Think You're Gonna Survive with that Attitude?"]],
+		],
+	],
+	[
+		"title" => "Summer With Misono",
+		"conditions" => [
+			"Artist" => [["match", "8000"]],
+			"Title" => [["prefix", "Summer With Misono"]],
+		],
+	],
+	[
+		"title" => "Inseminators for Hire",
+		"conditions" => [
+			"Artist" => [["match", "Abe Inori"]],
+			"Title" => [["prefix", "Inseminators for Hire"]],
+		],
+	],
+	[
+		"title" => "Cat Studio R18",
+		"conditions" => [
+			"Artist" => [["match", "Acefishy"]],
+			"Title" => [["prefix", "Cat Studio R18"]],
+		],
+	],
+	[
+		"title" => "My Beloved Shipgirl",
+		"conditions" => [
+			"Artist" => [["match", "Aiue Oka"]],
+			"Title" => [["prefix", "My Beloved Shipgirl"]],
+		],
+	],
+	[
+		"title" => "Instapussy",
+		"conditions" => [
+			"Artist" => [["match", "Akamoto Akamoto"]],
+			"Title" => [["prefix", "Instapussy"]],
+		],
+	],
+	[
+		"title" => "I Tried Renting My Little Sister",
+		"conditions" => [
+			"Artist" => [["match", "Akashi Rokuro"]],
+			"Title" => [["prefix", "I Tried Renting My Little Sister"]],
+		],
+	],
+	[
+		"title" => "The Town of Tasty Treats",
+		"conditions" => [
+			"Artist" => [["match", "Akazawa RED"]],
+			"Title" => [["prefix", "The Town of Tasty Treats"]],
+		],
+	],
+	[
+		"title" => "Afterschool Harem Bliss",
+		"conditions" => [
+			"Artist" => [["match", "Akosuke"]],
+			"Title" => [["prefix", "Afterschool Harem Bliss"]],
+		],
+	],
+	[
+		"title" => "Like a Doujin: Sex with My Otaku Friend",
+		"conditions" => [
+			"Artist" => [["match", "Alp"]],
+			"Title" => [["prefix", "Like a Doujin: Sex with My Otaku Friend"]],
+		],
+	],
+	[
+		"title" => "Rocker Girl Strapped for Cash",
+		"conditions" => [
+			"Artist" => [["match", "Amasora Taichi"]],
+			"Title" => [["prefix", "Rocker Girl Strapped for Cash"]],
+		],
+	],
+	[
+		"title" => "My Innocent Girlfriend Loves Anal",
+		"conditions" => [
+			"Artist" => [["match", "Amatusae"]],
+			"Title" => [["prefix", "My Innocent Girlfriend Loves Anal"]],
+		],
+	],
+	[
+		"title" => "Urban Sexploration",
+		"conditions" => [
+			"Artist" => [["match", "Ameno Shigure"]],
+			"Title" => [["prefix", "Urban Sexploration"]],
+		],
+	],
+	[
+		"title" => "A Taste of Honey ~become an adult~",
+		"conditions" => [
+			"Artist" => [["match", "Aoi Miharu"]],
+			"Title" => [["prefix", "A Taste of Honey ~become an adult~"]],
+		],
+	],
+	[
+		"title" => "First Day of Winter",
+		"conditions" => [
+			"Artist" => [["match", "Aoi Miharu"]],
+			"Title" => [["prefix", "First Day of Winter"]],
+		],
+	],
+	[
+		"title" => "Mild Winter",
+		"conditions" => [
+			"Artist" => [["match", "Aoi Miharu"]],
+			"Title" => [["prefix", "Mild Winter"]],
+		],
+	],
+	[
+		"title" => "Caiman Motors Bunny-Breeding Support Department",
+		"conditions" => [
+			"Artist" => [["match", "Aomushi"]],
+			"Title" => [["prefix", "Caiman Motors Bunny-Breeding Support Department"]],
+		],
+	],
+	[
+		"title" => "Raised Under the Same Roof",
+		"conditions" => [
+			"Artist" => [["match", "Aoyama Kiiro."]],
+			"Title" => [["prefix", "Raised Under the Same Roof"]],
+		],
+	],
+	[
+		"title" => "Loss of Innocence",
+		"conditions" => [
+			"Artist" => [["match", "Araiguma"]],
+			"Title" => [["prefix", "Loss of Innocence"]],
+		],
+	],
+	[
+		"title" => "Crimson Whisper",
+		"conditions" => [
+			"Artist" => [["match", "Arakure"]],
+			"Title" => [["prefix", "Crimson Whisper"]],
+		],
+	],
+	[
+		"title" => "Unrequited Student Council",
+		"conditions" => [
+			"Artist" => [["match", "Aratagawa Nikei"]],
+			"Title" => [["prefix", "Unrequited Student Council"]],
+		],
+	],
+	[
+		"title" => "Enticing ♥ Twins",
+		"conditions" => [
+			"Artist" => [["match", "Arekusa Mahoone"]],
+			"Title" => [["prefix", "Enticing ♥ Twins"]],
+		],
+	],
+	[
+		"title" => "Come Play With Us, Yuu!",
+		"conditions" => [
+			"Artist" => [["match", "Arima Kouichi"]],
+			"Title" => [["prefix", "Come Play With Us, Yuu!"]],
+		],
+	],
+	[
+		"title" => "Horny Kogal & Strait-laced Boy",
+		"conditions" => [
+			"Artist" => [["match", "Asamine Tel"]],
+			"Title" => [["prefix", "Horny Kogal & Strait-laced Boy"]],
+		],
+	],
+	[
+		"title" => "Spirited Away To The Snow Women's Harem",
+		"conditions" => [
+			"Artist" => [["match", "Ayakase Chiyoko"]],
+			"Title" => [["prefix", "Spirited Away To The Snow Women's Harem"]],
+		],
+	],
+	[
+		"title" => "Cum Dump Duty",
+		"conditions" => [
+			"Artist" => [["match", "Bambi"]],
+			"Title" => [["prefix", "Cum Dump Duty"]],
+		],
+	],
+	[
+		"title" => "Isekai Mononoke Hot Spring Town",
+		"conditions" => [
+			"Artist" => [["match", "Ban Kazuyasu"]],
+			"Title" => [["prefix", "Isekai Mononoke Hot Spring Town"]],
+		],
+	],
+	[
+		"title" => "Stray Gyaru Harem",
+		"conditions" => [
+			"Artist" => [["match", "Benzou"]],
+			"Title" => [["prefix", "Stray Gyaru Harem"]],
+		],
+	],
+	[
+		"title" => "I'll Take Charge!",
+		"conditions" => [
+			"Artist" => [["match", "Cotton"]],
+			"Title" => [["prefix", "I'll Take Charge!"]],
+		],
+	],
+	[
+		"title" => "Intercourse Observation",
+		"conditions" => [
+			"Artist" => [["match", "Coupe"]],
+			"Title" => [["prefix", "Intercourse Observation"]],
+		],
+	],
+	[
+		"title" => "S♥EXp Chance!",
+		"conditions" => [
+			"Artist" => [["match", "Croriin"]],
+			"Title" => [["prefix", "S♥EXp Chance!"]],
+		],
+	],
+	[
+		"title" => "Mythical Horned Rabbit's Owner",
+		"conditions" => [
+			"Artist" => [["match", "Croriin"]],
+			"Title" => [["prefix", "Mythical Horned Rabbit's Owner"]],
+		],
+	],
+	[
+		"title" => "My Lifelong Rival's a Girl Now!?",
+		"conditions" => [
+			"Artist" => [["match", "Cup Chan"]],
+			"Title" => [["prefix", "My Lifelong Rival's a Girl Now!?"]],
+		],
+	],
+	[
+		"title" => "Haunted ❤",
+		"conditions" => [
+			"Artist" => [["match", "Cuvie"]],
+			"Title" => [["prefix", "Haunted ❤"]],
+		],
+	],
+	[
+		"title" => "Her Mature Side",
+		"conditions" => [
+			"Artist" => [["match", "Cuvie"]],
+			"Title" => [["prefix", "Her Mature Side"]],
+		],
+	],
+	[
+		"title" => "HBD!",
+		"conditions" => [
+			"Artist" => [["match", "Cuvie"]],
+			"Title" => [["prefix", "HBD!"]],
+		],
+	],
+	[
+		"title" => "Indulgence",
+		"conditions" => [
+			"Artist" => [["match", "Dagashi"]],
+			"Title" => [["prefix", "Indulgence"]],
+		],
+	],
+	[
+		"title" => "That Won't Fit...! All Night Sex with the Biggest Cock",
+		"conditions" => [
+			"Artist" => [["match", "Daiki Fuun"]],
+			"Title" => [["prefix", "That Won't Fit...! All Night Sex with the Biggest Cock"]],
+		],
+	],
+	[
+		"title" => "Goblin Global Conquest",
+		"conditions" => [
+			"Artist" => [["match", "diletta"]],
+			"Title" => [["prefix", "Goblin Global Conquest"]],
+		],
+	],
+	[
+		"title" => "The Only Man in an All-Girls Party",
+		"conditions" => [
+			"Artist" => [["match", "diletta"]],
+			"Title" => [["prefix", "The Only Man in an All-Girls Party"]],
+		],
+	],
+	[
+		"title" => "Unguarded!",
+		"conditions" => [
+			"Artist" => [["match", "Dojirou"]],
+			"Title" => [["prefix", "Unguarded!"]],
+		],
+	],
+	[
+		"title" => "Magician of Seduction",
+		"conditions" => [
+			"Artist" => [["match", "Dosojin"]],
+			"Title" => [["prefix", "Magician of Seduction"]],
+		],
+	],
+	[
+		"title" => "Girlfriend From Abroad",
+		"conditions" => [
+			"Artist" => [["match", "Dramus"]],
+			"Title" => [["prefix", "Girlfriend From Abroad"]],
+		],
+	],
+	[
+		"title" => "Dual Swap",
+		"conditions" => [
+			"Artist" => [["match", "Dramus"]],
+			"Title" => [["prefix", "Dual Swap"]],
+		],
+	],
+	[
+		"title" => "Dear Anal Vampire-senpai",
+		"conditions" => [
+			"Artist" => [["match", "Dramus"]],
+			"Title" => [["prefix", "Dear Anal Vampire-senpai"]],
+		],
+	],
+	[
+		"title" => "Monopolize (Dramus)",
+		"conditions" => [
+			"Artist" => [["match", "Dramus"]],
+			"Title" => [["prefix", "Monopolize"]],
+		],
+	],
+	[
+		"title" => "My Husband's Dick Can't Satisfy Me?",
+		"conditions" => [
+			"Artist" => [["match", "e9"]],
+			"Title" => [["prefix", "My Husband's Dick Can't Satisfy Me?"]],
+		],
+	],
+	[
+		"title" => "My Annoying Boss Is... Kinda Sexy?!",
+		"conditions" => [
+			"Artist" => [["match", "Ebi Umino"]],
+			"Title" => [["prefix", "My Annoying Boss Is... Kinda Sexy?!"]],
+		],
+	],
+	[
+		"title" => "Blackmailing My Boss Using My Power To Recognize Women By Their Asses",
+		"conditions" => [
+			"Artist" => [["match", "ECOheeky"]],
+			"Title" => [["prefix", "Blackmailing My Boss Using My Power To Recognize Women By Their Asses"]],
+		],
+	],
+	[
+		"title" => "Don't Fuck With Futas!",
+		"conditions" => [
+			"Artist" => [["match", "Eigetu"]],
+			"Title" => [["prefix", "Don't Fuck With Futas!"]],
+		],
+	],
+	[
+		"title" => "The Exiled Tamer’s NTR Revenge",
+		"conditions" => [
+			"Artist" => [["match", "Eltoria"]],
+			"Title" => [["prefix", "The Exiled Tamer’s NTR Revenge"]],
+		],
+	],
+	[
+		"title" => "My Girlfriend’s Mom Teaches Me the Ropes",
+		"conditions" => [
+			"Artist" => [["match", "Endo Yoshiki"]],
+			"Title" => [["prefix", "My Girlfriend’s Mom Teaches Me the Ropes"]],
+		],
+	],
+	[
+		"title" => "Would You Still Love Me If I Was a Bad Girl?",
+		"conditions" => [
+			"Artist" => [["match", "Ennorei"]],
+			"Title" => [["prefix", "Would You Still Love Me If I Was a Bad Girl?"]],
+		],
+	],
+	[
+		"title" => "Dead or Sex",
+		"conditions" => [
+			"Artist" => [["match", "Eroi-Roe"]],
+			"Title" => [["prefix", "Dead or Sex"]],
+		],
+	],
+	[
+		"title" => "Extinction Prevention Files",
+		"conditions" => [
+			"Artist" => [["match", "Eroi-Roe"]],
+			"Title" => [["prefix", "Extinction Prevention Files"]],
+		],
+	],
+	[
+		"title" => "The Born-Again Program",
+		"conditions" => [
+			"Artist" => [["match", "EROKI"]],
+			"Title" => [["prefix", "The Born-Again Program"]],
+		],
+	],
+	[
+		"title" => "Because It's Work!",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Because It's Work!"]],
+		],
+	],
+	[
+		"title" => "Don't Do It Alone",
+		"conditions" => [
+			"Artist" => [["match", "Eroi-Roe"]],
+			"Title" => [["prefix", "Don't Do It Alone"]],
+		],
+	],
+	[
+		"title" => "Dolls",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Dolls"]],
+		],
+	],
+	[
+		"title" => "Dream Application",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Dream Application"]],
+		],
+	],
+	[
+		"title" => "Dropping By",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Dropping By"]],
+		],
+	],
+	[
+		"title" => "Living With a Naughty, Bronze High School Elf",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Living With a Naughty, Bronze High School Elf"]],
+		],
+	],
+	[
+		"title" => "Mischief Makers",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Mischief Makers"]],
+		],
+	],
+	[
+		"title" => "Tapestry",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Tapestry"]],
+		],
+	],
+	[
+		"title" => "The Beast's Gratitude(?)",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "The Beast's Gratitude(?)"]],
+		],
+	],
+	[
+		"title" => "Welcome Home",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Welcome Home"]],
+		],
+	],
+	[
+		"title" => "Excursion Day 99",
+		"conditions" => [
+			"Artist" => [["match", "F4U"]],
+			"Title" => [["prefix", "Excursion Day 99"]],
+		],
+	],
+	[
+		"title" => "Ayano Attention",
+		"conditions" => [
+			"Artist" => [["match", "Flugel"]],
+			"Title" => [["prefix", "Ayano Attention"]],
+		],
+	],
+	[
+		"title" => "Monopolize (Flugel)",
+		"conditions" => [
+			"Artist" => [["match", "Flugel"]],
+			"Title" => [["prefix", "Monopolize"]],
+		],
+	],
+	[
+		"title" => "They're Both Careless",
+		"conditions" => [
+			"Artist" => [["match", "fu-ta"]],
+			"Title" => [["prefix", "They're Both Careless"]],
+		],
+	],
+	[
+		"title" => "My Relationship With Mrs. Fujita",
+		"conditions" => [
+			"Artist" => [["match", "Fujisaki Chiro"]],
+			"Title" => [["prefix", "My Relationship With Mrs. Fujita"]],
+		],
+	],
+	[
+		"title" => "GAMER GF",
+		"conditions" => [
+			"Artist" => [["match", "Fujiyama"]],
+			"Title" => [["prefix", "GAMER GF"]],
+		],
+	],
+	[
+		"title" => "What They Won't Teach You in School",
+		"conditions" => [
+			"Artist" => [["match", "Fukumaaya"]],
+			"Title" => [["prefix", "What They Won't Teach You in School"]],
+		],
+	],
+	[
+		"title" => "Pop Girl Operation",
+		"conditions" => [
+			"Artist" => [["match", "Furisuku"]],
+			"Title" => [["prefix", "Pop Girl Operation"]],
+		],
+	],
+	[
+		"title" => "Calming a Panzer High",
+		"conditions" => [
+			"Artist" => [["match", "Futaba Yodomu"]],
+			"Title" => [["prefix", "Calming a Panzer High"]],
+		],
+	],
+	[
+		"title" => "Futanari Triple Shot",
+		"conditions" => [
+			"Artist" => [["match", "Futaba Yodomu"]],
+			"Title" => [["prefix", "Futanari Triple Shot"]],
+		],
+	],
+	[
+		"title" => "Futaman!",
+		"conditions" => [
+			"Artist" => [["match", "Futaba Yodomu"]],
+			"Title" => [["prefix", "Futaman!"]],
+		],
+	],
+	[
+		"title" => "Working at the Futanari Beach Police",
+		"conditions" => [
+			"Artist" => [["match", "Futaba Yodomu"]],
+			"Title" => [["prefix", "Working at the Futanari Beach Police"]],
+		],
+	],
+	[
+		"title" => "Getting it On With Your Gaming Buddy at the Hot Spring",
+		"conditions" => [
+			"Artist" => [["match", "Gachonjirou"]],
+			"Title" => [["prefix", "Getting it On With Your Gaming Buddy at the Hot Spring"]],
+		],
+	],
+	[
+		"title" => "My Big Boobed Wife Is Fucking My Uncle Behind My Back!",
+		"conditions" => [
+			"Artist" => [["match", "Gagarinkichi"]],
+			"Title" => [["prefix", "My Big Boobed Wife Is Fucking My Uncle Behind My Back!"]],
+		],
+	],
+	[
+		"title" => "Top Class MILF",
+		"conditions" => [
+			"Artist" => [["match", "Gagarin Kichi"]],
+			"Title" => [["prefix", "Top Class MILF"]],
+		],
+	],
+	[
+		"title" => "Even an Innocent TV Show Singer Needs Sex",
+		"conditions" => [
+			"Artist" => [["match", "Girigirimai"]],
+			"Title" => [["prefix", "Even an Innocent TV Show Singer Needs Sex"]],
+		],
+	],
+	[
+		"title" => "Graduation Reward",
+		"conditions" => [
+			"Artist" => [["match", "Gosaiji"]],
+			"Title" => [["prefix", "Graduation Reward"]],
+		],
+	],
+	[
+		"title" => "Sexy Lady Bar",
+		"conditions" => [
+			"Artist" => [["match", "gonza"]],
+			"Title" => [["prefix", "Sexy Lady Bar"]],
+		],
+	],
+	[
+		"title" => "She's My Friend, She's His Slut",
+		"conditions" => [
+			"Artist" => [["match", "Great Mosu"]],
+			"Title" => [["prefix", "She's My Friend, She's His Slut"]],
+		],
+	],
+	[
+		"title" => "High Libido Index Organization CHINSA",
+		"conditions" => [
+			"Artist" => [["match", "Guts Shihan"]],
+			"Title" => [["prefix", "High Libido Index Organization CHINSA"]],
+		],
+	],
+	[
+		"title" => "Debut (gy)",
+		"conditions" => [
+			"Artist" => [["match", "gy"]],
+			"Title" => [["prefix", "Debut"]],
+		],
+	],
+	[
+		"title" => "The Cure for Kleptomania",
+		"conditions" => [
+			"Artist" => [["match", "gy"]],
+			"Title" => [["prefix", "The Cure for Kleptomania"]],
+		],
+	],
+	[
+		"title" => "The Homewrecking Handyman",
+		"conditions" => [
+			"Artist" => [["match", "Hachisuto"]],
+			"Title" => [["prefix", "The Homewrecking Handyman"]],
+		],
+	],
+	[
+		"title" => "My Crush Is My Roommate",
+		"conditions" => [
+			"Artist" => [["match", "Haijima"]],
+			"Title" => [["prefix", "My Crush Is My Roommate"]],
+		],
+	],
+	[
+		"title" => "Slutpartment Complex",
+		"conditions" => [
+			"Artist" => [["match", "hal"]],
+			"Title" => [["prefix", "Slutpartment Complex"]],
+		],
+	],
+	[
+		"title" => "Avenger (Hamao)",
+		"conditions" => [
+			"Artist" => [["match", "Hamao"]],
+			"Title" => [["prefix", "Avenger"]],
+		],
+	],
+	[
+		"title" => "Connect (Hamao)",
+		"conditions" => [
+			"Artist" => [["match", "Hamao"]],
+			"Title" => [["prefix", "Connect"]],
+		],
+	],
+	[
+		"title" => "I'm Going to Take Her Place",
+		"conditions" => [
+			"Artist" => [["match", "Hanafuda Sakurano"]],
+			"Title" => [["prefix", "I'm Going to Take Her Place"]],
+		],
+	],
+	[
+		"title" => "Minori-chan's Home",
+		"conditions" => [
+			"Artist" => [["match", "Hanafuda Sakurano"]],
+			"Title" => [["prefix", "Minori-chan's Home"]],
+		],
+	],
+	[
+		"title" => "Perpetually Uncomfortable",
+		"conditions" => [
+			"Artist" => [["match", "Hanafuda Sakurano"]],
+			"Title" => [["prefix", "Perpetually Uncomfortable"]],
+		],
+	],
+	[
+		"title" => "A Predator in a Skirt",
+		"conditions" => [
+			"Artist" => [["match", "Hanamaluo"]],
+			"Title" => [["prefix", "A Predator in a Skirt"]],
+		],
+	],
+	[
+		"title" => "A Peek at 0.1% of Love",
+		"conditions" => [
+			"Artist" => [["match", "Hanane Cain"]],
+			"Title" => [["prefix", "A Peek at 0.1% of Love"]],
+		],
+	],
+	[
+		"title" => "After-School Goddess",
+		"conditions" => [
+			"Artist" => [["match", "Haregama"]],
+			"Title" => [["prefix", "After-School Goddess"]],
+		],
+	],
+	[
+		"title" => "Girlfriend in Too Deep",
+		"conditions" => [
+			"Artist" => [["match", "Hassen"]],
+			"Title" => [["prefix", "Girlfriend in Too Deep"]],
+		],
+	],
+	[
+		"title" => "What She Fell on Was the Tip of My Dick",
+		"conditions" => [
+			"Artist" => [["match", "Hatokonro"]],
+			"Title" => [["prefix", "What She Fell on Was the Tip of My Dick"]],
+		],
+	],
+	[
+		"title" => "Marry Me, I'll Fuck You Until You're Pregnant!",
+		"conditions" => [
+			"Artist" => [["match", "Hiroyoshi Kira"]],
+			"Title" => [["prefix", "Marry Me, I'll Fuck You Until You're Pregnant!"]],
+		],
+	],
+	[
+		"title" => "Taking a Hot Tanned Chick's Virginity",
+		"conditions" => [
+			"Artist" => [["match", "Hiroyoshi Kira"]],
+			"Title" => [["prefix", "Taking a Hot Tanned Chick's Virginity"]],
+		],
+	],
+	[
+		"title" => "My Big-Boobed Stalker Is Now My Girlfriend",
+		"conditions" => [
+			"Artist" => [["match", "Hiyori Hamster"]],
+			"Title" => [["prefix", "My Big-Boobed Stalker Is Now My Girlfriend"]],
+		],
+	],
+	[
+		"title" => "In a World with Fewer Men, More Pussy for Me",
+		"conditions" => [
+			"Artist" => [["match", "Hiyori Hamster"]],
+			"Title" => [["prefix", "In a World with Fewer Men, More Pussy for Me"]],
+		],
+	],
+	[
+		"title" => "Reincarnated into Demon King Evelogia's World",
+		"conditions" => [
+			"Artist" => [["match", "Io Kaziwara"]],
+			"Title" => [["prefix", "Reincarnated into Demon King Evelogia's World"]],
+		],
+	],
+	[
+		"title" => "The Titan's Bride",
+		"conditions" => [
+			"Artist" => [["match", "Itkz"]],
+			"Title" => [["prefix", "The Titan's Bride"]],
+		],
+	],
 ];
