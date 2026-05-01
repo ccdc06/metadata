@@ -10,7 +10,6 @@ switch (php_sapi_name()) {
 			case '/': case '/index.php': return routeWebIndex();
 			case '/update.php': return routeWebUpdate();
 			case '/hide.php': return routeWebHide();
-			case '/hentagProxy.php': return routeWebHentagProxy();
 			case '/sm.php': return routeSm();
 			case '/duplicates.php': return routeDuplicates();
 			case '/favicon.ico': die();
@@ -28,26 +27,6 @@ function routeCli() {
 
 	putenv('PHP_CLI_SERVER_WORKERS=4');
 	passthru(escapeshellarg(PHP_BINARY) . ' -S 127.0.0.1:3602 ' . __FILE__);
-}
-
-function routeWebHentagProxy() {
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, "https://hentag.com/api/v1/search/vault/title/");
-	curl_setopt($ch, CURLOPT_POST, true);
-	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($_POST));
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-	$ret = curl_exec($ch);
-
-	if (json_validate($ret)) {
-		header('Content-Type: application/json');
-		echo $ret;
-	} else {
-		http_response_code(400);
-		echo $ret;
-	}
-	curl_close($ch);
 }
 
 function routeWebFakkuProxy() {
@@ -221,10 +200,6 @@ function routeWebIndex() {
 
 				$query = implode(' ', $query);
 
-				$hentagUrl = "https://hentag.com/?" . http_build_query([
-					't' => $query,
-				]);
-
 				$googleUrl = "https://www.google.com/search?" . http_build_query([
 					'q' => "{$artist} \"{$title}\"",
 				]);
@@ -298,8 +273,6 @@ function routeWebIndex() {
 					</div>
 					<div class="card-footer">
 						<button type="button" class="sm-api btn btn-primary" data-query="<?= h($title) ?>">SM</button>
-						<button type="button" class="hentag-api btn btn-primary" data-query="<?= h($query) ?>">Hentag API</button>
-						<a target="hentag" rel="noopener,noreferrer" href="<?= h($hentagUrl) ?>" class="btn btn-primary">Hentag</a>
 						<a target="google" rel="noopener,noreferrer" href="<?= h($googleUrl) ?>" class="btn btn-primary">Google</a>
 						<a target="fakku" rel="noopener,noreferrer" href="<?= h($fakkuUrl) ?>" class="btn btn-primary">Fakku</a>
 						<a target="irodori" rel="noopener,noreferrer" href="<?= h($irodoriUrl) ?>" class="btn btn-primary">Irodori</a>
@@ -373,57 +346,6 @@ function routeWebIndex() {
 				}
 			});
 		});
-
-		$body.on('click', 'button.hentag-api', function (e) {
-			e.preventDefault();
-			var $current = $(e.currentTarget);
-			var query = $current.data('query');
-			var $listTarget = $current.closest('div.card').find('.list-target');
-			var $comment = $current.closest('div.card').find('span.comment');
-			var $titleCompare = $current.closest('div.card').find('div.title_compare');
-			$current.attr('disabled', true);
-
-			$.ajax({
-				type: 'POST',
-				url: 'hentagProxy.php',
-				data: {title: query},
-				success: function(data) {
-					$current.removeAttr('disabled');
-
-					if (Array.isArray(data)) {
-						for (const result of data) {
-							if ('locations' in result) {
-								if (result.otherTags) {
-									var evilTags = result.otherTags.filter(v => (v == 'forced' || v == 'incest' || v == 'loli' || v == 'lolicon' || v == 'shotacon'));
-									if (evilTags.length > 0) {
-										$comment.html('Contains hidden tags (' + evilTags.join(', ') + ')');
-									}
-								}
-
-								for (const location of result.locations) {
-									if (location.includes('fakku.net')) {
-										addOption($listTarget, location, 'Fakku', result.title);
-									}
-									if (location.includes('irodoricomics.com')) {
-										addOption($listTarget, location, 'Irodori', result.title);
-									}
-									if (location.includes('doujin.io')) {
-										addOption($listTarget, location, 'J18', result.title);
-									}
-								}
-							}
-						}
-					}
-				},
-				error: function (xhr) {
-					$current.removeAttr('disabled');
-
-					if (xhr.responseText.includes('Rate limited')) {
-						$current.click();
-					}
-				}
-			});
-		})
 
 		$body.on('click', 'div.card-footer a', function (e) {
 			var $current = $(e.currentTarget);
