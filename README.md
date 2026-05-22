@@ -8,28 +8,28 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # Status
 |Status|Count|
 |-|-|
-|[Total](indexes/list.csv)|17639|
-|OK|17626|
-|[Errors](indexes/errors.csv)|13|
+|[Total](indexes/list.csv)|17661|
+|OK|17647|
+|[Errors](indexes/errors.csv)|14|
 
 # [Errors](indexes/errors.csv)
 |Error|Count|
 |-|-|
-|Empty URL field|7|
+|Empty URL field|8|
 |Empty Artist field|6|
 
 # [Download sources](indexes/downloadSource.csv)
 |Source|Count|
 |-|-|
 |Schale|14400|
-|HentaiNexus|3239|
+|HentaiNexus|3261|
 
 # [Download URLs](indexes/urlSource.csv)
 |Source|Count|
 |-|-|
-|Fakku|16966|
+|Fakku|16981|
 |ProjectHentai|43|
-|Irodori|2263|
+|Irodori|2270|
 |J18|16|
 <!-- [/Status] -->
 
