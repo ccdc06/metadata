@@ -148,6 +148,7 @@ class Spec {
 	public string $Description; // string
 	public array $Parody; // []string
 	public array $URL; // map[string]string
+	public array $AlternativeUrl; // []string
 	public string $URLSource; // string
 	public array $Tags; // []string
 	public array $Publisher; // []string
@@ -647,6 +648,7 @@ class Spec {
 				case 'Publisher': // []string
 				case 'Event': // []string
 				case 'Files': // []string
+				case 'AlternativeUrl': // []string
 					$err = validateArrayString($val);
 					break;
 
