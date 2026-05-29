@@ -50,15 +50,19 @@ function routeWebFakkuProxy() {
 function routeSm() {
 	$fakkuindex = require __DIR__ . '/temp/fakkusm.php';
 	$iroindex = require __DIR__ . '/temp/irosmindex.php';
+	$djindex = require __DIR__ . '/temp/djsmindex.php';
+
 	$query = strval(isset($_GET['query']) ? $_GET['query'] : '');
 
 	$query = mb_strtolower(preg_replace('/[^0-9a-z]/im', '', $query));
-	array_walk($fakkuindex, function (&$val) {
+
+	$f = function (&$val) {
 		$val['title'] = mb_strtolower(preg_replace('/[^0-9a-z]/im', '', $val['title']));
-	});
-	array_walk($iroindex, function (&$val) {
-		$val['title'] = mb_strtolower(preg_replace('/[^0-9a-z]/im', '', $val['title']));
-	});
+	};
+
+	array_walk($fakkuindex, $f);
+	array_walk($iroindex, $f);
+	array_walk($djindex, $f);
 
 	$ret = [];
 	foreach ($fakkuindex as $url => $val) {
@@ -81,6 +85,65 @@ function routeSm() {
 				// 'query' => $query,
 			];
 		}
+	}
+
+	foreach ($djindex as $url => $val) {
+		if (strnatcasecmp($query, $val['title']) === 0) {
+			$ret[] = [
+				'url' => $url,
+				'title' => "[{$djindex[$url]['artist']}] {$djindex[$url]['title']}",
+				'source' => 'J18',
+				// 'query' => $query,
+			];
+		}
+	}
+
+	if (empty($ret)) {
+		$percs = array();
+
+		foreach ($fakkuindex as $url => $val) {
+			$perc = null;
+			similar_text($query, $val['title'], $perc);
+			if ($perc > 80) {
+				$percs[] = [
+					'url' => $url,
+					'title' => "[{$fakkuindex[$url]['artist']}] {$fakkuindex[$url]['title']}",
+					'source' => 'Fakku',
+					'perc' => $perc,
+				];
+			}
+		}
+
+		foreach ($iroindex as $url => $val) {
+			$perc = null;
+			similar_text($query, $val['title'], $perc);
+			if ($perc > 80) {
+				$percs[] = [
+					'url' => $url,
+					'title' => "[{$fakkuindex[$url]['artist']}] {$fakkuindex[$url]['title']}",
+					'source' => 'Irodori',
+					'perc' => $perc,
+				];
+			}
+		}
+
+		foreach ($djindex as $url => $val) {
+			$perc = null;
+			similar_text($query, $val['title'], $perc);
+			if ($perc > 80) {
+				$percs[] = [
+					'url' => $url,
+					'title' => "[{$fakkuindex[$url]['artist']}] {$fakkuindex[$url]['title']}",
+					'source' => 'J18',
+					'perc' => $perc,
+				];
+			}
+		}
+
+		usort($percs, function($a, $b) {
+			return ($a['perc'] < $b['perc']) ? 1 : -1;
+		});
+		$ret = array_slice($percs, 0, 5);
 	}
 
 	header('Content-Type: application/json');
@@ -251,8 +314,8 @@ function routeWebIndex() {
 											<h6></h6>
 										</div>
 										<div class="d-flex flex-row">
-											<input type="text" class="form-control mx-1" placeholder="URL" name="url" />
-											<select style="max-width: 190px" class="form-select mx-1" name="source">
+											<input type="text" class="form-control mx-1" placeholder="URL" data-url-input name="url" />
+											<select style="max-width: 190px" class="form-select mx-1" data-source-input name="source">
 												<option value="" selected>(Select)</option>
 												<?php foreach (ValNorm::$urlSources as $source): ?>
 													<option value="<?= h($source) ?>"><?= h($source) ?></option>
@@ -349,13 +412,13 @@ function routeWebIndex() {
 
 		$body.on('click', 'div.card-footer a', function (e) {
 			var $current = $(e.currentTarget);
-			var $url = $current.closest('div.card').find('input[name="url"]');
+			var $url = $current.closest('div.card').find('[data-url-input]');
 			$url.focus();
 		});
 
-		$body.on('keyup', 'input[name="url"]', function (e) {
+		$body.on('keyup', '[data-url-input]', function(e) {
 			var $current = $(e.currentTarget);
-			var $select = $current.closest('div.card').find('select[name="source"]');
+			var $select = $current.closest('div.card').find('[data-source-input]');
 			if ($select.val() !== "") {
 				return;
 			}

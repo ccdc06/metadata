@@ -775,7 +775,7 @@ return  [
 		"title" => "Love My Roommate ♡",
 		"conditions" => [
 			"Artist" => [["match", "BoBoBo"]],
-			"Title" => [["prefix", "Love My Roommate ♡"]],
+			"Title" => [["prefix", "Love My Roommate"]],
 		],
 	],
 	[

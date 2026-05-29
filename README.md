@@ -8,29 +8,30 @@ Pull requests and correction suggestions are welcome. If you don't want to expos
 # Status
 |Status|Count|
 |-|-|
-|[Total](indexes/list.csv)|17639|
-|OK|17626|
-|[Errors](indexes/errors.csv)|13|
+|[Total](indexes/list.csv)|17874|
+|OK|17860|
+|[Errors](indexes/errors.csv)|14|
 
 # [Errors](indexes/errors.csv)
 |Error|Count|
 |-|-|
-|Empty URL field|7|
+|Empty URL field|8|
 |Empty Artist field|6|
 
 # [Download sources](indexes/downloadSource.csv)
 |Source|Count|
 |-|-|
-|Schale|14400|
-|HentaiNexus|3239|
+|Schale|14392|
+|J18FreeReader|55|
+|HentaiNexus|3427|
 
 # [Download URLs](indexes/urlSource.csv)
 |Source|Count|
 |-|-|
-|Fakku|16966|
+|Fakku|16995|
 |ProjectHentai|43|
-|Irodori|2263|
-|J18|16|
+|Irodori|2296|
+|J18|189|
 <!-- [/Status] -->
 
 ![#ccdc06](https://placehold.co/15x15/ccdc06/ccdc06.png)
