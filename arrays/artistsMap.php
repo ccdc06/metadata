@@ -261,4 +261,5 @@ return  [
 	'bekotaro' => 'Beko Tarou',
 	'ootori mahiro' => 'Mahiro Ootori',
 	'ayano baru' => 'Ayano Val',
+	'fugutake' => 'Fuguta-ke',
 ];
