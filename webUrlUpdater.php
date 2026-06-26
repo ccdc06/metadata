@@ -455,6 +455,11 @@ function routeDuplicates() {
 				$groups[$url][] = $spec->getBaseName();
 			}
 		}
+		// if (!empty($spec->AlternativeUrl)) {
+		// 	foreach ($spec->AlternativeUrl as $url) {
+		// 		$groups[$url][] = $spec->getBaseName();
+		// 	}
+		// }
 	}
 
 	foreach ($groups as $url => $names) {
@@ -466,7 +471,7 @@ function routeDuplicates() {
 				// if (!empty($spec->Filesize)) {
 				// 	echo '#' . round($spec->Filesize/1024/1024, 1) . 'MB', PHP_EOL;
 				// }
-				echo 'rm ' . escapeshellarg($name), PHP_EOL;
+				echo 'rm ' . escapeshellarg($name), ' ', "# {$url}", PHP_EOL;
 			}
 			echo PHP_EOL;
 		}
