@@ -4,4 +4,5 @@ return [
 	'Irodori',
 	'ProjectHentai',
 	'J18',
+	'DLsite',
 ];
