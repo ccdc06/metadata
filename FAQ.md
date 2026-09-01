@@ -1,6 +1,6 @@
 # Next release when?
 
-Every 2 weeks (maybe)[.](https://tenor.com/view/anime-whatever-kawaii-dont-worry-gif-12242087)
+On the last Friday of every month. Maybe.
 
 # What is your goal?
 
