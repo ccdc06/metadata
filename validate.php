@@ -35,6 +35,11 @@ if ($updateStatus) {
 	$byTagIndex->setCsvControl(',', '"', '\\');
 	$byTagIndex->fputcsv(['tag', 'count']);
 	$byTagArray = [];
+
+	$notesIndex = new \SplFileObject( __DIR__ . '/indexes/notes.csv', 'w');
+	$notesIndex->setCsvControl(',', '"', '\\');
+	$notesIndex->fputcsv(['notes', 'file']);
+	$notesArray = [];
 }
 
 $files = listFiles();
@@ -64,6 +69,10 @@ foreach ($files as $yamlFn) {
 			foreach ($spec->Series as $series) {
 				$bySeriesIndex->fputcsv([$series, $baseName]);
 			}
+		}
+
+		if (!empty($spec->Notes)) {
+			$notesIndex->fputcsv([$spec->Notes, $baseName]);
 		}
 
 		$byTitleIndex->fputcsv([$title, $baseName]);
