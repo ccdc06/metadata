@@ -10,7 +10,7 @@ if (php_sapi_name() === 'cli') {
 }
 
 if (php_sapi_name() !== 'cli-server') {
-	throw new Exception();
+	throw new \Exception();
 }
 
 $files = listFiles();

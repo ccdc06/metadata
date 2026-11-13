@@ -5,8 +5,6 @@ init();
 
 $baseDir = require __DIR__ . '/temp/baseDir.php';
 
-$zip = new \ZipArchive();
-
 foreach (streamSpecs() as $spec) {
 	if (!empty($spec->Files)) {
 		continue;
@@ -19,19 +17,12 @@ foreach (streamSpecs() as $spec) {
 	}
 	echo "{$fn}\n";
 
-	$zip->open($fn);
-
-	$spec->Files = [];
-	for ($i = 0; $i < $zip->numFiles; $i++) {
-		$f = $zip->getNameIndex($i);
-		$pi = pathinfo($f);
-		if ($pi['extension'] === 'txt' || $pi['extension'] === 'yaml' || $pi['extension'] === 'xml') {
-			continue;
-		}
-
-		$spec->Files[] = $f;
+	try {
+		$spec->updateFiles($fn);
+	} catch (\Exception $e) {
+		echo $e->getMessage(), "\n";
+		continue;
 	}
 
 	$spec->save();
-	$zip->close();
 }

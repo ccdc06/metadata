@@ -120,7 +120,7 @@ function routeSm() {
 			if ($perc > 80) {
 				$percs[] = [
 					'url' => $url,
-					'title' => "[{$fakkuindex[$url]['artist']}] {$fakkuindex[$url]['title']}",
+					'title' => "[{$iroindex[$url]['artist']}] {$iroindex[$url]['title']}",
 					'source' => 'Irodori',
 					'perc' => $perc,
 				];
@@ -133,7 +133,7 @@ function routeSm() {
 			if ($perc > 80) {
 				$percs[] = [
 					'url' => $url,
-					'title' => "[{$fakkuindex[$url]['artist']}] {$fakkuindex[$url]['title']}",
+					'title' => "[{$djindex[$url]['artist']}] {$djindex[$url]['title']}",
 					'source' => 'J18',
 					'perc' => $perc,
 				];
@@ -306,7 +306,7 @@ function routeWebIndex() {
 					<div class="card-body">
 						<p class="px-2"><code><?= h($baseName) ?></code></p>
 						<form method="post" action="update.php">
-							<input type="hidden" name="key" value="<?= $baseName ?>" />
+							<input type="hidden" name="key" value="<?= h($baseName) ?>" />
 							<div class="list-target">
 								<template>
 									<fieldset class="p-1 d-flex flex-column">
