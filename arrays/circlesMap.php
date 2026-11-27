@@ -87,7 +87,7 @@ return  [
 	'otousan no kurorekishi' => 'Otousan no Kurorekishi',
 	'p-kan' => 'p-kan',
 	'peachpulsar' => 'peachpulsar',
-	'piro-piro-go' => 'piro-piro-go',
+	'piro-piro-go' => 'piropiro-GO',
 	'piropiro-go' => 'piropiro-GO',
 	'pochi-goya' => 'POCHI-GOYA',
 	'poki no ie' => 'Poki no Ie',

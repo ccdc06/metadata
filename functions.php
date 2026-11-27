@@ -330,6 +330,8 @@ class Spec {
 		if ($this->DownloadSource == 'J18FreeReader') {
 			return "doujin.io_free_reader";
 		}
+
+		throw new \Exception("No collection rule for DownloadSource {$this->DownloadSource}");
 	}
 
 	public function currentCollection() : string {
@@ -430,11 +432,10 @@ class Spec {
 		}
 
 		foreach ($this->Tags as &$tag) {
-			if (str_ends_with($tag, ' ♂')) {
-				$tag = rtrim($tag, ' ♂');
-			}
-			if (str_ends_with($tag, ' ♀')) {
-				$tag = rtrim($tag, ' ♀');
+			foreach ([' ♂', ' ♀'] as $suffix) {
+				if (str_ends_with($tag, $suffix)) {
+					$tag = substr($tag, 0, -strlen($suffix));
+				}
 			}
 		}
 		unset($tag);
@@ -456,7 +457,7 @@ class Spec {
 
 		if (!empty($this->ThumbnailName) && isset($this->ThumbnailIndex)) {
 			if (!in_array($this->ThumbnailName, $this->Files)) {
-				$this->ThumbnailName = $this->Files[$this->ThumbnailIndex];
+				$this->ThumbnailName = $this->Files[$this->ThumbnailIndex] ?? $this->Files[0];
 			}
 		}
 
@@ -505,11 +506,11 @@ class Spec {
 			return;
 		}
 
-		if (empty($GLOBAL['auto_series'])) {
-			$GLOBAL['auto_series'] = require __DIR__ . '/arrays/autoSeriesMap.php';
+		if (empty($GLOBALS['auto_series'])) {
+			$GLOBALS['auto_series'] = require __DIR__ . '/arrays/autoSeriesMap.php';
 		}
 
-		foreach ($GLOBAL['auto_series'] as $series) {
+		foreach ($GLOBALS['auto_series'] as $series) {
 			$seriesTitle = $series['title'];
 			$conditions = $series['conditions'];
 
@@ -602,8 +603,9 @@ class Spec {
 			}
 
 			if ($source === 'Fakku') {
-				if ($pu['host'] !== 'fakku.net') {
+				if ($pu['host'] === 'fakku.net') {
 					$url = str_replace('https://fakku.net/', 'https://www.fakku.net/', $url);
+					$pu = parse_url($url);
 				}
 
 				if ($pu['host'] !== 'www.fakku.net') {
@@ -631,20 +633,26 @@ class Spec {
 
 	public function updateFiles(string $fn) {
 		$zip = new \ZipArchive();
-		if ($zip->open($fn) === false) {
-			throw new \Exception();
+		$res = $zip->open($fn);
+		if ($res !== true) {
+			throw new \Exception("Can't open {$fn} (ZipArchive error {$res})");
 		}
 
 		$this->Files = [];
 		for ($i = 0; $i < $zip->numFiles; $i++) {
 			$f = $zip->getNameIndex($i);
-			$pi = pathinfo($f);
-			if ($pi['extension'] === 'txt' || $pi['extension'] === 'yaml' || $pi['extension'] === 'xml') {
+			if (str_ends_with($f, '/')) {
+				continue;
+			}
+
+			$ext = pathinfo($f, PATHINFO_EXTENSION);
+			if ($ext === 'txt' || $ext === 'yaml' || $ext === 'xml') {
 				continue;
 			}
 
 			$this->Files[] = $f;
 		}
+		$zip->close();
 	}
 
 	public function validateTypes(ValidationErrors $errors) {
@@ -767,6 +775,7 @@ class Spec {
 		foreach ($this->Tags as $tag) {
 			if (!is_string($tag)) {
 				$errors->push("Tags", $tag, "Tag isn't a string");
+				continue;
 			}
 
 			if (!ValNorm::validateTag($tag)) {
@@ -835,7 +844,7 @@ function relativeDir($path) {
 function parseMid(string $mid) : array {
 	$spl = explode('/', $mid, 2);
 	if (count($spl) !== 2) {
-		throw new Exception('Invalid mid');
+		throw new \Exception('Invalid mid');
 	}
 	$spl[1] = '/' . $spl[1];
 	return $spl;

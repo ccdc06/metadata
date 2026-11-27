@@ -3945,7 +3945,7 @@ return  [
 	[
 		"title" => "Top Class MILF",
 		"conditions" => [
-			"Artist" => [["match", "Gagarin Kichi"]],
+			"Artist" => [["match", "Gagarinkichi"]],
 			"Title" => [["prefix", "Top Class MILF"]],
 		],
 	],
@@ -4129,6 +4129,4414 @@ return  [
 		"conditions" => [
 			"Artist" => [["match", "Itkz"]],
 			"Title" => [["prefix", "The Titan's Bride"]],
+		],
+	],
+	[
+		"title" => "Whispers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "ae"]],
+			"Title" => [["prefix", "Whispers"]],
+		],
+	],
+	[
+		"title" => "Notice Me, Ayu",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "AkaP"]],
+			"Title" => [["prefix", "Notice Me, Ayu"]],
+		],
+	],
+	[
+		"title" => "Countryside Harem Bliss",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Akosuke"]],
+			"Title" => [["prefix", "Countryside Harem Bliss"]],
+		],
+	],
+	[
+		"title" => "Dreamboat in Bed",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Amane Ruri"]],
+			"Title" => [["prefix", "Dreamboat in Bed"]],
+		],
+	],
+	[
+		"title" => "The Hall Monitor on S.L.U.T. Duty",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Amano Don"]],
+			"Title" => [["prefix", "The Hall Monitor on S.L.U.T. Duty"]],
+		],
+	],
+	[
+		"title" => "Girl in the Library",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ame Arare"]],
+			"Title" => [["prefix", "Girl in the Library"]],
+		],
+	],
+	[
+		"title" => "Succubus Senpai",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Arinotowatari"]],
+			"Title" => [["prefix", "Succubus Senpai"]],
+		],
+	],
+	[
+		"title" => "Onee-chan Indulgence",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Asamine Tel"]],
+			"Title" => [["prefix", "Onee-chan Indulgence"]],
+		],
+	],
+	[
+		"title" => "Mediocre Mage Has a Lesson for the Gifted Genius",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ayakawa Riku"]],
+			"Title" => [["prefix", "Mediocre Mage Has a Lesson for the Gifted Genius"]],
+		],
+	],
+	[
+		"title" => "Introverts Want to Have Hentai Sex Too!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Azuma Ryo"]],
+			"Title" => [["prefix", "Introverts Want to Have Hentai Sex Too!"]],
+		],
+	],
+	[
+		"title" => "The Oharami Maiden",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Bambi"]],
+			"Title" => [["prefix", "The Oharami Maiden"]],
+		],
+	],
+	[
+		"title" => "Turn Her On",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Beko Tarou"]],
+			"Title" => [["prefix", "Turn Her On"]],
+		],
+	],
+	[
+		"title" => "Until the Wisteria Blooms",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Bouhashi Yahaku"]],
+			"Title" => [["prefix", "Until the Wisteria Blooms"]],
+		],
+	],
+	[
+		"title" => "Dark Pleasure",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Boxreeema"]],
+			"Title" => [["prefix", "Dark Pleasure"]],
+		],
+	],
+	[
+		"title" => "Age Gap Couple: Mita and Urabayashi",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Chabashira Tatekichi"]],
+			"Title" => [["prefix", "Age Gap Couple: Mita and Urabayashi"]],
+		],
+	],
+	[
+		"title" => "Naoto and Tomoyuki -Dads with Benefits-",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Chabashira Tatekichi"]],
+			"Title" => [["prefix", "Naoto and Tomoyuki -Dads with Benefits"]],
+		],
+	],
+	[
+		"title" => "Sakurai",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Chilt"]],
+			"Title" => [["prefix", "Sakurai"]],
+		],
+	],
+	[
+		"title" => "Gay Sex with My Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Chinzurina"]],
+			"Title" => [["prefix", "Gay Sex with My Girlfriend"]],
+		],
+	],
+	[
+		"title" => "Where I'm Not Looking",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Cior"]],
+			"Title" => [["prefix", "Where I'm Not Looking"]],
+		],
+	],
+	[
+		"title" => "Tobari at Night",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Coupe"]],
+			"Title" => [["prefix", "Tobari at Night"]],
+		],
+	],
+	[
+		"title" => "NTR Share House",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Cuck Manga J&W"]],
+			"Title" => [["prefix", "NTR Share House"]],
+		],
+	],
+	[
+		"title" => "My Booty Call Life Starts Now!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Danchino"]],
+			"Title" => [["prefix", "My Booty Call Life Starts Now!"]],
+		],
+	],
+	[
+		"title" => "Sister Sacrificing",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "diletta"]],
+			"Title" => [["prefix", "Sister Sacrificing"]],
+		],
+	],
+	[
+		"title" => "Akari-chan, Be My Onahole",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Dojirou"]],
+			"Title" => [["prefix", "Akari-chan, Be My Onahole"]],
+		],
+	],
+	[
+		"title" => "Sex Between Gloomy Types is the Hottest, Ain't It?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Dojirou"]],
+			"Title" => [["prefix", "Sex Between Gloomy Types is the Hottest, Ain't It?"]],
+		],
+	],
+	[
+		"title" => "The Moment Right Before Gloomy Types Start Dating is the Hottest, Ain't It?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Dojirou"]],
+			"Title" => [["prefix", "The Moment Right Before Gloomy Types Start Dating is the Hottest, Ain't It?"]],
+		],
+	],
+	[
+		"title" => "Usual Spot",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Dojirou"]],
+			"Title" => [["prefix", "Usual Spot"]],
+		],
+	],
+	[
+		"title" => "Saint Lily's Magical Girls",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Eltoria"]],
+			"Title" => [["prefix", "Saint Lily’s Magical Girls"]],
+		],
+	],
+	[
+		"title" => "Sex Leveling",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Eltoria"]],
+			"Title" => [["prefix", "Sex Leveling"]],
+		],
+	],
+	[
+		"title" => "The Exiled Tamer's NTR Revenge",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Eltoria"]],
+			"Title" => [["prefix", "The Exiled Tamer's NTR Revenge"]],
+		],
+	],
+	[
+		"title" => "7 Days",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Enno Esuke"]],
+			"Title" => [["prefix", "7 Days"]],
+		],
+	],
+	[
+		"title" => "Maiden Estrusology",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Enno Esuke"]],
+			"Title" => [["prefix", "Maiden Estrusology"]],
+		],
+	],
+	[
+		"title" => "PANDRA",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Erect Sawaru"]],
+			"Title" => [["prefix", "PANDRA"]],
+		],
+	],
+	[
+		"title" => "Anna-san Can't Get Enough",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Esuke"]],
+			"Title" => [["prefix", "Anna-san Can't Get Enough"]],
+		],
+	],
+	[
+		"title" => "The Angelic Incubator",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Freedom Prophet"]],
+			"Title" => [["prefix", "The Angelic Incubator"]],
+		],
+	],
+	[
+		"title" => "Thanatos",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "fu-ta"]],
+			"Title" => [["prefix", "Thanatos"]],
+		],
+	],
+	[
+		"title" => "Poker Face",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Fujizarashi"]],
+			"Title" => [["prefix", "Poker Face"]],
+		],
+	],
+	[
+		"title" => "Cucked by the Coach",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Fukidamari"]],
+			"Title" => [["prefix", "Cucked by the Coach"]],
+		],
+	],
+	[
+		"title" => "Futanari Days With a Twist",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Futaba Yodomu"]],
+			"Title" => [["prefix", "Futanari Days With a Twist"]],
+		],
+	],
+	[
+		"title" => "My Co-Worker Is a Total MILF",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Fuzinoe 13B"]],
+			"Title" => [["prefix", "My Co-Worker Is a Total MILF"]],
+		],
+	],
+	[
+		"title" => "Happy Endings Men's Spa",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ginyou Haru"]],
+			"Title" => [["prefix", "Happy Endings Men's Spa"]],
+		],
+	],
+	[
+		"title" => "Good GF Gone Bad",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Great Mosu"]],
+			"Title" => [["prefix", "Good GF Gone Bad"]],
+		],
+	],
+	[
+		"title" => "The Hero of the World Has Zero Experience!?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hagane"]],
+			"Title" => [["prefix", "The Hero of the World Has Zero Experience!?"]],
+		],
+	],
+	[
+		"title" => "Not Boy Meets Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hamachi"]],
+			"Title" => [["prefix", "Not Boy Meets Girl"]],
+		],
+	],
+	[
+		"title" => "Unparalleled Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Haru Yukiko"]],
+			"Title" => [["prefix", "Unparalleled Girlfriend"]],
+		],
+	],
+	[
+		"title" => "Of Stews and Nurses",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hatimoto"]],
+			"Title" => [["prefix", "Of Stews and Nurses"]],
+		],
+	],
+	[
+		"title" => "From Business Babe to Bunny Bitch",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hatsuden Penguin"]],
+			"Title" => [["prefix", "From Business Babe to Bunny Bitch"]],
+		],
+	],
+	[
+		"title" => "Stranded on a Desert Island Where I Can Creampie All the Girls I Want",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hazakura Satsuki"]],
+			"Title" => [["prefix", "Stranded on a Desert Island Where I Can Creampie All the Girls I Want"]],
+		],
+	],
+	[
+		"title" => "Fall! Sticky Education!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Henkuma"]],
+			"Title" => [["prefix", "Fall! Sticky Education!"]],
+		],
+	],
+	[
+		"title" => "In the Palm of My Hand With Me",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Henkuma"]],
+			"Title" => [["prefix", "In the Palm of My Hand With Me"]],
+		],
+	],
+	[
+		"title" => "The Wife-Lenders",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hetata"]],
+			"Title" => [["prefix", "The Wife-Lenders"]],
+		],
+	],
+	[
+		"title" => "Young Wife Has a Hot Spring Fling",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hetata"]],
+			"Title" => [["prefix", "Young Wife Has a Hot Spring Fling"]],
+		],
+	],
+	[
+		"title" => "I Will Gently Steal Your Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hg Chagawa"]],
+			"Title" => [["prefix", "I Will Gently Steal Your Girl"]],
+		],
+	],
+	[
+		"title" => "A Study in Substitutes",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Higashide Irodori"]],
+			"Title" => [["prefix", "A Study in Substitutes"]],
+		],
+	],
+	[
+		"title" => "Lovey-Dovey Make-A-Wish",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Himukai Kyousuke"]],
+			"Title" => [["prefix", "Lovey-Dovey Make-A-Wish"]],
+		],
+	],
+	[
+		"title" => "Your Maid Has Arrived",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hinahara Emi"]],
+			"Title" => [["prefix", "Your Maid Has Arrived"]],
+		],
+	],
+	[
+		"title" => "The Two Sides of the Honors Student Ayaka",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hisama Kumako"]],
+			"Title" => [["prefix", "The Two Sides of the Honors Student Ayaka"]],
+		],
+	],
+	[
+		"title" => "Gyaru Harem Invasion",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hishigata Tomaru"]],
+			"Title" => [["prefix", "Gyaru Harem Invasion"]],
+		],
+	],
+	[
+		"title" => "ANALTO ~Rump Scrolls~",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hitori"]],
+			"Title" => [["prefix", "ANALTO ~Rump Scrolls"]],
+		],
+	],
+	[
+		"title" => "Ass Note",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hitori"]],
+			"Title" => [["prefix", "Ass Note"]],
+		],
+	],
+	[
+		"title" => "Shirizaki Anal Online",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hitori"]],
+			"Title" => [["prefix", "Shirizaki Anal Online"]],
+		],
+	],
+	[
+		"title" => "Mouthy Gyaru Meets Monster Cock",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hokke"]],
+			"Title" => [["prefix", "Mouthy Gyaru Meets Monster Cock"]],
+		],
+	],
+	[
+		"title" => "These Gyaru Can't Get Enough of My Huge Cock",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hokke"]],
+			"Title" => [["prefix", "These Gyaru Can't Get Enough of My Huge Cock"]],
+		],
+	],
+	[
+		"title" => "Brother X Sisters",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hota."]],
+			"Title" => [["prefix", "Brother X Sisters"]],
+		],
+	],
+	[
+		"title" => "Shiranui's Impregnation",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hozumi Kenji"]],
+			"Title" => [["prefix", "Shiranui's Impregnation"]],
+		],
+	],
+	[
+		"title" => "My Straight-A Girlfriend Gets a D on Weekends",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hubrael"]],
+			"Title" => [["prefix", "My Straight-A Girlfriend Gets a D on Weekends"]],
+		],
+	],
+	[
+		"title" => "Amnero Anthology",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hyocoro"]],
+			"Title" => [["prefix", "Amnero Anthology"]],
+		],
+	],
+	[
+		"title" => "Boy Meets Innocence",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ibarame Hisa"]],
+			"Title" => [["prefix", "Boy Meets Innocence"]],
+		],
+	],
+	[
+		"title" => "Follower Corruption",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ibarame Hisa"]],
+			"Title" => [["prefix", "Follower Corruption"]],
+		],
+	],
+	[
+		"title" => "My Sub",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ibarame Hisa"]],
+			"Title" => [["prefix", "My Sub"]],
+		],
+	],
+	[
+		"title" => "Corrupt Check-Up",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ichinomiya Yuu"]],
+			"Title" => [["prefix", "Corrupt Check-Up"]],
+		],
+	],
+	[
+		"title" => "Holiday with My Busty Cousin",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ichinomiya Yuu"]],
+			"Title" => [["prefix", "Holiday with My Busty Cousin"]],
+		],
+	],
+	[
+		"title" => "It Doesn't Count If We Were All Partying!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Igedoaha"]],
+			"Title" => [["prefix", "It Doesn't Count If We Were All Partying!"]],
+		],
+	],
+	[
+		"title" => "Private Lesson",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Iida Toyoyuki"]],
+			"Title" => [["prefix", "Private Lesson"]],
+		],
+	],
+	[
+		"title" => "My Little Brother Is Dating My Ex",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Imazon"]],
+			"Title" => [["prefix", "My Little Brother Is Dating My Ex"]],
+		],
+	],
+	[
+		"title" => "Aim For the Scoop!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "INAGO"]],
+			"Title" => [["prefix", "Aim For the Scoop!"]],
+		],
+	],
+	[
+		"title" => "Chōko",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "IND Kary"]],
+			"Title" => [["prefix", "Chōko"]],
+		],
+	],
+	[
+		"title" => "Otaku VS Succubus",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "IND Kary"]],
+			"Title" => [["prefix", "Otaku VS Succubus"]],
+		],
+	],
+	[
+		"title" => "Diamond & Zirconia",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Inue Shinsuke"]],
+			"Title" => [["prefix", "Diamond & Zirconia"]],
+		],
+	],
+	[
+		"title" => "This is Nice",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Isao"]],
+			"Title" => [["prefix", "This is Nice"]],
+		],
+	],
+	[
+		"title" => "Brown Tomboy Summer",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ishikarian"]],
+			"Title" => [["prefix", "Brown Tomboy Summer"]],
+		],
+	],
+	[
+		"title" => "Straight Girl Meets Futa",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Itami"]],
+			"Title" => [["prefix", "Straight Girl Meets Futa"]],
+		],
+	],
+	[
+		"title" => "Viewer Discretion Advised",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Iwasaki Yuuki"]],
+			"Title" => [["prefix", "Viewer Discretion Advised"]],
+		],
+	],
+	[
+		"title" => "Cousins' Secret",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Izure"]],
+			"Title" => [["prefix", "Cousins' Secret"]],
+		],
+	],
+	[
+		"title" => "First Time Yearning",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Izure"]],
+			"Title" => [["prefix", "First Time Yearning"]],
+		],
+	],
+	[
+		"title" => "Doctor Voluptua - The Sexual Shrink",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Jackie Lesnick"]],
+			"Title" => [["prefix", "Doctor Voluptua - The Sexual Shrink"]],
+		],
+	],
+	[
+		"title" => "The Pet Elf",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Jackie Lesnick"]],
+			"Title" => [["prefix", "The Pet Elf"]],
+		],
+	],
+	[
+		"title" => "Degenerates",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Jairou"]],
+			"Title" => [["prefix", "Degenerates"]],
+		],
+	],
+	[
+		"title" => "A World With Pure Men and Slutty Women",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Jake"]],
+			"Title" => [["prefix", "A World With Pure Men and Slutty Women"]],
+		],
+	],
+	[
+		"title" => "The Neighbor Next Door",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Jūichi"]],
+			"Title" => [["prefix", "The Neighbor Next Door"]],
+		],
+	],
+	[
+		"title" => "Come Pain!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakei Kei"]],
+			"Title" => [["prefix", "Come Pain!"]],
+		],
+	],
+	[
+		"title" => "Do As You Please!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakei Kei"]],
+			"Title" => [["prefix", "Do As You Please!"]],
+		],
+	],
+	[
+		"title" => "First Limit",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakei Kei"]],
+			"Title" => [["prefix", "First Limit"]],
+		],
+	],
+	[
+		"title" => "Night Secret",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakei Kei"]],
+			"Title" => [["prefix", "Night Secret"]],
+		],
+	],
+	[
+		"title" => "Pushing For Sex!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakei Kei"]],
+			"Title" => [["prefix", "Pushing For Sex!"]],
+		],
+	],
+	[
+		"title" => "Spiritupal",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakei Kei"]],
+			"Title" => [["prefix", "Spiritupal"]],
+		],
+	],
+	[
+		"title" => "Trip Trap",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakei Kei"]],
+			"Title" => [["prefix", "Trip Trap"]],
+		],
+	],
+	[
+		"title" => "Love at First Bump",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakitsubata Kanae"]],
+			"Title" => [["prefix", "Love at First Bump"]],
+		],
+	],
+	[
+		"title" => "A Magical Girl's Repayment",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakunini"]],
+			"Title" => [["prefix", "A Magical Girl's Repayment"]],
+		],
+	],
+	[
+		"title" => "Living Together Has Its Issues!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakunini"]],
+			"Title" => [["prefix", "Living Together Has Its Issues!"]],
+		],
+	],
+	[
+		"title" => "The Puppet Witch",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakunini"]],
+			"Title" => [["prefix", "The Puppet Witch"]],
+		],
+	],
+	[
+		"title" => "Matrimony Academy FILE",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakuzato"]],
+			"Title" => [["prefix", "Matrimony Academy FILE"]],
+		],
+	],
+	[
+		"title" => "Barber Shop Fuck",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kamakiri Farm"]],
+			"Title" => [["prefix", "Barber Shop Fuck"]],
+		],
+	],
+	[
+		"title" => "Tipsy Infection ❤ ~Lust of Classmates!?~",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kamiya Zuzu"]],
+			"Title" => [["prefix", "Tipsy Infection ❤ ~Lust of Classmates!?"]],
+		],
+	],
+	[
+		"title" => "Nashiguchi-san Has Her Reasons",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kamizuki Shiki"]],
+			"Title" => [["prefix", "Nashiguchi-san Has Her Reasons"]],
+		],
+	],
+	[
+		"title" => "Discord",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kangoku Meika"]],
+			"Title" => [["prefix", "Discord"]],
+		],
+	],
+	[
+		"title" => "My Elven Foster Mom Loves Me So Much That She Won't Let Me Go on Adventures!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kanimura Ebio"]],
+			"Title" => [["prefix", "My Elven Foster Mom Loves Me So Much That She Won't Let Me Go on Adventures!"]],
+		],
+	],
+	[
+		"title" => "My 2 Step-Brothers are Ganging Up on Me!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kanitomato"]],
+			"Title" => [["prefix", "My 2 Step-Brothers are Ganging Up on Me!"]],
+		],
+	],
+	[
+		"title" => "What Happened After My Place Got So Humid It Grew Magic Mushrooms and I Ate Them and Got Super Horny!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Karasu-chan"]],
+			"Title" => [["prefix", "What Happened After My Place Got So Humid It Grew Magic Mushrooms and I Ate Them and Got Super Horny!"]],
+		],
+	],
+	[
+		"title" => "A Request of the Jizo",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Karma Tatsuro"]],
+			"Title" => [["prefix", "A Request of the Jizo"]],
+		],
+	],
+	[
+		"title" => "Virginity Verification",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Karma Tatsuro"]],
+			"Title" => [["prefix", "Virginity Verification"]],
+		],
+	],
+	[
+		"title" => "Pure Slut Miko Senpai",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "karory"]],
+			"Title" => [["prefix", "Pure Slut Miko Senpai"]],
+		],
+	],
+	[
+		"title" => "Billed For Sex, Built For Sex",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Karube Guri"]],
+			"Title" => [["prefix", "Billed For Sex, Built For Sex"]],
+		],
+	],
+	[
+		"title" => "It's All an Act!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Karube Guri"]],
+			"Title" => [["prefix", "It's All an Act!"]],
+		],
+	],
+	[
+		"title" => "Accidentally in Love With a Crocodile-Man",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kashiwagi Zonbi"]],
+			"Title" => [["prefix", "Accidentally in Love With a Crocodile-Man"]],
+		],
+	],
+	[
+		"title" => "A Girl's Sex Slave School Life",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "KasuKasu"]],
+			"Title" => [["prefix", "A Girl's Sex Slave School Life"]],
+		],
+	],
+	[
+		"title" => "Fire in His Fingertips",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kawano Tanishi"]],
+			"Title" => [["prefix", "Fire in His Fingertips"]],
+		],
+	],
+	[
+		"title" => "Bridesmaids",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kaza Midori"]],
+			"Title" => [["prefix", "Bridesmaids"]],
+		],
+	],
+	[
+		"title" => "The NTR Massage",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kazutaro"]],
+			"Title" => [["prefix", "The NTR Massage"]],
+		],
+	],
+	[
+		"title" => "Très Lovers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ken-1"]],
+			"Title" => [["prefix", "Très Lovers"]],
+		],
+	],
+	[
+		"title" => "Monster Girl Encyclopedia",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kenkou Cross"]],
+			"Title" => [["prefix", "Monster Girl Encyclopedia"]],
+		],
+	],
+	[
+		"title" => "A Virgin Girl in a Sex Club?!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kissukekun"]],
+			"Title" => [["prefix", "A Virgin Girl in a Sex Club?!"]],
+		],
+	],
+	[
+		"title" => "Education",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kito Sakeru"]],
+			"Title" => [["prefix", "Education"]],
+		],
+	],
+	[
+		"title" => "Dream-Invading Luxuria",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "KOMOTA"]],
+			"Title" => [["prefix", "Dream-Invading Luxuria"]],
+		],
+	],
+	[
+		"title" => "Falling in Love at the Brothel",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kondo Yume"]],
+			"Title" => [["prefix", "Falling in Love at the Brothel"]],
+		],
+	],
+	[
+		"title" => "Partner",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Konka"]],
+			"Title" => [["prefix", "Partner"]],
+		],
+	],
+	[
+		"title" => "Netoraserare",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Konomi Shikishiro"]],
+			"Title" => [["prefix", "Netoraserare"]],
+		],
+	],
+	[
+		"title" => "Tsuzura-san",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Koppori Nama Beer"]],
+			"Title" => [["prefix", "Tsuzura-san"]],
+		],
+	],
+	[
+		"title" => "Doomsday School Life ~Creating a Utopia Together~",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kurikura Kuro"]],
+			"Title" => [["prefix", "Doomsday School Life ~Creating a Utopia Together"]],
+		],
+	],
+	[
+		"title" => "I Am Learning to be a Succubus?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kurimochi Chizuru"]],
+			"Title" => [["prefix", "I Am Learning to be a Succubus?"]],
+		],
+	],
+	[
+		"title" => "Countryside Play",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kuro-nyan"]],
+			"Title" => [["prefix", "Countryside Play"]],
+		],
+	],
+	[
+		"title" => "A Midsummer NTR Dream",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kurosu Gatari"]],
+			"Title" => [["prefix", "A Midsummer NTR Dream"]],
+		],
+	],
+	[
+		"title" => "My GF's Mom Has Got It Goin' On",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kurosu Gatari"]],
+			"Title" => [["prefix", "My GF's Mom Has Got It Goin' On"]],
+		],
+	],
+	[
+		"title" => "Who's the Boss Now!?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kurosu Gatari"]],
+			"Title" => [["prefix", "Who's the Boss Now!?"]],
+		],
+	],
+	[
+		"title" => "Who's the Boss Now!?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kurosu Gatari"]],
+			"Title" => [["prefix", "Who’s the Boss Now!?"]],
+		],
+	],
+	[
+		"title" => "Diary of a Downfall: From Girlfriend to Sex Toy",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kurumi Moka"]],
+			"Title" => [["prefix", "Diary of a Downfall: From Girlfriend to Sex Toy"]],
+		],
+	],
+	[
+		"title" => "Nishizumi Sisters Assault",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kyockcho"]],
+			"Title" => [["prefix", "Nishizumi Sisters Assault"]],
+		],
+	],
+	[
+		"title" => "My Wife",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "LINDA"]],
+			"Title" => [["prefix", "My Wife - Case"]],
+		],
+	],
+	[
+		"title" => "Paraphilia of Sensation",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Loose"]],
+			"Title" => [["prefix", "Paraphilia of Sensation"]],
+		],
+	],
+	[
+		"title" => "Crazy for My Daughter's B.F.",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Maemuki na Doemu"]],
+			"Title" => [["prefix", "Crazy for My Daughter's B.F."]],
+		],
+	],
+	[
+		"title" => "Returning the Favor, Doggy Style",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Maemuki na Doemu"]],
+			"Title" => [["prefix", "Returning the Favor, Doggy Style"]],
+		],
+	],
+	[
+		"title" => "The Lone Cock in the Sex Club for Girls",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mahiro Ootori"]],
+			"Title" => [["prefix", "The Lone Cock in the Sex Club for Girls"]],
+		],
+	],
+	[
+		"title" => "My Sister Brought a Friend Over",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mahomaho Koubou"]],
+			"Title" => [["prefix", "My Sister Brought a Friend Over"]],
+		],
+	],
+	[
+		"title" => "Fuck Buddies With My Girlfriend's Mom",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Maimu Maimu"]],
+			"Title" => [["prefix", "Fuck Buddies With My Girlfriend's Mom"]],
+		],
+	],
+	[
+		"title" => "A Career-Oriented Woman Wants to Bury Her Dark Past!!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Maki Daikichi"]],
+			"Title" => [["prefix", "A Career-Oriented Woman Wants to Bury Her Dark Past!!"]],
+		],
+	],
+	[
+		"title" => "Adagio",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mame Ojitan"]],
+			"Title" => [["prefix", "Adagio"]],
+		],
+	],
+	[
+		"title" => "Love in a New Body",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Marbin"]],
+			"Title" => [["prefix", "Love in a New Body"]],
+		],
+	],
+	[
+		"title" => "Fiddling Manhole",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mareo"]],
+			"Title" => [["prefix", "Fiddling Manhole"]],
+		],
+	],
+	[
+		"title" => "Succubus-chan and Big Dick-kun",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mareo"]],
+			"Title" => [["prefix", "Succubus-chan and Big Dick-kun"]],
+		],
+	],
+	[
+		"title" => "She's My Oneechan, but She's Just Pampering Me a Bit, so It's Okay",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Maruta"]],
+			"Title" => [["prefix", "She's My Oneechan, but She's Just Pampering Me a Bit, so It's Okay"]],
+		],
+	],
+	[
+		"title" => "Soirée at the Love Hotel",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Matsuka"]],
+			"Title" => [["prefix", "Soirée at the Love Hotel"]],
+		],
+	],
+	[
+		"title" => "A Senpai on Each Arm",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Matsukawa"]],
+			"Title" => [["prefix", "A Senpai on Each Arm"]],
+		],
+	],
+	[
+		"title" => "Quiet Girlfriend, Loud Libido",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Meysuke"]],
+			"Title" => [["prefix", "Quiet Girlfriend, Loud Libido"]],
+		],
+	],
+	[
+		"title" => "The Aunt I've Always Loved",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "MILF Shobou"]],
+			"Title" => [["prefix", "The Aunt I've Always Loved"]],
+		],
+	],
+	[
+		"title" => "Precious Playmates Anthology Book",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mimic"]],
+			"Title" => [["prefix", "Precious Playmates Anthology Book"]],
+		],
+	],
+	[
+		"title" => "Former Kogal & Ex-Nerd",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Minagiri"]],
+			"Title" => [["prefix", "Former Kogal & Ex-Nerd"]],
+		],
+	],
+	[
+		"title" => "Divorced with a Child",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Minamoto"]],
+			"Title" => [["prefix", "Divorced with a Child"]],
+		],
+	],
+	[
+		"title" => "Fuck-or-Die",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Minazuki Mikka"]],
+			"Title" => [["prefix", "Fuck-or-Die"]],
+		],
+	],
+	[
+		"title" => "Beware the Girly-Girls",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mira"]],
+			"Title" => [["prefix", "Beware the Girly-Girls"]],
+		],
+	],
+	[
+		"title" => "Dream Colored Replica",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mira"]],
+			"Title" => [["prefix", "Dream Colored Replica"]],
+		],
+	],
+	[
+		"title" => "Happy Nudist Beach",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mira"]],
+			"Title" => [["prefix", "Happy Nudist Beach"]],
+		],
+	],
+	[
+		"title" => "Lashes of Love",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mira"]],
+			"Title" => [["prefix", "Lashes of Love"]],
+		],
+	],
+	[
+		"title" => "The Dark Lily Deflowered: Reincarnated as a Maid With an Obsessive Master",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mishiro Shizuku"]],
+			"Title" => [["prefix", "The Dark Lily Deflowered: Reincarnated as a Maid With an Obsessive Master"]],
+		],
+	],
+	[
+		"title" => "Compatibility",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Miyabi"]],
+			"Title" => [["prefix", "Compatibility"]],
+		],
+	],
+	[
+		"title" => "Escape",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Miyabi"]],
+			"Title" => [["prefix", "Escape"]],
+		],
+	],
+	[
+		"title" => "My Beloved Old Man X My Beloved Runaway Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Miyabi"]],
+			"Title" => [["prefix", "My Beloved Old Man X My Beloved Runaway Girl"]],
+		],
+	],
+	[
+		"title" => "Lotsa Hearts",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Miyamoto Issa"]],
+			"Title" => [["prefix", "Lotsa Hearts"]],
+		],
+	],
+	[
+		"title" => "Mother Fuckers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Miyamoto Muga"]],
+			"Title" => [["prefix", "Mother Fuckers"]],
+		],
+	],
+	[
+		"title" => "Wife With an Attitude Fucked by Her Ex",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Miyamoto Muga"]],
+			"Title" => [["prefix", "Wife With an Attitude Fucked by Her Ex"]],
+		],
+	],
+	[
+		"title" => "Thanks for the Post-Con Hookup",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Miyasiro Sousuke"]],
+			"Title" => [["prefix", "Thanks for the Post-Con Hookup"]],
+		],
+	],
+	[
+		"title" => "Is It Wrong to Pick Up A Jiangshi in a Dungeon?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Moburaibu"]],
+			"Title" => [["prefix", "Is It Wrong to Pick Up A Jiangshi in a Dungeon?"]],
+		],
+	],
+	[
+		"title" => "Alternate World Communication",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "mogg"]],
+			"Title" => [["prefix", "Alternate World Communication"]],
+		],
+	],
+	[
+		"title" => "Sailor Mantle",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "mogg"]],
+			"Title" => [["prefix", "Sailor Mantle"]],
+		],
+	],
+	[
+		"title" => "From Proper to Perverted in Just Three Days",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mokko Ritchie"]],
+			"Title" => [["prefix", "From Proper to Perverted in Just Three Days"]],
+		],
+	],
+	[
+		"title" => "Dick Me Deeply Even Though You're Hung and Scary",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Momohara Ryo"]],
+			"Title" => [["prefix", "Dick Me Deeply Even Though You’re Hung and Scary"]],
+		],
+	],
+	[
+		"title" => "The Fox Witch's Pet Cat",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Momonigiri"]],
+			"Title" => [["prefix", "The Fox Witch's Pet Cat"]],
+		],
+	],
+	[
+		"title" => "Fuck Till We Drop",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "MONIMONIMO"]],
+			"Title" => [["prefix", "Fuck Till We Drop"]],
+		],
+	],
+	[
+		"title" => "Stay Away from the Sexy Bitches - Tales of an Older Lady",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "MONIMONIMO"]],
+			"Title" => [["prefix", "Stay Away from the Sexy Bitches - Tales of an Older Lady"]],
+		],
+	],
+	[
+		"title" => "Step Daddy Discipline",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Monyata"]],
+			"Title" => [["prefix", "Step Daddy Discipline"]],
+		],
+	],
+	[
+		"title" => "Malevolence",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mori Guruta"]],
+			"Title" => [["prefix", "Malevolence"]],
+		],
+	],
+	[
+		"title" => "Sisters",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mozu"]],
+			"Title" => [["prefix", "Sisters"]],
+		],
+	],
+	[
+		"title" => "Cosplex",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mozuya Murasaki"]],
+			"Title" => [["prefix", "Cosplex"]],
+		],
+	],
+	[
+		"title" => "I Want This Woman From Another World to Change Jobs",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mucc"]],
+			"Title" => [["prefix", "I Want This Woman From Another World to Change Jobs"]],
+		],
+	],
+	[
+		"title" => "My Childhood Sweetheart Was Ensnared by an Upperclassman's Huge Cock",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Munioni"]],
+			"Title" => [["prefix", "My Childhood Sweetheart Was Ensnared by an Upperclassman's Huge Cock"]],
+		],
+	],
+	[
+		"title" => "Meguru's Circling",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mutsutake"]],
+			"Title" => [["prefix", "Meguru's Circling"]],
+		],
+	],
+	[
+		"title" => "Mako-chan's Development Diary",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mutya"]],
+			"Title" => [["prefix", "Mako-chan's Development Diary"]],
+		],
+	],
+	[
+		"title" => "Escape Virgin",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nagayori"]],
+			"Title" => [["prefix", "Escape Virgin"]],
+		],
+	],
+	[
+		"title" => "Kanna & Karin",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nagayori"]],
+			"Title" => [["prefix", "Kanna & Karin"]],
+		],
+	],
+	[
+		"title" => "Komari Step",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nagayori"]],
+			"Title" => [["prefix", "Komari Step ~Step"]],
+		],
+	],
+	[
+		"title" => "Swept Away...",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nagayori"]],
+			"Title" => [["prefix", "Swept Away..."]],
+		],
+	],
+	[
+		"title" => "Monthly Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nakajima Lupus"]],
+			"Title" => [["prefix", "Monthly Girl"]],
+		],
+	],
+	[
+		"title" => "Wanna See More After That?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nakani"]],
+			"Title" => [["prefix", "Wanna See More After That?"]],
+		],
+	],
+	[
+		"title" => "Committee Chairman, Didn't You Just Masturbate in the Bathroom? I Can See The Number of Times People Orgasm",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Namita"]],
+			"Title" => [["prefix", "Committee Chairman, Didn't You Just Masturbate in the Bathroom? I Can See The Number of Times People Orgasm"]],
+		],
+	],
+	[
+		"title" => "Our Kinky Newlywed Life",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nanakusa Amane"]],
+			"Title" => [["prefix", "Our Kinky Newlywed Life"]],
+		],
+	],
+	[
+		"title" => "Special Treatment",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nanigawa Rui"]],
+			"Title" => [["prefix", "Special Treatment"]],
+		],
+	],
+	[
+		"title" => "Party Play",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "naop"]],
+			"Title" => [["prefix", "Party Play"]],
+		],
+	],
+	[
+		"title" => "Playing Dress-Up With My Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Natsuki Marina"]],
+			"Title" => [["prefix", "Playing Dress-Up With My Girlfriend"]],
+		],
+	],
+	[
+		"title" => "My Hard-on Life in the Country",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Navier Haruka 2T"]],
+			"Title" => [["prefix", "My Hard-on Life in the Country"]],
+		],
+	],
+	[
+		"title" => "But I Loved Her... Summer Chapter: My Cheerleader Friend got Taken by a Foreign Student!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Neginegio"]],
+			"Title" => [["prefix", "But I Loved Her... Summer Chapter: My Cheerleader Friend got Taken by a Foreign Student!"]],
+		],
+	],
+	[
+		"title" => "Obscene Academy",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Neginegio"]],
+			"Title" => [["prefix", "Obscene Academy"]],
+		],
+	],
+	[
+		"title" => "Factory of Nekoi",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nekoi Hikaru"]],
+			"Title" => [["prefix", "Factory of Nekoi"]],
+		],
+	],
+	[
+		"title" => "Holograph",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nekoyama Kushitarou"]],
+			"Title" => [["prefix", "Holograph"]],
+		],
+	],
+	[
+		"title" => "Lustful Little Kitty Cat",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nemu"]],
+			"Title" => [["prefix", "Lustful Little Kitty Cat"]],
+		],
+	],
+	[
+		"title" => "09%: Our Compatibility on the Kink Dating App Was the Worst",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nemui Nezu"]],
+			"Title" => [["prefix", "09%: Our Compatibility on the Kink Dating App Was the Worst"]],
+		],
+	],
+	[
+		"title" => "Could You Please Fuck My Girlfriend?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nemui Nezu"]],
+			"Title" => [["prefix", "Could You Please Fuck My Girlfriend?"]],
+		],
+	],
+	[
+		"title" => "Stealing Sakura Away",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nemui Nezu"]],
+			"Title" => [["prefix", "Stealing Sakura Away"]],
+		],
+	],
+	[
+		"title" => "Maiden Collection",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Neo Hatachi"]],
+			"Title" => [["prefix", "Maiden Collection"]],
+		],
+	],
+	[
+		"title" => "Family Obligations: How I Came to Breed My Brother's Wife",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nibo Niboshi"]],
+			"Title" => [["prefix", "Family Obligations: How I Came to Breed My Brother's Wife"]],
+		],
+	],
+	[
+		"title" => "In and Out of Love",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nibo Niboshi"]],
+			"Title" => [["prefix", "In and Out of Love"]],
+		],
+	],
+	[
+		"title" => "Taken at the Hot Spring? My Busty Honey and Her Pal's Hung Boyfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nibo Niboshi"]],
+			"Title" => [["prefix", "Taken at the Hot Spring? My Busty Honey and Her Pal's Hung Boyfriend"]],
+		],
+	],
+	[
+		"title" => "Thrills After Being Caught",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nibo Niboshi"]],
+			"Title" => [["prefix", "Thrills After Being Caught"]],
+		],
+	],
+	[
+		"title" => "Saki & Kana's BFF Plan",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nise"]],
+			"Title" => [["prefix", "Saki & Kana's BFF Plan"]],
+		],
+	],
+	[
+		"title" => "Daily Life",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nishi Iori"]],
+			"Title" => [["prefix", "Daily Life"]],
+		],
+	],
+	[
+		"title" => "Zombie Sugar Baby",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nishi Yoshiyuki"]],
+			"Title" => [["prefix", "Zombie Sugar Baby"]],
+		],
+	],
+	[
+		"title" => "Ero Manga Author's Wife",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nishizawa Mizuki"]],
+			"Title" => [["prefix", "Ero Manga Author's Wife"]],
+		],
+	],
+	[
+		"title" => "Over-Booking",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nishizawa Mizuki"]],
+			"Title" => [["prefix", "Over-Booking"]],
+		],
+	],
+	[
+		"title" => "Bullied Boy's Tongue Revenge",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Non Takayama"]],
+			"Title" => [["prefix", "Bullied Boy's Tongue Revenge"]],
+		],
+	],
+	[
+		"title" => "Locking Horns",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Norasuko"]],
+			"Title" => [["prefix", "Locking Horns"]],
+		],
+	],
+	[
+		"title" => "A Housewife's DEEP Massage",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nosekichiku"]],
+			"Title" => [["prefix", "A Housewife's DEEP Massage"]],
+		],
+	],
+	[
+		"title" => "A Chiropractor's Wet Dream ❤",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nunnu"]],
+			"Title" => [["prefix", "A Chiropractor's Wet Dream ❤"]],
+		],
+	],
+	[
+		"title" => "Urban Legend! Old Man Cunnilingus",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nunnu"]],
+			"Title" => [["prefix", "Urban Legend! Old Man Cunnilingus"]],
+		],
+	],
+	[
+		"title" => "A Spritz of Subservience",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ogon Shinshi Club"]],
+			"Title" => [["prefix", "A Spritz of Subservience"]],
+		],
+	],
+	[
+		"title" => "Screwed by Father-in-Law - All About Yui",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ogon Shinshi Club"]],
+			"Title" => [["prefix", "Screwed by Father-in-Law - All About Yui"]],
+		],
+	],
+	[
+		"title" => "Invader Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ojou"]],
+			"Title" => [["prefix", "Invader Girlfriend"]],
+		],
+	],
+	[
+		"title" => "The Circumstances of the Pure and the Lascivious",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Okinaga Umanosuke"]],
+			"Title" => [["prefix", "The Circumstances of the Pure and the Lascivious"]],
+		],
+	],
+	[
+		"title" => "Elven Bride",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Okito Endoh"]],
+			"Title" => [["prefix", "Elven Bride"]],
+		],
+	],
+	[
+		"title" => "How Transferring to a Former All-Girls Facility Turned My Life Into a Total Harem",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Okumoto Yuta"]],
+			"Title" => [["prefix", "How Transferring to a Former All-Girls Facility Turned My Life Into a Total Harem"]],
+		],
+	],
+	[
+		"title" => "My Childhood Friend is Strong",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Okumoto Yuta"]],
+			"Title" => [["prefix", "My Childhood Friend is Strong"]],
+		],
+	],
+	[
+		"title" => "My Life After Bringing Home a Runaway Highschool Gal",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Omizu Chihiro"]],
+			"Title" => [["prefix", "My Life After Bringing Home a Runaway Highschool Gal"]],
+		],
+	],
+	[
+		"title" => "Chimera",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Omochi"]],
+			"Title" => [["prefix", "Chimera"]],
+		],
+	],
+	[
+		"title" => "She Wants My Package Instead",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Onizuka Chris"]],
+			"Title" => [["prefix", "She Wants My Package Instead"]],
+		],
+	],
+	[
+		"title" => "Taming a Mother With an Attitude",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Onizuka Chris"]],
+			"Title" => [["prefix", "Taming a Mother With an Attitude"]],
+		],
+	],
+	[
+		"title" => "OgreTits",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Onomesin"]],
+			"Title" => [["prefix", "OgreTits"]],
+		],
+	],
+	[
+		"title" => "Checking Answers on a Summer Day",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Oosaki"]],
+			"Title" => [["prefix", "Checking Answers on a Summer Day"]],
+		],
+	],
+	[
+		"title" => "Footjobs Galore",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Oouso"]],
+			"Title" => [["prefix", "Footjobs Galore"]],
+		],
+	],
+	[
+		"title" => "Allowance Arms Race",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Orico"]],
+			"Title" => [["prefix", "Allowance Arms Race"]],
+		],
+	],
+	[
+		"title" => "Fuck Buddies With Miss Prim and Proper",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Oryo"]],
+			"Title" => [["prefix", "Fuck Buddies With Miss Prim and Proper"]],
+		],
+	],
+	[
+		"title" => "Just The Tip Inside is Not Sex",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ouma"]],
+			"Title" => [["prefix", "Just The Tip Inside is Not Sex"]],
+		],
+	],
+	[
+		"title" => "The Share House's Secret Rule",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ouma"]],
+			"Title" => [["prefix", "The Share House's Secret Rule"]],
+		],
+	],
+	[
+		"title" => "The Share Houses Secret Rule",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ouma"]],
+			"Title" => [["prefix", "The Share Houses Secret Rule"]],
+		],
+	],
+	[
+		"title" => "The Teacher We Took For Granted Was Actually a Sex Machine Using Cheat Codes",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Oyabe Ryou"]],
+			"Title" => [["prefix", "The Teacher We Took For Granted Was Actually a Sex Machine Using Cheat Codes"]],
+		],
+	],
+	[
+		"title" => "Married Couple Swap ~He's Better Than My Husband~",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Peter Mittsuru"]],
+			"Title" => [["prefix", "Married Couple Swap ~He's Better Than My Husband"]],
+		],
+	],
+	[
+		"title" => "My Neighbor Comes By to Borrow My Cock",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Pochitaro"]],
+			"Title" => [["prefix", "My Neighbor Comes By to Borrow My Cock"]],
+		],
+	],
+	[
+		"title" => "First Experience With My Hoodie Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "poruna"]],
+			"Title" => [["prefix", "First Experience With My Hoodie Girlfriend"]],
+		],
+	],
+	[
+		"title" => "One Room Summer",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Potekoro"]],
+			"Title" => [["prefix", "One Room Summer"]],
+		],
+	],
+	[
+		"title" => "Chaldea Soapland's Premium Maid",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Prime"]],
+			"Title" => [["prefix", "Chaldea Soapland's Premium Maid"]],
+		],
+	],
+	[
+		"title" => "The Shy Snow Woman and the Cursed Ring",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Puuzaki Puuna"]],
+			"Title" => [["prefix", "The Shy Snow Woman and the Cursed Ring"]],
+		],
+	],
+	[
+		"title" => "Double ★ Live",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Puyocha"]],
+			"Title" => [["prefix", "Double ★ Live"]],
+		],
+	],
+	[
+		"title" => "Service Gyaru",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Raita"]],
+			"Title" => [["prefix", "Service Gyaru"]],
+		],
+	],
+	[
+		"title" => "UFO X High Schoolers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Raita"]],
+			"Title" => [["prefix", "UFO X High Schoolers"]],
+		],
+	],
+	[
+		"title" => "She Is the Midsummer Santa Claus",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Rakko"]],
+			"Title" => [["prefix", "She Is the Midsummer Santa Claus"]],
+		],
+	],
+	[
+		"title" => "May I Interest You in a Sex Toy?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Rokuroku Bin"]],
+			"Title" => [["prefix", "May I Interest You in a Sex Toy?"]],
+		],
+	],
+	[
+		"title" => "Onahole Maker",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ronna"]],
+			"Title" => [["prefix", "Onahole Maker"]],
+		],
+	],
+	[
+		"title" => "I Took My Ex-Boyfriend's Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Runrun"]],
+			"Title" => [["prefix", "I Took My Ex-Boyfriend's Girl"]],
+		],
+	],
+	[
+		"title" => "Welcome to The Dickbunny Club",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Runrun"]],
+			"Title" => [["prefix", "Welcome to The Dickbunny Club"]],
+		],
+	],
+	[
+		"title" => "Mismatched, Anxious Hunting",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ryou"]],
+			"Title" => [["prefix", "Mismatched, Anxious Hunting"]],
+		],
+	],
+	[
+		"title" => "The Befouled Demon",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ryou"]],
+			"Title" => [["prefix", "The Befouled Demon"]],
+		],
+	],
+	[
+		"title" => "Angel's Unrequited Love",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ryu Shinonome"]],
+			"Title" => [["prefix", "Angel's Unrequited Love"]],
+		],
+	],
+	[
+		"title" => "Futanari Kunoichi Nine Tails",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ryunosuke"]],
+			"Title" => [["prefix", "Futanari Kunoichi Nine Tails"]],
+		],
+	],
+	[
+		"title" => "Cirrus",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Saikawa Yusa"]],
+			"Title" => [["prefix", "Cirrus"]],
+		],
+	],
+	[
+		"title" => "When a Wicked Woman Falls in Love",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sakurai Ayako"]],
+			"Title" => [["prefix", "When a Wicked Woman Falls in Love"]],
+		],
+	],
+	[
+		"title" => "Pet Robot Lilly",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Saori Sato"]],
+			"Title" => [["prefix", "Pet Robot Lilly"]],
+		],
+	],
+	[
+		"title" => "Cherry Picking",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Satsuki Imonet"]],
+			"Title" => [["prefix", "Cherry Picking"]],
+		],
+	],
+	[
+		"title" => "Sexual Season",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Satsuki Imonet"]],
+			"Title" => [["prefix", "Sexual Season"]],
+		],
+	],
+	[
+		"title" => "Your Glasses Are 100 Thousand Volts",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Satsuki Mikazu"]],
+			"Title" => [["prefix", "Your Glasses Are 100 Thousand Volts"]],
+		],
+	],
+	[
+		"title" => "Ooyama-kun & Komori-chan",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Satsukiasha"]],
+			"Title" => [["prefix", "Ooyama-kun & Komori-chan"]],
+		],
+	],
+	[
+		"title" => "Make It and Eat It on Your Own",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "schwinn"]],
+			"Title" => [["prefix", "Make It and Eat It on Your Own"]],
+		],
+	],
+	[
+		"title" => "Bitch Blasting",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sekaisaisoku No Panda"]],
+			"Title" => [["prefix", "Bitch Blasting"]],
+		],
+	],
+	[
+		"title" => "Be Honest For Once!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sekitsui"]],
+			"Title" => [["prefix", "Be Honest For Once!"]],
+		],
+	],
+	[
+		"title" => "Wonderful Long Distance!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sekitsui"]],
+			"Title" => [["prefix", "Wonderful Long Distance!"]],
+		],
+	],
+	[
+		"title" => "Instant Succubus",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sekiya Asami"]],
+			"Title" => [["prefix", "Instant Succubus"]],
+		],
+	],
+	[
+		"title" => "Metamorphosis",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sekiya Asami"]],
+			"Title" => [["prefix", "Metamorphosis"]],
+		],
+	],
+	[
+		"title" => "Shlick-Crazy Ninja",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "SGK"]],
+			"Title" => [["prefix", "Shlick-Crazy Ninja"]],
+		],
+	],
+	[
+		"title" => "Futanari Elf Breeding Farm",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shikigami Kuroko"]],
+			"Title" => [["prefix", "Futanari Elf Breeding Farm"]],
+		],
+	],
+	[
+		"title" => "Female Hero's Journey",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shindo L"]],
+			"Title" => [["prefix", "Female Hero's Journey"]],
+		],
+	],
+	[
+		"title" => "TSF Story Append",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shindo L"]],
+			"Title" => [["prefix", "TSF Story Append"]],
+		],
+	],
+	[
+		"title" => "White Peach Lodge Shut-In Correctional Facility",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shine Nabyss"]],
+			"Title" => [["prefix", "White Peach Lodge Shut-In Correctional Facility"]],
+		],
+	],
+	[
+		"title" => "Cultural Appreciation Meets Sexual Education",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shiro Yuudutsu"]],
+			"Title" => [["prefix", "Cultural Appreciation Meets Sexual Education"]],
+		],
+	],
+	[
+		"title" => "Who's the Crybaby Now?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shiromizugi"]],
+			"Title" => [["prefix", "Who's the Crybaby Now?"]],
+		],
+	],
+	[
+		"title" => "The Student Guidance Handbook",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shiropaka"]],
+			"Title" => [["prefix", "The Student Guidance Handbook"]],
+		],
+	],
+	[
+		"title" => "INSTRUCTOR: Married Woman",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shirouzu Myuuta"]],
+			"Title" => [["prefix", "INSTRUCTOR: Married Woman"]],
+		],
+	],
+	[
+		"title" => "Femboy Next Door",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shirow"]],
+			"Title" => [["prefix", "Femboy Next Door"]],
+		],
+	],
+	[
+		"title" => "Strictly Horny Business",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shittoribouzu"]],
+			"Title" => [["prefix", "Strictly Horny Business"]],
+		],
+	],
+	[
+		"title" => "Horny, Single, and Teaching",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shittoribouzu"]],
+			"Title" => [["prefix", "Horny, Single, and Teaching"]],
+		],
+	],
+	[
+		"title" => "Country Bumpkin Creampies",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shituzhi"]],
+			"Title" => [["prefix", "Country Bumpkin Creampies"]],
+		],
+	],
+	[
+		"title" => "Delinquent Turned Docile Darling",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shituzhi"]],
+			"Title" => [["prefix", "Delinquent Turned Docile Darling"]],
+		],
+	],
+	[
+		"title" => "Fucking My Daughter's Best Friend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shituzhi"]],
+			"Title" => [["prefix", "Fucking My Daughter's Best Friend"]],
+		],
+	],
+	[
+		"title" => "Fulfilling Secretarial Dirty Duties",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shituzhi"]],
+			"Title" => [["prefix", "Fulfilling Secretarial Dirty Duties"]],
+		],
+	],
+	[
+		"title" => "Home Lessons With Sexy Gyarus",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shituzhi"]],
+			"Title" => [["prefix", "Home Lessons With Sexy Gyarus"]],
+		],
+	],
+	[
+		"title" => "I Spent the Whole Time Fucking My Girlfriend's Friend While She Went on a Trip",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shituzhi"]],
+			"Title" => [["prefix", "I Spent the Whole Time Fucking My Girlfriend's Friend While She Went on a Trip"]],
+		],
+	],
+	[
+		"title" => "Streamer Making It Big",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shobu"]],
+			"Title" => [["prefix", "Streamer Making It Big"]],
+		],
+	],
+	[
+		"title" => "Even Moms Want a Little Lovin'!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Siberian Hahasky"]],
+			"Title" => [["prefix", "Even Moms Want a Little Lovin'!"]],
+		],
+	],
+	[
+		"title" => "Offering a Guiding Pussy",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Siokonbu"]],
+			"Title" => [["prefix", "Offering a Guiding Pussy"]],
+		],
+	],
+	[
+		"title" => "How to Make an Elf Happy",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Soramame-san"]],
+			"Title" => [["prefix", "How to Make an Elf Happy"]],
+		],
+	],
+	[
+		"title" => "The Virgin Hits His Peak",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Soramame-san"]],
+			"Title" => [["prefix", "The Virgin Hits His Peak"]],
+		],
+	],
+	[
+		"title" => "Twisted Love from My Coworker",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Starling-chan"]],
+			"Title" => [["prefix", "Twisted Love from My Coworker"]],
+		],
+	],
+	[
+		"title" => "Becoming Fuckbuddies With a Hot Upperclassman",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sueyuu"]],
+			"Title" => [["prefix", "Becoming Fuckbuddies With a Hot Upperclassman"]],
+		],
+	],
+	[
+		"title" => "Lovey-Dovey With an Otaku-Friendly Gyaru",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sueyuu"]],
+			"Title" => [["prefix", "Lovey-Dovey With an Otaku-Friendly Gyaru"]],
+		],
+	],
+	[
+		"title" => "NTR To Save My Wife",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sueyuu"]],
+			"Title" => [["prefix", "NTR To Save My Wife"]],
+		],
+	],
+	[
+		"title" => "Wildlife Canvas",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Survival Knife"]],
+			"Title" => [["prefix", "Wildlife Canvas"]],
+		],
+	],
+	[
+		"title" => "Evening Light",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Susukumo Nagi"]],
+			"Title" => [["prefix", "Evening Light"]],
+		],
+	],
+	[
+		"title" => "The Things I Taught My Serious Junior at the Anime Research Club",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Suzuki Akoni"]],
+			"Title" => [["prefix", "The Things I Taught My Serious Junior at the Anime Research Club"]],
+		],
+	],
+	[
+		"title" => "Fuck & Slash! Little Demon's House",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Suzurame"]],
+			"Title" => [["prefix", "Fuck & Slash! Little Demon's House"]],
+		],
+	],
+	[
+		"title" => "Can't Believe My Loner Childhood Friend Became This Sexy Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Syosonn"]],
+			"Title" => [["prefix", "Can't Believe My Loner Childhood Friend Became This Sexy Girl"]],
+		],
+	],
+	[
+		"title" => "Bitch on the Pole",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tabe Koji"]],
+			"Title" => [["prefix", "Bitch on the Pole"]],
+		],
+	],
+	[
+		"title" => "Lessons From an Old Man",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tadano Mezashi"]],
+			"Title" => [["prefix", "Lessons From an Old Man"]],
+		],
+	],
+	[
+		"title" => "Capricious Lady & Loyal Butler",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Taira Issui"]],
+			"Title" => [["prefix", "Capricious Lady & Loyal Butler"]],
+		],
+	],
+	[
+		"title" => "The Case of My Little Sister Being XX!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Taira Issui"]],
+			"Title" => [["prefix", "The Case of My Little Sister Being XX!"]],
+		],
+	],
+	[
+		"title" => "Taking Shelter from the Rain",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takahashi Note"]],
+			"Title" => [["prefix", "Taking Shelter from the Rain"]],
+		],
+	],
+	[
+		"title" => "Please ★ Lapu-chan",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takahashiya Takabee"]],
+			"Title" => [["prefix", "Please ★ Lapu-chan"]],
+		],
+	],
+	[
+		"title" => "Our Class President is a Succubus",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takano Saku"]],
+			"Title" => [["prefix", "Our Class President is a Succubus"]],
+		],
+	],
+	[
+		"title" => "Parent & Child",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takashi"]],
+			"Title" => [["prefix", "Parent & Child"]],
+		],
+	],
+	[
+		"title" => "Netorare Junior Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takeda Aranobu"]],
+			"Title" => [["prefix", "Netorare Junior Girlfriend"]],
+		],
+	],
+	[
+		"title" => "Hot and Heavy with Mr. Hanabusa",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Taketa"]],
+			"Title" => [["prefix", "Hot and Heavy with Mr. Hanabusa"]],
+		],
+	],
+	[
+		"title" => "I'm in Love with Mr. Hanabusa's Mouth",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Taketa"]],
+			"Title" => [["prefix", "I'm in Love with Mr. Hanabusa's Mouth"]],
+		],
+	],
+	[
+		"title" => "Modest Request",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takota Konu"]],
+			"Title" => [["prefix", "Modest Request"]],
+		],
+	],
+	[
+		"title" => "My Composed Girlfriend's Enraptured Face",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takota Konu"]],
+			"Title" => [["prefix", "My Composed Girlfriend's Enraptured Face"]],
+		],
+	],
+	[
+		"title" => "What I Want to Do With Senpai",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takota Konu"]],
+			"Title" => [["prefix", "What I Want to Do With Senpai"]],
+		],
+	],
+	[
+		"title" => "Takurowo Collection",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takurowo"]],
+			"Title" => [["prefix", "Takurowo Collection"]],
+		],
+	],
+	[
+		"title" => "NekoPara",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tam-U"]],
+			"Title" => [["prefix", "NekoPara"]],
+		],
+	],
+	[
+		"title" => "Chipped Glass",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tama-Bon"]],
+			"Title" => [["prefix", "Chipped Glass"]],
+		],
+	],
+	[
+		"title" => "Mega Milkies",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tama-Bon"]],
+			"Title" => [["prefix", "Mega Milkies"]],
+		],
+	],
+	[
+		"title" => "Long-Lost Pals Living Their Breast Life",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tamaki Nao"]],
+			"Title" => [["prefix", "Long-Lost Pals Living Their Breast Life"]],
+		],
+	],
+	[
+		"title" => "Under a Love Contract With My Mysterious Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tamazatou"]],
+			"Title" => [["prefix", "Under a Love Contract With My Mysterious Girlfriend"]],
+		],
+	],
+	[
+		"title" => "Call Me, Please!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tanuma Yuuichirou"]],
+			"Title" => [["prefix", "Call Me, Please!"]],
+		],
+	],
+	[
+		"title" => "Playing Lovers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Taono Kinoko"]],
+			"Title" => [["prefix", "Playing Lovers"]],
+		],
+	],
+	[
+		"title" => "My Pet is a Succubus",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "tatapopo"]],
+			"Title" => [["prefix", "My Pet is a Succubus"]],
+		],
+	],
+	[
+		"title" => "One-on-One Coaching",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "tatapopo"]],
+			"Title" => [["prefix", "One-on-One Coaching"]],
+		],
+	],
+	[
+		"title" => "Ex-Classmate Call Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tatsuwaipu"]],
+			"Title" => [["prefix", "Ex-Classmate Call Girl"]],
+		],
+	],
+	[
+		"title" => "Albino's Diary",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tendou Itsuki"]],
+			"Title" => [["prefix", "Albino's Diary"]],
+		],
+	],
+	[
+		"title" => "The Little Onahole Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ter"]],
+			"Title" => [["prefix", "The Little Onahole Girl"]],
+		],
+	],
+	[
+		"title" => "The Netori Syndrome Begins Here",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Teritama Potekora"]],
+			"Title" => [["prefix", "The Netori Syndrome Begins Here"]],
+		],
+	],
+	[
+		"title" => "Orc's Prison",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "tes_mel"]],
+			"Title" => [["prefix", "Orc's Prison"]],
+		],
+	],
+	[
+		"title" => "Adabana",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tirotata"]],
+			"Title" => [["prefix", "Adabana"]],
+		],
+	],
+	[
+		"title" => "A Flower Just For Me",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tohyama Eight"]],
+			"Title" => [["prefix", "A Flower Just For Me"]],
+		],
+	],
+	[
+		"title" => "Crossdressing in a Boys School",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Toitoi"]],
+			"Title" => [["prefix", "Crossdressing in a Boys School"]],
+		],
+	],
+	[
+		"title" => "Life With the Succubus Boy",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Toitoi"]],
+			"Title" => [["prefix", "Life With the Succubus Boy"]],
+		],
+	],
+	[
+		"title" => "Abstinence Idol",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Totoyama Keiji"]],
+			"Title" => [["prefix", "Abstinence Idol"]],
+		],
+	],
+	[
+		"title" => "Behind the Curtain",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Totoyama Keiji"]],
+			"Title" => [["prefix", "Behind the Curtain"]],
+		],
+	],
+	[
+		"title" => "Teased Honey",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Totoyama Keiji"]],
+			"Title" => [["prefix", "Teased Honey"]],
+		],
+	],
+	[
+		"title" => "Leaving the Nest",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Toushiki Yubune"]],
+			"Title" => [["prefix", "Leaving the Nest"]],
+		],
+	],
+	[
+		"title" => "My Neighbor Who Comes Over to Eat",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Toushiki Yubune"]],
+			"Title" => [["prefix", "My Neighbor Who Comes Over to Eat"]],
+		],
+	],
+	[
+		"title" => "About the Beloved Student President's Huge Tits",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Try"]],
+			"Title" => [["prefix", "About the Beloved Student President's Huge Tits"]],
+		],
+	],
+	[
+		"title" => "About the New President of the Disciplinary Committee's Huge Tits",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Try"]],
+			"Title" => [["prefix", "About the New President of the Disciplinary Committee's Huge Tits"]],
+		],
+	],
+	[
+		"title" => "Stepbrother Fuck Toy Project",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tsukuru"]],
+			"Title" => [["prefix", "Stepbrother Fuck Toy Project"]],
+		],
+	],
+	[
+		"title" => "For Working So Hard",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tsuruyama Mito"]],
+			"Title" => [["prefix", "For Working So Hard"]],
+		],
+	],
+	[
+		"title" => "Popping My Cherry with You...or so I Thought!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tsuruyama Mito"]],
+			"Title" => [["prefix", "Popping My Cherry with You...or so I Thought!"]],
+		],
+	],
+	[
+		"title" => "The Daily Life of a Half-Blood Succubus",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tulip"]],
+			"Title" => [["prefix", "The Daily Life of a Half-Blood Succubus"]],
+		],
+	],
+	[
+		"title" => "I Lost My Tomboy Friend to a Huge Cock",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ubuo"]],
+			"Title" => [["prefix", "I Lost My Tomboy Friend to a Huge Cock"]],
+		],
+	],
+	[
+		"title" => "Epicurean Nightclub",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ukiuki Chisato"]],
+			"Title" => [["prefix", "Epicurean Nightclub"]],
+		],
+	],
+	[
+		"title" => "Jirai-Kei is Pretty Good. Nice Size, Too.",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Umi no Kyuuban"]],
+			"Title" => [["prefix", "Jirai-Kei is Pretty Good. Nice Size, Too."]],
+		],
+	],
+	[
+		"title" => "The Name Tohno Makeinuboe Brings Luck With the Ladies",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Umi no Kyuuban"]],
+			"Title" => [["prefix", "The Name Tohno Makeinuboe Brings Luck With the Ladies"]],
+		],
+	],
+	[
+		"title" => "Delphinium Madonna",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "UNAGIMARU"]],
+			"Title" => [["prefix", "Delphinium Madonna"]],
+		],
+	],
+	[
+		"title" => "Half of PRISM",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "UNAGIMARU"]],
+			"Title" => [["prefix", "Half of PRISM"]],
+		],
+	],
+	[
+		"title" => "A Single Wall",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "untsuku"]],
+			"Title" => [["prefix", "A Single Wall"]],
+		],
+	],
+	[
+		"title" => "Creampie Idol Harem Life!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ushizawa Mikke"]],
+			"Title" => [["prefix", "Creampie Idol Harem Life!"]],
+		],
+	],
+	[
+		"title" => "Spicy Role-Play With an Uptight Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Utsutenkai"]],
+			"Title" => [["prefix", "Spicy Role-Play With an Uptight Girl"]],
+		],
+	],
+	[
+		"title" => "Cucked Between the Pages",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Utsutsu*Minoru"]],
+			"Title" => [["prefix", "Cucked Between the Pages"]],
+		],
+	],
+	[
+		"title" => "Forbidden Magic: It Was All For You",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Utsutsu*Minoru"]],
+			"Title" => [["prefix", "Forbidden Magic: It Was All For You"]],
+		],
+	],
+	[
+		"title" => "Arrest Thy Neighbor",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "VOLVOX"]],
+			"Title" => [["prefix", "Arrest Thy Neighbor"]],
+		],
+	],
+	[
+		"title" => "Welcome to Rum's Lighthouse",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "VOLVOX"]],
+			"Title" => [["prefix", "Welcome to Rum's Lighthouse"]],
+		],
+	],
+	[
+		"title" => "How to Make a Quiet Girl Fall in Love",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Wabara Hiro"]],
+			"Title" => [["prefix", "How to Make a Quiet Girl Fall in Love"]],
+		],
+	],
+	[
+		"title" => "Jealous Teacher",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Wabara Hiro"]],
+			"Title" => [["prefix", "Jealous Teacher"]],
+		],
+	],
+	[
+		"title" => "Maid Training",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Wabara Hiro"]],
+			"Title" => [["prefix", "Maid Training"]],
+		],
+	],
+	[
+		"title" => "King of the Studio",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Waira"]],
+			"Title" => [["prefix", "King of the Studio"]],
+		],
+	],
+	[
+		"title" => "The First and Final Time",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Waira"]],
+			"Title" => [["prefix", "The First and Final Time"]],
+		],
+	],
+	[
+		"title" => "The Broken",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Warabite"]],
+			"Title" => [["prefix", "The Broken"]],
+		],
+	],
+	[
+		"title" => "Trauma Sex Clinic",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Watanuki Ron"]],
+			"Title" => [["prefix", "Trauma Sex Clinic"]],
+		],
+	],
+	[
+		"title" => "Wavering Heart",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Wes Heartland Smith"]],
+			"Title" => [["prefix", "Wavering Heart"]],
+		],
+	],
+	[
+		"title" => "AI/Love",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Woruto"]],
+			"Title" => [["prefix", "AI/Love"]],
+		],
+	],
+	[
+		"title" => "Bad Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Wozu Satoru"]],
+			"Title" => [["prefix", "Bad Girl"]],
+		],
+	],
+	[
+		"title" => "Living with a Bootylicious Superweapon",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yaginomekichi"]],
+			"Title" => [["prefix", "Living with a Bootylicious Superweapon"]],
+		],
+	],
+	[
+		"title" => "First Love",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yamada Yuuya"]],
+			"Title" => [["prefix", "First Love"]],
+		],
+	],
+	[
+		"title" => "Flower in Shade",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yamada Yuuya"]],
+			"Title" => [["prefix", "Flower in Shade"]],
+		],
+	],
+	[
+		"title" => "Lily Flower",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yamada Yuuya"]],
+			"Title" => [["prefix", "Lily Flower"]],
+		],
+	],
+	[
+		"title" => "Sensual Days",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yamada Yuuya"]],
+			"Title" => [["prefix", "Sensual Days"]],
+		],
+	],
+	[
+		"title" => "Snow Time",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yamada Yuuya"]],
+			"Title" => [["prefix", "Snow Time"]],
+		],
+	],
+	[
+		"title" => "Closet",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yamakumo"]],
+			"Title" => [["prefix", "Closet"]],
+		],
+	],
+	[
+		"title" => "Untitled Document",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yamakumo"]],
+			"Title" => [["prefix", "Untitled Document"]],
+		],
+	],
+	[
+		"title" => "I Wanna Try!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yochi Ryouta"]],
+			"Title" => [["prefix", "I Wanna Try!"]],
+		],
+	],
+	[
+		"title" => "Fight on, MILF",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yokoshima Nikki"]],
+			"Title" => [["prefix", "Fight on, MILF"]],
+		],
+	],
+	[
+		"title" => "Pink Pearl Dreaming - Reverse Side",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yoriu Mushi"]],
+			"Title" => [["prefix", "Pink Pearl Dreaming - Reverse Side"]],
+		],
+	],
+	[
+		"title" => "The Receptionist at the Adventurer's Guild was a Slut",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yucchris"]],
+			"Title" => [["prefix", "The Receptionist at the Adventurer's Guild was a Slut"]],
+		],
+	],
+	[
+		"title" => "Inter-Species Impregnation Valkyrie Hazard",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yuduki Kei"]],
+			"Title" => [["prefix", "Inter-Species Impregnation Valkyrie Hazard"]],
+		],
+	],
+	[
+		"title" => "Koh LOVE-Ru",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yuki Tomoshi"]],
+			"Title" => [["prefix", "Koh LOVE-Ru"]],
+		],
+	],
+	[
+		"title" => "Eat Me Up, My Husband",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yukiharu"]],
+			"Title" => [["prefix", "Eat Me Up, My Husband"]],
+		],
+	],
+	[
+		"title" => "Whether You're Here or Not",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yumeki Banana"]],
+			"Title" => [["prefix", "Whether You're Here or Not"]],
+		],
+	],
+	[
+		"title" => "My Tall, Stacked, Virgin Boss",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yunamaro"]],
+			"Title" => [["prefix", "My Tall, Stacked, Virgin Boss ＃"]],
+		],
+	],
+	[
+		"title" => "My Life in a Boarding House",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yuzuha"]],
+			"Title" => [["prefix", "My Life in a Boarding House"]],
+		],
+	],
+	[
+		"title" => "Just Fit!!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yuzuto Sen"]],
+			"Title" => [["prefix", "Just Fit!!"]],
+		],
+	],
+	[
+		"title" => "The Twilight Sometimes Whispers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hinasaki Yo"]],
+			"Title" => [["prefix", "The Twilight Sometimes Whispers"]],
+		],
+	],
+	[
+		"title" => "Gaze Upon a Distant Star",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "7x2"]],
+			"Title" => [["prefix", "Gaze Upon a Distant Star"]],
+		],
+	],
+	[
+		"title" => "Rendezvous",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "ae"]],
+			"Title" => [["prefix", "Rendezvous"]],
+		],
+	],
+	[
+		"title" => "Sleep-Running",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Akinosora"]],
+			"Title" => [["prefix", "Sleep-Running"]],
+		],
+	],
+	[
+		"title" => "The Tale of a Couple Who Got Stood Up on a Dating App and Then Had Sex Together",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Asamine Tel"]],
+			"Title" => [["prefix", "The Tale of a Couple Who Got Stood Up on a Dating App and Then Had Sex Together"]],
+		],
+	],
+	[
+		"title" => "Nice Guy",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Asano Yomichi"]],
+			"Title" => [["prefix", "Nice Guy"]],
+		],
+	],
+	[
+		"title" => "Vanilla Onahole",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "BeNantoka"]],
+			"Title" => [["prefix", "Vanilla Onahole"]],
+		],
+	],
+	[
+		"title" => "Grant and Fulfill",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Boxreeema"]],
+			"Title" => [["prefix", "Grant and Fulfill"]],
+		],
+	],
+	[
+		"title" => "Love Is Invisible to the Naked Eye",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Chimple Hotter"]],
+			"Title" => [["prefix", "Love Is Invisible to the Naked Eye"]],
+		],
+	],
+	[
+		"title" => "Beyond the Thrill",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Cleanendme"]],
+			"Title" => [["prefix", "Beyond the Thrill"]],
+		],
+	],
+	[
+		"title" => "Luring Call",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Coupe"]],
+			"Title" => [["prefix", "Luring Call"]],
+		],
+	],
+	[
+		"title" => "Sore Loser, Shunko!!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "dam"]],
+			"Title" => [["prefix", "Sore Loser, Shunko!!"]],
+		],
+	],
+	[
+		"title" => "I Can't Fall For Your Eyes",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Dekosuke 18gou"]],
+			"Title" => [["prefix", "I Can't Fall For Your Eyes"]],
+		],
+	],
+	[
+		"title" => "The Ultra Pervert Secret",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Dojirou"]],
+			"Title" => [["prefix", "The Ultra Pervert Secret"]],
+		],
+	],
+	[
+		"title" => "Parallel World Eros & Swine",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "E-musu Aki"]],
+			"Title" => [["prefix", "Parallel World Eros & Swine"]],
+		],
+	],
+	[
+		"title" => "GF Cure",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "fu-ta"]],
+			"Title" => [["prefix", "GF Cure"]],
+		],
+	],
+	[
+		"title" => "August Lights",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Fujimaru"]],
+			"Title" => [["prefix", "August Lights"]],
+		],
+	],
+	[
+		"title" => "Milk Fetish",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Futaba Yodomu"]],
+			"Title" => [["prefix", "Milk Fetish"]],
+		],
+	],
+	[
+		"title" => "Change of Heart",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hanafuda Sakurano"]],
+			"Title" => [["prefix", "Change of Heart"]],
+		],
+	],
+	[
+		"title" => "Secret",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hanafuda Sakurano"]],
+			"Title" => [["prefix", "Secret"]],
+		],
+	],
+	[
+		"title" => "Amazon Pathfinding",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Haru Yukiko"]],
+			"Title" => [["prefix", "Amazon Pathfinding"]],
+		],
+	],
+	[
+		"title" => "Home Tutor",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Haru Yukiko"]],
+			"Title" => [["prefix", "Home Tutor"]],
+		],
+	],
+	[
+		"title" => "Unbalanced Diet",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Harumachi Uro"]],
+			"Title" => [["prefix", "Unbalanced Diet"]],
+		],
+	],
+	[
+		"title" => "Lovey-Dovey Sex With My Bookworm Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Harusawa"]],
+			"Title" => [["prefix", "Lovey-Dovey Sex With My Bookworm Girlfriend"]],
+		],
+	],
+	[
+		"title" => "Beast Trail",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hatomugi Munmun"]],
+			"Title" => [["prefix", "Beast Trail"]],
+		],
+	],
+	[
+		"title" => "Feel the Distance",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hatsuyasumi"]],
+			"Title" => [["prefix", "Feel the Distance"]],
+		],
+	],
+	[
+		"title" => "Triple Chocolate Fantasy",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Highlow"]],
+			"Title" => [["prefix", "Triple Chocolate Fantasy"]],
+		],
+	],
+	[
+		"title" => "Teasing Invader ❤",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hihiyama Yokikana"]],
+			"Title" => [["prefix", "Teasing Invader ❤"]],
+		],
+	],
+	[
+		"title" => "From a Secluded Room",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hirayan"]],
+			"Title" => [["prefix", "From a Secluded Room"]],
+		],
+	],
+	[
+		"title" => "Jump Over the Guardrail",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hirayan"]],
+			"Title" => [["prefix", "Jump Over the Guardrail"]],
+		],
+	],
+	[
+		"title" => "Elegantly Adorable",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hitonitachi"]],
+			"Title" => [["prefix", "Elegantly Adorable"]],
+		],
+	],
+	[
+		"title" => "I Love You",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Hoshii Nasake"]],
+			"Title" => [["prefix", "I Love You"]],
+		],
+	],
+	[
+		"title" => "Way of the Kogal",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ichi-Okunen Wakusei"]],
+			"Title" => [["prefix", "Way of the Kogal"]],
+		],
+	],
+	[
+		"title" => "Unleashed",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "ICHIGAIN"]],
+			"Title" => [["prefix", "Unleashed"]],
+		],
+	],
+	[
+		"title" => "Business",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Idaten Funisuke"]],
+			"Title" => [["prefix", "Business"]],
+		],
+	],
+	[
+		"title" => "My Girl",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Igedoaha"]],
+			"Title" => [["prefix", "My Girl"]],
+		],
+	],
+	[
+		"title" => "The Runaway Girl I Picked Up Was a Good-For-Nothing",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "INAGO"]],
+			"Title" => [["prefix", "The Runaway Girl I Picked Up Was a Good-For-Nothing"]],
+		],
+	],
+	[
+		"title" => "Cute Girls with Cute Dicks",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Inari Mochi"]],
+			"Title" => [["prefix", "Cute Girls with Cute Dicks"]],
+		],
+	],
+	[
+		"title" => "Sheltered Bud",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Itsuki Kuro"]],
+			"Title" => [["prefix", "Sheltered Bud"]],
+		],
+	],
+	[
+		"title" => "It'll Be Okay, Cock Holster-chan",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Itsutsuse"]],
+			"Title" => [["prefix", "It'll Be Okay, Cock Holster-chan"]],
+		],
+	],
+	[
+		"title" => "First Anniversary",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Iyo"]],
+			"Title" => [["prefix", "First Anniversary"]],
+		],
+	],
+	[
+		"title" => "Sexual Regulation is a Big Sister's Job",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kaitenfude"]],
+			"Title" => [["prefix", "Sexual Regulation is a Big Sister's Job"]],
+		],
+	],
+	[
+		"title" => "How to Set a Cheeky Kogal Straight",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakino Nashiko"]],
+			"Title" => [["prefix", "How to Set a Cheeky Kogal Straight"]],
+		],
+	],
+	[
+		"title" => "Super Dendo Ride Battle",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kakuzato"]],
+			"Title" => [["prefix", "Super Dendo Ride Battle"]],
+		],
+	],
+	[
+		"title" => "Horny Hometown",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Karube Guri"]],
+			"Title" => [["prefix", "Horny Hometown"]],
+		],
+	],
+	[
+		"title" => "As My Stepsister Says!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kayama Rim"]],
+			"Title" => [["prefix", "As My Stepsister Says!"]],
+		],
+	],
+	[
+		"title" => "New Big Sister",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kayumidome"]],
+			"Title" => [["prefix", "New Big Sister"]],
+		],
+	],
+	[
+		"title" => "Unlocking a Maid's Heart",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kaza Midori"]],
+			"Title" => [["prefix", "Unlocking a Maid's Heart"]],
+		],
+	],
+	[
+		"title" => "Hungry For More",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kirihara Yuu"]],
+			"Title" => [["prefix", "Hungry For More"]],
+		],
+	],
+	[
+		"title" => "Idol Planning",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kise Itsuki"]],
+			"Title" => [["prefix", "Idol Planning"]],
+		],
+	],
+	[
+		"title" => "The Job of a Service Committee Member",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kiyoshiro Inoue"]],
+			"Title" => [["prefix", "The Job of a Service Committee Member"]],
+		],
+	],
+	[
+		"title" => "Stripper",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kohri"]],
+			"Title" => [["prefix", "Stripper"]],
+		],
+	],
+	[
+		"title" => "Elf & Alternate World's Seed",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kourui"]],
+			"Title" => [["prefix", "Elf & Alternate World's Seed"]],
+		],
+	],
+	[
+		"title" => "The Maiden's Mild Fever Is As Hot As the Sun",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kudaraji Hatsuka"]],
+			"Title" => [["prefix", "The Maiden's Mild Fever Is As Hot As the Sun"]],
+		],
+	],
+	[
+		"title" => "Kuromorimine Assault",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kyockcho"]],
+			"Title" => [["prefix", "Kuromorimine Assault"]],
+		],
+	],
+	[
+		"title" => "The Breaking of the Tohsaka Sisters",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Kyockcho"]],
+			"Title" => [["prefix", "The Breaking of the Tohsaka Sisters"]],
+		],
+	],
+	[
+		"title" => "Sex Friend Sisters Are a Package Deal",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mahiro Ootori"]],
+			"Title" => [["prefix", "Sex Friend Sisters Are a Package Deal"]],
+		],
+	],
+	[
+		"title" => "Good Fucking Friends",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Meysuke"]],
+			"Title" => [["prefix", "Good Fucking Friends"]],
+		],
+	],
+	[
+		"title" => "My Father's Mistress",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Midori no Ruupe"]],
+			"Title" => [["prefix", "My Father's Mistress"]],
+		],
+	],
+	[
+		"title" => "Re:Play",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mikaduchi"]],
+			"Title" => [["prefix", "Re:Play"]],
+		],
+	],
+	[
+		"title" => "Living Together",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mikarin"]],
+			"Title" => [["prefix", "Living Together"]],
+		],
+	],
+	[
+		"title" => "Sensei's Circumstances",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Minagiri"]],
+			"Title" => [["prefix", "Sensei's Circumstances"]],
+		],
+	],
+	[
+		"title" => "Unknown Feelings",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Minami Fumika"]],
+			"Title" => [["prefix", "Unknown Feelings"]],
+		],
+	],
+	[
+		"title" => "Earth Girls",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mira"]],
+			"Title" => [["prefix", "Earth Girls"]],
+		],
+	],
+	[
+		"title" => "Secret Lesbian Beauty Parlor",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mira"]],
+			"Title" => [["prefix", "Secret Lesbian Beauty Parlor"]],
+		],
+	],
+	[
+		"title" => "How to Raise Plants",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mizone"]],
+			"Title" => [["prefix", "How to Raise Plants"]],
+		],
+	],
+	[
+		"title" => "Summer Fun With Three Sisters",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "mogg"]],
+			"Title" => [["prefix", "Summer Fun With Three Sisters"]],
+		],
+	],
+	[
+		"title" => "Close to You",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Momoko"]],
+			"Title" => [["prefix", "Close to You"]],
+		],
+	],
+	[
+		"title" => "SxS Oath",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Morimiya Masayuki"]],
+			"Title" => [["prefix", "SxS Oath"]],
+		],
+	],
+	[
+		"title" => "The Incubus Gourmet",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Moriyama Tarutaru"]],
+			"Title" => [["prefix", "The Incubus Gourmet"]],
+		],
+	],
+	[
+		"title" => "Miyu-chan",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mozu"]],
+			"Title" => [["prefix", "Miyu-chan"]],
+		],
+	],
+	[
+		"title" => "Planet of the Pussy Cats",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mozu"]],
+			"Title" => [["prefix", "Planet of the Pussy Cats"]],
+		],
+	],
+	[
+		"title" => "The Sensational Suzuri",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mumumu"]],
+			"Title" => [["prefix", "The Sensational Suzuri"]],
+		],
+	],
+	[
+		"title" => "The Woman I Met",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Muronaga Chaashuu"]],
+			"Title" => [["prefix", "The Woman I Met"]],
+		],
+	],
+	[
+		"title" => "Love Me Forever",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Mutya"]],
+			"Title" => [["prefix", "Love Me Forever"]],
+		],
+	],
+	[
+		"title" => "Disordered ♥ Snow, Moon, and Flowers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nagayori"]],
+			"Title" => [["prefix", "Disordered ♥ Snow, Moon, and Flowers"]],
+		],
+	],
+	[
+		"title" => "Other Side",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nagayori"]],
+			"Title" => [["prefix", "Other Side"]],
+		],
+	],
+	[
+		"title" => "Blue Daisy",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nanamiya Tsugumi"]],
+			"Title" => [["prefix", "Blue Daisy"]],
+		],
+	],
+	[
+		"title" => "My Ideal Morikawa-san",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nanao Yukiji"]],
+			"Title" => [["prefix", "My Ideal Morikawa-san"]],
+		],
+	],
+	[
+		"title" => "Pleasant Illusion",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nekomata Naomi"]],
+			"Title" => [["prefix", "Pleasant Illusion"]],
+		],
+	],
+	[
+		"title" => "The Oni and the Fresh Peach",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nemu"]],
+			"Title" => [["prefix", "The Oni and the Fresh Peach"]],
+		],
+	],
+	[
+		"title" => "The Tanuki's Lover",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nemu"]],
+			"Title" => [["prefix", "The Tanuki's Lover"]],
+		],
+	],
+	[
+		"title" => "Silent Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nikubou Maranoshin"]],
+			"Title" => [["prefix", "Silent Girlfriend"]],
+		],
+	],
+	[
+		"title" => "Pet Sensei",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Nishi Iori"]],
+			"Title" => [["prefix", "Pet Sensei"]],
+		],
+	],
+	[
+		"title" => "Hey... Let Me In?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "nohito"]],
+			"Title" => [["prefix", "Hey... Let Me In?"]],
+		],
+	],
+	[
+		"title" => "Job Offer While Living Together",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ojou"]],
+			"Title" => [["prefix", "Job Offer While Living Together"]],
+		],
+	],
+	[
+		"title" => "Lewd Present",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ojou"]],
+			"Title" => [["prefix", "Lewd Present"]],
+		],
+	],
+	[
+		"title" => "Hot Flash",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Okara"]],
+			"Title" => [["prefix", "Hot Flash"]],
+		],
+	],
+	[
+		"title" => "Phosphorescence",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Okinaga Umanosuke"]],
+			"Title" => [["prefix", "Phosphorescence"]],
+		],
+	],
+	[
+		"title" => "As the Water Boils, the Bitch Springs Up",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ono Kana"]],
+			"Title" => [["prefix", "As the Water Boils, the Bitch Springs Up"]],
+		],
+	],
+	[
+		"title" => "Wankinterest",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Oohira Sunset"]],
+			"Title" => [["prefix", "Wankinterest"]],
+		],
+	],
+	[
+		"title" => "Big Prize!?",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Oosaki"]],
+			"Title" => [["prefix", "Big Prize!?"]],
+		],
+	],
+	[
+		"title" => "Erogenous Zone",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Oouso"]],
+			"Title" => [["prefix", "Erogenous Zone"]],
+		],
+	],
+	[
+		"title" => "Twins Harassment",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Oouso"]],
+			"Title" => [["prefix", "Twins Harassment"]],
+		],
+	],
+	[
+		"title" => "True Feelings",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Panda Ekisu"]],
+			"Title" => [["prefix", "True Feelings"]],
+		],
+	],
+	[
+		"title" => "Lawless Slut Hii-chan ☆",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Particular"]],
+			"Title" => [["prefix", "Lawless Slut Hii-chan ☆"]],
+		],
+	],
+	[
+		"title" => "The Only Guy at the Club Getaway",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "PuruMetal"]],
+			"Title" => [["prefix", "The Only Guy at the Club Getaway"]],
+		],
+	],
+	[
+		"title" => "Kuro and Me",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "reitou"]],
+			"Title" => [["prefix", "Kuro and Me"]],
+		],
+	],
+	[
+		"title" => "VS Bratty Slut",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Roteri"]],
+			"Title" => [["prefix", "VS Bratty Slut"]],
+		],
+	],
+	[
+		"title" => "A Slut Has Come to the Countryside!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ryu Shinonome"]],
+			"Title" => [["prefix", "A Slut Has Come to the Countryside!"]],
+		],
+	],
+	[
+		"title" => "Creampie Trip",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Ryu Shinonome"]],
+			"Title" => [["prefix", "Creampie Trip"]],
+		],
+	],
+	[
+		"title" => "So Long as We Don't Get Caught",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sadahiro"]],
+			"Title" => [["prefix", "So Long as We Don't Get Caught"]],
+		],
+	],
+	[
+		"title" => "Otsuyu & the New Program",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sakurai Energy"]],
+			"Title" => [["prefix", "Otsuyu & the New Program"]],
+		],
+	],
+	[
+		"title" => "Reunion Lovers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sakurai Maki"]],
+			"Title" => [["prefix", "Reunion Lovers"]],
+		],
+	],
+	[
+		"title" => "Second First Love in the Bath",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sakurai Maki"]],
+			"Title" => [["prefix", "Second First Love in the Bath"]],
+		],
+	],
+	[
+		"title" => "Heat Without Retreat",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Senoo Hibiteru"]],
+			"Title" => [["prefix", "Heat Without Retreat"]],
+		],
+	],
+	[
+		"title" => "Leaving My Mark On You",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shibaken Gorou"]],
+			"Title" => [["prefix", "Leaving My Mark On You"]],
+		],
+	],
+	[
+		"title" => "Railing My Hot Aunt",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shikabanekamo"]],
+			"Title" => [["prefix", "Railing My Hot Aunt"]],
+		],
+	],
+	[
+		"title" => "Saki-chan is at Her Limit!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shimon"]],
+			"Title" => [["prefix", "Saki-chan is at Her Limit!"]],
+		],
+	],
+	[
+		"title" => "Instinct",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shine Nabis"]],
+			"Title" => [["prefix", "Instinct"]],
+		],
+	],
+	[
+		"title" => "The Hero’s Party of Pushovers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shinshu Takedake"]],
+			"Title" => [["prefix", "The Hero’s Party of Pushovers"]],
+		],
+	],
+	[
+		"title" => "The Camgirl Next Door",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Shobu"]],
+			"Title" => [["prefix", "The Camgirl Next Door"]],
+		],
+	],
+	[
+		"title" => "Searching For the Ideal Crotch",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Signo Mandara"]],
+			"Title" => [["prefix", "Searching For the Ideal Crotch"]],
+		],
+	],
+	[
+		"title" => "The Time Bomb In Her Skirt",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sio Oninco"]],
+			"Title" => [["prefix", "The Time Bomb In Her Skirt"]],
+		],
+	],
+	[
+		"title" => "Ayane, 28 Year Old Widow",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sorono"]],
+			"Title" => [["prefix", "Ayane, 28 Year Old Widow"]],
+		],
+	],
+	[
+		"title" => "I'll Drag You Down to Hell",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Sugaru Shun"]],
+			"Title" => [["prefix", "I'll Drag You Down to Hell"]],
+		],
+	],
+	[
+		"title" => "I Only Have Eyes For You",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Suruga Kuroitsu"]],
+			"Title" => [["prefix", "I Only Have Eyes For You"]],
+		],
+	],
+	[
+		"title" => "Bookworm Girls Get Hooked",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Survival Knife"]],
+			"Title" => [["prefix", "Bookworm Girls Get Hooked"]],
+		],
+	],
+	[
+		"title" => "Schwarz Weiß",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Survival Knife"]],
+			"Title" => [["prefix", "Schwarz Weiß"]],
+		],
+	],
+	[
+		"title" => "Dog Feelings",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Suzushimo"]],
+			"Title" => [["prefix", "Dog Feelings"]],
+		],
+	],
+	[
+		"title" => "Not According to Plan",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Suzushimo"]],
+			"Title" => [["prefix", "Not According to Plan"]],
+		],
+	],
+	[
+		"title" => "Fucked Housewife",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Syuuen"]],
+			"Title" => [["prefix", "Fucked Housewife"]],
+		],
+	],
+	[
+		"title" => "The Subordinate Brought Home by His Career Woman Wife Turned Out to Be His Ex-Girlfriend",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Syuuen"]],
+			"Title" => [["prefix", "The Subordinate Brought Home by His Career Woman Wife Turned Out to Be His Ex-Girlfriend"]],
+		],
+	],
+	[
+		"title" => "Class Reunion",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tachibana Nagon"]],
+			"Title" => [["prefix", "Class Reunion"]],
+		],
+	],
+	[
+		"title" => "P5 Harem",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tachibana Omina"]],
+			"Title" => [["prefix", "P5 Harem"]],
+		],
+	],
+	[
+		"title" => "Doll Princess",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takashi"]],
+			"Title" => [["prefix", "Doll Princess"]],
+		],
+	],
+	[
+		"title" => "The Demon's Kiss",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takatsuki Shuuya"]],
+			"Title" => [["prefix", "The Demon's Kiss"]],
+		],
+	],
+	[
+		"title" => "Connection",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takemasa Takeshi"]],
+			"Title" => [["prefix", "Connection"]],
+		],
+	],
+	[
+		"title" => "Thrill",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takemasa Takeshi"]],
+			"Title" => [["prefix", "Thrill"]],
+		],
+	],
+	[
+		"title" => "Namaco's Live Streampie",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Takurowo"]],
+			"Title" => [["prefix", "Namaco's Live Streampie"]],
+		],
+	],
+	[
+		"title" => "Mature Dental",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tamatsuyada"]],
+			"Title" => [["prefix", "Mature Dental"]],
+		],
+	],
+	[
+		"title" => "My Big Sister",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tirotata"]],
+			"Title" => [["prefix", "My Big Sister"]],
+		],
+	],
+	[
+		"title" => "My Girlfriend is Chuuni",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tohyama Eight"]],
+			"Title" => [["prefix", "My Girlfriend is Chuuni"]],
+		],
+	],
+	[
+		"title" => "Sexual Remote Control",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Totoyama Keiji"]],
+			"Title" => [["prefix", "Sexual Remote Control"]],
+		],
+	],
+	[
+		"title" => "Study Time!",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Totoyama Keiji"]],
+			"Title" => [["prefix", "Study Time!"]],
+		],
+	],
+	[
+		"title" => "Less-ponse",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tou"]],
+			"Title" => [["prefix", "Less-ponse"]],
+		],
+	],
+	[
+		"title" => "Checking Answers",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Toujou Tsukushi"]],
+			"Title" => [["prefix", "Checking Answers"]],
+		],
+	],
+	[
+		"title" => "Mio-san's Secret",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Toujou Tsukushi"]],
+			"Title" => [["prefix", "Mio-san's Secret"]],
+		],
+	],
+	[
+		"title" => "Awakening",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Touma Itsuki"]],
+			"Title" => [["prefix", "Awakening"]],
+		],
+	],
+	[
+		"title" => "November Teardrops",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tsukako"]],
+			"Title" => [["prefix", "November Teardrops"]],
+		],
+	],
+	[
+		"title" => "Because This is the Last Time...",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tsuruomi"]],
+			"Title" => [["prefix", "Because This is the Last Time..."]],
+		],
+	],
+	[
+		"title" => "Autumn Always Gives Way to Spring",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tsuruyama Mito"]],
+			"Title" => [["prefix", "Autumn Always Gives Way to Spring"]],
+		],
+	],
+	[
+		"title" => "Unreachable Hana-chan",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tulip"]],
+			"Title" => [["prefix", "Unreachable Hana-chan"]],
+		],
+	],
+	[
+		"title" => "My Petite Girlfriend Is My Dad's Sex Slave",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tyranu"]],
+			"Title" => [["prefix", "My Petite Girlfriend Is My Dad's Sex Slave"]],
+		],
+	],
+	[
+		"title" => "Fulminate",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "U2D"]],
+			"Title" => [["prefix", "Fulminate"]],
+		],
+	],
+	[
+		"title" => "Never Fantasize About What Your Coworker Sounds Like in Bed",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Uchigawa"]],
+			"Title" => [["prefix", "Never Fantasize About What Your Coworker Sounds Like in Bed"]],
+		],
+	],
+	[
+		"title" => "Remains",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "untsuku"]],
+			"Title" => [["prefix", "Remains"]],
+		],
+	],
+	[
+		"title" => "Capable School Council",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Uono Shinome"]],
+			"Title" => [["prefix", "Capable School Council"]],
+		],
+	],
+	[
+		"title" => "Tropical Remnants",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "utu"]],
+			"Title" => [["prefix", "Tropical Remnants"]],
+		],
+	],
+	[
+		"title" => "Sea-Colored Sunset",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Wabara Hiro"]],
+			"Title" => [["prefix", "Sea-Colored Sunset"]],
+		],
+	],
+	[
+		"title" => "Sex Comes After 100 Points",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "waves"]],
+			"Title" => [["prefix", "Sex Comes After 100 Points"]],
+		],
+	],
+	[
+		"title" => "Passionate Amity",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yamada Yuuya"]],
+			"Title" => [["prefix", "Passionate Amity"]],
+		],
+	],
+	[
+		"title" => "Heart Switch",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yamaimo Tororo"]],
+			"Title" => [["prefix", "Heart Switch"]],
+		],
+	],
+	[
+		"title" => "The Trip is Off Track",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yoki Kana"]],
+			"Title" => [["prefix", "The Trip is Off Track"]],
+		],
+	],
+	[
+		"title" => "Shitty Lab",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "ysmmzr"]],
+			"Title" => [["prefix", "Shitty Lab"]],
+		],
+	],
+	[
+		"title" => "Red Light District: MILF/Daughter NTR",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yuuki Ringo"]],
+			"Title" => [["prefix", "Red Light District: MILF/Daughter NTR"]],
+		],
+	],
+	[
+		"title" => "Addicted to Sex With a Taciturn Library Committee Member",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yuzuha"]],
+			"Title" => [["prefix", "Addicted to Sex With a Taciturn Library Committee Member"]],
+		],
+	],
+	[
+		"title" => "Milking Hero",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Yuzuki Himuka"]],
+			"Title" => [["prefix", "Milking Hero"]],
+		],
+	],
+	[
+		"title" => "Sekigahara-san",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tsukako"]],
+			"Title" => [["prefix", "Sekigahara-san Has Something"]],
+		],
+	],
+	[
+		"title" => "Tough ☆ Sis",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tsukako"]],
+			"Title" => [["prefix", "Tough ☆ Sis"]],
+		],
+	],
+	[
+		"title" => "Tough ☆ Sis",
+		"source" => "ai",
+		"conditions" => [
+			"Artist" => [["match", "Tsukako"]],
+			"Title" => [["prefix", "Smitten ❤ Sis"]],
 		],
 	],
 ];
